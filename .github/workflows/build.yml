@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build
+        run: dotnet build Helyx/Helyx.csproj -c Release
+
+      - name: Publish single file
+        run: dotnet publish Helyx/Helyx.csproj -p:PublishProfile=SingleFile
+
+      - name: Upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: Helyx-win-x64
+          path: publish/Helyx.exe
