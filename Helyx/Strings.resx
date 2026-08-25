@@ -1,0 +1,3626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Back" xml:space="preserve">
+    <value>Back</value>
+    <comment>In nearly every menu, so keep it to one or two words.</comment>
+  </data>	
+  <data name="Common_CtrlClick" xml:space="preserve">
+    <value>(ctrl + click)</value>
+    <comment>Hint printed under a link. Keep it short.</comment>
+  </data>
+  <data name="Common_Disable" xml:space="preserve">
+    <value>Disable</value>
+    <comment>Button label. Common_Disabled is the state.</comment>
+  </data>
+  <data name="Common_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+    <comment>State label. Common_Disable is the button.</comment>
+  </data>
+  <data name="Common_Enable" xml:space="preserve">
+    <value>Enable</value>
+    <comment>Button label. Common_Enabled is the state.</comment>
+  </data>
+  <data name="Common_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+    <comment>State label. Common_Enable is the button.</comment>
+  </data>
+  <data name="Common_Found" xml:space="preserve">
+    <value>Found</value>
+    <comment>Used twice on the IDE screen, once as the row label and once as its value.</comment>
+  </data>
+  <data name="Common_InitGitHint" xml:space="preserve">
+    <value>Open Git Actions and initialize one to continue.</value>
+    <comment>Second line under Common_NotAGitRepo.</comment>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Common_NotAGitRepo" xml:space="preserve">
+    <value>This project is not a Git repository.</value>
+    <comment>First line of a two line message. Common_InitGitHint is the second.</comment>
+  </data>
+  <data name="Common_Path" xml:space="preserve">
+    <value>Path</value>
+    <comment>Row label in a details grid. Also used on the project screens.</comment>
+  </data>
+  <data name="Common_ProjectFolderMissing" xml:space="preserve">
+    <value>The project folder no longer exists:</value>
+    <comment>The path is printed under it, so do not put a period at the end. Used on several screens.</comment>
+  </data>
+  <data name="Common_ScopesMissing" xml:space="preserve">
+    <value>Your GitHub authorization is missing the following permissions:</value>
+    <comment>The permission list is added by the code, so do not put a period at the end. Used on two screens.</comment>
+  </data>
+  <data name="Common_ScopesOutdated_Title" xml:space="preserve">
+    <value>GitHub Authorization Outdated</value>
+    <comment>Used on the main menu and on the GitHub Authorization screen.</comment>
+  </data>
+  <data name="Common_SelectAction" xml:space="preserve">
+    <value>Select an action:</value>
+  </data>
+  <data name="Common_Settings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Both the main menu item and the settings screen header.</comment>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ConfigFile_OpenDirectory" xml:space="preserve">
+    <value>Open Configuration File Directory</value>
+  </data>
+  <data name="ConfigFile_Open_Failed" xml:space="preserve">
+    <value>The configuration folder could not be opened.
+
+{0}</value>
+    <comment>{0} is the Windows error message and stays in English.</comment>
+  </data>
+  <data name="ConfigFile_Reset" xml:space="preserve">
+    <value>Reset Configuration File</value>
+  </data>
+  <data name="ConfigFile_Reset_Confirm" xml:space="preserve">
+    <value>Are you sure you want to reset the configuration file?</value>
+  </data>
+  <data name="ConfigFile_Reset_Failed" xml:space="preserve">
+    <value>The configuration file could not be reset.
+
+{0}</value>
+    <comment>{0} is the Windows error message and stays in English.</comment>
+  </data>
+  <data name="ConfigFile_Restart_Failed" xml:space="preserve">
+    <value>Helyx could not restart itself, please start it again manually.
+
+{0}</value>
+    <comment>{0} is the Windows error message and stays in English.</comment>
+  </data>
+  <data name="Config_CreateFailed" xml:space="preserve">
+    <value>The configuration file could not be created in '{0}'.</value>
+    <comment>{0} is a folder path.</comment>
+  </data>
+  <data name="Config_KeptAs" xml:space="preserve">
+    <value>The old one was kept as {0}.</value>
+    <comment>{0} is a file name.</comment>
+  </data>
+  <data name="Config_ReadFailed" xml:space="preserve">
+    <value>The configuration file could not be read and was reset.</value>
+    <comment>Shown before Strings.Culture is set, so it may still appear in English.</comment>
+  </data>
+  <data name="Config_SaveFailed" xml:space="preserve">
+    <value>The configuration file could not be saved.</value>
+    <comment>The error message is printed under it.</comment>
+  </data>
+  <data name="Credits_Title" xml:space="preserve">
+    <value>Helyx was created by:</value>
+    <comment>The name printed under it stays as it is.</comment>
+  </data>
+  <data name="GitHubAuth_Authorize" xml:space="preserve">
+    <value>Authorize with GitHub</value>
+  </data>
+  <data name="GitHubAuth_Outdated_Hint" xml:space="preserve">
+    <value>Reauthorizing will replace your token with one that grants them.</value>
+  </data>
+  <data name="GitHubAuth_Reauthorize" xml:space="preserve">
+    <value>Reauthorize with GitHub</value>
+  </data>
+  <data name="GitHubAuth_Unauthorize" xml:space="preserve">
+    <value>Unauthorize from GitHub</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Message" xml:space="preserve">
+    <value>Successfully unauthorized from GitHub!</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Title" xml:space="preserve">
+    <value>Unauthorized from GitHub</value>
+  </data>
+  <data name="GitHubAuth_Username" xml:space="preserve">
+    <value>GitHub Username</value>
+  </data>
+  <data name="Git_RepoOpenFailed" xml:space="preserve">
+    <value>The repository could not be opened.</value>
+    <comment>The error message is printed under it.</comment>
+  </data>
+  <data name="Git_Status_Clean" xml:space="preserve">
+    <value>CLEAN</value>
+    <comment>Column label in the status table. Uppercase, keep it short.</comment>
+  </data>
+  <data name="Git_Status_Conflict" xml:space="preserve">
+    <value>CONFLICT</value>
+  </data>
+  <data name="Git_Status_Deleted" xml:space="preserve">
+    <value>DELETED</value>
+  </data>
+  <data name="Git_Status_Ignored" xml:space="preserve">
+    <value>IGNORED</value>
+  </data>
+  <data name="Git_Status_Missing" xml:space="preserve">
+    <value>MISSING</value>
+  </data>
+  <data name="Git_Status_Modified" xml:space="preserve">
+    <value>MODIFIED</value>
+  </data>
+  <data name="Git_Status_New" xml:space="preserve">
+    <value>NEW</value>
+  </data>
+  <data name="Git_Status_Renamed" xml:space="preserve">
+    <value>RENAMED</value>
+  </data>
+  <data name="Git_Status_StagedAndModified" xml:space="preserve">
+    <value>STAGED + MODIFIED</value>
+    <comment>The file is staged and then edited again.</comment>
+  </data>
+  <data name="Git_Status_StagedAndRenamed" xml:space="preserve">
+    <value>STAGED + RENAMED</value>
+  </data>
+  <data name="Git_Status_StagedDelete" xml:space="preserve">
+    <value>STAGED DELETE</value>
+  </data>
+  <data name="Git_Status_StagedModified" xml:space="preserve">
+    <value>STAGED MODIFIED</value>
+  </data>
+  <data name="Git_Status_StagedNew" xml:space="preserve">
+    <value>STAGED NEW</value>
+  </data>
+  <data name="Git_Status_StagedRename" xml:space="preserve">
+    <value>STAGED RENAME</value>
+  </data>
+  <data name="Git_Status_StagedTypeChange" xml:space="preserve">
+    <value>STAGED TYPE CHANGE</value>
+  </data>
+  <data name="Git_Status_TypeChanged" xml:space="preserve">
+    <value>TYPE CHANGED</value>
+  </data>
+  <data name="Git_Status_Unknown" xml:space="preserve">
+    <value>UNKNOWN</value>
+    <comment>Followed by the raw state name from LibGit2Sharp, which stays in English.</comment>
+  </data>
+  <data name="Git_Status_Unreadable" xml:space="preserve">
+    <value>UNREADABLE</value>
+  </data>
+  <data name="Identity_Current" xml:space="preserve">
+    <value>Current Preferred Identity</value>
+  </data>
+  <data name="Identity_NeedsAuth" xml:space="preserve">
+    <value>You need to authorize with GitHub before you can change this setting.</value>
+  </data>
+  <data name="Identity_Select" xml:space="preserve">
+    <value>Select your preferred identity:</value>
+  </data>
+  <data name="IDE_Actions_Select" xml:space="preserve">
+    <value>Select an IDE action:</value>
+  </data>
+  <data name="IDE_ChangePath" xml:space="preserve">
+    <value>Change IDE path</value>
+  </data>
+  <data name="IDE_Default" xml:space="preserve">
+    <value>Default IDE</value>
+  </data>
+  <data name="IDE_Default_Set" xml:space="preserve">
+    <value>Default IDE set to {0}.</value>
+    <comment>{0} is the IDE name and stays in English.</comment>
+  </data>
+  <data name="IDE_NoExecutable" xml:space="preserve">
+    <value>No executable is configured for {0}.</value>
+    <comment>{0} is the IDE name. IDE_SetOneHint is the second line.</comment>
+  </data>
+  <data name="IDE_OpenIn" xml:space="preserve">
+    <value>Open in IDE</value>
+    <comment>Also the panel title for errors on this screen.</comment>
+  </data>
+  <data name="IDE_OpenInDefault" xml:space="preserve">
+    <value>Open in default IDE</value>
+  </data>
+  <data name="IDE_OpenTitle" xml:space="preserve">
+    <value>Open {0} in IDE</value>
+    <comment>{0} is the project name.</comment>
+  </data>
+  <data name="IDE_Path_Changed" xml:space="preserve">
+    <value>IDE executable changed to {0}.</value>
+    <comment>{0} is the file path.</comment>
+  </data>
+  <data name="IDE_Path_Invalid" xml:space="preserve">
+    <value>Invalid executable. Please try again.</value>
+  </data>
+  <data name="IDE_Picker_Filter" xml:space="preserve">
+    <value>Executable (*.exe)|*.exe|All files (*.*)|*.*</value>
+    <comment>Windows file dialog filter. Translate only the words. Keep the | separators and the *.exe and *.* patterns exactly.</comment>
+  </data>
+  <data name="IDE_Picker_Title" xml:space="preserve">
+    <value>Select a new IDE executable</value>
+  </data>
+  <data name="IDE_Recommended" xml:space="preserve">
+    <value>(recommended)</value>
+    <comment>Printed after the IDE name that matches the project. Keep the brackets.</comment>
+  </data>
+  <data name="IDE_Select" xml:space="preserve">
+    <value>Select an IDE:</value>
+  </data>
+  <data name="IDE_SetDefault" xml:space="preserve">
+    <value>Set as default IDE</value>
+  </data>
+  <data name="IDE_SetOneHint" xml:space="preserve">
+    <value>Set one in Settings › IDE Settings.</value>
+    <comment>Second line under IDE_NoExecutable.</comment>
+  </data>
+  <data name="IDE_StartFailed" xml:space="preserve">
+    <value>{0} could not be started.</value>
+    <comment>{0} is the IDE name. The error message is printed under it.</comment>
+  </data>
+  <data name="IDE_State_NotFound" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="IDE_State_SetByUser" xml:space="preserve">
+    <value>Set by user</value>
+  </data>
+  <data name="Language_Current" xml:space="preserve">
+    <value>Current Language</value>
+  </data>
+  <data name="Language_Saved" xml:space="preserve">
+    <value>Language saved.</value>
+  </data>
+  <data name="Language_Select" xml:space="preserve">
+    <value>Select a new language:</value>
+  </data>
+  <data name="MainMenu_Config_Created" xml:space="preserve">
+    <value>Configuration file created successfully!</value>
+  </data>
+  <data name="MainMenu_Config_Creating" xml:space="preserve">
+    <value>Creating a new one...</value>
+  </data>
+  <data name="MainMenu_Config_NotFound" xml:space="preserve">
+    <value>Configuration file not found!</value>
+  </data>
+  <data name="MainMenu_Credits" xml:space="preserve">
+    <value>Credits</value>
+  </data>
+  <data name="MainMenu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MainMenu_Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="MainMenu_Scopes_Hint" xml:space="preserve">
+    <value>Some features will not work until you reauthorize under {0}.</value>
+    <comment>{0} is the menu path, written in code as Settings &gt; GitHub Authorization.</comment>
+  </data>
+  <data name="Migrator_Corrupted" xml:space="preserve">
+    <value>The configuration file is corrupted or unreadable. Recreating it.</value>
+  </data>
+  <data name="Migrator_Created" xml:space="preserve">
+    <value>Configuration file created.</value>
+  </data>
+  <data name="Migrator_Invalid" xml:space="preserve">
+    <value>The configuration file does not contain a valid configuration. Recreating it.</value>
+  </data>
+  <data name="Migrator_ProjectsToGuid" xml:space="preserve">
+    <value>Migrated 'projects' from list to Guid-keyed format.</value>
+    <comment>Keep 'projects' as it is, it is a key in the file.</comment>
+  </data>
+  <data name="Migrator_PropertyReset" xml:space="preserve">
+    <value>Property '{0}' had an incompatible shape and was reset.</value>
+    <comment>{0} is a property name from the file and stays in English.</comment>
+  </data>
+  <data name="Migrator_SaveFailed" xml:space="preserve">
+    <value>The migrated configuration file could not be saved: {0}</value>
+    <comment>{0} is the system error message.</comment>
+  </data>
+  <data name="Migrator_StatusToString" xml:space="preserve">
+    <value>Migrated project 'Status' from object to string format.</value>
+    <comment>Keep 'Status' as it is, it is a key in the file.</comment>
+  </data>
+  <data name="Migrator_TagsToIds" xml:space="preserve">
+    <value>Migrated project statuses and badges from names to ids.</value>
+  </data>
+  <data name="Migrator_UnreadableAfter" xml:space="preserve">
+    <value>The configuration file could not be read after migration. Recreating it.</value>
+  </data>
+  <data name="Migrator_Updated" xml:space="preserve">
+    <value>The configuration file was updated (schema migration).</value>
+  </data>
+  <data name="Notes_Converted_Decrypted" xml:space="preserve">
+    <value>{0} project(s) were decrypted.</value>
+    <comment>{0} is the number of projects. Put it wherever it reads best.</comment>
+  </data>
+  <data name="Notes_Converted_Encrypted" xml:space="preserve">
+    <value>{0} project(s) were encrypted.</value>
+    <comment>{0} is the number of projects. Put it wherever it reads best.</comment>
+  </data>
+  <data name="Notes_Encrypt" xml:space="preserve">
+    <value>Encrypt Notes</value>
+  </data>
+  <data name="Notes_Failed" xml:space="preserve">
+    <value>Windows refused to encrypt these, so they are still in plain text:</value>
+    <comment>A list of project names is printed under it, so do not put a period at the end.</comment>
+  </data>
+  <data name="Notes_Result_Disabled" xml:space="preserve">
+    <value>Notes encryption is now disabled.</value>
+    <comment>Keep it as one sentence. Same as Notes_Result_Enabled.</comment>
+  </data>
+  <data name="Notes_Result_Enabled" xml:space="preserve">
+    <value>Notes encryption is now enabled.</value>
+    <comment>Keep it as one sentence. Do not split the last word out of it.</comment>
+  </data>
+  <data name="Notes_State_Title" xml:space="preserve">
+    <value>Notes Encryption State</value>
+  </data>
+  <data name="Notes_Title" xml:space="preserve">
+    <value>Notes Encryption</value>
+  </data>
+  <data name="Notes_Unreadable" xml:space="preserve">
+    <value>These were encrypted by a different Windows account or on a different machine, so they were left untouched:</value>
+    <comment>A list of project names is printed under it, so do not put a period at the end.</comment>
+  </data>
+  <data name="Secrets_CreateFailed" xml:space="preserve">
+    <value>The secrets file could not be created.</value>
+  </data>
+  <data name="Secrets_ReadFailed" xml:space="preserve">
+    <value>The secrets file could not be read.</value>
+  </data>
+  <data name="Secrets_SaveFailed" xml:space="preserve">
+    <value>The secrets file could not be saved.</value>
+  </data>
+  <data name="Settings_GitHubAuthorization" xml:space="preserve">
+    <value>GitHub Authorization</value>
+  </data>
+  <data name="Settings_IDE" xml:space="preserve">
+    <value>IDE Settings</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_ManageBadges" xml:space="preserve">
+    <value>Manage Badges</value>
+  </data>
+  <data name="Settings_ManageConfigurationFile" xml:space="preserve">
+    <value>Manage Configuration File</value>
+  </data>
+  <data name="Settings_ManageCustomStatuses" xml:space="preserve">
+    <value>Manage Custom Statuses</value>
+  </data>
+  <data name="Settings_Notes" xml:space="preserve">
+    <value>Notes Settings</value>
+  </data>
+  <data name="Settings_PreferredIdentity" xml:space="preserve">
+    <value>Preferred Identity</value>
+  </data>
+  <data name="Settings_Updates" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="Token_SaveFailed" xml:space="preserve">
+    <value>The GitHub token could not be saved.</value>
+  </data>
+  <data name="Update_Available" xml:space="preserve">
+    <value>A new version of Helyx is available! Follow the link below to download it:</value>
+  </data>
+  <data name="Update_Available_Title" xml:space="preserve">
+    <value>Update Available</value>
+  </data>
+  <data name="Update_Checking" xml:space="preserve">
+    <value>Looking for updates...</value>
+  </data>
+  <data name="Update_ClickHere" xml:space="preserve">
+    <value>Click here</value>
+    <comment>The text of the link itself. Keep it short.</comment>
+  </data>
+  <data name="Update_Current" xml:space="preserve">
+    <value>Current version: v{0}</value>
+    <comment>{0} has no prefix, so the v belongs here.</comment>
+  </data>
+  <data name="Update_Error_NoVersion" xml:space="preserve">
+    <value>The latest version could not be retrieved from GitHub.</value>
+  </data>
+  <data name="Update_Error_Unreadable" xml:space="preserve">
+    <value>The current or the latest version number could not be read.</value>
+  </data>
+  <data name="Update_Failed" xml:space="preserve">
+    <value>An error occurred while checking for updates:</value>
+  </data>
+  <data name="Update_Failed_Title" xml:space="preserve">
+    <value>Update Check Failed</value>
+  </data>
+  <data name="Update_Latest" xml:space="preserve">
+    <value>Latest version: {0}</value>
+    <comment>{0} is the GitHub tag and already starts with v. That is why this one has no v and Update_Current does.</comment>
+  </data>
+  <data name="Update_None" xml:space="preserve">
+    <value>You are already running the latest version.</value>
+  </data>
+  <data name="Update_None_Title" xml:space="preserve">
+    <value>No Updates</value>
+  </data>
+  <data name="Common_EditName" xml:space="preserve">
+    <value>Edit Name</value>
+  </data>
+  <data name="Common_EditColor" xml:space="preserve">
+    <value>Edit Color</value>
+  </data>
+  <data name="Common_SelectEditAction" xml:space="preserve">
+    <value>Select an edit action:</value>
+  </data>
+  <data name="Common_InvalidName" xml:space="preserve">
+    <value>Invalid Name</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Common_NameTaken" xml:space="preserve">
+    <value>Name Already Taken</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Common_EnterNewName" xml:space="preserve">
+    <value>Enter new name</value>
+  </data>
+  <data name="Common_ChangeInHelyxOnly" xml:space="preserve">
+    <value>Change it in Helyx only</value>
+    <comment>Answer that declines pushing the change to GitHub.</comment>
+  </data>
+  <data name="Common_DeleteInHelyxOnly" xml:space="preserve">
+    <value>Delete it in Helyx only</value>
+    <comment>Answer that declines pushing the change to GitHub.</comment>
+  </data>
+  <data name="Status_Active" xml:space="preserve">
+    <value>Active</value>
+    <comment>Built in project status. Tags.BuiltInStatuses has to be changed to read from here.</comment>
+  </data>
+  <data name="Status_Inactive" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>Built in project status.</comment>
+  </data>
+  <data name="Status_Paused" xml:space="preserve">
+    <value>Paused</value>
+    <comment>Built in project status.</comment>
+  </data>
+  <data name="Status_Archived" xml:space="preserve">
+    <value>Archived</value>
+    <comment>Built in project status.</comment>
+  </data>
+  <data name="Tags_SelectColor" xml:space="preserve">
+    <value>Select a color:</value>
+  </data>
+  <data name="Tags_NameTooLong" xml:space="preserve">
+    <value>The name must be {0} characters or fewer.</value>
+    <comment>{0} is the limit, currently 40.</comment>
+  </data>
+  <data name="Tags_NameBrackets" xml:space="preserve">
+    <value>The name cannot contain square brackets.</value>
+  </data>
+  <data name="Tags_NameControl" xml:space="preserve">
+    <value>The name cannot contain control characters.</value>
+  </data>
+  <data name="Other_Title" xml:space="preserve">
+    <value>Other Actions</value>
+  </data>
+  <data name="Other_OpenIn" xml:space="preserve">
+    <value>Open in ...</value>
+  </data>
+  <data name="Other_UserScripts" xml:space="preserve">
+    <value>User Scripts</value>
+  </data>
+  <data name="Other_BackupProject" xml:space="preserve">
+    <value>Backup Project</value>
+  </data>
+  <data name="Other_Notes" xml:space="preserve">
+    <value>Notes</value>
+    <comment>Menu item and the panel title on the notes screen.</comment>
+  </data>
+  <data name="Notes_ForeignAccount" xml:space="preserve">
+    <value>These notes were encrypted by a different Windows account or on a different machine, so they cannot be read here.</value>
+    <comment>Notes_EditorStaysClosed is printed under it.</comment>
+  </data>
+  <data name="Notes_EditorStaysClosed" xml:space="preserve">
+    <value>Opening them would overwrite them, so the editor stays closed.</value>
+  </data>
+  <data name="Notes_ProtectFailed" xml:space="preserve">
+    <value>Windows refused to encrypt these notes, so they were saved in plain text.</value>
+  </data>
+  <data name="Badges_Add" xml:space="preserve">
+    <value>Add Badge</value>
+  </data>
+  <data name="Badges_Edit" xml:space="preserve">
+    <value>Edit Badge</value>
+  </data>
+  <data name="Badges_Delete" xml:space="preserve">
+    <value>Delete Badge</value>
+  </data>
+  <data name="Badges_EnterName" xml:space="preserve">
+    <value>Enter badge name:</value>
+  </data>
+  <data name="Badges_NameExists" xml:space="preserve">
+    <value>A badge named {0} already exists.</value>
+    <comment>{0} is the name the user typed, the code puts it in quotes.</comment>
+  </data>
+  <data name="Badges_None_Title" xml:space="preserve">
+    <value>No Badges</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Badges_NoneToEdit" xml:space="preserve">
+    <value>There are no badges to edit.</value>
+  </data>
+  <data name="Badges_NoneToDelete" xml:space="preserve">
+    <value>There are no badges to delete.</value>
+  </data>
+  <data name="Badges_SelectToEdit" xml:space="preserve">
+    <value>Select a badge to edit:</value>
+  </data>
+  <data name="Badges_SelectToDelete" xml:space="preserve">
+    <value>Select a badge to delete:</value>
+  </data>
+  <data name="Badges_Added" xml:space="preserve">
+    <value>The badge {0} was added.</value>
+    <comment>{0} is the badge name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Badges_Edited" xml:space="preserve">
+    <value>Badge {0} was successfully edited!</value>
+    <comment>{0} is the badge name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Badges_Deleted" xml:space="preserve">
+    <value>Badge {0} was deleted successfully.</value>
+    <comment>{0} is the badge name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Badges_DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete badge {0} ?</value>
+    <comment>{0} is the badge name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Badges_RemovedFrom" xml:space="preserve">
+    <value>It will be removed from {0} project(s).</value>
+    <comment>{0} is a count. Printed under the confirmation question.</comment>
+  </data>
+  <data name="Statuses_Add" xml:space="preserve">
+    <value>Add Custom Status</value>
+  </data>
+  <data name="Statuses_Edit" xml:space="preserve">
+    <value>Edit Custom Status</value>
+  </data>
+  <data name="Statuses_Delete" xml:space="preserve">
+    <value>Delete Custom Status</value>
+  </data>
+  <data name="Statuses_EnterName" xml:space="preserve">
+    <value>Enter status name:</value>
+  </data>
+  <data name="Statuses_NameExists" xml:space="preserve">
+    <value>A status named {0} already exists.</value>
+    <comment>{0} is the name the user typed, the code puts it in quotes.</comment>
+  </data>
+  <data name="Statuses_None_Title" xml:space="preserve">
+    <value>No Custom Statuses</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Statuses_NoneToEdit" xml:space="preserve">
+    <value>There are no custom statuses to edit.</value>
+  </data>
+  <data name="Statuses_NoneToDelete" xml:space="preserve">
+    <value>There are no custom statuses to delete.</value>
+  </data>
+  <data name="Statuses_SelectToEdit" xml:space="preserve">
+    <value>Select a custom status to edit:</value>
+  </data>
+  <data name="Statuses_SelectToDelete" xml:space="preserve">
+    <value>Select a custom status to delete:</value>
+  </data>
+  <data name="Statuses_Added" xml:space="preserve">
+    <value>The custom status {0} was added.</value>
+    <comment>{0} is the status name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Statuses_Edited" xml:space="preserve">
+    <value>Custom status {0} was successfully edited!</value>
+    <comment>{0} is the status name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Statuses_Deleted" xml:space="preserve">
+    <value>Custom status {0} was deleted successfully.</value>
+    <comment>{0} is the status name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Statuses_DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete custom status {0} ?</value>
+    <comment>{0} is the status name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Statuses_UsedBy" xml:space="preserve">
+    <value>{0} project(s) using it will be set back to Active.</value>
+    <comment>{0} is a count. The last word is the Active status name.</comment>
+  </data>
+  <data name="Statuses_ResetToActive" xml:space="preserve">
+    <value>Projects that used it were set back to {0}.</value>
+    <comment>{0} is the Active status name, already coloured and quoted by the code.</comment>
+  </data>
+  <data name="Git_Group_Conflicted" xml:space="preserve">
+    <value>Conflicted</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Git_Group_Modified" xml:space="preserve">
+    <value>Modified</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Git_Group_New" xml:space="preserve">
+    <value>New</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Git_Group_Deleted" xml:space="preserve">
+    <value>Deleted</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Git_Group_Renamed" xml:space="preserve">
+    <value>Renamed</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Git_Group_Other" xml:space="preserve">
+    <value>Other</value>
+    <comment>Group header in the Stage file picker.</comment>
+  </data>
+  <data name="Program_AlreadyRunning_Title" xml:space="preserve">
+    <value>Already Running</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Program_AlreadyRunning" xml:space="preserve">
+    <value>Helyx is already running in another window.</value>
+  </data>
+  <data name="Program_Crash_Title" xml:space="preserve">
+    <value>Something went wrong</value>
+    <comment>Panel title for an unhandled error.</comment>
+  </data>
+  <data name="Program_Crash_Closing" xml:space="preserve">
+    <value>This has failed {0} times in a row, so Helyx will close.</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="Program_Crash_Return" xml:space="preserve">
+    <value>Press any key to return to the menu...</value>
+  </data>
+  <data name="Scripts_FolderCreateFailed" xml:space="preserve">
+    <value>The scripts folder could not be created.</value>
+  </data>
+  <data name="Scripts_FolderReadFailed" xml:space="preserve">
+    <value>The scripts folder could not be read.</value>
+  </data>
+  <data name="Scripts_SaveFailed" xml:space="preserve">
+    <value>The script {0} could not be saved.</value>
+    <comment>{0} is the script name, already quoted by the code.</comment>
+  </data>
+  <data name="Scripts_LoadProblems" xml:space="preserve">
+    <value>Some scripts could not be loaded completely:</value>
+    <comment>A list of file names follows, so do not put a period at the end.</comment>
+  </data>
+  <data name="Scripts_CouldNotRead" xml:space="preserve">
+    <value>{0}: could not be read</value>
+    <comment>{0} is a file name.</comment>
+  </data>
+  <data name="Scripts_BlocksSkipped" xml:space="preserve">
+    <value>{0}: {1} unreadable block(s) were skipped</value>
+    <comment>{0} is a file name, {1} is a count.</comment>
+  </data>
+  <data name="GitHub_AuthFailed_Title" xml:space="preserve">
+    <value>Authorization Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GitHub_Authorized_Title" xml:space="preserve">
+    <value>Authorized</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GitHub_Unreachable" xml:space="preserve">
+    <value>GitHub could not be reached:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GitHub_ReturnedError" xml:space="preserve">
+    <value>GitHub returned an error:</value>
+    <comment>The raw response follows.</comment>
+  </data>
+  <data name="GitHub_IncompleteResponse" xml:space="preserve">
+    <value>GitHub returned an incomplete response. Please try again.</value>
+  </data>
+  <data name="GitHub_GoToAndEnter" xml:space="preserve">
+    <value>Go to {0} and enter this code:</value>
+    <comment>{0} is the verification link, already made clickable by the code.</comment>
+  </data>
+  <data name="GitHub_CodeCopied" xml:space="preserve">
+    <value>(the code has been copied to your clipboard)</value>
+  </data>
+  <data name="GitHub_ClipboardFailed" xml:space="preserve">
+    <value>The code could not be copied to your clipboard:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GitHub_BrowserFailed" xml:space="preserve">
+    <value>The browser could not be opened automatically, please open the link manually:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GitHub_CodeExpired" xml:space="preserve">
+    <value>The authorization code expired before it was confirmed. Please try again.</value>
+  </data>
+  <data name="GitHub_Waiting" xml:space="preserve">
+    <value>Waiting for GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GitHub_AuthSuccess" xml:space="preserve">
+    <value>GitHub authorization successful!</value>
+  </data>
+  <data name="GitHub_RepoNotFound" xml:space="preserve">
+    <value>No matching repository was found on your GitHub profile.</value>
+    <comment>GitHub_RepoNotFound_Hint is printed under it.</comment>
+  </data>
+  <data name="GitHub_RepoNotFound_Hint" xml:space="preserve">
+    <value>Make sure the GitHub name matches your GitHub repository name.</value>
+  </data>
+  <data name="GitHub_CouldNotCheck" xml:space="preserve">
+    <value>GitHub could not be reached, so your repositories could not be checked.</value>
+    <comment>GitHub_CouldNotCheck_Hint is printed under it.</comment>
+  </data>
+  <data name="GitHub_CouldNotCheck_Hint" xml:space="preserve">
+    <value>Check your internet connection, then try again.</value>
+  </data>
+  <data name="GitHub_NoIdentity" xml:space="preserve">
+    <value>No Git identity could be determined.</value>
+    <comment>GitHub_NoIdentity_Hint is printed under it.</comment>
+  </data>
+  <data name="GitHub_NoIdentity_Hint" xml:space="preserve">
+    <value>Set user.name and user.email in your Git configuration, or authorize with GitHub in Settings.</value>
+    <comment>Keep user.name and user.email exactly, they are Git config keys.</comment>
+  </data>
+  <data name="GitHub_NotLinked" xml:space="preserve">
+    <value>This project is not linked with a GitHub repository.</value>
+  </data>
+  <data name="GitHub_AssignNow" xml:space="preserve">
+    <value>Do you want to assign the GitHub repository now?</value>
+  </data>
+  <data name="GitHub_LoadingRepos" xml:space="preserve">
+    <value>Loading your repositories...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GitHub_UnreachableSettings" xml:space="preserve">
+    <value>GitHub could not be reached.</value>
+    <comment>GitHub_CheckConnection is printed under it.</comment>
+  </data>
+  <data name="GitHub_CheckConnection" xml:space="preserve">
+    <value>Check your connection and your authorization in Settings.</value>
+  </data>
+  <data name="GitHub_NoRepos" xml:space="preserve">
+    <value>There are no repositories on your GitHub account.</value>
+  </data>
+  <data name="GitHub_SelectRepo" xml:space="preserve">
+    <value>Select the GitHub repository:</value>
+  </data>
+  <data name="GitHub_UnknownError" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
+  <data name="GitHub_Part_Languages" xml:space="preserve">
+    <value>languages</value>
+    <comment>Listed when GitHub did not return this part of the repository data.</comment>
+  </data>
+  <data name="GitHub_Part_CommitActivity" xml:space="preserve">
+    <value>commit activity</value>
+    <comment>Listed when GitHub did not return this part of the repository data.</comment>
+  </data>
+  <data name="GitHub_Part_Topics" xml:space="preserve">
+    <value>topics</value>
+    <comment>Listed when GitHub did not return this part of the repository data.</comment>
+  </data>
+  <data name="Scripts_Run" xml:space="preserve">
+    <value>Run Script</value>
+  </data>
+  <data name="Scripts_EditScript" xml:space="preserve">
+    <value>Edit Script</value>
+  </data>
+  <data name="Scripts_Create" xml:space="preserve">
+    <value>Create Script</value>
+  </data>
+  <data name="Scripts_DeleteScript" xml:space="preserve">
+    <value>Delete Script</value>
+  </data>
+  <data name="Scripts_None" xml:space="preserve">
+    <value>There are no scripts for this project yet.</value>
+  </data>
+  <data name="Scripts_SelectToRun" xml:space="preserve">
+    <value>Select script to run:</value>
+  </data>
+  <data name="Scripts_SelectToEdit" xml:space="preserve">
+    <value>Select a script to edit:</value>
+  </data>
+  <data name="Scripts_SelectToDelete" xml:space="preserve">
+    <value>Select a script to delete:</value>
+  </data>
+  <data name="Scripts_EnterName" xml:space="preserve">
+    <value>Enter script name:</value>
+  </data>
+  <data name="Scripts_DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete the script {0}?</value>
+    <comment>{0} is the script name, already quoted by the code.</comment>
+  </data>
+  <data name="Scripts_Deleted" xml:space="preserve">
+    <value>The script {0} was deleted successfully.</value>
+    <comment>{0} is the script name, already quoted by the code.</comment>
+  </data>
+  <data name="Scripts_AlreadyGone" xml:space="preserve">
+    <value>The file for {0} was already gone.</value>
+    <comment>{0} is the script name, already quoted by the code.</comment>
+  </data>
+  <data name="Scripts_DeleteFailed" xml:space="preserve">
+    <value>The script {0} could not be deleted.</value>
+    <comment>{0} is the script name, already quoted by the code.</comment>
+  </data>
+  <data name="Scripts_Failed_Title" xml:space="preserve">
+    <value>Script Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Scripts_Begun" xml:space="preserve">
+    <value>Script has begun!</value>
+  </data>
+  <data name="Scripts_Ended" xml:space="preserve">
+    <value>Script has ended!</value>
+  </data>
+  <data name="Scripts_SelectOperation" xml:space="preserve">
+    <value>Select operation:</value>
+  </data>
+  <data name="Scripts_AddBlock" xml:space="preserve">
+    <value>Add Block</value>
+  </data>
+  <data name="Scripts_EditBlock" xml:space="preserve">
+    <value>Edit Block</value>
+  </data>
+  <data name="Scripts_RemoveBlock" xml:space="preserve">
+    <value>Remove Block</value>
+  </data>
+  <data name="Scripts_SelectBlockEdit" xml:space="preserve">
+    <value>Select block to edit:</value>
+  </data>
+  <data name="Scripts_SelectBlockRemove" xml:space="preserve">
+    <value>Select block to remove:</value>
+  </data>
+  <data name="Scripts_ConfirmContinue" xml:space="preserve">
+    <value>Are you sure you want to continue?</value>
+  </data>
+  <data name="Scripts_Guid" xml:space="preserve">
+    <value>Script GUID</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Scripts_BlockCount" xml:space="preserve">
+    <value>Number of blocks</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Scripts_Start" xml:space="preserve">
+    <value>Start</value>
+    <comment>First node of the script flow tree.</comment>
+  </data>
+  <data name="Scripts_End" xml:space="preserve">
+    <value>End</value>
+    <comment>Last node of the script flow tree.</comment>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Common_Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Common_Continue" xml:space="preserve">
+    <value>Do you want to continue?</value>
+  </data>
+  <data name="Common_Searching" xml:space="preserve">
+    <value>Searching...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Projects_Title" xml:space="preserve">
+    <value>Projects</value>
+    <comment>Screen header.</comment>
+  </data>
+  <data name="Projects_Select" xml:space="preserve">
+    <value>Select a project:</value>
+  </data>
+  <data name="Projects_Filter" xml:space="preserve">
+    <value>Type to filter projects...</value>
+  </data>
+  <data name="Projects_AddNew" xml:space="preserve">
+    <value>+ Add a new project</value>
+    <comment>Keep the leading plus sign.</comment>
+  </data>
+  <data name="Projects_Row_Status" xml:space="preserve">
+    <value>Status</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Projects_Row_LastModified" xml:space="preserve">
+    <value>Last modified</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Projects_Row_Badges" xml:space="preserve">
+    <value>Badges</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Projects_Row_Topics" xml:space="preserve">
+    <value>Topics</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Projects_Row_Languages" xml:space="preserve">
+    <value>Languages</value>
+    <comment>Grid row label. Programming languages, not UI languages.</comment>
+  </data>
+  <data name="Projects_Row_ProjectName" xml:space="preserve">
+    <value>Project name</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="Projects_RetrievingStats" xml:space="preserve">
+    <value>Retrieving GitHub repository stats...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Projects_Missing_Title" xml:space="preserve">
+    <value>Project Missing</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_FolderNotFound" xml:space="preserve">
+    <value>The folder of {0} was not found:</value>
+    <comment>{0} is the project name, already quoted by the code. The path follows.</comment>
+  </data>
+  <data name="Projects_WhatToDo" xml:space="preserve">
+    <value>What do you want to do?</value>
+  </data>
+  <data name="Projects_SearchAuto" xml:space="preserve">
+    <value>Search for the folder automatically</value>
+  </data>
+  <data name="Projects_LocateManually" xml:space="preserve">
+    <value>Locate the folder manually</value>
+  </data>
+  <data name="Projects_NoFolderSelected" xml:space="preserve">
+    <value>No folder was selected.</value>
+  </data>
+  <data name="Projects_DifferentRepo_Title" xml:space="preserve">
+    <value>Different Repository</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_DifferentRepo" xml:space="preserve">
+    <value>The selected folder is not the same repository as the original one.</value>
+    <comment>Projects_LinkAnyway is printed under it.</comment>
+  </data>
+  <data name="Projects_LinkAnyway" xml:space="preserve">
+    <value>Do you want to link it anyway?</value>
+  </data>
+  <data name="Projects_NoFingerprint" xml:space="preserve">
+    <value>This project has no saved fingerprint, so Helyx cannot search for it.</value>
+    <comment>Projects_LocateInstead is printed under it.</comment>
+  </data>
+  <data name="Projects_LocateInstead" xml:space="preserve">
+    <value>Locate the folder manually instead.</value>
+  </data>
+  <data name="Projects_NotFound" xml:space="preserve">
+    <value>The folder could not be found.</value>
+    <comment>Projects_LocateInstead is printed under it.</comment>
+  </data>
+  <data name="Projects_Found_Title" xml:space="preserve">
+    <value>Project Found</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_Linked" xml:space="preserve">
+    <value>{0} was linked to:</value>
+    <comment>{0} is the project name, already quoted by the code. The path follows.</comment>
+  </data>
+  <data name="Projects_Menu_IDE" xml:space="preserve">
+    <value>IDE Actions</value>
+  </data>
+  <data name="Projects_Menu_Git" xml:space="preserve">
+    <value>Git Actions</value>
+  </data>
+  <data name="Projects_Menu_GitHub" xml:space="preserve">
+    <value>GitHub Actions</value>
+  </data>
+  <data name="Projects_Menu_Manage" xml:space="preserve">
+    <value>Manage Project</value>
+  </data>
+  <data name="Projects_SelectFolder" xml:space="preserve">
+    <value>Select a project folder</value>
+    <comment>Windows folder dialog title.</comment>
+  </data>
+  <data name="Projects_FolderGone" xml:space="preserve">
+    <value>The folder {0} no longer exists.</value>
+    <comment>{0} is a path, already quoted by the code.</comment>
+  </data>
+  <data name="Projects_FolderNotFound_Title" xml:space="preserve">
+    <value>Folder Not Found</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_DriveRoot" xml:space="preserve">
+    <value>A drive root cannot be added as a project. Please pick a project folder.</value>
+  </data>
+  <data name="Projects_InvalidFolder_Title" xml:space="preserve">
+    <value>Invalid Folder</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_DuplicateFolder_Title" xml:space="preserve">
+    <value>Duplicate Folder</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_AlreadyAdded" xml:space="preserve">
+    <value>This folder is already added as {0}.</value>
+    <comment>{0} is the project name, already quoted by the code.</comment>
+  </data>
+  <data name="Projects_AddAgain" xml:space="preserve">
+    <value>Do you want to add it again?</value>
+  </data>
+  <data name="Projects_EnterName" xml:space="preserve">
+    <value>Enter name of your project</value>
+  </data>
+  <data name="Projects_NameEmpty" xml:space="preserve">
+    <value>The project name cannot be empty.</value>
+  </data>
+  <data name="Projects_DuplicateProject_Title" xml:space="preserve">
+    <value>Duplicate Project</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Projects_NameExists" xml:space="preserve">
+    <value>A project named {0} already exists.</value>
+    <comment>{0} is the name, already quoted by the code.</comment>
+  </data>
+  <data name="Projects_DetectingLanguages" xml:space="preserve">
+    <value>Detecting languages...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Projects_ConfirmDetails" xml:space="preserve">
+    <value>Confirm Project Details</value>
+    <comment>Screen header.</comment>
+  </data>
+  <data name="Projects_NoneDetected" xml:space="preserve">
+    <value>None detected</value>
+  </data>
+  <data name="Projects_AddConfirm" xml:space="preserve">
+    <value>Would you like to add this project?</value>
+  </data>
+  <data name="Manage_ChangeStatus" xml:space="preserve">
+    <value>Change Status</value>
+  </data>
+  <data name="Manage_AssignBadges" xml:space="preserve">
+    <value>Assign Badges</value>
+  </data>
+  <data name="Manage_Analyze" xml:space="preserve">
+    <value>Analyze Project</value>
+  </data>
+  <data name="Manage_ChangeName" xml:space="preserve">
+    <value>Change Name</value>
+  </data>
+  <data name="Manage_RemoveProject" xml:space="preserve">
+    <value>Remove Project</value>
+  </data>
+  <data name="Manage_SelectNewStatus" xml:space="preserve">
+    <value>Select the new status:</value>
+  </data>
+  <data name="Manage_NoBadgesToAssign" xml:space="preserve">
+    <value>There are no badges to assign. You can create them in Settings.</value>
+  </data>
+  <data name="Manage_SelectBadges" xml:space="preserve">
+    <value>Select the badges you want to assign:</value>
+  </data>
+  <data name="Manage_ChangeNameOf" xml:space="preserve">
+    <value>Change name of ...</value>
+  </data>
+  <data name="Manage_EnterNewNameFor" xml:space="preserve">
+    <value>Enter the new {0} name</value>
+    <comment>{0} is Helyx or GitHub, not translated.</comment>
+  </data>
+  <data name="Manage_RemoveConfirm" xml:space="preserve">
+    <value>Remove {0}?</value>
+    <comment>{0} is the project name, already styled by the code.</comment>
+  </data>
+  <data name="Manage_CannotBeUndone" xml:space="preserve">
+    <value>This cannot be undone.</value>
+  </data>
+  <data name="Manage_AlsoDeletes" xml:space="preserve">
+    <value>BE AWARE THAT THIS WILL ALSO DELETE ALL BACKUPS AND SCRIPTS ASSIGNED TO THIS PROJECT!</value>
+    <comment>Shown in capitals as a warning.</comment>
+  </data>
+  <data name="Manage_CleanupIncomplete" xml:space="preserve">
+    <value>Cleanup Incomplete</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Manage_CleanupFailed" xml:space="preserve">
+    <value>Some backups or scripts could not be deleted:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="Manage_Removed_Title" xml:space="preserve">
+    <value>Project Removed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Manage_Removed" xml:space="preserve">
+    <value>The project {0} was removed successfully.</value>
+    <comment>{0} is the project name, already quoted by the code.</comment>
+  </data>
+  <data name="Analyze_Running" xml:space="preserve">
+    <value>Analyzing the project...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Analyze_ReadingRepo" xml:space="preserve">
+    <value>Reading the repository...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Analyze_Files" xml:space="preserve">
+    <value>Files</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_Folders" xml:space="preserve">
+    <value>Folders</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_SizeOnDisk" xml:space="preserve">
+    <value>Size on disk</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_Lines" xml:space="preserve">
+    <value>Lines</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_Tracked" xml:space="preserve">
+    <value>{0} tracked</value>
+    <comment>{0} is a count or a size. Detail note next to a row.</comment>
+  </data>
+  <data name="Analyze_NoSourceFiles" xml:space="preserve">
+    <value>no source files</value>
+    <comment>Detail note, lowercase on purpose.</comment>
+  </data>
+  <data name="Analyze_InFiles" xml:space="preserve">
+    <value>in {0} files</value>
+    <comment>{0} is a count. Detail note, lowercase on purpose.</comment>
+  </data>
+  <data name="Analyze_LinesDetail" xml:space="preserve">
+    <value>{0} lines</value>
+    <comment>{0} is a count. Detail note.</comment>
+  </data>
+  <data name="Analyze_Languages" xml:space="preserve">
+    <value>Languages</value>
+    <comment>Section header.</comment>
+  </data>
+  <data name="Analyze_Other" xml:space="preserve">
+    <value>Other</value>
+    <comment>Row label for languages beyond the top eight.</comment>
+  </data>
+  <data name="Analyze_LargestFiles" xml:space="preserve">
+    <value>Largest files</value>
+    <comment>Section header.</comment>
+  </data>
+  <data name="Analyze_Branch" xml:space="preserve">
+    <value>Branch</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_LocalBranches" xml:space="preserve">
+    <value>{0} local branches</value>
+    <comment>{0} is a count. Detail note.</comment>
+  </data>
+  <data name="Analyze_LocalBranchOne" xml:space="preserve">
+    <value>{0} local branch</value>
+    <comment>Singular form, used when the count is one.</comment>
+  </data>
+  <data name="Analyze_Commits" xml:space="preserve">
+    <value>Commits</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_FirstCommit" xml:space="preserve">
+    <value>First commit</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_Today" xml:space="preserve">
+    <value>today</value>
+    <comment>Detail note, lowercase on purpose.</comment>
+  </data>
+  <data name="Analyze_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="Analyze_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="Analyze_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="Analyze_LastCommit" xml:space="preserve">
+    <value>Last commit</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_WorkingTree" xml:space="preserve">
+    <value>Working tree</value>
+    <comment>Row label.</comment>
+  </data>
+  <data name="Analyze_Clean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="Analyze_Changed" xml:space="preserve">
+    <value>changed</value>
+    <comment>Follows a count, lowercase on purpose.</comment>
+  </data>
+  <data name="Analyze_GitSize" xml:space="preserve">
+    <value>.git size</value>
+    <comment>Row label. Keep .git as it is.</comment>
+  </data>
+  <data name="Analyze_Footer" xml:space="preserve">
+    <value>↑↓ scroll   &lt;pgup/pgdn&gt; page   &lt;r&gt; analyze again   &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="Analyze_All" xml:space="preserve">
+    <value>all</value>
+    <comment>Shown when everything fits on one screen, lowercase on purpose.</comment>
+  </data>
+  <data name="Common_MultiSelectHint" xml:space="preserve">
+    <value>(&lt;space&gt; toggle, &lt;enter&gt; confirm)</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="Backups_Title" xml:space="preserve">
+    <value>Backup Actions</value>
+  </data>
+  <data name="Backups_Header" xml:space="preserve">
+    <value>Backups</value>
+    <comment>Panel header above the list.</comment>
+  </data>
+  <data name="Backups_Create" xml:space="preserve">
+    <value>Create Backup</value>
+  </data>
+  <data name="Backups_Restore" xml:space="preserve">
+    <value>Restore Backup</value>
+  </data>
+  <data name="Backups_Delete" xml:space="preserve">
+    <value>Delete Backup</value>
+  </data>
+  <data name="Backups_CreateConfirm" xml:space="preserve">
+    <value>Are you sure you want to create a backup for this project?</value>
+  </data>
+  <data name="Backups_ProjectMissing" xml:space="preserve">
+    <value>This project could not be found in the configuration file.</value>
+    <comment>Backups_ProjectMissing_Hint is printed under it.</comment>
+  </data>
+  <data name="Backups_ProjectMissing_Hint" xml:space="preserve">
+    <value>Fix it manually, or reset the configuration file in Settings.</value>
+  </data>
+  <data name="Backups_FolderCreateFailed" xml:space="preserve">
+    <value>The backups folder could not be created.</value>
+  </data>
+  <data name="Backups_ScopeQuestion" xml:space="preserve">
+    <value>What should the backup contain?</value>
+  </data>
+  <data name="Backups_ScopeSkipIgnored" xml:space="preserve">
+    <value>Everything except files ignored by .gitignore</value>
+    <comment>Keep .gitignore as it is.</comment>
+  </data>
+  <data name="Backups_ScopeEverything" xml:space="preserve">
+    <value>Everything in the project folder</value>
+  </data>
+  <data name="Backups_Running" xml:space="preserve">
+    <value>Backing up...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Backups_BackingUpFile" xml:space="preserve">
+    <value>Backing up {0}</value>
+    <comment>{0} is a file path inside the project.</comment>
+  </data>
+  <data name="Backups_Failed_Title" xml:space="preserve">
+    <value>Backup Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Backups_CreatedWithSkipped" xml:space="preserve">
+    <value>The backup was created, but {0} file(s) were locked or unreadable and were left out:</value>
+    <comment>{0} is a count. A file list follows, so do not put a period at the end.</comment>
+  </data>
+  <data name="Backups_AndMore" xml:space="preserve">
+    <value>... and {0} more</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="Backups_Created" xml:space="preserve">
+    <value>The backup was created successfully.</value>
+  </data>
+  <data name="Backups_NoneAvailable" xml:space="preserve">
+    <value>No backups available.</value>
+  </data>
+  <data name="Backups_NoneToRestore" xml:space="preserve">
+    <value>There are no backups to restore.</value>
+  </data>
+  <data name="Backups_NoneToDelete" xml:space="preserve">
+    <value>There are no backups to delete.</value>
+  </data>
+  <data name="Backups_Col_Project" xml:space="preserve">
+    <value>Project</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="Backups_Col_Date" xml:space="preserve">
+    <value>Date</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="Backups_OverwriteWarning" xml:space="preserve">
+    <value>THIS WILL OVERWRITE YOUR CURRENT PROJECT!</value>
+    <comment>Shown in capitals as a warning.</comment>
+  </data>
+  <data name="Backups_Restoring" xml:space="preserve">
+    <value>Restoring backup...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Backups_RestoringFile" xml:space="preserve">
+    <value>Restoring {0}</value>
+    <comment>{0} is a file path inside the archive.</comment>
+  </data>
+  <data name="Backups_Swapping" xml:space="preserve">
+    <value>Swapping in restored project</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Backups_RestoreFailed_Title" xml:space="preserve">
+    <value>Restore Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Backups_OriginalLeftAt" xml:space="preserve">
+    <value>The original project was left at:</value>
+    <comment>A path follows, so do not put a period at the end.</comment>
+  </data>
+  <data name="Backups_Restored" xml:space="preserve">
+    <value>The backup was restored successfully.</value>
+  </data>
+  <data name="Backups_RestoredLeftover" xml:space="preserve">
+    <value>The backup was restored successfully, but the copy of the old project could not be removed.</value>
+    <comment>A path and Backups_DeleteYourself follow.</comment>
+  </data>
+  <data name="Backups_DeleteYourself" xml:space="preserve">
+    <value>Delete it yourself once nothing is holding it open.</value>
+  </data>
+  <data name="Backups_Deleting" xml:space="preserve">
+    <value>Deleting backup...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="Backups_DeleteFailed_Title" xml:space="preserve">
+    <value>Delete Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="Backups_Deleted" xml:space="preserve">
+    <value>The backup was deleted successfully.</value>
+  </data>
+  <data name="Backups_EntryEscapes" xml:space="preserve">
+    <value>Entry escapes destination: {0}</value>
+    <comment>{0} is the entry name from the archive.</comment>
+  </data>
+  <data name="Script_Wait" xml:space="preserve">
+    <value>Wait</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_Log" xml:space="preserve">
+    <value>Log</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_CommandDone" xml:space="preserve">
+    <value>finished</value>
+    <comment>Shown after a command in a script finishes without an error.</comment>
+  </data>
+  <data name="Script_ExitCode" xml:space="preserve">
+    <value>exited with code {0}</value>
+  </data>
+  <data name="Script_Execute" xml:space="preserve">
+    <value>Execute</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_Open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_CreateFile" xml:space="preserve">
+    <value>Create File</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_CreateFolder" xml:space="preserve">
+    <value>Create Folder</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_DeleteFile" xml:space="preserve">
+    <value>Delete File</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_DeleteFolder" xml:space="preserve">
+    <value>Delete Folder</value>
+    <comment>Name of a script block.</comment>
+  </data>
+  <data name="Script_EnterDuration" xml:space="preserve">
+    <value>Enter duration in seconds:</value>
+  </data>
+  <data name="Script_DurationRange" xml:space="preserve">
+    <value>Duration must be between 0 and {0} seconds</value>
+    <comment>{0} is the limit. Validation message, no period at the end.</comment>
+  </data>
+  <data name="Script_DurationRangeError" xml:space="preserve">
+    <value>The duration must be between 0 and {0} seconds.</value>
+    <comment>{0} is the limit.</comment>
+  </data>
+  <data name="Script_EnterLogMessage" xml:space="preserve">
+    <value>Enter log message:</value>
+  </data>
+  <data name="Script_EnterCommand" xml:space="preserve">
+    <value>Enter command to execute:</value>
+  </data>
+  <data name="Script_NoCommand" xml:space="preserve">
+    <value>No command was configured for this block.</value>
+  </data>
+  <data name="Script_CommandFailed" xml:space="preserve">
+    <value>The command could not be started: {0}</value>
+    <comment>{0} is the system error message.</comment>
+  </data>
+  <data name="Script_EnterPathOpen" xml:space="preserve">
+    <value>Enter path to open:</value>
+  </data>
+  <data name="Script_NoPath" xml:space="preserve">
+    <value>No path was configured for this block.</value>
+  </data>
+  <data name="Script_OpenFailed" xml:space="preserve">
+    <value>{0} could not be opened: {1}</value>
+    <comment>{0} is a path already quoted by the code, {1} is the error message.</comment>
+  </data>
+  <data name="Script_EnterPathNewFile" xml:space="preserve">
+    <value>Enter path for new file:</value>
+  </data>
+  <data name="Script_EnterPathNewFolder" xml:space="preserve">
+    <value>Enter path for new folder:</value>
+  </data>
+  <data name="Script_CreateFailed" xml:space="preserve">
+    <value>{0} could not be created: {1}</value>
+    <comment>{0} is a path already quoted by the code, {1} is the error message.</comment>
+  </data>
+  <data name="Script_EnterPathDeleteFile" xml:space="preserve">
+    <value>Enter path for file to delete:</value>
+  </data>
+  <data name="Script_EnterPathDeleteFolder" xml:space="preserve">
+    <value>Enter path for folder to delete:</value>
+  </data>
+  <data name="Script_DeleteFailed" xml:space="preserve">
+    <value>{0} could not be deleted: {1}</value>
+    <comment>{0} is a path already quoted by the code, {1} is the error message.</comment>
+  </data>
+  <data name="Script_NothingConfigured" xml:space="preserve">
+    <value>No {0} was configured for this block.</value>
+    <comment>{0} is Script_FilePath, Script_FolderPath or Script_Folder.</comment>
+  </data>
+  <data name="Script_InvalidPath" xml:space="preserve">
+    <value>{0} is not a valid {1}.</value>
+    <comment>{0} is a path already quoted by the code, {1} is Script_FilePath, Script_FolderPath or Script_Folder.</comment>
+  </data>
+  <data name="Script_FilePath" xml:space="preserve">
+    <value>file path</value>
+    <comment>Used inside Script_NothingConfigured and Script_InvalidPath, lowercase on purpose.</comment>
+  </data>
+  <data name="Script_FolderPath" xml:space="preserve">
+    <value>folder path</value>
+    <comment>Used inside Script_NothingConfigured and Script_InvalidPath, lowercase on purpose.</comment>
+  </data>
+  <data name="Script_Folder" xml:space="preserve">
+    <value>folder</value>
+    <comment>Used inside Script_NothingConfigured and Script_InvalidPath, lowercase on purpose.</comment>
+  </data>
+  <data name="Script_TooCloseToRoot" xml:space="preserve">
+    <value>Refusing to delete {0}, it is too close to the drive root.</value>
+    <comment>{0} is a path already quoted by the code.</comment>
+  </data>
+  <data name="Script_BlockFailed" xml:space="preserve">
+    <value>Block {0} ({1}) failed:</value>
+    <comment>{0} is the block number, {1} is the block name. The error message follows.</comment>
+  </data>
+  <data name="Script_Stopped" xml:space="preserve">
+    <value>The script was stopped.</value>
+  </data>
+  <data name="GH_NeedAuth" xml:space="preserve">
+    <value>You need to connect to GitHub in Settings before you can use this.</value>
+  </data>
+  <data name="GH_ManageIssues" xml:space="preserve">
+    <value>Manage Issues</value>
+    <comment>Menu item. Issue is the GitHub term.</comment>
+  </data>
+  <data name="GH_ManagePulls" xml:space="preserve">
+    <value>Manage Pull Requests</value>
+    <comment>Menu item.</comment>
+  </data>
+  <data name="GH_Synchronization" xml:space="preserve">
+    <value>GitHub Synchronization</value>
+  </data>
+  <data name="GH_ViewStats" xml:space="preserve">
+    <value>View GitHub Repository Stats</value>
+  </data>
+  <data name="GH_OpenWiki" xml:space="preserve">
+    <value>Open Wiki</value>
+  </data>
+  <data name="GH_Issues" xml:space="preserve">
+    <value>Issues</value>
+    <comment>Screen header. Issue is the GitHub term.</comment>
+  </data>
+  <data name="GH_PullRequests" xml:space="preserve">
+    <value>Pull Requests</value>
+    <comment>Screen header.</comment>
+  </data>
+  <data name="GH_RetrievingIssues" xml:space="preserve">
+    <value>Retrieving issues from GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GH_IssuesLoadFailed" xml:space="preserve">
+    <value>GitHub could not be reached, so the issues could not be loaded.</value>
+    <comment>GH_CheckAndRetry is printed under it.</comment>
+  </data>
+  <data name="GH_CheckAndRetry" xml:space="preserve">
+    <value>Check your connection and try again.</value>
+  </data>
+  <data name="GH_NoIssues" xml:space="preserve">
+    <value>This repository has no issues.</value>
+  </data>
+  <data name="GH_NoPulls" xml:space="preserve">
+    <value>This repository has no pull requests.</value>
+  </data>
+  <data name="GH_PullsLoadFailed" xml:space="preserve">
+    <value>GitHub could not be reached, so the pull requests could not be loaded.</value>
+    <comment>GH_CheckAndRetry is printed under it.</comment>
+  </data>
+  <data name="GH_CommentsLoadFailed" xml:space="preserve">
+    <value>GitHub could not be reached, so the comments could not be loaded.</value>
+    <comment>GH_CheckAndRetry is printed under it.</comment>
+  </data>
+  <data name="GH_ReviewsLoadFailed" xml:space="preserve">
+    <value>GitHub could not be reached, so the reviews could not be loaded.</value>
+    <comment>GH_CheckAndRetry is printed under it.</comment>
+  </data>
+  <data name="GH_RetrievingComments" xml:space="preserve">
+    <value>Retrieving comments from GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GH_RetrievingPulls" xml:space="preserve">
+    <value>Retrieving pull requests from GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GH_RetrievingPull" xml:space="preserve">
+    <value>Retrieving the pull request from GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GH_Filter_All" xml:space="preserve">
+    <value>All</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Commented" xml:space="preserve">
+    <value>Commented</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Assigned" xml:space="preserve">
+    <value>Assigned</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Labels" xml:space="preserve">
+    <value>Labels</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Open" xml:space="preserve">
+    <value>Open</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Drafts" xml:space="preserve">
+    <value>Drafts</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_Reviewed" xml:space="preserve">
+    <value>Reviewed</value>
+    <comment>Filter name.</comment>
+  </data>
+  <data name="GH_Filter_NoComments" xml:space="preserve">
+    <value>No comments</value>
+    <comment>Inverted filter name.</comment>
+  </data>
+  <data name="GH_Filter_Unassigned" xml:space="preserve">
+    <value>Unassigned</value>
+    <comment>Inverted filter name.</comment>
+  </data>
+  <data name="GH_Filter_Unlabeled" xml:space="preserve">
+    <value>Unlabeled</value>
+    <comment>Inverted filter name.</comment>
+  </data>
+  <data name="GH_Filter_Closed" xml:space="preserve">
+    <value>Closed</value>
+    <comment>Inverted filter name.</comment>
+  </data>
+  <data name="GH_Filter_Ready" xml:space="preserve">
+    <value>Ready</value>
+    <comment>Inverted filter name for drafts.</comment>
+  </data>
+  <data name="GH_Filter_NoReviewers" xml:space="preserve">
+    <value>No reviewers</value>
+    <comment>Inverted filter name.</comment>
+  </data>
+  <data name="GH_Col_State" xml:space="preserve">
+    <value>State</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Locked" xml:space="preserve">
+    <value>Locked</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Title" xml:space="preserve">
+    <value>Title</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Labels" xml:space="preserve">
+    <value>Labels</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Comments" xml:space="preserve">
+    <value>Comments</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Updated" xml:space="preserve">
+    <value>Updated</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_Col_Branch" xml:space="preserve">
+    <value>Branch</value>
+    <comment>Table column header.</comment>
+  </data>
+  <data name="GH_State_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="GH_State_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="GH_State_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="GH_State_NotPlanned" xml:space="preserve">
+    <value>Not planned</value>
+  </data>
+  <data name="GH_State_Merged" xml:space="preserve">
+    <value>Merged</value>
+  </data>
+  <data name="GH_State_Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="GH_NothingMatches" xml:space="preserve">
+    <value>Nothing matches this filter.</value>
+  </data>
+  <data name="GH_IssueTitle" xml:space="preserve">
+    <value>Issue #{0}</value>
+    <comment>{0} is the issue number.</comment>
+  </data>
+  <data name="GH_PullTitle" xml:space="preserve">
+    <value>Pull request #{0}</value>
+    <comment>{0} is the pull request number.</comment>
+  </data>
+  <data name="GH_Footer_Issues" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page  &lt;tab&gt; change filter   &lt;shift+tab&gt; invert filter  &lt;n&gt; new  &lt;enter&gt; open  &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="GH_Footer_Pulls" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page   &lt;tab&gt; change filter   &lt;shift+tab&gt; invert filter   &lt;enter&gt; open   &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="GH_Page" xml:space="preserve">
+    <value>page {0}/{1}   ·   issue {2}/{3}</value>
+    <comment>{0} current page, {1} total pages, {2} current issue, {3} total issues.</comment>
+  </data>
+  <data name="GH_PagePull" xml:space="preserve">
+    <value>page {0}/{1}   ·   pull request {2}/{3}</value>
+    <comment>{0} current page, {1} total pages, {2} current item, {3} total items.</comment>
+  </data>
+  <data name="GH_PageComment" xml:space="preserve">
+    <value>page {0}/{1}   ·   comment {2}/{3}</value>
+    <comment>{0} current page, {1} total pages, {2} current comment, {3} total comments.</comment>
+  </data>
+  <data name="GH_NewIssue_Title" xml:space="preserve">
+    <value>New Issue</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_NewIssue_AskTitle" xml:space="preserve">
+    <value>Title of the new issue:</value>
+  </data>
+  <data name="GH_TitleEmpty" xml:space="preserve">
+    <value>The title cannot be empty.</value>
+  </data>
+  <data name="GH_NewIssue_AskBody" xml:space="preserve">
+    <value>Description {0}:</value>
+    <comment>Keep the grey markup tags around the hint.</comment>
+  </data>
+  <data name="GH_CreatingIssue" xml:space="preserve">
+    <value>Creating the issue on GitHub...</value>
+    <comment>Spinner text.</comment>
+  </data>
+  <data name="GH_IssueNotCreated" xml:space="preserve">
+    <value>The issue was not created:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_IssueCreated" xml:space="preserve">
+    <value>Issue {0} was created.</value>
+    <comment>{0} is the issue number, already styled by the code.</comment>
+  </data>
+  <data name="GH_OpeningPost" xml:space="preserve">
+    <value>opening post</value>
+    <comment>Marker on the first panel of a thread.</comment>
+  </data>
+  <data name="GH_Review" xml:space="preserve">
+    <value>review</value>
+    <comment>Marker on a review panel.</comment>
+  </data>
+  <data name="GH_Row_Author" xml:space="preserve">
+    <value>Author</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Opened" xml:space="preserve">
+    <value>Opened</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Assignees" xml:space="preserve">
+    <value>Assignees</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Branches" xml:space="preserve">
+    <value>Branches</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Changes" xml:space="preserve">
+    <value>Changes</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Mergeable" xml:space="preserve">
+    <value>Mergeable</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_Row_Reviews" xml:space="preserve">
+    <value>Reviews</value>
+    <comment>Grid row label.</comment>
+  </data>
+  <data name="GH_ChangesDetail" xml:space="preserve">
+    <value>in {0} files   ·   {1} commits</value>
+    <comment>{0} is a file count, {1} is a commit count.</comment>
+  </data>
+  <data name="GH_Merge_Computing" xml:space="preserve">
+    <value>GitHub is still computing it</value>
+  </data>
+  <data name="GH_Merge_Clean" xml:space="preserve">
+    <value>clean</value>
+    <comment>Lowercase on purpose.</comment>
+  </data>
+  <data name="GH_Merge_Merged" xml:space="preserve">
+    <value>merged</value>
+    <comment>Lowercase on purpose.</comment>
+  </data>
+  <data name="GH_Reason_Dirty" xml:space="preserve">
+    <value>conflicts with {0}</value>
+    <comment>{0} is the base branch name.</comment>
+  </data>
+  <data name="GH_Reason_BaseBranch" xml:space="preserve">
+    <value>the base branch</value>
+    <comment>Used inside GH_Reason_Dirty when the branch name is unknown.</comment>
+  </data>
+  <data name="GH_Reason_Blocked" xml:space="preserve">
+    <value>a required review is missing</value>
+  </data>
+  <data name="GH_Reason_Behind" xml:space="preserve">
+    <value>the branch needs updating first</value>
+  </data>
+  <data name="GH_Reason_Unstable" xml:space="preserve">
+    <value>checks are failing, merge is still allowed</value>
+  </data>
+  <data name="GH_Reason_Draft" xml:space="preserve">
+    <value>still a draft</value>
+  </data>
+  <data name="GH_Footer_Issue" xml:space="preserve">
+    <value>↑↓ select  ←→ page  &lt;c&gt; comment  &lt;e&gt; edit  </value>
+    <comment>Keep the key names in angle brackets and the trailing spaces.</comment>
+  </data>
+  <data name="GH_Key_Refresh" xml:space="preserve">
+    <value>&lt;f5&gt; refresh  </value>
+  </data>
+  <data name="GH_Key_Delete" xml:space="preserve">
+    <value>&lt;d&gt; delete</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Close" xml:space="preserve">
+    <value>&lt;x&gt; close</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Reopen" xml:space="preserve">
+    <value>&lt;x&gt; reopen</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Lock" xml:space="preserve">
+    <value>&lt;k&gt; lock</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Unlock" xml:space="preserve">
+    <value>&lt;k&gt; unlock</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Browser" xml:space="preserve">
+    <value>&lt;o&gt; browser  &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Edit" xml:space="preserve">
+    <value>&lt;e&gt; edit</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Merge" xml:space="preserve">
+    <value>&lt;m&gt; merge</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Key_Review" xml:space="preserve">
+    <value>&lt;r&gt; review</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Footer_Pull" xml:space="preserve">
+    <value>↑↓ select  ←→ page  &lt;c&gt; comment  </value>
+    <comment>Keep the key names in angle brackets and the trailing spaces.</comment>
+  </data>
+  <data name="GH_AnyKey" xml:space="preserve">
+    <value>&lt;any key&gt; continue</value>
+  </data>
+  <data name="GH_ChooseHint" xml:space="preserve">
+    <value>←→ choose   &lt;enter&gt; confirm   &lt;esc&gt; cancel</value>
+    <comment>Keep the key names in angle brackets.</comment>
+  </data>
+  <data name="GH_Wf_Menu" xml:space="preserve">
+    <value>GitHub Actions</value>
+  </data>
+  <data name="GH_Wf_Title_Short" xml:space="preserve">
+    <value>Workflow runs</value>
+  </data>
+  <data name="GH_Wf_Title" xml:space="preserve">
+    <value>Workflow runs · {0}</value>
+  </data>
+  <data name="GH_Wf_RunTitle" xml:space="preserve">
+    <value>Run #{0} · {1}</value>
+  </data>
+  <data name="GH_Wf_LogTitle" xml:space="preserve">
+    <value>Full log · run #{0}</value>
+  </data>
+  <data name="GH_Wf_Page" xml:space="preserve">
+    <value>page {0}/{1}   ·   run {2}/{3}</value>
+  </data>
+  <data name="GH_Wf_Retrieving" xml:space="preserve">
+    <value>Retrieving workflow runs...</value>
+  </data>
+  <data name="GH_Wf_RetrievingJobs" xml:space="preserve">
+    <value>Retrieving jobs...</value>
+  </data>
+  <data name="GH_Wf_DownloadingLog" xml:space="preserve">
+    <value>Downloading the log archive...</value>
+  </data>
+  <data name="GH_Wf_Working" xml:space="preserve">
+    <value>Talking to GitHub...</value>
+  </data>
+  <data name="GH_Wf_LoadFailed" xml:space="preserve">
+    <value>Could not load the workflow runs.</value>
+  </data>
+  <data name="GH_Wf_JobsLoadFailed" xml:space="preserve">
+    <value>Could not load the jobs of this run.</value>
+  </data>
+  <data name="GH_Wf_LogFailed" xml:space="preserve">
+    <value>Could not download the log. GitHub keeps run logs for a limited time only.</value>
+  </data>
+  <data name="GH_Wf_NoRuns" xml:space="preserve">
+    <value>This repository has no workflow runs yet.</value>
+  </data>
+  <data name="GH_Wf_NoRunsFiltered" xml:space="preserve">
+    <value>No runs for this workflow.</value>
+  </data>
+  <data name="GH_Wf_AllWorkflows" xml:space="preserve">
+    <value>All workflows</value>
+  </data>
+  <data name="GH_Wf_Col_Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="GH_Wf_Col_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="GH_Wf_Col_Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="GH_Wf_Col_Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="GH_Wf_Col_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Col_When" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="GH_Wf_Row_Conclusion" xml:space="preserve">
+    <value>Conclusion</value>
+  </data>
+  <data name="GH_Wf_Row_Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="GH_Wf_Row_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Row_Actor" xml:space="preserve">
+    <value>Actor</value>
+  </data>
+  <data name="GH_Wf_Row_Started" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="GH_Wf_Row_Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="GH_Wf_State_Queued" xml:space="preserve">
+    <value>queued</value>
+  </data>
+  <data name="GH_Wf_State_Running" xml:space="preserve">
+    <value>running</value>
+  </data>
+  <data name="GH_Wf_State_Success" xml:space="preserve">
+    <value>success</value>
+  </data>
+  <data name="GH_Wf_State_Failure" xml:space="preserve">
+    <value>failure</value>
+  </data>
+  <data name="GH_Wf_State_Cancelled" xml:space="preserve">
+    <value>cancelled</value>
+  </data>
+  <data name="GH_Wf_State_Skipped" xml:space="preserve">
+    <value>skipped</value>
+  </data>
+  <data name="GH_Wf_State_TimedOut" xml:space="preserve">
+    <value>timed out</value>
+  </data>
+  <data name="GH_Wf_State_ActionRequired" xml:space="preserve">
+    <value>action required</value>
+  </data>
+  <data name="GH_Wf_State_Neutral" xml:space="preserve">
+    <value>neutral</value>
+  </data>
+  <data name="GH_Wf_Seconds" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="GH_Wf_Minutes" xml:space="preserve">
+    <value>{0} m {1} s</value>
+  </data>
+  <data name="GH_Wf_Hours" xml:space="preserve">
+    <value>{0} h {1} m</value>
+  </data>
+  <data name="GH_Wf_Jobs_Count" xml:space="preserve">
+    <value>{0} jobs</value>
+  </data>
+  <data name="GH_Wf_LogLines" xml:space="preserve">
+    <value>lines {0} to {1} of {2}</value>
+  </data>
+  <data name="GH_Wf_Confirm_Rerun" xml:space="preserve">
+    <value>Re-run this whole workflow?</value>
+  </data>
+  <data name="GH_Wf_Confirm_RerunFailed" xml:space="preserve">
+    <value>Re-run only the failed jobs?</value>
+  </data>
+  <data name="GH_Wf_Confirm_Cancel" xml:space="preserve">
+    <value>Cancel this run?</value>
+  </data>
+  <data name="GH_Wf_Rerunning" xml:space="preserve">
+    <value>The run was queued again.</value>
+  </data>
+  <data name="GH_Wf_Cancelled" xml:space="preserve">
+    <value>The run was cancelled.</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Pick" xml:space="preserve">
+    <value>Which workflow do you want to run?</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Branch" xml:space="preserve">
+    <value>On which branch?</value>
+  </data>
+  <data name="GH_Wf_Dispatched" xml:space="preserve">
+    <value>{0} was started on {1}.</value>
+  </data>
+  <data name="GH_Wf_Footer_List" xml:space="preserve">
+    <value>↑↓ select  ←→ page  &lt;tab&gt; workflow  </value>
+  </data>
+  <data name="GH_Wf_Footer_Run" xml:space="preserve">
+    <value>↑↓ scroll  </value>
+  </data>
+  <data name="GH_Wf_Footer_Log" xml:space="preserve">
+    <value>↑↓ scroll  &lt;pgup/pgdn&gt; page  &lt;home/end&gt; jump  &lt;esc&gt; back</value>
+  </data>
+  <data name="GH_Wf_Key_Dispatch" xml:space="preserve">
+    <value>&lt;d&gt; dispatch  </value>
+  </data>
+  <data name="GH_Wf_Key_Refresh" xml:space="preserve">
+    <value>&lt;r&gt; refresh  </value>
+  </data>
+  <data name="GH_Wf_Key_Browser" xml:space="preserve">
+    <value>&lt;b&gt; browser</value>
+  </data>
+  <data name="GH_Wf_Key_Rerun" xml:space="preserve">
+    <value>&lt;e&gt; re-run</value>
+  </data>
+  <data name="GH_Wf_Key_RerunFailed" xml:space="preserve">
+    <value>&lt;f&gt; failed only</value>
+  </data>
+  <data name="GH_Wf_Key_Cancel" xml:space="preserve">
+    <value>&lt;c&gt; cancel</value>
+  </data>
+  <data name="GH_Wf_Key_FullLog" xml:space="preserve">
+    <value>&lt;l&gt; full log  </value>
+  </data>
+  <data name="GH_Yes" xml:space="preserve">
+    <value>yes</value>
+    <comment>Lowercase on purpose, part of an inline choice.</comment>
+  </data>
+  <data name="GH_No" xml:space="preserve">
+    <value>no</value>
+    <comment>Lowercase on purpose, part of an inline choice.</comment>
+  </data>
+  <data name="GH_NewComment" xml:space="preserve">
+    <value>New comment</value>
+    <comment>Editor title.</comment>
+  </data>
+  <data name="GH_EditComment" xml:space="preserve">
+    <value>Edit the comment</value>
+    <comment>Editor title.</comment>
+  </data>
+  <data name="GH_EditIssue" xml:space="preserve">
+    <value>Edit the issue</value>
+    <comment>Editor title.</comment>
+  </data>
+  <data name="GH_EditPull" xml:space="preserve">
+    <value>Edit the pull request</value>
+    <comment>Editor title.</comment>
+  </data>
+  <data name="GH_ReviewBody" xml:space="preserve">
+    <value>Review body</value>
+    <comment>Editor title.</comment>
+  </data>
+  <data name="GH_SendingComment" xml:space="preserve">
+    <value>Sending the comment to GitHub...</value>
+  </data>
+  <data name="GH_SendingReview" xml:space="preserve">
+    <value>Sending the review to GitHub...</value>
+  </data>
+  <data name="GH_Saving" xml:space="preserve">
+    <value>Saving to GitHub...</value>
+  </data>
+  <data name="GH_Deleting" xml:space="preserve">
+    <value>Deleting the comment...</value>
+  </data>
+  <data name="GH_Talking" xml:space="preserve">
+    <value>Talking to GitHub...</value>
+  </data>
+  <data name="GH_Merging" xml:space="preserve">
+    <value>Merging on GitHub...</value>
+  </data>
+  <data name="GH_Recomputing" xml:space="preserve">
+    <value>GitHub is computing the merge, asking again...</value>
+  </data>
+  <data name="GH_MergeNotReady" xml:space="preserve">
+    <value>GitHub has not finished computing the merge. Try again in a moment.</value>
+  </data>
+  <data name="GH_CommentNotPosted" xml:space="preserve">
+    <value>The comment was not posted:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_CommentNotSaved" xml:space="preserve">
+    <value>The comment was not saved:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_CommentNotDeleted" xml:space="preserve">
+    <value>The comment was not deleted:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_IssueNotSaved" xml:space="preserve">
+    <value>The issue was not saved:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_IssueNotChanged" xml:space="preserve">
+    <value>The issue was not changed:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_PullNotSaved" xml:space="preserve">
+    <value>The pull request was not saved:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_PullNotChanged" xml:space="preserve">
+    <value>The pull request was not changed:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_PullNotMerged" xml:space="preserve">
+    <value>The pull request was not merged:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_ReviewNotSent" xml:space="preserve">
+    <value>The review was not sent:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_CannotMerge" xml:space="preserve">
+    <value>This pull request cannot be merged:</value>
+    <comment>The reason follows.</comment>
+  </data>
+  <data name="GH_ChangesRequested" xml:space="preserve">
+    <value>a review requested changes</value>
+  </data>
+  <data name="GH_BrowserFailed" xml:space="preserve">
+    <value>The browser could not be opened:</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_DeleteCommentConfirm" xml:space="preserve">
+    <value>Delete this comment? It cannot be undone.</value>
+  </data>
+  <data name="GH_ClosePullConfirm" xml:space="preserve">
+    <value>Close this pull request?</value>
+  </data>
+  <data name="GH_ReopenPullConfirm" xml:space="preserve">
+    <value>Reopen this pull request?</value>
+  </data>
+  <data name="GH_MergeConfirm" xml:space="preserve">
+    <value>Merge #{0} into {1}</value>
+    <comment>{0} is the pull request number, {1} is the base branch.</comment>
+  </data>
+  <data name="GH_WhyClosed" xml:space="preserve">
+    <value>Why is it being closed?</value>
+  </data>
+  <data name="GH_WhyLocked" xml:space="preserve">
+    <value>Why is it being locked?</value>
+  </data>
+  <data name="GH_HowMerged" xml:space="preserve">
+    <value>How should it be merged?</value>
+  </data>
+  <data name="GH_WhatReview" xml:space="preserve">
+    <value>What kind of review?</value>
+  </data>
+  <data name="GH_WriteHint" xml:space="preserve">
+    <value>Write your text - Markdown is supported.</value>
+  </data>
+  <data name="GH_Editor_Footer" xml:space="preserve">
+    <value>&lt;ctrl+l&gt; list   &lt;ctrl+q&gt; quote   &lt;f2&gt; send   &lt;esc&gt; cancel</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="GH_Editor_Bold" xml:space="preserve">
+    <value>&lt;ctrl+b&gt; bold</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Editor_Italic" xml:space="preserve">
+    <value>&lt;ctrl+e&gt; italic</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Editor_Code" xml:space="preserve">
+    <value>&lt;ctrl+k&gt; code</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Characters" xml:space="preserve">
+    <value>{0} characters</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_ContinuedFrom" xml:space="preserve">
+    <value>⋯ continued from the previous page</value>
+  </data>
+  <data name="GH_ContinuesOn" xml:space="preserve">
+    <value>⋯ continues on the next page</value>
+  </data>
+  <data name="GH_JustNow" xml:space="preserve">
+    <value>just now</value>
+  </data>
+  <data name="GH_SecondsAgo" xml:space="preserve">
+    <value>{0} seconds ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_MinutesAgo" xml:space="preserve">
+    <value>{0} minutes ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_HoursAgo" xml:space="preserve">
+    <value>{0} hours ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_DaysAgo" xml:space="preserve">
+    <value>{0} days ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_MonthsAgo" xml:space="preserve">
+    <value>{0} months ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_YearsAgo" xml:space="preserve">
+    <value>{0} years ago</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_Sync_Select" xml:space="preserve">
+    <value>Select the settings you want to enable:</value>
+  </data>
+  <data name="GH_Sync_Status" xml:space="preserve">
+    <value>Sync status with GitHub repository</value>
+  </data>
+  <data name="GH_Sync_Badges" xml:space="preserve">
+    <value>Sync badges with GitHub repository</value>
+  </data>
+  <data name="GH_Sync_Topics" xml:space="preserve">
+    <value>Fetch GitHub repository topics</value>
+  </data>
+  <data name="GH_Sync_Actions" xml:space="preserve">
+    <value>Fetch GitHub Actions</value>
+  </data>
+  <data name="GH_Sync_Stats" xml:space="preserve">
+    <value>Fetch GitHub repository stats</value>
+  </data>
+  <data name="GH_Sync_Languages" xml:space="preserve">
+    <value>Use GitHub's language detection instead of Helyx's</value>
+  </data>
+  <data name="GH_BadgesSync" xml:space="preserve">
+    <value>Badges Sync</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_BadgesSyncFailed" xml:space="preserve">
+    <value>Badges Sync Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_StatusSync" xml:space="preserve">
+    <value>Status Sync</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_StatusSyncFailed" xml:space="preserve">
+    <value>Status Sync Failed</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_PendingBadges" xml:space="preserve">
+    <value>These badges are assigned in Helyx but are not in README.md yet:</value>
+    <comment>A badge list follows, so do not put a period at the end.</comment>
+  </data>
+  <data name="GH_AddThemNow" xml:space="preserve">
+    <value>Do you want to add them to README.md now?</value>
+  </data>
+  <data name="GH_StagedChanges_Status" xml:space="preserve">
+    <value>There are staged changes, so the status was changed in Helyx only.</value>
+    <comment>GH_CommitOrUnstage_Status is printed under it.</comment>
+  </data>
+  <data name="GH_CommitOrUnstage_Status" xml:space="preserve">
+    <value>Commit or unstage them, then set the status again.</value>
+  </data>
+  <data name="GH_StagedChanges_Badges" xml:space="preserve">
+    <value>There are staged changes, so the badges were changed in Helyx only.</value>
+    <comment>GH_CommitOrUnstage_Badges is printed under it.</comment>
+  </data>
+  <data name="GH_CommitOrUnstage_Badges" xml:space="preserve">
+    <value>Commit or unstage them, then assign the badges again.</value>
+  </data>
+  <data name="GH_OperationInProgress_Status" xml:space="preserve">
+    <value>A {0} is still in progress, so the status was changed in Helyx only.</value>
+    <comment>{0} is a Git operation name from LibGit2Sharp and stays in English.</comment>
+  </data>
+  <data name="GH_OperationInProgress_Badges" xml:space="preserve">
+    <value>A {0} is still in progress, so the badges were changed in Helyx only.</value>
+    <comment>{0} is a Git operation name from LibGit2Sharp and stays in English.</comment>
+  </data>
+  <data name="GH_NoUpstream_Status" xml:space="preserve">
+    <value>{0} does not track a remote branch, so the status was changed in Helyx only.</value>
+    <comment>{0} is the branch name, already quoted by the code.</comment>
+  </data>
+  <data name="GH_NoUpstream_Badges" xml:space="preserve">
+    <value>{0} does not track a remote branch, so the badges were changed in Helyx only.</value>
+    <comment>{0} is the branch name, already quoted by the code.</comment>
+  </data>
+  <data name="GH_PushOnceFirst" xml:space="preserve">
+    <value>Push it once from Git Actions to create the remote branch first.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Status" xml:space="preserve">
+    <value>README.md was not found, so the status was changed in Helyx only.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Badges" xml:space="preserve">
+    <value>README.md was not found, so the badges were changed in Helyx only.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Status" xml:space="preserve">
+    <value>README.md is not valid UTF-8, so the status was changed in Helyx only.</value>
+    <comment>GH_SaveAsUtf8_Status is printed under it.</comment>
+  </data>
+  <data name="GH_SaveAsUtf8_Status" xml:space="preserve">
+    <value>Save it as UTF-8, then set the status again.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Badges" xml:space="preserve">
+    <value>README.md is not valid UTF-8, so the badges were changed in Helyx only.</value>
+    <comment>GH_SaveAsUtf8_Badges is printed under it.</comment>
+  </data>
+  <data name="GH_SaveAsUtf8_Badges" xml:space="preserve">
+    <value>Save it as UTF-8, then assign the badges again.</value>
+  </data>
+  <data name="GH_MarkersNotFound_Status" xml:space="preserve">
+    <value>The Helyx markers were not found in README.md, so the status was changed in Helyx only.</value>
+    <comment>GH_ExpectedMarkers is printed under it.</comment>
+  </data>
+  <data name="GH_ExpectedMarkers" xml:space="preserve">
+    <value>Expected markers:</value>
+    <comment>The marker text follows.</comment>
+  </data>
+  <data name="GH_BadgeMarkersNotFound" xml:space="preserve">
+    <value>The Helyx markers for badge {0} were not found. Assigning only in Helyx!</value>
+    <comment>{0} is the badge name, already quoted and coloured by the code.</comment>
+  </data>
+  <data name="GH_ConfirmSync" xml:space="preserve">
+    <value>This will commit and push a README change to {0} repositories.</value>
+    <comment>{0} is a count, already styled by the code.</comment>
+  </data>
+  <data name="GH_ConfirmSyncOne" xml:space="preserve">
+    <value>This will commit and push a README change to {0} repository.</value>
+    <comment>Singular form, used when the count is one.</comment>
+  </data>
+  <data name="GH_Markers_Title" xml:space="preserve">
+    <value>Place the Helyx markers · {0}</value>
+    <comment>{0} is the calling screen name.</comment>
+  </data>
+  <data name="GH_Markers_Missing" xml:space="preserve">
+    <value>README.md has no Helyx markers for {0} of these, so there is nowhere to write them.</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_Markers_How" xml:space="preserve">
+    <value>How do you want to add them?</value>
+  </data>
+  <data name="GH_Markers_Place" xml:space="preserve">
+    <value>Place them in README.md now</value>
+  </data>
+  <data name="GH_Markers_Manually" xml:space="preserve">
+    <value>Show me the markers, I will add them myself</value>
+  </data>
+  <data name="GH_Markers_Skip" xml:space="preserve">
+    <value>Skip, change it in Helyx only</value>
+  </data>
+  <data name="GH_Markers_AddThese" xml:space="preserve">
+    <value>Add these to README.md wherever you want them:</value>
+    <comment>The markers follow, so do not put a period at the end.</comment>
+  </data>
+  <data name="GH_Markers_NotUtf8" xml:space="preserve">
+    <value>README.md is not valid UTF-8, so placing the markers would destroy characters in it.</value>
+    <comment>GH_SaveAsUtf8Retry is printed under it.</comment>
+  </data>
+  <data name="GH_SaveAsUtf8Retry" xml:space="preserve">
+    <value>Save it as UTF-8, then try again.</value>
+  </data>
+  <data name="GH_Markers_ReadFailed" xml:space="preserve">
+    <value>README.md could not be read.</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_Markers_WriteFailed" xml:space="preserve">
+    <value>README.md could not be written.</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_Markers_Footer" xml:space="preserve">
+    <value>↑↓ move   &lt;enter&gt; new line   </value>
+    <comment>Keep the key names in angle brackets and the trailing spaces.</comment>
+  </data>
+  <data name="GH_Markers_KeyPlace" xml:space="preserve">
+    <value>&lt;space&gt; place</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Markers_KeyRemove" xml:space="preserve">
+    <value>&lt;del&gt; clear tag</value>
+    <comment>The key names stay in English, they are keyboard keys.</comment>
+  </data>
+  <data name="GH_Markers_KeyDeleteLine" xml:space="preserve">
+    <value>&lt;bksp&gt; delete line</value>
+  </data>
+  <data name="GH_Markers_KeyNextTag" xml:space="preserve">
+    <value>&lt;tab&gt; next tag   </value>
+    <comment>Keep the key name in angle brackets and the trailing spaces.</comment>
+  </data>
+  <data name="GH_Markers_KeySave" xml:space="preserve">
+    <value>&lt;f2&gt; save</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Markers_KeyCancel" xml:space="preserve">
+    <value>&lt;esc&gt; cancel</value>
+    <comment>Keep the key name in angle brackets.</comment>
+  </data>
+  <data name="GH_Markers_Placing" xml:space="preserve">
+    <value>placing {0}</value>
+    <comment>{0} is the tag label, already coloured by the code.</comment>
+  </data>
+  <data name="GH_Markers_Left" xml:space="preserve">
+    <value>({0} left)</value>
+    <comment>{0} is a count.</comment>
+  </data>
+  <data name="GH_Markers_AllPlaced" xml:space="preserve">
+    <value>all placed</value>
+  </data>
+  <data name="GH_Stats_Title" xml:space="preserve">
+    <value>GitHub Repository Stats</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_Stats_Failed" xml:space="preserve">
+    <value>The stats for this repository could not be retrieved from GitHub.</value>
+  </data>
+  <data name="GH_Stats_Incomplete_Title" xml:space="preserve">
+    <value>Incomplete Data</value>
+    <comment>Panel title.</comment>
+  </data>
+  <data name="GH_Stats_Incomplete" xml:space="preserve">
+    <value>GitHub did not return everything, so parts of this screen are incomplete:</value>
+    <comment>A list of missing parts follows, so do not put a period at the end.</comment>
+  </data>
+  <data name="GH_Stats_Retry" xml:space="preserve">
+    <value>Open this screen again to retry.</value>
+  </data>
+  <data name="GH_Stats_Stars" xml:space="preserve">
+    <value>Stars</value>
+    <comment>Bar chart label.</comment>
+  </data>
+  <data name="GH_Stats_Watchers" xml:space="preserve">
+    <value>Watchers</value>
+    <comment>Bar chart label.</comment>
+  </data>
+  <data name="GH_Stats_Forks" xml:space="preserve">
+    <value>Forks</value>
+    <comment>Bar chart label.</comment>
+  </data>
+  <data name="GH_Stats_Activity" xml:space="preserve">
+    <value>Repository Commit Activity - over the last year</value>
+  </data>
+  <data name="GH_Wiki_Failed" xml:space="preserve">
+    <value>The wiki address could not be built.</value>
+    <comment>GH_Wiki_CheckAuth is printed under it.</comment>
+  </data>
+  <data name="GH_Wiki_CheckAuth" xml:space="preserve">
+    <value>Check your GitHub authorization in Settings and the GitHub name of this project.</value>
+  </data>
+  <data name="GH_Wiki_OpenFailed" xml:space="preserve">
+    <value>The wiki could not be opened.</value>
+    <comment>The error message follows.</comment>
+  </data>
+  <data name="GH_ContinueAction" xml:space="preserve">
+    <value>Continue</value>
+    <comment>Button that accepts pushing the change to GitHub.</comment>
+  </data>
+  <data name="GH_UnknownAuthor" xml:space="preserve">
+    <value>Unknown Author</value>
+    <comment>Shown instead of a GitHub login the API did not return.</comment>
+  </data>
+  <data name="Git_FolderGone" xml:space="preserve">
+    <value>The project folder no longer exists:</value>
+    <comment>The path is appended on the next line.</comment>
+  </data>
+  <data name="Git_FolderGone_Title" xml:space="preserve">
+    <value>Folder Not Found</value>
+  </data>
+  <data name="Git_NotARepo" xml:space="preserve">
+    <value>'{0}' is not a Git repository.</value>
+    <comment>{0} is the project name in Helyx.</comment>
+  </data>
+  <data name="Git_NotARepo_Title" xml:space="preserve">
+    <value>Not a Git Repository</value>
+  </data>
+  <data name="Git_InitAsk" xml:space="preserve">
+    <value>Do you want to initialize one and continue?</value>
+  </data>
+  <data name="Git_InitFailed" xml:space="preserve">
+    <value>The repository could not be initialized.</value>
+  </data>
+  <data name="Git_InitFailed_Title" xml:space="preserve">
+    <value>Git Init Failed</value>
+  </data>
+  <data name="Git_Status" xml:space="preserve">
+    <value>Status</value>
+    <comment>Top level Git menu entry.</comment>
+  </data>
+  <data name="Git_Changes" xml:space="preserve">
+    <value>Changes</value>
+    <comment>Submenu holding Stage, Commit, Diff, Undo and Redo.</comment>
+  </data>
+  <data name="Git_Sync" xml:space="preserve">
+    <value>Sync</value>
+    <comment>Submenu holding Push, Pull, Fetch and the automatic sync.</comment>
+  </data>
+  <data name="Git_Branches" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="Git_Stashes" xml:space="preserve">
+    <value>Stashes</value>
+  </data>
+  <data name="Git_Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Git_Diagnostics" xml:space="preserve">
+    <value>Diagnostics</value>
+  </data>
+  <data name="Git_CurrentBranch" xml:space="preserve">
+    <value>Current Branch</value>
+  </data>
+  <data name="Git_Stage" xml:space="preserve">
+    <value>Stage</value>
+    <comment>Adds files to the Git index.</comment>
+  </data>
+  <data name="Git_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="Git_UndoCommit" xml:space="preserve">
+    <value>Undo Commit</value>
+  </data>
+  <data name="Git_RedoCommit" xml:space="preserve">
+    <value>Redo Commit</value>
+  </data>
+  <data name="Git_SyncAuto" xml:space="preserve">
+    <value>Sync (auto pull+push)</value>
+  </data>
+  <data name="Git_CreateBranch" xml:space="preserve">
+    <value>Create Branch</value>
+  </data>
+  <data name="Git_SwitchBranch" xml:space="preserve">
+    <value>Switch Branch</value>
+  </data>
+  <data name="Git_MergeBranch" xml:space="preserve">
+    <value>Merge Branch</value>
+  </data>
+  <data name="Git_DeleteBranch" xml:space="preserve">
+    <value>Delete Branch</value>
+  </data>
+  <data name="Git_SaveStash" xml:space="preserve">
+    <value>Save Stash</value>
+  </data>
+  <data name="Git_ApplyStash" xml:space="preserve">
+    <value>Apply Stash</value>
+  </data>
+  <data name="Git_PopStash" xml:space="preserve">
+    <value>Pop Stash</value>
+  </data>
+  <data name="Git_ListStashes" xml:space="preserve">
+    <value>List Stashes</value>
+  </data>
+  <data name="Git_StatusTitle" xml:space="preserve">
+    <value>Git Status — {0}</value>
+    <comment>{0} is the project name in Helyx.</comment>
+  </data>
+  <data name="Git_WorkingTreeClean" xml:space="preserve">
+    <value>Working tree clean</value>
+  </data>
+  <data name="Git_NothingToStage" xml:space="preserve">
+    <value>Nothing to stage — working tree is clean.</value>
+  </data>
+  <data name="Git_StageFiles" xml:space="preserve">
+    <value>Stage Files</value>
+  </data>
+  <data name="Git_SelectFilesToStage" xml:space="preserve">
+    <value>Select files to stage:</value>
+  </data>
+  <data name="Git_ToggleHint" xml:space="preserve">
+    <value>(&lt;space&gt; toggle, &lt;enter&gt; confirm)</value>
+    <comment>Key names stay in English, they are printed keys.</comment>
+  </data>
+  <data name="Git_AllFiles" xml:space="preserve">
+    <value>All files</value>
+  </data>
+  <data name="Git_NothingStaged" xml:space="preserve">
+    <value>Nothing is staged. Use {0} first.</value>
+    <comment>{0} is the name of the Stage action.</comment>
+  </data>
+  <data name="Git_FilesToCommit" xml:space="preserve">
+    <value>{0} file(s) to commit</value>
+  </data>
+  <data name="Git_ProceedCommit" xml:space="preserve">
+    <value>Proceed with this commit?</value>
+  </data>
+  <data name="Git_CommitMessage" xml:space="preserve">
+    <value>Commit message:</value>
+  </data>
+  <data name="Git_CommittedAs" xml:space="preserve">
+    <value>Committed as {0}: {1}</value>
+    <comment>{0} is the short hash, {1} the commit message.</comment>
+  </data>
+  <data name="Git_NothingToDiff" xml:space="preserve">
+    <value>Nothing to diff — working tree is clean.</value>
+  </data>
+  <data name="Git_CommitNotFound" xml:space="preserve">
+    <value>Commit not found.</value>
+  </data>
+  <data name="Git_NoChangesInCommit" xml:space="preserve">
+    <value>This commit contains no changes.</value>
+  </data>
+  <data name="Git_ChangedFiles" xml:space="preserve">
+    <value>Changed Files</value>
+  </data>
+  <data name="Git_NoDiffForFile" xml:space="preserve">
+    <value>No diff available for this file.</value>
+  </data>
+  <data name="Git_DiffFailed" xml:space="preserve">
+    <value>The diff could not be produced:</value>
+  </data>
+  <data name="Git_Col_File" xml:space="preserve">
+    <value>File</value>
+    <comment>Column header in the Status table.</comment>
+  </data>
+  <data name="Git_Col_State" xml:space="preserve">
+    <value>State</value>
+    <comment>Column header in the Status table.</comment>
+  </data>
+  <data name="Common_Warning" xml:space="preserve">
+    <value>Warning</value>
+    <comment>Panel title above a destructive action.</comment>
+  </data>
+  <data name="Git_UndoWarning" xml:space="preserve">
+    <value>Undoing a commit rewrites your Git history.
+Make sure you understand what will happen before you continue.</value>
+  </data>
+  <data name="Git_UndoHow" xml:space="preserve">
+    <value>How should the commit be undone?</value>
+  </data>
+  <data name="Git_Undo_Soft" xml:space="preserve">
+    <value>Keep changes staged (Soft reset)</value>
+  </data>
+  <data name="Git_Undo_Mixed" xml:space="preserve">
+    <value>Keep changes unstaged (Mixed reset)</value>
+  </data>
+  <data name="Git_Undo_Hard" xml:space="preserve">
+    <value>Delete changes completely (Hard reset)</value>
+  </data>
+  <data name="Git_Undo_SoftInfo" xml:space="preserve">
+    <value>The last commit will be removed, but its changes will stay staged.</value>
+  </data>
+  <data name="Git_Undo_MixedInfo" xml:space="preserve">
+    <value>The last commit will be removed, but its changes will stay in your working directory.</value>
+  </data>
+  <data name="Git_Undo_HardInfo" xml:space="preserve">
+    <value>The last commit and every change it introduced will be permanently removed.</value>
+  </data>
+  <data name="Git_Undo_GenericInfo" xml:space="preserve">
+    <value>The last commit will be undone.</value>
+  </data>
+  <data name="Git_UndoConfirm" xml:space="preserve">
+    <value>Are you sure you want to undo the last commit?</value>
+  </data>
+  <data name="Git_NoCommits" xml:space="preserve">
+    <value>The repository has no commits.</value>
+  </data>
+  <data name="Git_FirstCommitUndo" xml:space="preserve">
+    <value>The first commit cannot be undone because there is no commit to go back to.</value>
+  </data>
+  <data name="Git_UndoDone" xml:space="preserve">
+    <value>Last commit undone successfully.</value>
+  </data>
+  <data name="Git_RedoWarning" xml:space="preserve">
+    <value>Redoing a commit rewrites the current state of your repository.
+Only continue if you are sure this is the commit you want to restore.</value>
+  </data>
+  <data name="Git_RedoAsk" xml:space="preserve">
+    <value>Do you want to restore the undone commit?</value>
+  </data>
+  <data name="Git_Redo_NoUndo" xml:space="preserve">
+    <value>There is no undone commit to restore.
+Undo a commit first before trying to redo it.</value>
+  </data>
+  <data name="Git_Redo_BranchChanged" xml:space="preserve">
+    <value>The current branch has changed.
+The undo was performed on '{0}',
+but you are now on '{1}'.</value>
+    <comment>{0} is the branch the undo ran on, {1} the current one.</comment>
+  </data>
+  <data name="Git_Redo_NoSha" xml:space="preserve">
+    <value>There is no commit to redo.
+Undo a commit first before trying to redo it.</value>
+  </data>
+  <data name="Git_Redo_Dirty" xml:space="preserve">
+    <value>The repository has uncommitted changes.
+Commit, stash, or discard them before redoing a commit.</value>
+  </data>
+  <data name="Git_Redo_Gone" xml:space="preserve">
+    <value>The commit that should be restored no longer exists.
+Git garbage collection or other repository changes may have removed it.</value>
+  </data>
+  <data name="Git_RedoDone" xml:space="preserve">
+    <value>The commit was restored successfully!
+Restored commit: {0}</value>
+    <comment>{0} is the short hash.</comment>
+  </data>
+  <data name="Git_NoCommitsToPush" xml:space="preserve">
+    <value>There are no commits to push.</value>
+  </data>
+  <data name="Git_NoOriginAdd" xml:space="preserve">
+    <value>This repository has no 'origin' remote.
+Do you want Helyx to add it for you?</value>
+  </data>
+  <data name="Git_UsernameUnknown" xml:space="preserve">
+    <value>Your GitHub username could not be determined.</value>
+  </data>
+  <data name="Git_PushFailed_Title" xml:space="preserve">
+    <value>Push Failed</value>
+  </data>
+  <data name="Git_OriginAdded" xml:space="preserve">
+    <value>The remote {0} was added.</value>
+    <comment>{0} is the remote name, always origin.</comment>
+  </data>
+  <data name="Git_RenameToRemote" xml:space="preserve">
+    <value>Your branch is '{0}' but the remote only has '{1}'.
+Do you want to rename your branch to '{1}'?</value>
+    <comment>{0} is the local branch, {1} the only remote one.</comment>
+  </data>
+  <data name="Git_SetUpstreamAsk" xml:space="preserve">
+    <value>The branch '{0}' does not track a remote branch.
+Do you want Helyx to set it up?</value>
+  </data>
+  <data name="Git_NowTracks" xml:space="preserve">
+    <value>Branch {0} now tracks {1}.</value>
+  </data>
+  <data name="Git_Pushing" xml:space="preserve">
+    <value>Pushing...</value>
+  </data>
+  <data name="Git_RebaseAsk" xml:space="preserve">
+    <value>Do you want to rebase onto the remote branch and try again?</value>
+  </data>
+  <data name="Git_NoUpstreamRebase" xml:space="preserve">
+    <value>This branch does not track a remote branch, so it cannot be rebased.</value>
+  </data>
+  <data name="Git_RebaseFailed_Title" xml:space="preserve">
+    <value>Rebase Failed</value>
+  </data>
+  <data name="Git_Rebasing" xml:space="preserve">
+    <value>Rebasing...</value>
+  </data>
+  <data name="Git_Row_Step" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="Git_StepOf" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="Git_UnknownLower" xml:space="preserve">
+    <value>unknown</value>
+    <comment>Shown in place of a commit that could not be read.</comment>
+  </data>
+  <data name="Git_Row_Conflicts" xml:space="preserve">
+    <value>Conflicts</value>
+  </data>
+  <data name="Git_NoneReadyContinue" xml:space="preserve">
+    <value>None - ready to continue</value>
+  </data>
+  <data name="Git_RebaseInProgress" xml:space="preserve">
+    <value>Rebase In Progress</value>
+  </data>
+  <data name="Git_WhatDo" xml:space="preserve">
+    <value>What do you want to do?</value>
+  </data>
+  <data name="Git_ContinueRebase" xml:space="preserve">
+    <value>Continue the rebase</value>
+  </data>
+  <data name="Git_MarkResolvedContinue" xml:space="preserve">
+    <value>Mark the conflicts as resolved and continue</value>
+  </data>
+  <data name="Git_ResolveHere" xml:space="preserve">
+    <value>Resolve a conflict here</value>
+    <comment>Opens the built in conflict editor.</comment>
+  </data>
+  <data name="Git_OpenFolder" xml:space="preserve">
+    <value>Open the project folder</value>
+  </data>
+  <data name="Git_RecheckFiles" xml:space="preserve">
+    <value>Check the files again</value>
+  </data>
+  <data name="Git_AbortRebase" xml:space="preserve">
+    <value>Abort the rebase</value>
+  </data>
+  <data name="Git_LeaveInProgress" xml:space="preserve">
+    <value>Leave it in progress</value>
+  </data>
+  <data name="Git_SelectFileResolve" xml:space="preserve">
+    <value>Select the file you want to resolve:</value>
+  </data>
+  <data name="Git_StillMarked" xml:space="preserve">
+    <value>These files still contain conflict markers, or could not be read:</value>
+  </data>
+  <data name="Git_ResolveBeforeRebase" xml:space="preserve">
+    <value>Resolve them before the rebase can continue.</value>
+  </data>
+  <data name="Git_ConflictsNotResolved" xml:space="preserve">
+    <value>Conflicts Not Resolved</value>
+  </data>
+  <data name="Git_ContinuingRebase" xml:space="preserve">
+    <value>Continuing the rebase...</value>
+  </data>
+  <data name="Git_RebaseAborted" xml:space="preserve">
+    <value>The rebase was aborted, the branch is back where it started.</value>
+  </data>
+  <data name="Git_RebaseAborted_Title" xml:space="preserve">
+    <value>Rebase Aborted</value>
+  </data>
+  <data name="Git_RebaseLeft" xml:space="preserve">
+    <value>The rebase was left in progress.
+Finish or abort it before you push again.</value>
+  </data>
+  <data name="Git_PushedOk" xml:space="preserve">
+    <value>Branch {0} was pushed successfully!</value>
+  </data>
+  <data name="Git_Pull_UpToDate" xml:space="preserve">
+    <value>Branch '{0}' is already up to date.</value>
+  </data>
+  <data name="Git_Pull_FastForward" xml:space="preserve">
+    <value>Branch {0} pulled successfully (fast-forward).</value>
+  </data>
+  <data name="Git_Pull_Merged" xml:space="preserve">
+    <value>Branch {0} pulled and merged successfully.</value>
+  </data>
+  <data name="Git_Pull_Conflicts" xml:space="preserve">
+    <value>Pull completed with conflicts on {0}. Resolve them before continuing.</value>
+  </data>
+  <data name="Git_Pull_Unexpected" xml:space="preserve">
+    <value>Pull finished with an unexpected status: {0}</value>
+    <comment>{0} is the LibGit2Sharp merge status, it stays in English.</comment>
+  </data>
+  <data name="Git_PullFailed_Title" xml:space="preserve">
+    <value>Pull Failed</value>
+  </data>
+  <data name="Git_ForcePullAsk" xml:space="preserve">
+    <value>Do you want to force the pull? {0}</value>
+    <comment>{0} is the warning about discarded local changes.</comment>
+  </data>
+  <data name="Git_DiscardWarn" xml:space="preserve">
+    <value>THIS WILL DISCARD YOUR LOCAL CHANGES!</value>
+  </data>
+  <data name="Git_NoOriginConfigured" xml:space="preserve">
+    <value>This repository has no 'origin' remote configured.</value>
+  </data>
+  <data name="Git_NoRemoteToReset" xml:space="preserve">
+    <value>The branch '{0}' has no remote branch to reset to.</value>
+  </data>
+  <data name="Git_ResetTo" xml:space="preserve">
+    <value>Branch {0} was reset to {1}.</value>
+  </data>
+  <data name="Git_FetchFailed_Title" xml:space="preserve">
+    <value>Fetch Failed</value>
+  </data>
+  <data name="Git_Fetched" xml:space="preserve">
+    <value>Fetched latest changes from '{0}'.</value>
+    <comment>{0} is the remote name.</comment>
+  </data>
+  <data name="Git_SyncDirty" xml:space="preserve">
+    <value>This repository has uncommitted changes, so the final result may differ from what you expect.</value>
+  </data>
+  <data name="Git_PressAnyKey" xml:space="preserve">
+    <value>Press any key to continue...</value>
+  </data>
+  <data name="Git_NoCommitsToSync" xml:space="preserve">
+    <value>There are no commits to synchronize.</value>
+  </data>
+  <data name="Git_NoUpstreamSync" xml:space="preserve">
+    <value>The branch '{0}' does not track a remote branch yet.
+Push it once to create the remote branch first.</value>
+  </data>
+  <data name="Git_DivergenceUnknown" xml:space="preserve">
+    <value>The difference between the local and the remote branch could not be determined.</value>
+  </data>
+  <data name="Git_SyncFailed_Title" xml:space="preserve">
+    <value>Sync Failed</value>
+  </data>
+  <data name="Git_AlreadySynced" xml:space="preserve">
+    <value>Already synchronized.</value>
+  </data>
+  <data name="Git_LocalAhead" xml:space="preserve">
+    <value>The local branch is {0} commit(s) ahead. Pushing...</value>
+  </data>
+  <data name="Git_RemoteAhead" xml:space="preserve">
+    <value>The remote branch is {0} commit(s) ahead. Pulling...</value>
+  </data>
+  <data name="Git_Diverged" xml:space="preserve">
+    <value>The branches have diverged.</value>
+  </data>
+  <data name="Git_SelectVersion" xml:space="preserve">
+    <value>Select the version you want to keep:</value>
+  </data>
+  <data name="Git_Local" xml:space="preserve">
+    <value>Local</value>
+    <comment>The local commit in the diverged branch picker.</comment>
+  </data>
+  <data name="Git_Remote" xml:space="preserve">
+    <value>Remote</value>
+    <comment>The remote commit in the diverged branch picker.</comment>
+  </data>
+  <data name="Git_EnterBranchName" xml:space="preserve">
+    <value>Enter new branch name:</value>
+  </data>
+  <data name="Git_InvalidBranchName" xml:space="preserve">
+    <value>'{0}' is not a valid branch name.</value>
+  </data>
+  <data name="Git_BranchExists" xml:space="preserve">
+    <value>A branch named '{0}' already exists.</value>
+  </data>
+  <data name="Git_NoBranchBeforeCommit" xml:space="preserve">
+    <value>A branch cannot be created before the first commit.</value>
+  </data>
+  <data name="Git_BranchCreated" xml:space="preserve">
+    <value>Branch {0} was created successfully!</value>
+  </data>
+  <data name="Git_CreateBranchFailed_Title" xml:space="preserve">
+    <value>Create Branch Failed</value>
+  </data>
+  <data name="Git_NoBranchesToSwitch" xml:space="preserve">
+    <value>No other local branches available to switch to.</value>
+  </data>
+  <data name="Git_SelectBranchSwitch" xml:space="preserve">
+    <value>Select a branch to switch to:</value>
+  </data>
+  <data name="Git_DirtySwitch" xml:space="preserve">
+    <value>This repository has uncommitted changes.
+Stage and commit them before switching branches.</value>
+  </data>
+  <data name="Git_Switched" xml:space="preserve">
+    <value>Switched to branch {0}.</value>
+  </data>
+  <data name="Git_SwitchBranchFailed_Title" xml:space="preserve">
+    <value>Switch Branch Failed</value>
+  </data>
+  <data name="Git_NoBranchesToMerge" xml:space="preserve">
+    <value>No other local branches available to merge.</value>
+  </data>
+  <data name="Git_NothingBeforeCommit" xml:space="preserve">
+    <value>Nothing can be merged before the first commit.</value>
+  </data>
+  <data name="Git_SelectBranchMerge" xml:space="preserve">
+    <value>Select the branch you want to merge into {0}:</value>
+  </data>
+  <data name="Git_DirtyMerge" xml:space="preserve">
+    <value>This repository has uncommitted changes.
+Stage and commit them before merging.</value>
+  </data>
+  <data name="Git_AlreadyMerged" xml:space="preserve">
+    <value>Branch '{0}' is already merged into '{1}'.</value>
+  </data>
+  <data name="Git_MergeConfirm" xml:space="preserve">
+    <value>Merge {0} ({1}) into {2}?</value>
+    <comment>{1} is the commit count with its word, already formatted.</comment>
+  </data>
+  <data name="Git_CommitCountOne" xml:space="preserve">
+    <value>{0} commit</value>
+  </data>
+  <data name="Git_CommitCountMany" xml:space="preserve">
+    <value>{0} commits</value>
+  </data>
+  <data name="Git_Merging" xml:space="preserve">
+    <value>Merging...</value>
+  </data>
+  <data name="Git_MergeFailed_Title" xml:space="preserve">
+    <value>Merge Failed</value>
+  </data>
+  <data name="Git_Merge_FastForward" xml:space="preserve">
+    <value>Branch '{0}' was merged into '{1}' (fast-forward).</value>
+  </data>
+  <data name="Git_Merge_Done" xml:space="preserve">
+    <value>Branch '{0}' was merged into '{1}'.</value>
+  </data>
+  <data name="Git_Merge_Unexpected" xml:space="preserve">
+    <value>The merge finished with an unexpected status: {0}</value>
+    <comment>{0} is the LibGit2Sharp merge status, it stays in English.</comment>
+  </data>
+  <data name="Git_Row_Merging" xml:space="preserve">
+    <value>Merging</value>
+    <comment>Row label above the two branch names.</comment>
+  </data>
+  <data name="Git_NoneReadyCommit" xml:space="preserve">
+    <value>None - ready to commit</value>
+  </data>
+  <data name="Git_MergeInProgress" xml:space="preserve">
+    <value>Merge In Progress</value>
+  </data>
+  <data name="Git_CommitMerge" xml:space="preserve">
+    <value>Commit the merge</value>
+  </data>
+  <data name="Git_MarkResolvedCommit" xml:space="preserve">
+    <value>Mark the conflicts as resolved and commit</value>
+  </data>
+  <data name="Git_AbortMerge" xml:space="preserve">
+    <value>Abort the merge</value>
+  </data>
+  <data name="Git_ResolveBeforeMerge" xml:space="preserve">
+    <value>Resolve them before the merge can be committed.</value>
+  </data>
+  <data name="Git_MergedInto" xml:space="preserve">
+    <value>Branch {0} was merged into {1}.</value>
+  </data>
+  <data name="Git_MergeAborted" xml:space="preserve">
+    <value>The merge was aborted, the branch is back where it started.</value>
+  </data>
+  <data name="Git_MergeAborted_Title" xml:space="preserve">
+    <value>Merge Aborted</value>
+  </data>
+  <data name="Git_MergeLeft" xml:space="preserve">
+    <value>The merge was left in progress.
+Finish or abort it before you commit again.</value>
+  </data>
+  <data name="Git_NoBranchesToDelete" xml:space="preserve">
+    <value>No other local branches available to delete.</value>
+  </data>
+  <data name="Git_SelectBranchDelete" xml:space="preserve">
+    <value>Select the branch you want to remove:</value>
+  </data>
+  <data name="Git_UnmergedWarn" xml:space="preserve">
+    <value>Branch {0} contains commits that are not merged into any other branch.
+Deleting it may make those commits unreachable and eventually lost.</value>
+  </data>
+  <data name="Git_UnmergedWarn_Title" xml:space="preserve">
+    <value>Unmerged Commits Detected</value>
+  </data>
+  <data name="Git_DeleteBranchConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete the branch {0}?</value>
+  </data>
+  <data name="Git_DeleteBranchStill" xml:space="preserve">
+    <value>Do you still want to delete this branch?</value>
+  </data>
+  <data name="Git_DeleteBranchFailed_Title" xml:space="preserve">
+    <value>Delete Branch Failed</value>
+  </data>
+  <data name="Git_BranchDeleted" xml:space="preserve">
+    <value>Branch {0} was deleted successfully!</value>
+  </data>
+  <data name="Git_NothingToStash" xml:space="preserve">
+    <value>There are no uncommitted changes to stash.</value>
+  </data>
+  <data name="Git_StashMessage" xml:space="preserve">
+    <value>Stash message:</value>
+  </data>
+  <data name="Git_StashedNothing" xml:space="preserve">
+    <value>There was nothing to stash.</value>
+  </data>
+  <data name="Git_StashSaved" xml:space="preserve">
+    <value>Stash {0} was saved successfully!</value>
+  </data>
+  <data name="Git_SaveStashFailed_Title" xml:space="preserve">
+    <value>Save Stash Failed</value>
+  </data>
+  <data name="Git_NoStashes" xml:space="preserve">
+    <value>No stashes available.</value>
+  </data>
+  <data name="Git_NoStashesFound" xml:space="preserve">
+    <value>No stashes found.</value>
+  </data>
+  <data name="Git_Col_Stash" xml:space="preserve">
+    <value>Stash</value>
+    <comment>Column header in the stash list.</comment>
+  </data>
+  <data name="Git_Col_Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Git_Nav_Apply" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page   &lt;enter&gt; apply   &lt;esc&gt; back</value>
+    <comment>Key names stay in English, they are printed keys.</comment>
+  </data>
+  <data name="Git_Nav_Pop" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page   &lt;enter&gt; pop   &lt;esc&gt; back</value>
+  </data>
+  <data name="Git_Nav_View" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page   &lt;enter&gt; view   &lt;esc&gt; back</value>
+  </data>
+  <data name="Common_Page" xml:space="preserve">
+    <value>page {0}/{1}   ·   {2}/{3}</value>
+    <comment>{0} current page, {1} total pages, {2} current row, {3} total rows.</comment>
+  </data>
+  <data name="Common_NavSelect" xml:space="preserve">
+    <value>↑↓ navigate   ←→ page   &lt;enter&gt; select   &lt;esc&gt; back</value>
+  </data>
+  <data name="Git_StashApplied" xml:space="preserve">
+    <value>Stash {0} was applied successfully.</value>
+  </data>
+  <data name="Git_StashConflicts" xml:space="preserve">
+    <value>The stash was applied, but it caused conflicts.
+
+The stash was kept — resolve the conflicts manually.</value>
+  </data>
+  <data name="Git_Conflicts_Title" xml:space="preserve">
+    <value>Conflicts</value>
+  </data>
+  <data name="Git_StashApplyFailed" xml:space="preserve">
+    <value>The stash could not be applied: {0}.</value>
+    <comment>{0} is the LibGit2Sharp status, it stays in English.</comment>
+  </data>
+  <data name="Git_ApplyStashFailed_Title" xml:space="preserve">
+    <value>Apply Stash Failed</value>
+  </data>
+  <data name="Git_StashPopped" xml:space="preserve">
+    <value>Stash {0} was popped successfully.</value>
+  </data>
+  <data name="Git_StashPopFailed" xml:space="preserve">
+    <value>The stash could not be popped: {0}.</value>
+  </data>
+  <data name="Git_PopStashFailed_Title" xml:space="preserve">
+    <value>Pop Stash Failed</value>
+  </data>
+  <data name="Git_Row_Index" xml:space="preserve">
+    <value>Index</value>
+    <comment>Row label showing the stash number.</comment>
+  </data>
+  <data name="Git_Row_BasedOn" xml:space="preserve">
+    <value>Based on</value>
+  </data>
+  <data name="Git_StashInfo" xml:space="preserve">
+    <value>Stash Info</value>
+  </data>
+  <data name="Git_NoFileChanges" xml:space="preserve">
+    <value>No file changes.</value>
+  </data>
+  <data name="Git_Files" xml:space="preserve">
+    <value>Files ({0})</value>
+  </data>
+  <data name="Git_NoChangesInStash" xml:space="preserve">
+    <value>No changes in this stash.</value>
+  </data>
+  <data name="Git_ReadingLog" xml:space="preserve">
+    <value>Reading the log...</value>
+  </data>
+  <data name="Git_NoCommitsFound" xml:space="preserve">
+    <value>No commits found.</value>
+  </data>
+  <data name="Git_Col_Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="Git_Col_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Git_CommitDetails" xml:space="preserve">
+    <value>Commit Details</value>
+  </data>
+  <data name="Git_Stash_Footer" xml:space="preserve">
+    <value>↑↓ scroll   &lt;pgup/pgdn&gt; page   &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="Git_Diff_Footer" xml:space="preserve">
+    <value>↑↓ navigate   &lt;tab&gt; switch pane   &lt;pgup/pgdn&gt; page   &lt;esc&gt; back</value>
+    <comment>Keep the key names in angle brackets exactly.</comment>
+  </data>
+  <data name="Git_MoreFiles" xml:space="preserve">
+    <value>+{0} more files</value>
+    <comment>{0} is how many files are not listed.</comment>
+  </data>
+  <data name="Git_Row_Branches" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="Git_Row_Parents" xml:space="preserve">
+    <value>Parents</value>
+  </data>
+  <data name="Git_Row_Insertions" xml:space="preserve">
+    <value>Insertions</value>
+  </data>
+  <data name="Git_Row_Deletions" xml:space="preserve">
+    <value>Deletions</value>
+  </data>
+  <data name="Git_CommitInformation" xml:space="preserve">
+    <value>Commit Information</value>
+  </data>
+  <data name="Git_Col_Status" xml:space="preserve">
+    <value>Status</value>
+    <comment>Column header in the changed files table.</comment>
+  </data>
+  <data name="Git_CommitActions" xml:space="preserve">
+    <value>Commit Actions</value>
+  </data>
+  <data name="Git_ViewDiff" xml:space="preserve">
+    <value>View Diff</value>
+  </data>
+  <data name="Git_ViewFullMessage" xml:space="preserve">
+    <value>View Full Message</value>
+  </data>
+  <data name="Git_CommitMessageTitle" xml:space="preserve">
+    <value>Commit Message</value>
+  </data>
+  <data name="Git_PressAnyKeyReturn" xml:space="preserve">
+    <value>Press any key to return...</value>
+  </data>
+  <data name="Git_Col_Check" xml:space="preserve">
+    <value>Check</value>
+    <comment>Column header in the Diagnostics table.</comment>
+  </data>
+  <data name="Git_Col_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Git_Check_Index" xml:space="preserve">
+    <value>Index</value>
+    <comment>Name of the index.lock check.</comment>
+  </data>
+  <data name="Git_NotLocked" xml:space="preserve">
+    <value>Not locked</value>
+  </data>
+  <data name="Git_LockedGitRunning" xml:space="preserve">
+    <value>Locked while a git process is running. Wait until it finishes.</value>
+  </data>
+  <data name="Git_LockedNotEmpty" xml:space="preserve">
+    <value>Locked and not empty. Something may still be writing it.</value>
+  </data>
+  <data name="Git_LockedCrashed" xml:space="preserve">
+    <value>Locked by a crashed process. Staging and committing will fail.</value>
+  </data>
+  <data name="Git_Check_Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Git_NothingInProgress" xml:space="preserve">
+    <value>Nothing in progress</value>
+  </data>
+  <data name="Git_RebaseUnfinished" xml:space="preserve">
+    <value>A rebase was never finished - step {0} of {1}. </value>
+    <comment>Keep the trailing space, the conflict count is appended to it.</comment>
+  </data>
+  <data name="Git_RebaseUnfinishedByGit" xml:space="preserve">
+    <value>A rebase was never finished. </value>
+    <comment>Keep the trailing space, the conflict count is appended to it.</comment>
+  </data>
+  <data name="Git_RebaseFinishInTerminal" xml:space="preserve">
+    <value>Git started this rebase, so Helyx cannot continue or abort it. Finish it in a terminal with git rebase --continue or git rebase --abort.</value>
+    <comment>The two commands are Git syntax and stay in English in every language.</comment>
+  </data>
+  <data name="Git_StillConflictedOne" xml:space="preserve">
+    <value>{0} file is still conflicted.</value>
+  </data>
+  <data name="Git_StillConflictedMany" xml:space="preserve">
+    <value>{0} files are still conflicted.</value>
+  </data>
+  <data name="Git_NoConflictsLeft" xml:space="preserve">
+    <value>No conflicts left - it can be continued.</value>
+  </data>
+  <data name="Git_OperationUnfinished" xml:space="preserve">
+    <value>'{0}' was never finished.</value>
+    <comment>{0} is the Git operation name, it stays in English.</comment>
+  </data>
+  <data name="Git_OnBranch" xml:space="preserve">
+    <value>On branch {0}</value>
+  </data>
+  <data name="Git_Detached" xml:space="preserve">
+    <value>Detached. Commits made now will not belong to any branch.</value>
+  </data>
+  <data name="Git_Check_LastCommit" xml:space="preserve">
+    <value>Last commit</value>
+  </data>
+  <data name="Git_NoCommitsYet" xml:space="preserve">
+    <value>The repository has no commits yet</value>
+  </data>
+  <data name="Git_Check_GitHubName" xml:space="preserve">
+    <value>GitHub name</value>
+  </data>
+  <data name="Git_GitHubNameMissing" xml:space="preserve">
+    <value>Not set in Helyx, so every GitHub feature is unavailable.</value>
+  </data>
+  <data name="Git_RemoteSuggests" xml:space="preserve">
+    <value> The remote suggests '{0}'.</value>
+    <comment>Keep the leading space, this is appended to the message above.</comment>
+  </data>
+  <data name="Git_Check_Remote" xml:space="preserve">
+    <value>Remote</value>
+  </data>
+  <data name="Git_NoOriginNothing" xml:space="preserve">
+    <value>No 'origin' remote. Nothing can be pushed or pulled.</value>
+  </data>
+  <data name="Git_RemoteMismatch" xml:space="preserve">
+    <value>Points at '{0}' but Helyx has '{1}'.</value>
+  </data>
+  <data name="Git_RemoteMismatchHint" xml:space="preserve">
+    <value>Pushes go to the first one while every lookup asks about the second.</value>
+  </data>
+  <data name="Git_Check_SyncState" xml:space="preserve">
+    <value>Sync state</value>
+  </data>
+  <data name="Git_UpToDateRemote" xml:space="preserve">
+    <value>Up to date with the remote</value>
+  </data>
+  <data name="Git_AheadBehind" xml:space="preserve">
+    <value>{0} commit(s) ahead, {1} commit(s) behind.</value>
+  </data>
+  <data name="Git_NoRemoteNoCheck" xml:space="preserve">
+    <value>Cannot be checked without a remote</value>
+  </data>
+  <data name="Git_TracksNothing" xml:space="preserve">
+    <value>'{0}' tracks nothing, so it cannot be pushed.</value>
+  </data>
+  <data name="Git_Check_BranchName" xml:space="preserve">
+    <value>Branch name</value>
+  </data>
+  <data name="Git_LocalRemoteNameDiff" xml:space="preserve">
+    <value>Local is '{0}', but the remote only has '{1}'.</value>
+  </data>
+  <data name="Git_RetrievingStatus" xml:space="preserve">
+    <value>Retrieving status...</value>
+  </data>
+  <data name="Git_Check_WorkingTree" xml:space="preserve">
+    <value>Working tree</value>
+  </data>
+  <data name="Git_ChangedFileCount" xml:space="preserve">
+    <value>{0} changed file(s)</value>
+  </data>
+  <data name="Git_Clean" xml:space="preserve">
+    <value>Clean</value>
+  </data>
+  <data name="Git_MeasuringFiles" xml:space="preserve">
+    <value>Measuring tracked files...</value>
+  </data>
+  <data name="Git_Check_FileSizes" xml:space="preserve">
+    <value>File sizes</value>
+  </data>
+  <data name="Git_NothingOverLimit" xml:space="preserve">
+    <value>Nothing over GitHub's 100 MB limit</value>
+  </data>
+  <data name="Git_OversizedFiles" xml:space="preserve">
+    <value>{0} tracked file(s) are over GitHub's 100 MB limit, so every push is rejected:</value>
+  </data>
+  <data name="Git_AndMore" xml:space="preserve">
+    <value>... and {0} more</value>
+  </data>
+  <data name="Git_UntrackHint" xml:space="preserve">
+    <value>Untracking them only helps the next commit - one already committed has to be rewritten by hand.</value>
+  </data>
+  <data name="Git_Check_BuildOutput" xml:space="preserve">
+    <value>Build output</value>
+  </data>
+  <data name="Git_NotTracked" xml:space="preserve">
+    <value>Not tracked</value>
+  </data>
+  <data name="Git_BuildOutputTracked" xml:space="preserve">
+    <value>{0} tracked file(s) in bin/obj/.vs and similar, {1} MB. Every build rewrites them, so each commit carries them again.</value>
+  </data>
+  <data name="Git_Check_Identity" xml:space="preserve">
+    <value>Identity</value>
+  </data>
+  <data name="Git_NoProblems" xml:space="preserve">
+    <value>No problems were found.</value>
+  </data>
+  <data name="Git_SelectRepair" xml:space="preserve">
+    <value>Select what you want to repair:</value>
+  </data>
+  <data name="Git_Fix_RemoveLock" xml:space="preserve">
+    <value>Remove the leftover index lock</value>
+  </data>
+  <data name="Git_Fix_ContinueRebase" xml:space="preserve">
+    <value>Continue the unfinished rebase</value>
+  </data>
+  <data name="Git_Fix_UntrackBuild" xml:space="preserve">
+    <value>Stop tracking build output (keeps the files)</value>
+  </data>
+  <data name="Git_Fix_AbortOperation" xml:space="preserve">
+    <value>Abort the unfinished '{0}'</value>
+    <comment>{0} is the Git operation name, it stays in English.</comment>
+  </data>
+  <data name="Git_Fix_AttachHead" xml:space="preserve">
+    <value>Switch back to a branch</value>
+  </data>
+  <data name="Git_Fix_AddRemote" xml:space="preserve">
+    <value>Add the 'origin' remote</value>
+  </data>
+  <data name="Git_Fix_SetGitHubName" xml:space="preserve">
+    <value>Set the GitHub repository name</value>
+  </data>
+  <data name="Git_Fix_SetUpstream" xml:space="preserve">
+    <value>Set the upstream branch</value>
+  </data>
+  <data name="Git_Fix_RenameBranch" xml:space="preserve">
+    <value>Rename the branch to match the remote</value>
+  </data>
+  <data name="Git_LockRemoved" xml:space="preserve">
+    <value>The index lock was removed.</value>
+  </data>
+  <data name="Git_UntrackWarn" xml:space="preserve">
+    <value>{0} file(s) will stop being tracked by Git.
+They stay on your disk untouched - only the next commit changes.
+
+</value>
+    <comment>Keep the trailing blank line, the grey note is appended to it.</comment>
+  </data>
+  <data name="Git_UntrackWarnHistory" xml:space="preserve">
+    <value>Anything already committed stays in the history and keeps being pushed,
+so a file over GitHub's limit still has to be rewritten out by hand.</value>
+  </data>
+  <data name="Git_UntrackTitle" xml:space="preserve">
+    <value>Stop Tracking Build Output</value>
+  </data>
+  <data name="Git_UntrackDone" xml:space="preserve">
+    <value>{0} file(s) are no longer tracked and are staged for removal.
+Commit that, and add a {1} so they do not come back.</value>
+    <comment>{1} is the literal .gitignore file name.</comment>
+  </data>
+  <data name="Git_MarkedResolved" xml:space="preserve">
+    <value>{0} was marked as resolved.</value>
+  </data>
+  <data name="Git_RebaseStoppedAgain" xml:space="preserve">
+    <value>The rebase stopped again on a later step because of new conflicts.
+Resolve them, then run Diagnostics again.</value>
+  </data>
+  <data name="Git_RebaseNeedsHand" xml:space="preserve">
+    <value>The rebase stopped on a step that has to be finished by hand,
+such as an 'edit' or 'reword' in an interactive rebase.</value>
+  </data>
+  <data name="Git_ContinuingRebaseStep" xml:space="preserve">
+    <value>Continuing the rebase - step {0} of {1}...</value>
+  </data>
+  <data name="Git_RebaseFinished" xml:space="preserve">
+    <value>The rebase finished, you are back on {0}.</value>
+  </data>
+  <data name="Git_OperationAborted" xml:space="preserve">
+    <value>The unfinished operation was aborted.</value>
+  </data>
+  <data name="Git_NoLocalBranch" xml:space="preserve">
+    <value>There is no local branch to switch to.</value>
+  </data>
+  <data name="Git_RepairFailed_Title" xml:space="preserve">
+    <value>Repair Failed</value>
+  </data>
+  <data name="Git_SelectBranch" xml:space="preserve">
+    <value>Select a branch:</value>
+  </data>
+  <data name="Git_SwitchedTo" xml:space="preserve">
+    <value>Switched to {0}.</value>
+  </data>
+  <data name="Git_UseOriginName" xml:space="preserve">
+    <value>Use '{0}' from the 'origin' remote as the GitHub name?</value>
+  </data>
+  <data name="Git_GitHubNameSet" xml:space="preserve">
+    <value>The GitHub name was set to {0}.</value>
+  </data>
+  <data name="Git_OriginFirst" xml:space="preserve">
+    <value>The 'origin' remote has to be added first.</value>
+  </data>
+  <data name="Git_RenameTargetUnknown" xml:space="preserve">
+    <value>The branch to rename to could not be determined.</value>
+  </data>
+  <data name="Git_BranchRenamed" xml:space="preserve">
+    <value>The branch was renamed to {0}.</value>
+  </data>
+  <data name="Git_ConflictResolution" xml:space="preserve">
+    <value>Conflict Resolution</value>
+  </data>
+  <data name="Git_ConflictNotUtf8" xml:space="preserve">
+    <value>This file is not valid UTF-8, so resolving it here would destroy characters in it.</value>
+  </data>
+  <data name="Git_ResolveInEditor" xml:space="preserve">
+    <value>Resolve it in your editor instead.</value>
+  </data>
+  <data name="Git_NoMarkersFound" xml:space="preserve">
+    <value>No conflict markers were found in the file.</value>
+  </data>
+  <data name="Git_NoAltScreen" xml:space="preserve">
+    <value>This terminal does not support the alternate screen buffer.</value>
+  </data>
+  <data name="Git_Kind_Added" xml:space="preserve">
+    <value>Added</value>
+    <comment>Title case change label in the diff file list.</comment>
+  </data>
+  <data name="Git_Kind_Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="Git_Kind_Renamed" xml:space="preserve">
+    <value>Renamed</value>
+  </data>
+  <data name="Git_Kind_Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="Git_Staging" xml:space="preserve">
+    <value>Staging...</value>
+  </data>
+  <data name="Git_Unstaging" xml:space="preserve">
+    <value>Unstaging...</value>
+  </data>
+  <data name="Common_Error" xml:space="preserve">
+    <value>Error</value>
+    <comment>Default title of the red panel.</comment>
+  </data>
+  <data name="Common_Success" xml:space="preserve">
+    <value>Success</value>
+    <comment>Default title of the green panel.</comment>
+  </data>
+  <data name="Token_Empty" xml:space="preserve">
+    <value>The access token is empty.</value>
+  </data>
+  <data name="Scripts_Running" xml:space="preserve">
+    <value>Running...</value>
+    <comment>Spinner shown while a user script runs.</comment>
+  </data>
+  <data name="GH_NewIssue_BodyHint" xml:space="preserve">
+    <value>(leave empty to skip)</value>
+    <comment>Grey hint appended to the description prompt.</comment>
+  </data>
+  <data name="Git_State_Warn" xml:space="preserve">
+    <value>WARN</value>
+  </data>
+  <data name="Git_State_Problem" xml:space="preserve">
+    <value>PROBLEM</value>
+  </data>
+  <data name="Git_State_Skip" xml:space="preserve">
+    <value>SKIP</value>
+  </data>
+  <data name="Git_Status_StagedPlus" xml:space="preserve">
+    <value>STAGED + {0}</value>
+    <comment>Shown when a file is staged and then changed again in the working tree.</comment>
+  </data>
+  <data name="Tags_NameEmpty" xml:space="preserve">
+    <value>The name cannot be empty.</value>
+  </data>
+  <data name="GH_NoDescription" xml:space="preserve">
+    <value>No description provided.</value>
+    <comment>Shown in place of an empty issue or pull request body.</comment>
+  </data>
+</root>

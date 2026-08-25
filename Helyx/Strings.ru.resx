@@ -1,0 +1,3210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Common_CtrlClick" xml:space="preserve">
+    <value>(ctrl + клик)</value>
+  </data>
+  <data name="Common_Disable" xml:space="preserve">
+    <value>Отключить</value>
+  </data>
+  <data name="Common_Disabled" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="Common_Enable" xml:space="preserve">
+    <value>Включить</value>
+  </data>
+  <data name="Common_Enabled" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="Common_Found" xml:space="preserve">
+    <value>Найдено</value>
+  </data>
+  <data name="Common_InitGitHint" xml:space="preserve">
+    <value>Откройте Git Actions и создайте его, чтобы продолжить.</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Common_NotAGitRepo" xml:space="preserve">
+    <value>Этот проект не является репозиторием Git.</value>
+  </data>
+  <data name="Common_Path" xml:space="preserve">
+    <value>Путь</value>
+  </data>
+  <data name="Common_ProjectFolderMissing" xml:space="preserve">
+    <value>Папка проекта больше не существует:</value>
+  </data>
+  <data name="Common_ScopesMissing" xml:space="preserve">
+    <value>В вашей авторизации GitHub отсутствуют следующие разрешения:</value>
+  </data>
+  <data name="Common_ScopesOutdated_Title" xml:space="preserve">
+    <value>Авторизация GitHub устарела</value>
+  </data>
+  <data name="Common_SelectAction" xml:space="preserve">
+    <value>Выберите действие:</value>
+  </data>
+  <data name="Common_Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="ConfigFile_OpenDirectory" xml:space="preserve">
+    <value>Открыть папку файла конфигурации</value>
+  </data>
+  <data name="ConfigFile_Open_Failed" xml:space="preserve">
+    <value>Не удалось открыть папку конфигурации.
+
+{0}</value>
+  </data>
+  <data name="ConfigFile_Reset" xml:space="preserve">
+    <value>Сбросить файл конфигурации</value>
+  </data>
+  <data name="ConfigFile_Reset_Confirm" xml:space="preserve">
+    <value>Вы действительно хотите сбросить файл конфигурации?</value>
+  </data>
+  <data name="ConfigFile_Reset_Failed" xml:space="preserve">
+    <value>Не удалось сбросить файл конфигурации.
+
+{0}</value>
+  </data>
+  <data name="ConfigFile_Restart_Failed" xml:space="preserve">
+    <value>Helyx не смог перезапуститься, запустите его вручную.
+
+{0}</value>
+  </data>
+  <data name="Config_CreateFailed" xml:space="preserve">
+    <value>Не удалось создать файл конфигурации в '{0}'.</value>
+  </data>
+  <data name="Config_KeptAs" xml:space="preserve">
+    <value>Прежний сохранён как {0}.</value>
+  </data>
+  <data name="Config_ReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать файл конфигурации, он был сброшен.</value>
+  </data>
+  <data name="Config_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить файл конфигурации.</value>
+  </data>
+  <data name="Credits_Title" xml:space="preserve">
+    <value>Helyx создал:</value>
+  </data>
+  <data name="GitHubAuth_Authorize" xml:space="preserve">
+    <value>Авторизоваться в GitHub</value>
+  </data>
+  <data name="GitHubAuth_Outdated_Hint" xml:space="preserve">
+    <value>Повторная авторизация заменит ваш токен на новый с этими разрешениями.</value>
+  </data>
+  <data name="GitHubAuth_Reauthorize" xml:space="preserve">
+    <value>Повторно авторизоваться в GitHub</value>
+  </data>
+  <data name="GitHubAuth_Unauthorize" xml:space="preserve">
+    <value>Отозвать авторизацию GitHub</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Message" xml:space="preserve">
+    <value>Авторизация GitHub успешно отозвана!</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Title" xml:space="preserve">
+    <value>Авторизация GitHub отозвана</value>
+  </data>
+  <data name="GitHubAuth_Username" xml:space="preserve">
+    <value>Имя пользователя GitHub</value>
+  </data>
+  <data name="Git_RepoOpenFailed" xml:space="preserve">
+    <value>Не удалось открыть репозиторий.</value>
+  </data>
+  <data name="Git_Status_Clean" xml:space="preserve">
+    <value>ЧИСТО</value>
+  </data>
+  <data name="Git_Status_Conflict" xml:space="preserve">
+    <value>КОНФЛИКТ</value>
+  </data>
+  <data name="Git_Status_Deleted" xml:space="preserve">
+    <value>УДАЛЁН</value>
+  </data>
+  <data name="Git_Status_Ignored" xml:space="preserve">
+    <value>ИГНОРИРУЕТСЯ</value>
+  </data>
+  <data name="Git_Status_Missing" xml:space="preserve">
+    <value>ОТСУТСТВУЕТ</value>
+  </data>
+  <data name="Git_Status_Modified" xml:space="preserve">
+    <value>ИЗМЕНЁН</value>
+  </data>
+  <data name="Git_Status_New" xml:space="preserve">
+    <value>НОВЫЙ</value>
+  </data>
+  <data name="Git_Status_Renamed" xml:space="preserve">
+    <value>ПЕРЕИМЕНОВАН</value>
+  </data>
+  <data name="Git_Status_StagedAndModified" xml:space="preserve">
+    <value>В ИНДЕКСЕ + ИЗМЕНЁН</value>
+  </data>
+  <data name="Git_Status_StagedAndRenamed" xml:space="preserve">
+    <value>В ИНДЕКСЕ + ПЕРЕИМЕНОВАН</value>
+  </data>
+  <data name="Git_Status_StagedDelete" xml:space="preserve">
+    <value>УДАЛЁН В ИНДЕКСЕ</value>
+  </data>
+  <data name="Git_Status_StagedModified" xml:space="preserve">
+    <value>ИЗМЕНЁН В ИНДЕКСЕ</value>
+  </data>
+  <data name="Git_Status_StagedNew" xml:space="preserve">
+    <value>НОВЫЙ В ИНДЕКСЕ</value>
+  </data>
+  <data name="Git_Status_StagedRename" xml:space="preserve">
+    <value>ПЕРЕИМЕНОВАН В ИНДЕКСЕ</value>
+  </data>
+  <data name="Git_Status_StagedTypeChange" xml:space="preserve">
+    <value>СМЕНА ТИПА В ИНДЕКСЕ</value>
+  </data>
+  <data name="Git_Status_TypeChanged" xml:space="preserve">
+    <value>ТИП ИЗМЕНЁН</value>
+  </data>
+  <data name="Git_Status_Unknown" xml:space="preserve">
+    <value>НЕИЗВЕСТНО</value>
+  </data>
+  <data name="Git_Status_Unreadable" xml:space="preserve">
+    <value>НЕ ЧИТАЕТСЯ</value>
+  </data>
+  <data name="Identity_Current" xml:space="preserve">
+    <value>Текущая предпочитаемая учётная запись</value>
+  </data>
+  <data name="Identity_NeedsAuth" xml:space="preserve">
+    <value>Прежде чем менять эту настройку, необходимо авторизоваться в GitHub.</value>
+  </data>
+  <data name="Identity_Select" xml:space="preserve">
+    <value>Выберите предпочитаемую учётную запись:</value>
+  </data>
+  <data name="IDE_Actions_Select" xml:space="preserve">
+    <value>Выберите действие IDE:</value>
+  </data>
+  <data name="IDE_ChangePath" xml:space="preserve">
+    <value>Изменить путь к IDE</value>
+  </data>
+  <data name="IDE_Default" xml:space="preserve">
+    <value>IDE по умолчанию</value>
+  </data>
+  <data name="IDE_Default_Set" xml:space="preserve">
+    <value>IDE по умолчанию: {0}.</value>
+  </data>
+  <data name="IDE_NoExecutable" xml:space="preserve">
+    <value>Для {0} не настроен исполняемый файл.</value>
+  </data>
+  <data name="IDE_OpenIn" xml:space="preserve">
+    <value>Открыть в IDE</value>
+  </data>
+  <data name="IDE_OpenInDefault" xml:space="preserve">
+    <value>Открыть в IDE по умолчанию</value>
+  </data>
+  <data name="IDE_OpenTitle" xml:space="preserve">
+    <value>Открыть {0} в IDE</value>
+  </data>
+  <data name="IDE_Path_Changed" xml:space="preserve">
+    <value>Исполняемый файл IDE изменён на {0}.</value>
+  </data>
+  <data name="IDE_Path_Invalid" xml:space="preserve">
+    <value>Недопустимый исполняемый файл. Попробуйте ещё раз.</value>
+  </data>
+  <data name="IDE_Picker_Filter" xml:space="preserve">
+    <value>Исполняемый файл (*.exe)|*.exe|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="IDE_Picker_Title" xml:space="preserve">
+    <value>Выберите новый исполняемый файл IDE</value>
+  </data>
+  <data name="IDE_Recommended" xml:space="preserve">
+    <value>(рекомендуется)</value>
+  </data>
+  <data name="IDE_Select" xml:space="preserve">
+    <value>Выберите IDE:</value>
+  </data>
+  <data name="IDE_SetDefault" xml:space="preserve">
+    <value>Сделать IDE по умолчанию</value>
+  </data>
+  <data name="IDE_SetOneHint" xml:space="preserve">
+    <value>Задайте его в Настройки › Настройки IDE.</value>
+  </data>
+  <data name="IDE_StartFailed" xml:space="preserve">
+    <value>Не удалось запустить {0}.</value>
+  </data>
+  <data name="IDE_State_NotFound" xml:space="preserve">
+    <value>Не найдено</value>
+  </data>
+  <data name="IDE_State_SetByUser" xml:space="preserve">
+    <value>Задано пользователем</value>
+  </data>
+  <data name="Language_Current" xml:space="preserve">
+    <value>Текущий язык</value>
+  </data>
+  <data name="Language_Saved" xml:space="preserve">
+    <value>Язык сохранён.</value>
+  </data>
+  <data name="Language_Select" xml:space="preserve">
+    <value>Выберите новый язык:</value>
+  </data>
+  <data name="MainMenu_Config_Created" xml:space="preserve">
+    <value>Файл конфигурации успешно создан!</value>
+  </data>
+  <data name="MainMenu_Config_Creating" xml:space="preserve">
+    <value>Создаётся новый...</value>
+  </data>
+  <data name="MainMenu_Config_NotFound" xml:space="preserve">
+    <value>Файл конфигурации не найден!</value>
+  </data>
+  <data name="MainMenu_Credits" xml:space="preserve">
+    <value>Авторы</value>
+  </data>
+  <data name="MainMenu_Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="MainMenu_Projects" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
+  <data name="MainMenu_Scopes_Hint" xml:space="preserve">
+    <value>Некоторые функции не будут работать, пока вы не пройдёте повторную авторизацию в {0}.</value>
+  </data>
+  <data name="Migrator_Corrupted" xml:space="preserve">
+    <value>Файл конфигурации повреждён или не читается. Создаётся заново.</value>
+  </data>
+  <data name="Migrator_Created" xml:space="preserve">
+    <value>Файл конфигурации создан.</value>
+  </data>
+  <data name="Migrator_Invalid" xml:space="preserve">
+    <value>Файл конфигурации не содержит корректной конфигурации. Создаётся заново.</value>
+  </data>
+  <data name="Migrator_ProjectsToGuid" xml:space="preserve">
+    <value>'projects' переведён из списка в формат с ключами Guid.</value>
+  </data>
+  <data name="Migrator_PropertyReset" xml:space="preserve">
+    <value>Свойство '{0}' имело несовместимую форму и было сброшено.</value>
+  </data>
+  <data name="Migrator_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить перенесённый файл конфигурации: {0}</value>
+  </data>
+  <data name="Migrator_StatusToString" xml:space="preserve">
+    <value>'Status' проекта переведён из объекта в текст.</value>
+  </data>
+  <data name="Migrator_TagsToIds" xml:space="preserve">
+    <value>Статусы и значки проектов переведены с имён на id.</value>
+  </data>
+  <data name="Migrator_UnreadableAfter" xml:space="preserve">
+    <value>После миграции файл конфигурации не удалось прочитать. Создаётся заново.</value>
+  </data>
+  <data name="Migrator_Updated" xml:space="preserve">
+    <value>Файл конфигурации обновлён (миграция схемы).</value>
+  </data>
+  <data name="Notes_Converted_Decrypted" xml:space="preserve">
+    <value>Расшифровано проектов: {0}.</value>
+  </data>
+  <data name="Notes_Converted_Encrypted" xml:space="preserve">
+    <value>Зашифровано проектов: {0}.</value>
+  </data>
+  <data name="Notes_Encrypt" xml:space="preserve">
+    <value>Шифровать заметки</value>
+  </data>
+  <data name="Notes_Failed" xml:space="preserve">
+    <value>Windows отказался их зашифровать, поэтому они остались в открытом виде:</value>
+  </data>
+  <data name="Notes_Result_Disabled" xml:space="preserve">
+    <value>Шифрование заметок теперь отключено.</value>
+  </data>
+  <data name="Notes_Result_Enabled" xml:space="preserve">
+    <value>Шифрование заметок теперь включено.</value>
+  </data>
+  <data name="Notes_State_Title" xml:space="preserve">
+    <value>Состояние шифрования заметок</value>
+  </data>
+  <data name="Notes_Title" xml:space="preserve">
+    <value>Шифрование заметок</value>
+  </data>
+  <data name="Notes_Unreadable" xml:space="preserve">
+    <value>Эти заметки были зашифрованы другой учётной записью Windows или на другом компьютере, поэтому остались без изменений:</value>
+  </data>
+  <data name="Secrets_CreateFailed" xml:space="preserve">
+    <value>Не удалось создать файл с секретами.</value>
+  </data>
+  <data name="Secrets_ReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать файл с секретами.</value>
+  </data>
+  <data name="Secrets_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить файл с секретами.</value>
+  </data>
+  <data name="Settings_GitHubAuthorization" xml:space="preserve">
+    <value>Авторизация GitHub</value>
+  </data>
+  <data name="Settings_IDE" xml:space="preserve">
+    <value>Настройки IDE</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Settings_ManageBadges" xml:space="preserve">
+    <value>Управление значками</value>
+  </data>
+  <data name="Settings_ManageConfigurationFile" xml:space="preserve">
+    <value>Управление файлом конфигурации</value>
+  </data>
+  <data name="Settings_ManageCustomStatuses" xml:space="preserve">
+    <value>Управление своими статусами</value>
+  </data>
+  <data name="Settings_Notes" xml:space="preserve">
+    <value>Настройки заметок</value>
+  </data>
+  <data name="Settings_PreferredIdentity" xml:space="preserve">
+    <value>Предпочитаемая учётная запись</value>
+  </data>
+  <data name="Settings_Updates" xml:space="preserve">
+    <value>Обновления</value>
+  </data>
+  <data name="Token_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить токен GitHub.</value>
+  </data>
+  <data name="Update_Available" xml:space="preserve">
+    <value>Доступна новая версия Helyx! Перейдите по ссылке ниже, чтобы скачать её:</value>
+  </data>
+  <data name="Update_Available_Title" xml:space="preserve">
+    <value>Доступно обновление</value>
+  </data>
+  <data name="Update_Checking" xml:space="preserve">
+    <value>Поиск обновлений...</value>
+  </data>
+  <data name="Update_ClickHere" xml:space="preserve">
+    <value>Нажмите здесь</value>
+  </data>
+  <data name="Update_Current" xml:space="preserve">
+    <value>Текущая версия: v{0}</value>
+  </data>
+  <data name="Update_Error_NoVersion" xml:space="preserve">
+    <value>Не удалось получить последнюю версию с GitHub.</value>
+  </data>
+  <data name="Update_Error_Unreadable" xml:space="preserve">
+    <value>Не удалось прочитать номер текущей или последней версии.</value>
+  </data>
+  <data name="Update_Failed" xml:space="preserve">
+    <value>При проверке обновлений произошла ошибка:</value>
+  </data>
+  <data name="Update_Failed_Title" xml:space="preserve">
+    <value>Не удалось проверить обновления</value>
+  </data>
+  <data name="Update_Latest" xml:space="preserve">
+    <value>Последняя версия: {0}</value>
+  </data>
+  <data name="Update_None" xml:space="preserve">
+    <value>У вас уже установлена последняя версия.</value>
+  </data>
+  <data name="Update_None_Title" xml:space="preserve">
+    <value>Обновлений нет</value>
+  </data>
+  <data name="Common_EditName" xml:space="preserve">
+    <value>Изменить имя</value>
+  </data>
+  <data name="Common_EditColor" xml:space="preserve">
+    <value>Изменить цвет</value>
+  </data>
+  <data name="Common_SelectEditAction" xml:space="preserve">
+    <value>Выберите изменение:</value>
+  </data>
+  <data name="Common_InvalidName" xml:space="preserve">
+    <value>Недопустимое имя</value>
+  </data>
+  <data name="Common_NameTaken" xml:space="preserve">
+    <value>Имя уже занято</value>
+  </data>
+  <data name="Common_EnterNewName" xml:space="preserve">
+    <value>Введите новое имя</value>
+  </data>
+  <data name="Common_ChangeInHelyxOnly" xml:space="preserve">
+    <value>Изменить только в Helyx</value>
+  </data>
+  <data name="Common_DeleteInHelyxOnly" xml:space="preserve">
+    <value>Удалить только в Helyx</value>
+  </data>
+  <data name="Status_Active" xml:space="preserve">
+    <value>Активный</value>
+  </data>
+  <data name="Status_Inactive" xml:space="preserve">
+    <value>Неактивный</value>
+  </data>
+  <data name="Status_Paused" xml:space="preserve">
+    <value>Приостановлен</value>
+  </data>
+  <data name="Status_Archived" xml:space="preserve">
+    <value>В архиве</value>
+  </data>
+  <data name="Tags_SelectColor" xml:space="preserve">
+    <value>Выберите цвет:</value>
+  </data>
+  <data name="Tags_NameTooLong" xml:space="preserve">
+    <value>Имя должно содержать не более {0} символов.</value>
+  </data>
+  <data name="Tags_NameBrackets" xml:space="preserve">
+    <value>Имя не может содержать квадратные скобки.</value>
+  </data>
+  <data name="Tags_NameControl" xml:space="preserve">
+    <value>Имя не может содержать управляющие символы.</value>
+  </data>
+  <data name="Other_Title" xml:space="preserve">
+    <value>Другие действия</value>
+  </data>
+  <data name="Other_OpenIn" xml:space="preserve">
+    <value>Открыть в ...</value>
+  </data>
+  <data name="Other_UserScripts" xml:space="preserve">
+    <value>Пользовательские скрипты</value>
+  </data>
+  <data name="Other_BackupProject" xml:space="preserve">
+    <value>Резервная копия проекта</value>
+  </data>
+  <data name="Other_Notes" xml:space="preserve">
+    <value>Заметки</value>
+  </data>
+  <data name="Notes_ForeignAccount" xml:space="preserve">
+    <value>Эти заметки были зашифрованы другой учётной записью Windows или на другом компьютере, поэтому здесь их прочитать нельзя.</value>
+  </data>
+  <data name="Notes_EditorStaysClosed" xml:space="preserve">
+    <value>Их открытие перезаписало бы их, поэтому редактор остаётся закрытым.</value>
+  </data>
+  <data name="Notes_ProtectFailed" xml:space="preserve">
+    <value>Windows отказался зашифровать эти заметки, поэтому они сохранены в открытом виде.</value>
+  </data>
+  <data name="Badges_Add" xml:space="preserve">
+    <value>Добавить значок</value>
+  </data>
+  <data name="Badges_Edit" xml:space="preserve">
+    <value>Изменить значок</value>
+  </data>
+  <data name="Badges_Delete" xml:space="preserve">
+    <value>Удалить значок</value>
+  </data>
+  <data name="Badges_EnterName" xml:space="preserve">
+    <value>Введите название значка:</value>
+  </data>
+  <data name="Badges_NameExists" xml:space="preserve">
+    <value>Значок с именем {0} уже существует.</value>
+  </data>
+  <data name="Badges_None_Title" xml:space="preserve">
+    <value>Нет значков</value>
+  </data>
+  <data name="Badges_NoneToEdit" xml:space="preserve">
+    <value>Нет значков для изменения.</value>
+  </data>
+  <data name="Badges_NoneToDelete" xml:space="preserve">
+    <value>Нет значков для удаления.</value>
+  </data>
+  <data name="Badges_SelectToEdit" xml:space="preserve">
+    <value>Выберите значок для изменения:</value>
+  </data>
+  <data name="Badges_SelectToDelete" xml:space="preserve">
+    <value>Выберите значок для удаления:</value>
+  </data>
+  <data name="Badges_Added" xml:space="preserve">
+    <value>Значок {0} добавлен.</value>
+  </data>
+  <data name="Badges_Edited" xml:space="preserve">
+    <value>Значок {0} успешно изменён!</value>
+  </data>
+  <data name="Badges_Deleted" xml:space="preserve">
+    <value>Значок {0} успешно удалён.</value>
+  </data>
+  <data name="Badges_DeleteConfirm" xml:space="preserve">
+    <value>Вы действительно хотите удалить значок {0} ?</value>
+  </data>
+  <data name="Badges_RemovedFrom" xml:space="preserve">
+    <value>Он будет убран из {0} проектов.</value>
+  </data>
+  <data name="Statuses_Add" xml:space="preserve">
+    <value>Добавить свой статус</value>
+  </data>
+  <data name="Statuses_Edit" xml:space="preserve">
+    <value>Изменить свой статус</value>
+  </data>
+  <data name="Statuses_Delete" xml:space="preserve">
+    <value>Удалить свой статус</value>
+  </data>
+  <data name="Statuses_EnterName" xml:space="preserve">
+    <value>Введите название статуса:</value>
+  </data>
+  <data name="Statuses_NameExists" xml:space="preserve">
+    <value>Статус с именем {0} уже существует.</value>
+  </data>
+  <data name="Statuses_None_Title" xml:space="preserve">
+    <value>Нет своих статусов</value>
+  </data>
+  <data name="Statuses_NoneToEdit" xml:space="preserve">
+    <value>Нет своих статусов для изменения.</value>
+  </data>
+  <data name="Statuses_NoneToDelete" xml:space="preserve">
+    <value>Нет своих статусов для удаления.</value>
+  </data>
+  <data name="Statuses_SelectToEdit" xml:space="preserve">
+    <value>Выберите свой статус для изменения:</value>
+  </data>
+  <data name="Statuses_SelectToDelete" xml:space="preserve">
+    <value>Выберите свой статус для удаления:</value>
+  </data>
+  <data name="Statuses_Added" xml:space="preserve">
+    <value>Свой статус {0} добавлен.</value>
+  </data>
+  <data name="Statuses_Edited" xml:space="preserve">
+    <value>Свой статус {0} успешно изменён!</value>
+  </data>
+  <data name="Statuses_Deleted" xml:space="preserve">
+    <value>Свой статус {0} успешно удалён.</value>
+  </data>
+  <data name="Statuses_DeleteConfirm" xml:space="preserve">
+    <value>Вы действительно хотите удалить свой статус {0} ?</value>
+  </data>
+  <data name="Statuses_UsedBy" xml:space="preserve">
+    <value>{0} проектов, использующих его, вернутся в статус Активный.</value>
+  </data>
+  <data name="Statuses_ResetToActive" xml:space="preserve">
+    <value>Проекты, использовавшие его, возвращены в {0}.</value>
+  </data>
+  <data name="Git_Group_Conflicted" xml:space="preserve">
+    <value>С конфликтами</value>
+  </data>
+  <data name="Git_Group_Modified" xml:space="preserve">
+    <value>Изменённые</value>
+  </data>
+  <data name="Git_Group_New" xml:space="preserve">
+    <value>Новые</value>
+  </data>
+  <data name="Git_Group_Deleted" xml:space="preserve">
+    <value>Удалённые</value>
+  </data>
+  <data name="Git_Group_Renamed" xml:space="preserve">
+    <value>Переименованные</value>
+  </data>
+  <data name="Git_Group_Other" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="Program_AlreadyRunning_Title" xml:space="preserve">
+    <value>Уже запущено</value>
+  </data>
+  <data name="Program_AlreadyRunning" xml:space="preserve">
+    <value>Helyx уже запущен в другом окне.</value>
+  </data>
+  <data name="Program_Crash_Title" xml:space="preserve">
+    <value>Что-то пошло не так</value>
+  </data>
+  <data name="Program_Crash_Closing" xml:space="preserve">
+    <value>Это не удалось {0} раз подряд, поэтому Helyx закроется.</value>
+  </data>
+  <data name="Program_Crash_Return" xml:space="preserve">
+    <value>Нажмите любую клавишу, чтобы вернуться в меню...</value>
+  </data>
+  <data name="Scripts_FolderCreateFailed" xml:space="preserve">
+    <value>Не удалось создать папку со скриптами.</value>
+  </data>
+  <data name="Scripts_FolderReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать папку со скриптами.</value>
+  </data>
+  <data name="Scripts_SaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить скрипт {0}.</value>
+  </data>
+  <data name="Scripts_LoadProblems" xml:space="preserve">
+    <value>Некоторые скрипты не удалось загрузить полностью:</value>
+  </data>
+  <data name="Scripts_CouldNotRead" xml:space="preserve">
+    <value>{0}: не удалось прочитать</value>
+  </data>
+  <data name="Scripts_BlocksSkipped" xml:space="preserve">
+    <value>{0}: пропущено нечитаемых блоков: {1}</value>
+  </data>
+  <data name="GitHub_AuthFailed_Title" xml:space="preserve">
+    <value>Ошибка авторизации</value>
+  </data>
+  <data name="GitHub_Authorized_Title" xml:space="preserve">
+    <value>Авторизовано</value>
+  </data>
+  <data name="GitHub_Unreachable" xml:space="preserve">
+    <value>Не удалось связаться с GitHub:</value>
+  </data>
+  <data name="GitHub_ReturnedError" xml:space="preserve">
+    <value>GitHub вернул ошибку:</value>
+  </data>
+  <data name="GitHub_IncompleteResponse" xml:space="preserve">
+    <value>GitHub вернул неполный ответ. Попробуйте ещё раз.</value>
+  </data>
+  <data name="GitHub_GoToAndEnter" xml:space="preserve">
+    <value>Перейдите на {0} и введите этот код:</value>
+  </data>
+  <data name="GitHub_CodeCopied" xml:space="preserve">
+    <value>(код скопирован в буфер обмена)</value>
+  </data>
+  <data name="GitHub_ClipboardFailed" xml:space="preserve">
+    <value>Не удалось скопировать код в буфер обмена:</value>
+  </data>
+  <data name="GitHub_BrowserFailed" xml:space="preserve">
+    <value>Не удалось открыть браузер автоматически, откройте ссылку вручную:</value>
+  </data>
+  <data name="GitHub_CodeExpired" xml:space="preserve">
+    <value>Код авторизации истёк до подтверждения. Попробуйте ещё раз.</value>
+  </data>
+  <data name="GitHub_Waiting" xml:space="preserve">
+    <value>Ожидание GitHub...</value>
+  </data>
+  <data name="GitHub_AuthSuccess" xml:space="preserve">
+    <value>Авторизация в GitHub прошла успешно!</value>
+  </data>
+  <data name="GitHub_RepoNotFound" xml:space="preserve">
+    <value>В вашем профиле GitHub не найден подходящий репозиторий.</value>
+  </data>
+  <data name="GitHub_RepoNotFound_Hint" xml:space="preserve">
+    <value>Проверьте, совпадает ли имя с названием репозитория на GitHub.</value>
+  </data>
+  <data name="GitHub_CouldNotCheck" xml:space="preserve">
+    <value>Не удалось связаться с GitHub, поэтому проверить репозитории не получилось.</value>
+  </data>
+  <data name="GitHub_CouldNotCheck_Hint" xml:space="preserve">
+    <value>Проверьте подключение к интернету и попробуйте снова.</value>
+  </data>
+  <data name="GitHub_NoIdentity" xml:space="preserve">
+    <value>Не удалось определить личность Git.</value>
+  </data>
+  <data name="GitHub_NoIdentity_Hint" xml:space="preserve">
+    <value>Задайте user.name и user.email в настройках Git или авторизуйтесь в GitHub в Настройках.</value>
+  </data>
+  <data name="GitHub_NotLinked" xml:space="preserve">
+    <value>Этот проект не связан с репозиторием GitHub.</value>
+  </data>
+  <data name="GitHub_AssignNow" xml:space="preserve">
+    <value>Хотите назначить репозиторий GitHub сейчас?</value>
+  </data>
+  <data name="GitHub_LoadingRepos" xml:space="preserve">
+    <value>Загрузка ваших репозиториев...</value>
+  </data>
+  <data name="GitHub_UnreachableSettings" xml:space="preserve">
+    <value>Не удалось связаться с GitHub.</value>
+  </data>
+  <data name="GitHub_CheckConnection" xml:space="preserve">
+    <value>Проверьте подключение и авторизацию в Настройках.</value>
+  </data>
+  <data name="GitHub_NoRepos" xml:space="preserve">
+    <value>В вашей учётной записи GitHub нет репозиториев.</value>
+  </data>
+  <data name="GitHub_SelectRepo" xml:space="preserve">
+    <value>Выберите репозиторий GitHub:</value>
+  </data>
+  <data name="GitHub_UnknownError" xml:space="preserve">
+    <value>Неизвестная ошибка</value>
+  </data>
+  <data name="GitHub_Part_Languages" xml:space="preserve">
+    <value>языки</value>
+  </data>
+  <data name="GitHub_Part_CommitActivity" xml:space="preserve">
+    <value>активность коммитов</value>
+  </data>
+  <data name="GitHub_Part_Topics" xml:space="preserve">
+    <value>темы</value>
+  </data>
+  <data name="Scripts_Run" xml:space="preserve">
+    <value>Запустить скрипт</value>
+  </data>
+  <data name="Scripts_EditScript" xml:space="preserve">
+    <value>Изменить скрипт</value>
+  </data>
+  <data name="Scripts_Create" xml:space="preserve">
+    <value>Создать скрипт</value>
+  </data>
+  <data name="Scripts_DeleteScript" xml:space="preserve">
+    <value>Удалить скрипт</value>
+  </data>
+  <data name="Scripts_None" xml:space="preserve">
+    <value>Для этого проекта пока нет скриптов.</value>
+  </data>
+  <data name="Scripts_SelectToRun" xml:space="preserve">
+    <value>Выберите скрипт для запуска:</value>
+  </data>
+  <data name="Scripts_SelectToEdit" xml:space="preserve">
+    <value>Выберите скрипт для изменения:</value>
+  </data>
+  <data name="Scripts_SelectToDelete" xml:space="preserve">
+    <value>Выберите скрипт для удаления:</value>
+  </data>
+  <data name="Scripts_EnterName" xml:space="preserve">
+    <value>Введите название скрипта:</value>
+  </data>
+  <data name="Scripts_DeleteConfirm" xml:space="preserve">
+    <value>Вы действительно хотите удалить скрипт {0}?</value>
+  </data>
+  <data name="Scripts_Deleted" xml:space="preserve">
+    <value>Скрипт {0} успешно удалён.</value>
+  </data>
+  <data name="Scripts_AlreadyGone" xml:space="preserve">
+    <value>Файл скрипта {0} уже отсутствовал.</value>
+  </data>
+  <data name="Scripts_DeleteFailed" xml:space="preserve">
+    <value>Не удалось удалить скрипт {0}.</value>
+  </data>
+  <data name="Scripts_Failed_Title" xml:space="preserve">
+    <value>Скрипт завершился ошибкой</value>
+  </data>
+  <data name="Scripts_Begun" xml:space="preserve">
+    <value>Скрипт запущен!</value>
+  </data>
+  <data name="Scripts_Ended" xml:space="preserve">
+    <value>Скрипт завершён!</value>
+  </data>
+  <data name="Scripts_SelectOperation" xml:space="preserve">
+    <value>Выберите операцию:</value>
+  </data>
+  <data name="Scripts_AddBlock" xml:space="preserve">
+    <value>Добавить блок</value>
+  </data>
+  <data name="Scripts_EditBlock" xml:space="preserve">
+    <value>Изменить блок</value>
+  </data>
+  <data name="Scripts_RemoveBlock" xml:space="preserve">
+    <value>Убрать блок</value>
+  </data>
+  <data name="Scripts_SelectBlockEdit" xml:space="preserve">
+    <value>Выберите блок для изменения:</value>
+  </data>
+  <data name="Scripts_SelectBlockRemove" xml:space="preserve">
+    <value>Выберите блок для удаления:</value>
+  </data>
+  <data name="Scripts_ConfirmContinue" xml:space="preserve">
+    <value>Вы действительно хотите продолжить?</value>
+  </data>
+  <data name="Scripts_Guid" xml:space="preserve">
+    <value>GUID скрипта</value>
+  </data>
+  <data name="Scripts_BlockCount" xml:space="preserve">
+    <value>Количество блоков</value>
+  </data>
+  <data name="Scripts_Start" xml:space="preserve">
+    <value>Начало</value>
+  </data>
+  <data name="Scripts_End" xml:space="preserve">
+    <value>Конец</value>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Common_Cancelled" xml:space="preserve">
+    <value>Отменено</value>
+  </data>
+  <data name="Common_Continue" xml:space="preserve">
+    <value>Хотите продолжить?</value>
+  </data>
+  <data name="Common_Searching" xml:space="preserve">
+    <value>Поиск...</value>
+  </data>
+  <data name="Projects_Title" xml:space="preserve">
+    <value>Проекты</value>
+  </data>
+  <data name="Projects_Select" xml:space="preserve">
+    <value>Выберите проект:</value>
+  </data>
+  <data name="Projects_Filter" xml:space="preserve">
+    <value>Введите текст для фильтра проектов...</value>
+  </data>
+  <data name="Projects_AddNew" xml:space="preserve">
+    <value>+ Добавить новый проект</value>
+  </data>
+  <data name="Projects_Row_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Projects_Row_LastModified" xml:space="preserve">
+    <value>Последнее изменение</value>
+  </data>
+  <data name="Projects_Row_Badges" xml:space="preserve">
+    <value>Значки</value>
+  </data>
+  <data name="Projects_Row_Topics" xml:space="preserve">
+    <value>Темы</value>
+  </data>
+  <data name="Projects_Row_Languages" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="Projects_Row_ProjectName" xml:space="preserve">
+    <value>Название проекта</value>
+  </data>
+  <data name="Projects_RetrievingStats" xml:space="preserve">
+    <value>Загрузка статистики репозитория GitHub...</value>
+  </data>
+  <data name="Projects_Missing_Title" xml:space="preserve">
+    <value>Проект отсутствует</value>
+  </data>
+  <data name="Projects_FolderNotFound" xml:space="preserve">
+    <value>Папка проекта {0} не найдена:</value>
+  </data>
+  <data name="Projects_WhatToDo" xml:space="preserve">
+    <value>Что вы хотите сделать?</value>
+  </data>
+  <data name="Projects_SearchAuto" xml:space="preserve">
+    <value>Найти папку автоматически</value>
+  </data>
+  <data name="Projects_LocateManually" xml:space="preserve">
+    <value>Указать папку вручную</value>
+  </data>
+  <data name="Projects_NoFolderSelected" xml:space="preserve">
+    <value>Папка не выбрана.</value>
+  </data>
+  <data name="Projects_DifferentRepo_Title" xml:space="preserve">
+    <value>Другой репозиторий</value>
+  </data>
+  <data name="Projects_DifferentRepo" xml:space="preserve">
+    <value>Выбранная папка не тот же репозиторий, что и исходный.</value>
+  </data>
+  <data name="Projects_LinkAnyway" xml:space="preserve">
+    <value>Всё равно связать?</value>
+  </data>
+  <data name="Projects_NoFingerprint" xml:space="preserve">
+    <value>У этого проекта нет сохранённого отпечатка, поэтому Helyx не может его найти.</value>
+  </data>
+  <data name="Projects_LocateInstead" xml:space="preserve">
+    <value>Укажите папку вручную.</value>
+  </data>
+  <data name="Projects_NotFound" xml:space="preserve">
+    <value>Папку не удалось найти.</value>
+  </data>
+  <data name="Projects_Found_Title" xml:space="preserve">
+    <value>Проект найден</value>
+  </data>
+  <data name="Projects_Linked" xml:space="preserve">
+    <value>{0} связан с:</value>
+  </data>
+  <data name="Projects_Menu_IDE" xml:space="preserve">
+    <value>Действия IDE</value>
+  </data>
+  <data name="Projects_Menu_Git" xml:space="preserve">
+    <value>Действия Git</value>
+  </data>
+  <data name="Projects_Menu_GitHub" xml:space="preserve">
+    <value>Действия GitHub</value>
+  </data>
+  <data name="Projects_Menu_Manage" xml:space="preserve">
+    <value>Управление проектом</value>
+  </data>
+  <data name="Projects_SelectFolder" xml:space="preserve">
+    <value>Выберите папку проекта</value>
+  </data>
+  <data name="Projects_FolderGone" xml:space="preserve">
+    <value>Папка {0} больше не существует.</value>
+  </data>
+  <data name="Projects_FolderNotFound_Title" xml:space="preserve">
+    <value>Папка не найдена</value>
+  </data>
+  <data name="Projects_DriveRoot" xml:space="preserve">
+    <value>Корень диска нельзя добавить как проект. Выберите папку проекта.</value>
+  </data>
+  <data name="Projects_InvalidFolder_Title" xml:space="preserve">
+    <value>Недопустимая папка</value>
+  </data>
+  <data name="Projects_DuplicateFolder_Title" xml:space="preserve">
+    <value>Дублирующая папка</value>
+  </data>
+  <data name="Projects_AlreadyAdded" xml:space="preserve">
+    <value>Эта папка уже добавлена как {0}.</value>
+  </data>
+  <data name="Projects_AddAgain" xml:space="preserve">
+    <value>Хотите добавить её ещё раз?</value>
+  </data>
+  <data name="Projects_EnterName" xml:space="preserve">
+    <value>Введите название проекта</value>
+  </data>
+  <data name="Projects_NameEmpty" xml:space="preserve">
+    <value>Название проекта не может быть пустым.</value>
+  </data>
+  <data name="Projects_DuplicateProject_Title" xml:space="preserve">
+    <value>Дублирующий проект</value>
+  </data>
+  <data name="Projects_NameExists" xml:space="preserve">
+    <value>Проект с именем {0} уже существует.</value>
+  </data>
+  <data name="Projects_DetectingLanguages" xml:space="preserve">
+    <value>Определение языков...</value>
+  </data>
+  <data name="Projects_ConfirmDetails" xml:space="preserve">
+    <value>Подтвердите данные проекта</value>
+  </data>
+  <data name="Projects_NoneDetected" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="Projects_AddConfirm" xml:space="preserve">
+    <value>Хотите добавить этот проект?</value>
+  </data>
+  <data name="Manage_ChangeStatus" xml:space="preserve">
+    <value>Изменить статус</value>
+  </data>
+  <data name="Manage_AssignBadges" xml:space="preserve">
+    <value>Назначить значки</value>
+  </data>
+  <data name="Manage_Analyze" xml:space="preserve">
+    <value>Анализ проекта</value>
+  </data>
+  <data name="Manage_ChangeName" xml:space="preserve">
+    <value>Изменить название</value>
+  </data>
+  <data name="Manage_RemoveProject" xml:space="preserve">
+    <value>Удалить проект</value>
+  </data>
+  <data name="Manage_SelectNewStatus" xml:space="preserve">
+    <value>Выберите новый статус:</value>
+  </data>
+  <data name="Manage_NoBadgesToAssign" xml:space="preserve">
+    <value>Нет значков для назначения. Создать их можно в Настройках.</value>
+  </data>
+  <data name="Manage_SelectBadges" xml:space="preserve">
+    <value>Выберите значки для назначения:</value>
+  </data>
+  <data name="Manage_ChangeNameOf" xml:space="preserve">
+    <value>Изменить название ...</value>
+  </data>
+  <data name="Manage_EnterNewNameFor" xml:space="preserve">
+    <value>Введите новое название для {0}</value>
+  </data>
+  <data name="Manage_RemoveConfirm" xml:space="preserve">
+    <value>Удалить {0}?</value>
+  </data>
+  <data name="Manage_CannotBeUndone" xml:space="preserve">
+    <value>Это нельзя отменить.</value>
+  </data>
+  <data name="Manage_AlsoDeletes" xml:space="preserve">
+    <value>ВНИМАНИЕ, ЭТО ТАКЖЕ УДАЛИТ ВСЕ РЕЗЕРВНЫЕ КОПИИ И СКРИПТЫ ЭТОГО ПРОЕКТА!</value>
+  </data>
+  <data name="Manage_CleanupIncomplete" xml:space="preserve">
+    <value>Очистка не завершена</value>
+  </data>
+  <data name="Manage_CleanupFailed" xml:space="preserve">
+    <value>Не удалось удалить некоторые резервные копии или скрипты:</value>
+  </data>
+  <data name="Manage_Removed_Title" xml:space="preserve">
+    <value>Проект удалён</value>
+  </data>
+  <data name="Manage_Removed" xml:space="preserve">
+    <value>Проект {0} успешно удалён.</value>
+  </data>
+  <data name="Analyze_Running" xml:space="preserve">
+    <value>Анализ проекта...</value>
+  </data>
+  <data name="Analyze_ReadingRepo" xml:space="preserve">
+    <value>Чтение репозитория...</value>
+  </data>
+  <data name="Analyze_Files" xml:space="preserve">
+    <value>Файлы</value>
+  </data>
+  <data name="Analyze_Folders" xml:space="preserve">
+    <value>Папки</value>
+  </data>
+  <data name="Analyze_SizeOnDisk" xml:space="preserve">
+    <value>Размер на диске</value>
+  </data>
+  <data name="Analyze_Lines" xml:space="preserve">
+    <value>Строки</value>
+  </data>
+  <data name="Analyze_Tracked" xml:space="preserve">
+    <value>{0} отслеживается</value>
+  </data>
+  <data name="Analyze_NoSourceFiles" xml:space="preserve">
+    <value>нет исходных файлов</value>
+  </data>
+  <data name="Analyze_InFiles" xml:space="preserve">
+    <value>в {0} файлах</value>
+  </data>
+  <data name="Analyze_LinesDetail" xml:space="preserve">
+    <value>{0} строк</value>
+  </data>
+  <data name="Analyze_Languages" xml:space="preserve">
+    <value>Языки</value>
+  </data>
+  <data name="Analyze_Other" xml:space="preserve">
+    <value>Прочие</value>
+  </data>
+  <data name="Analyze_LargestFiles" xml:space="preserve">
+    <value>Самые большие файлы</value>
+  </data>
+  <data name="Analyze_Branch" xml:space="preserve">
+    <value>Ветка</value>
+  </data>
+  <data name="Analyze_LocalBranches" xml:space="preserve">
+    <value>{0} локальных веток</value>
+  </data>
+  <data name="Analyze_LocalBranchOne" xml:space="preserve">
+    <value>{0} локальная ветка</value>
+  </data>
+  <data name="Analyze_Commits" xml:space="preserve">
+    <value>Коммиты</value>
+  </data>
+  <data name="Analyze_FirstCommit" xml:space="preserve">
+    <value>Первый коммит</value>
+  </data>
+  <data name="Analyze_Today" xml:space="preserve">
+    <value>сегодня</value>
+  </data>
+  <data name="Analyze_DaysAgo" xml:space="preserve">
+    <value>{0} дней назад</value>
+  </data>
+  <data name="Analyze_MonthsAgo" xml:space="preserve">
+    <value>{0} месяцев назад</value>
+  </data>
+  <data name="Analyze_YearsAgo" xml:space="preserve">
+    <value>{0} лет назад</value>
+  </data>
+  <data name="Analyze_LastCommit" xml:space="preserve">
+    <value>Последний коммит</value>
+  </data>
+  <data name="Analyze_WorkingTree" xml:space="preserve">
+    <value>Рабочее дерево</value>
+  </data>
+  <data name="Analyze_Clean" xml:space="preserve">
+    <value>Чисто</value>
+  </data>
+  <data name="Analyze_Changed" xml:space="preserve">
+    <value>изменено</value>
+  </data>
+  <data name="Analyze_GitSize" xml:space="preserve">
+    <value>размер .git</value>
+  </data>
+  <data name="Analyze_Footer" xml:space="preserve">
+    <value>↑↓ прокрутка   &lt;pgup/pgdn&gt; страница   &lt;r&gt; анализ заново   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Analyze_All" xml:space="preserve">
+    <value>всё</value>
+  </data>
+  <data name="Common_MultiSelectHint" xml:space="preserve">
+    <value>(&lt;space&gt; переключить, &lt;enter&gt; подтвердить)</value>
+  </data>
+  <data name="Backups_Title" xml:space="preserve">
+    <value>Действия с копиями</value>
+  </data>
+  <data name="Backups_Header" xml:space="preserve">
+    <value>Резервные копии</value>
+  </data>
+  <data name="Backups_Create" xml:space="preserve">
+    <value>Создать копию</value>
+  </data>
+  <data name="Backups_Restore" xml:space="preserve">
+    <value>Восстановить из копии</value>
+  </data>
+  <data name="Backups_Delete" xml:space="preserve">
+    <value>Удалить копию</value>
+  </data>
+  <data name="Backups_CreateConfirm" xml:space="preserve">
+    <value>Вы действительно хотите создать резервную копию этого проекта?</value>
+  </data>
+  <data name="Backups_ProjectMissing" xml:space="preserve">
+    <value>Этот проект не найден в файле конфигурации.</value>
+  </data>
+  <data name="Backups_ProjectMissing_Hint" xml:space="preserve">
+    <value>Исправьте вручную или сбросьте файл конфигурации в Настройках.</value>
+  </data>
+  <data name="Backups_FolderCreateFailed" xml:space="preserve">
+    <value>Не удалось создать папку резервных копий.</value>
+  </data>
+  <data name="Backups_ScopeQuestion" xml:space="preserve">
+    <value>Что должна содержать копия?</value>
+  </data>
+  <data name="Backups_ScopeSkipIgnored" xml:space="preserve">
+    <value>Всё, кроме файлов, игнорируемых .gitignore</value>
+  </data>
+  <data name="Backups_ScopeEverything" xml:space="preserve">
+    <value>Всё в папке проекта</value>
+  </data>
+  <data name="Backups_Running" xml:space="preserve">
+    <value>Создание копии...</value>
+  </data>
+  <data name="Backups_BackingUpFile" xml:space="preserve">
+    <value>Копирование {0}</value>
+  </data>
+  <data name="Backups_Failed_Title" xml:space="preserve">
+    <value>Ошибка резервного копирования</value>
+  </data>
+  <data name="Backups_CreatedWithSkipped" xml:space="preserve">
+    <value>Копия создана, но {0} файлов были заблокированы или нечитаемы и пропущены:</value>
+  </data>
+  <data name="Backups_AndMore" xml:space="preserve">
+    <value>... и ещё {0}</value>
+  </data>
+  <data name="Backups_Created" xml:space="preserve">
+    <value>Резервная копия успешно создана.</value>
+  </data>
+  <data name="Backups_NoneAvailable" xml:space="preserve">
+    <value>Нет доступных копий.</value>
+  </data>
+  <data name="Backups_NoneToRestore" xml:space="preserve">
+    <value>Нет копий для восстановления.</value>
+  </data>
+  <data name="Backups_NoneToDelete" xml:space="preserve">
+    <value>Нет копий для удаления.</value>
+  </data>
+  <data name="Backups_Col_Project" xml:space="preserve">
+    <value>Проект</value>
+  </data>
+  <data name="Backups_Col_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Backups_OverwriteWarning" xml:space="preserve">
+    <value>ЭТО ПЕРЕЗАПИШЕТ ВАШ ТЕКУЩИЙ ПРОЕКТ!</value>
+  </data>
+  <data name="Backups_Restoring" xml:space="preserve">
+    <value>Восстановление копии...</value>
+  </data>
+  <data name="Backups_RestoringFile" xml:space="preserve">
+    <value>Восстановление {0}</value>
+  </data>
+  <data name="Backups_Swapping" xml:space="preserve">
+    <value>Замена на восстановленный проект</value>
+  </data>
+  <data name="Backups_RestoreFailed_Title" xml:space="preserve">
+    <value>Ошибка восстановления</value>
+  </data>
+  <data name="Backups_OriginalLeftAt" xml:space="preserve">
+    <value>Исходный проект остался в:</value>
+  </data>
+  <data name="Backups_Restored" xml:space="preserve">
+    <value>Резервная копия успешно восстановлена.</value>
+  </data>
+  <data name="Backups_RestoredLeftover" xml:space="preserve">
+    <value>Копия восстановлена, но удалить копию старого проекта не удалось.</value>
+  </data>
+  <data name="Backups_DeleteYourself" xml:space="preserve">
+    <value>Удалите её сами, когда её ничего не удерживает.</value>
+  </data>
+  <data name="Backups_Deleting" xml:space="preserve">
+    <value>Удаление копии...</value>
+  </data>
+  <data name="Backups_DeleteFailed_Title" xml:space="preserve">
+    <value>Ошибка удаления</value>
+  </data>
+  <data name="Backups_Deleted" xml:space="preserve">
+    <value>Резервная копия успешно удалена.</value>
+  </data>
+  <data name="Backups_EntryEscapes" xml:space="preserve">
+    <value>Запись выходит за пределы папки назначения: {0}</value>
+  </data>
+  <data name="Script_Wait" xml:space="preserve">
+    <value>Ждать</value>
+  </data>
+  <data name="Script_Log" xml:space="preserve">
+    <value>Записать</value>
+  </data>
+  <data name="Script_CommandDone" xml:space="preserve">
+    <value>завершено</value>
+  </data>
+  <data name="Script_ExitCode" xml:space="preserve">
+    <value>завершено с кодом {0}</value>
+  </data>
+  <data name="Script_Execute" xml:space="preserve">
+    <value>Выполнить</value>
+  </data>
+  <data name="Script_Open" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="Script_CreateFile" xml:space="preserve">
+    <value>Создать файл</value>
+  </data>
+  <data name="Script_CreateFolder" xml:space="preserve">
+    <value>Создать папку</value>
+  </data>
+  <data name="Script_DeleteFile" xml:space="preserve">
+    <value>Удалить файл</value>
+  </data>
+  <data name="Script_DeleteFolder" xml:space="preserve">
+    <value>Удалить папку</value>
+  </data>
+  <data name="Script_EnterDuration" xml:space="preserve">
+    <value>Введите длительность в секундах:</value>
+  </data>
+  <data name="Script_DurationRange" xml:space="preserve">
+    <value>Длительность должна быть от 0 до {0} секунд</value>
+  </data>
+  <data name="Script_DurationRangeError" xml:space="preserve">
+    <value>Длительность должна быть от 0 до {0} секунд.</value>
+  </data>
+  <data name="Script_EnterLogMessage" xml:space="preserve">
+    <value>Введите текст записи:</value>
+  </data>
+  <data name="Script_EnterCommand" xml:space="preserve">
+    <value>Введите команду для выполнения:</value>
+  </data>
+  <data name="Script_NoCommand" xml:space="preserve">
+    <value>Для этого блока не задана команда.</value>
+  </data>
+  <data name="Script_CommandFailed" xml:space="preserve">
+    <value>Не удалось запустить команду: {0}</value>
+  </data>
+  <data name="Script_EnterPathOpen" xml:space="preserve">
+    <value>Введите путь для открытия:</value>
+  </data>
+  <data name="Script_NoPath" xml:space="preserve">
+    <value>Для этого блока не задан путь.</value>
+  </data>
+  <data name="Script_OpenFailed" xml:space="preserve">
+    <value>Не удалось открыть {0}: {1}</value>
+  </data>
+  <data name="Script_EnterPathNewFile" xml:space="preserve">
+    <value>Введите путь для нового файла:</value>
+  </data>
+  <data name="Script_EnterPathNewFolder" xml:space="preserve">
+    <value>Введите путь для новой папки:</value>
+  </data>
+  <data name="Script_CreateFailed" xml:space="preserve">
+    <value>Не удалось создать {0}: {1}</value>
+  </data>
+  <data name="Script_EnterPathDeleteFile" xml:space="preserve">
+    <value>Введите путь к файлу для удаления:</value>
+  </data>
+  <data name="Script_EnterPathDeleteFolder" xml:space="preserve">
+    <value>Введите путь к папке для удаления:</value>
+  </data>
+  <data name="Script_DeleteFailed" xml:space="preserve">
+    <value>Не удалось удалить {0}: {1}</value>
+  </data>
+  <data name="Script_NothingConfigured" xml:space="preserve">
+    <value>Для этого блока не задан параметр {0}.</value>
+  </data>
+  <data name="Script_InvalidPath" xml:space="preserve">
+    <value>{0} не является допустимым: {1}.</value>
+  </data>
+  <data name="Script_FilePath" xml:space="preserve">
+    <value>путь к файлу</value>
+  </data>
+  <data name="Script_FolderPath" xml:space="preserve">
+    <value>путь к папке</value>
+  </data>
+  <data name="Script_Folder" xml:space="preserve">
+    <value>папка</value>
+  </data>
+  <data name="Script_TooCloseToRoot" xml:space="preserve">
+    <value>Отказ удалить {0}, слишком близко к корню диска.</value>
+  </data>
+  <data name="Script_BlockFailed" xml:space="preserve">
+    <value>Блок {0} ({1}) завершился ошибкой:</value>
+  </data>
+  <data name="Script_Stopped" xml:space="preserve">
+    <value>Скрипт остановлен.</value>
+  </data>
+  <data name="GH_NeedAuth" xml:space="preserve">
+    <value>Прежде чем использовать это, подключитесь к GitHub в Настройках.</value>
+  </data>
+  <data name="GH_ManageIssues" xml:space="preserve">
+    <value>Управление задачами</value>
+  </data>
+  <data name="GH_ManagePulls" xml:space="preserve">
+    <value>Управление pull request</value>
+  </data>
+  <data name="GH_Synchronization" xml:space="preserve">
+    <value>Синхронизация с GitHub</value>
+  </data>
+  <data name="GH_ViewStats" xml:space="preserve">
+    <value>Показать статистику репозитория</value>
+  </data>
+  <data name="GH_OpenWiki" xml:space="preserve">
+    <value>Открыть вики</value>
+  </data>
+  <data name="GH_Issues" xml:space="preserve">
+    <value>Задачи</value>
+  </data>
+  <data name="GH_PullRequests" xml:space="preserve">
+    <value>Pull request</value>
+  </data>
+  <data name="GH_RetrievingIssues" xml:space="preserve">
+    <value>Загрузка задач с GitHub...</value>
+  </data>
+  <data name="GH_IssuesLoadFailed" xml:space="preserve">
+    <value>Не удалось связаться с GitHub, задачи не загружены.</value>
+  </data>
+  <data name="GH_CheckAndRetry" xml:space="preserve">
+    <value>Проверьте подключение и попробуйте снова.</value>
+  </data>
+  <data name="GH_NoIssues" xml:space="preserve">
+    <value>В этом репозитории нет задач.</value>
+  </data>
+  <data name="GH_NoPulls" xml:space="preserve">
+    <value>В этом репозитории нет pull request.</value>
+  </data>
+  <data name="GH_PullsLoadFailed" xml:space="preserve">
+    <value>Не удалось связаться с GitHub, pull request не загружены.</value>
+  </data>
+  <data name="GH_CommentsLoadFailed" xml:space="preserve">
+    <value>Не удалось связаться с GitHub, комментарии не загружены.</value>
+  </data>
+  <data name="GH_ReviewsLoadFailed" xml:space="preserve">
+    <value>Не удалось связаться с GitHub, отзывы не загружены.</value>
+  </data>
+  <data name="GH_RetrievingComments" xml:space="preserve">
+    <value>Загрузка комментариев с GitHub...</value>
+  </data>
+  <data name="GH_RetrievingPulls" xml:space="preserve">
+    <value>Загрузка списка pull request с GitHub...</value>
+  </data>
+  <data name="GH_RetrievingPull" xml:space="preserve">
+    <value>Загрузка pull request с GitHub...</value>
+  </data>
+  <data name="GH_Filter_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="GH_Filter_Commented" xml:space="preserve">
+    <value>С комментариями</value>
+  </data>
+  <data name="GH_Filter_Assigned" xml:space="preserve">
+    <value>Назначенные</value>
+  </data>
+  <data name="GH_Filter_Labels" xml:space="preserve">
+    <value>С метками</value>
+  </data>
+  <data name="GH_Filter_Open" xml:space="preserve">
+    <value>Открытые</value>
+  </data>
+  <data name="GH_Filter_Drafts" xml:space="preserve">
+    <value>Черновики</value>
+  </data>
+  <data name="GH_Filter_Reviewed" xml:space="preserve">
+    <value>С рецензентами</value>
+  </data>
+  <data name="GH_Filter_NoComments" xml:space="preserve">
+    <value>Без комментариев</value>
+  </data>
+  <data name="GH_Filter_Unassigned" xml:space="preserve">
+    <value>Не назначенные</value>
+  </data>
+  <data name="GH_Filter_Unlabeled" xml:space="preserve">
+    <value>Без меток</value>
+  </data>
+  <data name="GH_Filter_Closed" xml:space="preserve">
+    <value>Закрытые</value>
+  </data>
+  <data name="GH_Filter_Ready" xml:space="preserve">
+    <value>Готовые</value>
+  </data>
+  <data name="GH_Filter_NoReviewers" xml:space="preserve">
+    <value>Без рецензентов</value>
+  </data>
+  <data name="GH_Col_State" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="GH_Col_Locked" xml:space="preserve">
+    <value>Заблокировано</value>
+  </data>
+  <data name="GH_Col_Title" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="GH_Col_Labels" xml:space="preserve">
+    <value>Метки</value>
+  </data>
+  <data name="GH_Col_Comments" xml:space="preserve">
+    <value>Комментарии</value>
+  </data>
+  <data name="GH_Col_Updated" xml:space="preserve">
+    <value>Обновлено</value>
+  </data>
+  <data name="GH_Col_Branch" xml:space="preserve">
+    <value>Ветка</value>
+  </data>
+  <data name="GH_State_Open" xml:space="preserve">
+    <value>Открыто</value>
+  </data>
+  <data name="GH_State_Closed" xml:space="preserve">
+    <value>Закрыто</value>
+  </data>
+  <data name="GH_State_Duplicate" xml:space="preserve">
+    <value>Дубликат</value>
+  </data>
+  <data name="GH_State_NotPlanned" xml:space="preserve">
+    <value>Не планируется</value>
+  </data>
+  <data name="GH_State_Merged" xml:space="preserve">
+    <value>Влито</value>
+  </data>
+  <data name="GH_State_Draft" xml:space="preserve">
+    <value>Черновик</value>
+  </data>
+  <data name="GH_NothingMatches" xml:space="preserve">
+    <value>Ничего не найдено по этому фильтру.</value>
+  </data>
+  <data name="GH_IssueTitle" xml:space="preserve">
+    <value>Задача #{0}</value>
+  </data>
+  <data name="GH_PullTitle" xml:space="preserve">
+    <value>Pull request #{0}</value>
+  </data>
+  <data name="GH_Footer_Issues" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница  &lt;tab&gt; сменить фильтр   &lt;shift+tab&gt; инвертировать  &lt;n&gt; новая  &lt;enter&gt; открыть  &lt;esc&gt; назад</value>
+  </data>
+  <data name="GH_Footer_Pulls" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница   &lt;tab&gt; сменить фильтр   &lt;shift+tab&gt; инвертировать   &lt;enter&gt; открыть   &lt;esc&gt; назад</value>
+  </data>
+  <data name="GH_Page" xml:space="preserve">
+    <value>страница {0}/{1}   ·   задача {2}/{3}</value>
+  </data>
+  <data name="GH_PagePull" xml:space="preserve">
+    <value>страница {0}/{1}   ·   pull request {2}/{3}</value>
+  </data>
+  <data name="GH_PageComment" xml:space="preserve">
+    <value>страница {0}/{1}   ·   комментарий {2}/{3}</value>
+  </data>
+  <data name="GH_NewIssue_Title" xml:space="preserve">
+    <value>Новая задача</value>
+  </data>
+  <data name="GH_NewIssue_AskTitle" xml:space="preserve">
+    <value>Заголовок новой задачи:</value>
+  </data>
+  <data name="GH_TitleEmpty" xml:space="preserve">
+    <value>Заголовок не может быть пустым.</value>
+  </data>
+  <data name="GH_NewIssue_AskBody" xml:space="preserve">
+    <value>Описание {0}:</value>
+  </data>
+  <data name="GH_CreatingIssue" xml:space="preserve">
+    <value>Создание задачи на GitHub...</value>
+  </data>
+  <data name="GH_IssueNotCreated" xml:space="preserve">
+    <value>Задача не создана:</value>
+  </data>
+  <data name="GH_IssueCreated" xml:space="preserve">
+    <value>Задача {0} создана.</value>
+  </data>
+  <data name="GH_OpeningPost" xml:space="preserve">
+    <value>первое сообщение</value>
+  </data>
+  <data name="GH_Review" xml:space="preserve">
+    <value>отзыв</value>
+  </data>
+  <data name="GH_Row_Author" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="GH_Row_Opened" xml:space="preserve">
+    <value>Открыто</value>
+  </data>
+  <data name="GH_Row_Assignees" xml:space="preserve">
+    <value>Исполнители</value>
+  </data>
+  <data name="GH_Row_Branches" xml:space="preserve">
+    <value>Ветки</value>
+  </data>
+  <data name="GH_Row_Changes" xml:space="preserve">
+    <value>Изменения</value>
+  </data>
+  <data name="GH_Row_Mergeable" xml:space="preserve">
+    <value>Можно влить</value>
+  </data>
+  <data name="GH_Row_Reviews" xml:space="preserve">
+    <value>Отзывы</value>
+  </data>
+  <data name="GH_ChangesDetail" xml:space="preserve">
+    <value>в {0} файлах   ·   {1} коммитов</value>
+  </data>
+  <data name="GH_Merge_Computing" xml:space="preserve">
+    <value>GitHub ещё вычисляет</value>
+  </data>
+  <data name="GH_Merge_Clean" xml:space="preserve">
+    <value>чисто</value>
+  </data>
+  <data name="GH_Merge_Merged" xml:space="preserve">
+    <value>влито</value>
+  </data>
+  <data name="GH_Reason_Dirty" xml:space="preserve">
+    <value>конфликтует с {0}</value>
+  </data>
+  <data name="GH_Reason_BaseBranch" xml:space="preserve">
+    <value>базовой веткой</value>
+  </data>
+  <data name="GH_Reason_Blocked" xml:space="preserve">
+    <value>отсутствует обязательный отзыв</value>
+  </data>
+  <data name="GH_Reason_Behind" xml:space="preserve">
+    <value>сначала нужно обновить ветку</value>
+  </data>
+  <data name="GH_Reason_Unstable" xml:space="preserve">
+    <value>проверки не проходят, влить всё же можно</value>
+  </data>
+  <data name="GH_Reason_Draft" xml:space="preserve">
+    <value>всё ещё черновик</value>
+  </data>
+  <data name="GH_Footer_Issue" xml:space="preserve">
+    <value>↑↓ выбор  ←→ страница  &lt;c&gt; комментарий  &lt;e&gt; изменить  </value>
+  </data>
+  <data name="GH_Key_Refresh" xml:space="preserve">
+    <value>&lt;f5&gt; обновить  </value>
+  </data>
+  <data name="GH_Key_Delete" xml:space="preserve">
+    <value>&lt;d&gt; удалить</value>
+  </data>
+  <data name="GH_Key_Close" xml:space="preserve">
+    <value>&lt;x&gt; закрыть</value>
+  </data>
+  <data name="GH_Key_Reopen" xml:space="preserve">
+    <value>&lt;x&gt; открыть снова</value>
+  </data>
+  <data name="GH_Key_Lock" xml:space="preserve">
+    <value>&lt;k&gt; заблокировать</value>
+  </data>
+  <data name="GH_Key_Unlock" xml:space="preserve">
+    <value>&lt;k&gt; разблокировать</value>
+  </data>
+  <data name="GH_Key_Browser" xml:space="preserve">
+    <value>&lt;o&gt; браузер  &lt;esc&gt; назад</value>
+  </data>
+  <data name="GH_Key_Edit" xml:space="preserve">
+    <value>&lt;e&gt; изменить</value>
+  </data>
+  <data name="GH_Key_Merge" xml:space="preserve">
+    <value>&lt;m&gt; влить</value>
+  </data>
+  <data name="GH_Key_Review" xml:space="preserve">
+    <value>&lt;r&gt; отзыв</value>
+  </data>
+  <data name="GH_Footer_Pull" xml:space="preserve">
+    <value>↑↓ выбор  ←→ страница  &lt;c&gt; комментарий  </value>
+  </data>
+  <data name="GH_AnyKey" xml:space="preserve">
+    <value>&lt;любая клавиша&gt; продолжить</value>
+  </data>
+  <data name="GH_ChooseHint" xml:space="preserve">
+    <value>←→ выбор   &lt;enter&gt; подтвердить   &lt;esc&gt; отмена</value>
+  </data>
+  <data name="GH_Wf_Menu" xml:space="preserve">
+    <value>GitHub Actions</value>
+  </data>
+  <data name="GH_Wf_Title_Short" xml:space="preserve">
+    <value>Запуски workflow</value>
+  </data>
+  <data name="GH_Wf_Title" xml:space="preserve">
+    <value>Запуски workflow · {0}</value>
+  </data>
+  <data name="GH_Wf_RunTitle" xml:space="preserve">
+    <value>Run #{0} · {1}</value>
+  </data>
+  <data name="GH_Wf_LogTitle" xml:space="preserve">
+    <value>Полный журнал · запуск #{0}</value>
+  </data>
+  <data name="GH_Wf_Page" xml:space="preserve">
+    <value>страница {0}/{1}   ·   запуск {2}/{3}</value>
+  </data>
+  <data name="GH_Wf_Retrieving" xml:space="preserve">
+    <value>Загрузка запусков workflow...</value>
+  </data>
+  <data name="GH_Wf_RetrievingJobs" xml:space="preserve">
+    <value>Загрузка задач...</value>
+  </data>
+  <data name="GH_Wf_DownloadingLog" xml:space="preserve">
+    <value>Загрузка архива журнала...</value>
+  </data>
+  <data name="GH_Wf_Working" xml:space="preserve">
+    <value>Обмен данными с GitHub...</value>
+  </data>
+  <data name="GH_Wf_LoadFailed" xml:space="preserve">
+    <value>Не удалось загрузить запуски workflow.</value>
+  </data>
+  <data name="GH_Wf_JobsLoadFailed" xml:space="preserve">
+    <value>Не удалось загрузить задачи запуска.</value>
+  </data>
+  <data name="GH_Wf_LogFailed" xml:space="preserve">
+    <value>Не удалось скачать журнал. GitHub хранит журналы ограниченное время.</value>
+  </data>
+  <data name="GH_Wf_NoRuns" xml:space="preserve">
+    <value>В этом репозитории пока нет запусков workflow.</value>
+  </data>
+  <data name="GH_Wf_NoRunsFiltered" xml:space="preserve">
+    <value>Нет запусков для этого workflow.</value>
+  </data>
+  <data name="GH_Wf_AllWorkflows" xml:space="preserve">
+    <value>Все workflow</value>
+  </data>
+  <data name="GH_Wf_Col_Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="GH_Wf_Col_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="GH_Wf_Col_Event" xml:space="preserve">
+    <value>Событие</value>
+  </data>
+  <data name="GH_Wf_Col_Branch" xml:space="preserve">
+    <value>Ветка</value>
+  </data>
+  <data name="GH_Wf_Col_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Col_When" xml:space="preserve">
+    <value>Когда</value>
+  </data>
+  <data name="GH_Wf_Row_Conclusion" xml:space="preserve">
+    <value>Итог</value>
+  </data>
+  <data name="GH_Wf_Row_Branch" xml:space="preserve">
+    <value>Ветка</value>
+  </data>
+  <data name="GH_Wf_Row_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Row_Actor" xml:space="preserve">
+    <value>Запустил</value>
+  </data>
+  <data name="GH_Wf_Row_Started" xml:space="preserve">
+    <value>Начато</value>
+  </data>
+  <data name="GH_Wf_Row_Duration" xml:space="preserve">
+    <value>Длительность</value>
+  </data>
+  <data name="GH_Wf_State_Queued" xml:space="preserve">
+    <value>в очереди</value>
+  </data>
+  <data name="GH_Wf_State_Running" xml:space="preserve">
+    <value>выполняется</value>
+  </data>
+  <data name="GH_Wf_State_Success" xml:space="preserve">
+    <value>успешно</value>
+  </data>
+  <data name="GH_Wf_State_Failure" xml:space="preserve">
+    <value>ошибка</value>
+  </data>
+  <data name="GH_Wf_State_Cancelled" xml:space="preserve">
+    <value>отменено</value>
+  </data>
+  <data name="GH_Wf_State_Skipped" xml:space="preserve">
+    <value>пропущено</value>
+  </data>
+  <data name="GH_Wf_State_TimedOut" xml:space="preserve">
+    <value>истекло время</value>
+  </data>
+  <data name="GH_Wf_State_ActionRequired" xml:space="preserve">
+    <value>требуется действие</value>
+  </data>
+  <data name="GH_Wf_State_Neutral" xml:space="preserve">
+    <value>нейтрально</value>
+  </data>
+  <data name="GH_Wf_Seconds" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="GH_Wf_Minutes" xml:space="preserve">
+    <value>{0} m {1} s</value>
+  </data>
+  <data name="GH_Wf_Hours" xml:space="preserve">
+    <value>{0} h {1} m</value>
+  </data>
+  <data name="GH_Wf_Jobs_Count" xml:space="preserve">
+    <value>задач: {0}</value>
+  </data>
+  <data name="GH_Wf_LogLines" xml:space="preserve">
+    <value>строки {0} по {1} из {2}</value>
+  </data>
+  <data name="GH_Wf_Confirm_Rerun" xml:space="preserve">
+    <value>Запустить весь workflow заново?</value>
+  </data>
+  <data name="GH_Wf_Confirm_RerunFailed" xml:space="preserve">
+    <value>Перезапустить только упавшие задачи?</value>
+  </data>
+  <data name="GH_Wf_Confirm_Cancel" xml:space="preserve">
+    <value>Отменить этот запуск?</value>
+  </data>
+  <data name="GH_Wf_Rerunning" xml:space="preserve">
+    <value>Запуск снова поставлен в очередь.</value>
+  </data>
+  <data name="GH_Wf_Cancelled" xml:space="preserve">
+    <value>Запуск отменён.</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Pick" xml:space="preserve">
+    <value>Какой workflow вы хотите запустить?</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Branch" xml:space="preserve">
+    <value>На какой ветке?</value>
+  </data>
+  <data name="GH_Wf_Dispatched" xml:space="preserve">
+    <value>{0} запущен на {1}.</value>
+  </data>
+  <data name="GH_Wf_Footer_List" xml:space="preserve">
+    <value>↑↓ выбор  ←→ страница  &lt;tab&gt; workflow  </value>
+  </data>
+  <data name="GH_Wf_Footer_Run" xml:space="preserve">
+    <value>↑↓ прокрутка  </value>
+  </data>
+  <data name="GH_Wf_Footer_Log" xml:space="preserve">
+    <value>↑↓ прокрутка  &lt;pgup/pgdn&gt; страница  &lt;home/end&gt; переход  &lt;esc&gt; назад</value>
+  </data>
+  <data name="GH_Wf_Key_Dispatch" xml:space="preserve">
+    <value>&lt;d&gt; запустить  </value>
+  </data>
+  <data name="GH_Wf_Key_Refresh" xml:space="preserve">
+    <value>&lt;r&gt; обновить  </value>
+  </data>
+  <data name="GH_Wf_Key_Browser" xml:space="preserve">
+    <value>&lt;b&gt; браузер</value>
+  </data>
+  <data name="GH_Wf_Key_Rerun" xml:space="preserve">
+    <value>&lt;e&gt; перезапуск</value>
+  </data>
+  <data name="GH_Wf_Key_RerunFailed" xml:space="preserve">
+    <value>&lt;f&gt; только упавшие</value>
+  </data>
+  <data name="GH_Wf_Key_Cancel" xml:space="preserve">
+    <value>&lt;c&gt; отменить</value>
+  </data>
+  <data name="GH_Wf_Key_FullLog" xml:space="preserve">
+    <value>&lt;l&gt; журнал  </value>
+  </data>
+  <data name="GH_Yes" xml:space="preserve">
+    <value>да</value>
+  </data>
+  <data name="GH_No" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="GH_NewComment" xml:space="preserve">
+    <value>Новый комментарий</value>
+  </data>
+  <data name="GH_EditComment" xml:space="preserve">
+    <value>Изменить комментарий</value>
+  </data>
+  <data name="GH_EditIssue" xml:space="preserve">
+    <value>Изменить задачу</value>
+  </data>
+  <data name="GH_EditPull" xml:space="preserve">
+    <value>Изменить pull request</value>
+  </data>
+  <data name="GH_ReviewBody" xml:space="preserve">
+    <value>Текст отзыва</value>
+  </data>
+  <data name="GH_SendingComment" xml:space="preserve">
+    <value>Отправка комментария на GitHub...</value>
+  </data>
+  <data name="GH_SendingReview" xml:space="preserve">
+    <value>Отправка отзыва на GitHub...</value>
+  </data>
+  <data name="GH_Saving" xml:space="preserve">
+    <value>Сохранение на GitHub...</value>
+  </data>
+  <data name="GH_Deleting" xml:space="preserve">
+    <value>Удаление комментария...</value>
+  </data>
+  <data name="GH_Talking" xml:space="preserve">
+    <value>Обмен данными с GitHub...</value>
+  </data>
+  <data name="GH_Merging" xml:space="preserve">
+    <value>Слияние на GitHub...</value>
+  </data>
+  <data name="GH_Recomputing" xml:space="preserve">
+    <value>GitHub вычисляет слияние, запрашиваю снова...</value>
+  </data>
+  <data name="GH_MergeNotReady" xml:space="preserve">
+    <value>GitHub ещё не закончил вычисление слияния. Попробуйте чуть позже.</value>
+  </data>
+  <data name="GH_CommentNotPosted" xml:space="preserve">
+    <value>Комментарий не отправлен:</value>
+  </data>
+  <data name="GH_CommentNotSaved" xml:space="preserve">
+    <value>Комментарий не сохранён:</value>
+  </data>
+  <data name="GH_CommentNotDeleted" xml:space="preserve">
+    <value>Комментарий не удалён:</value>
+  </data>
+  <data name="GH_IssueNotSaved" xml:space="preserve">
+    <value>Задача не сохранена:</value>
+  </data>
+  <data name="GH_IssueNotChanged" xml:space="preserve">
+    <value>Задача не изменена:</value>
+  </data>
+  <data name="GH_PullNotSaved" xml:space="preserve">
+    <value>Pull request не сохранён:</value>
+  </data>
+  <data name="GH_PullNotChanged" xml:space="preserve">
+    <value>Pull request не изменён:</value>
+  </data>
+  <data name="GH_PullNotMerged" xml:space="preserve">
+    <value>Pull request не влит:</value>
+  </data>
+  <data name="GH_ReviewNotSent" xml:space="preserve">
+    <value>Отзыв не отправлен:</value>
+  </data>
+  <data name="GH_CannotMerge" xml:space="preserve">
+    <value>Этот pull request нельзя влить:</value>
+  </data>
+  <data name="GH_ChangesRequested" xml:space="preserve">
+    <value>в отзыве запрошены изменения</value>
+  </data>
+  <data name="GH_BrowserFailed" xml:space="preserve">
+    <value>Не удалось открыть браузер:</value>
+  </data>
+  <data name="GH_DeleteCommentConfirm" xml:space="preserve">
+    <value>Удалить этот комментарий? Это нельзя отменить.</value>
+  </data>
+  <data name="GH_ClosePullConfirm" xml:space="preserve">
+    <value>Закрыть этот pull request?</value>
+  </data>
+  <data name="GH_ReopenPullConfirm" xml:space="preserve">
+    <value>Открыть этот pull request снова?</value>
+  </data>
+  <data name="GH_MergeConfirm" xml:space="preserve">
+    <value>Влить #{0} в {1}</value>
+  </data>
+  <data name="GH_WhyClosed" xml:space="preserve">
+    <value>Почему закрывается?</value>
+  </data>
+  <data name="GH_WhyLocked" xml:space="preserve">
+    <value>Почему блокируется?</value>
+  </data>
+  <data name="GH_HowMerged" xml:space="preserve">
+    <value>Как выполнить слияние?</value>
+  </data>
+  <data name="GH_WhatReview" xml:space="preserve">
+    <value>Какой тип отзыва?</value>
+  </data>
+  <data name="GH_WriteHint" xml:space="preserve">
+    <value>Пишите текст, поддерживается Markdown.</value>
+  </data>
+  <data name="GH_Editor_Footer" xml:space="preserve">
+    <value>&lt;ctrl+l&gt; список   &lt;ctrl+q&gt; цитата   &lt;f2&gt; отправить   &lt;esc&gt; отмена</value>
+  </data>
+  <data name="GH_Editor_Bold" xml:space="preserve">
+    <value>&lt;ctrl+b&gt; жирный</value>
+  </data>
+  <data name="GH_Editor_Italic" xml:space="preserve">
+    <value>&lt;ctrl+e&gt; курсив</value>
+  </data>
+  <data name="GH_Editor_Code" xml:space="preserve">
+    <value>&lt;ctrl+k&gt; код</value>
+  </data>
+  <data name="GH_Characters" xml:space="preserve">
+    <value>{0} символов</value>
+  </data>
+  <data name="GH_ContinuedFrom" xml:space="preserve">
+    <value>⋯ продолжение с предыдущей страницы</value>
+  </data>
+  <data name="GH_ContinuesOn" xml:space="preserve">
+    <value>⋯ продолжение на следующей странице</value>
+  </data>
+  <data name="GH_JustNow" xml:space="preserve">
+    <value>только что</value>
+  </data>
+  <data name="GH_SecondsAgo" xml:space="preserve">
+    <value>{0} секунд назад</value>
+  </data>
+  <data name="GH_MinutesAgo" xml:space="preserve">
+    <value>{0} минут назад</value>
+  </data>
+  <data name="GH_HoursAgo" xml:space="preserve">
+    <value>{0} часов назад</value>
+  </data>
+  <data name="GH_DaysAgo" xml:space="preserve">
+    <value>{0} дней назад</value>
+  </data>
+  <data name="GH_MonthsAgo" xml:space="preserve">
+    <value>{0} месяцев назад</value>
+  </data>
+  <data name="GH_YearsAgo" xml:space="preserve">
+    <value>{0} лет назад</value>
+  </data>
+  <data name="GH_Sync_Select" xml:space="preserve">
+    <value>Выберите настройки, которые хотите включить:</value>
+  </data>
+  <data name="GH_Sync_Status" xml:space="preserve">
+    <value>Синхронизировать статус с репозиторием GitHub</value>
+  </data>
+  <data name="GH_Sync_Badges" xml:space="preserve">
+    <value>Синхронизировать значки с репозиторием GitHub</value>
+  </data>
+  <data name="GH_Sync_Topics" xml:space="preserve">
+    <value>Загружать темы репозитория GitHub</value>
+  </data>
+  <data name="GH_Sync_Actions" xml:space="preserve">
+    <value>Загружать GitHub Actions</value>
+  </data>
+  <data name="GH_Sync_Stats" xml:space="preserve">
+    <value>Загружать статистику репозитория GitHub</value>
+  </data>
+  <data name="GH_Sync_Languages" xml:space="preserve">
+    <value>Использовать определение языков GitHub вместо Helyx</value>
+  </data>
+  <data name="GH_BadgesSync" xml:space="preserve">
+    <value>Синхронизация значков</value>
+  </data>
+  <data name="GH_BadgesSyncFailed" xml:space="preserve">
+    <value>Ошибка синхронизации значков</value>
+  </data>
+  <data name="GH_StatusSync" xml:space="preserve">
+    <value>Синхронизация статуса</value>
+  </data>
+  <data name="GH_StatusSyncFailed" xml:space="preserve">
+    <value>Ошибка синхронизации статуса</value>
+  </data>
+  <data name="GH_PendingBadges" xml:space="preserve">
+    <value>Эти значки назначены в Helyx, но их ещё нет в README.md:</value>
+  </data>
+  <data name="GH_AddThemNow" xml:space="preserve">
+    <value>Добавить их сейчас в README.md?</value>
+  </data>
+  <data name="GH_StagedChanges_Status" xml:space="preserve">
+    <value>Есть подготовленные изменения, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_CommitOrUnstage_Status" xml:space="preserve">
+    <value>Зафиксируйте их или уберите из индекса, затем задайте статус снова.</value>
+  </data>
+  <data name="GH_StagedChanges_Badges" xml:space="preserve">
+    <value>Есть подготовленные изменения, поэтому значки изменены только в Helyx.</value>
+  </data>
+  <data name="GH_CommitOrUnstage_Badges" xml:space="preserve">
+    <value>Зафиксируйте их или уберите из индекса, затем назначьте значки снова.</value>
+  </data>
+  <data name="GH_OperationInProgress_Status" xml:space="preserve">
+    <value>Операция {0} ещё выполняется, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_OperationInProgress_Badges" xml:space="preserve">
+    <value>Операция {0} ещё выполняется, поэтому значки изменены только в Helyx.</value>
+  </data>
+  <data name="GH_NoUpstream_Status" xml:space="preserve">
+    <value>{0} не отслеживает удалённую ветку, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_NoUpstream_Badges" xml:space="preserve">
+    <value>{0} не отслеживает удалённую ветку, поэтому значки изменены только в Helyx.</value>
+  </data>
+  <data name="GH_PushOnceFirst" xml:space="preserve">
+    <value>Сначала отправьте её через Действия Git, чтобы создать удалённую ветку.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Status" xml:space="preserve">
+    <value>README.md не найден, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Badges" xml:space="preserve">
+    <value>README.md не найден, поэтому значки изменены только в Helyx.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Status" xml:space="preserve">
+    <value>README.md не является корректным UTF-8, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_SaveAsUtf8_Status" xml:space="preserve">
+    <value>Сохраните его в UTF-8 и задайте статус снова.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Badges" xml:space="preserve">
+    <value>README.md не является корректным UTF-8, поэтому значки изменены только в Helyx.</value>
+  </data>
+  <data name="GH_SaveAsUtf8_Badges" xml:space="preserve">
+    <value>Сохраните его в UTF-8 и назначьте значки снова.</value>
+  </data>
+  <data name="GH_MarkersNotFound_Status" xml:space="preserve">
+    <value>Метки Helyx не найдены в README.md, поэтому статус изменён только в Helyx.</value>
+  </data>
+  <data name="GH_ExpectedMarkers" xml:space="preserve">
+    <value>Ожидаемые метки:</value>
+  </data>
+  <data name="GH_BadgeMarkersNotFound" xml:space="preserve">
+    <value>Метки Helyx для значка {0} не найдены. Назначаю только в Helyx!</value>
+  </data>
+  <data name="GH_ConfirmSync" xml:space="preserve">
+    <value>Это зафиксирует и отправит изменение README в {0} репозиториев.</value>
+  </data>
+  <data name="GH_ConfirmSyncOne" xml:space="preserve">
+    <value>Это зафиксирует и отправит изменение README в {0} репозиторий.</value>
+  </data>
+  <data name="GH_Markers_Title" xml:space="preserve">
+    <value>Разместить метки Helyx · {0}</value>
+  </data>
+  <data name="GH_Markers_Missing" xml:space="preserve">
+    <value>В README.md нет меток Helyx для {0} из них, поэтому их некуда записать.</value>
+  </data>
+  <data name="GH_Markers_How" xml:space="preserve">
+    <value>Как вы хотите их добавить?</value>
+  </data>
+  <data name="GH_Markers_Place" xml:space="preserve">
+    <value>Разместить их сейчас в README.md</value>
+  </data>
+  <data name="GH_Markers_Manually" xml:space="preserve">
+    <value>Покажи метки, я добавлю их сам</value>
+  </data>
+  <data name="GH_Markers_Skip" xml:space="preserve">
+    <value>Пропустить, изменить только в Helyx</value>
+  </data>
+  <data name="GH_Markers_AddThese" xml:space="preserve">
+    <value>Добавьте это в README.md в любое место:</value>
+  </data>
+  <data name="GH_Markers_NotUtf8" xml:space="preserve">
+    <value>README.md не является корректным UTF-8, размещение меток испортило бы символы.</value>
+  </data>
+  <data name="GH_SaveAsUtf8Retry" xml:space="preserve">
+    <value>Сохраните его в UTF-8 и попробуйте снова.</value>
+  </data>
+  <data name="GH_Markers_ReadFailed" xml:space="preserve">
+    <value>Не удалось прочитать README.md.</value>
+  </data>
+  <data name="GH_Markers_WriteFailed" xml:space="preserve">
+    <value>Не удалось записать README.md.</value>
+  </data>
+  <data name="GH_Markers_Footer" xml:space="preserve">
+    <value>↑↓ перемещение   &lt;enter&gt; новая строка   </value>
+  </data>
+  <data name="GH_Markers_KeyPlace" xml:space="preserve">
+    <value>&lt;space&gt; разместить</value>
+  </data>
+  <data name="GH_Markers_KeyRemove" xml:space="preserve">
+    <value>&lt;del&gt; убрать метку</value>
+  </data>
+  <data name="GH_Markers_KeyDeleteLine" xml:space="preserve">
+    <value>&lt;bksp&gt; удалить строку</value>
+  </data>
+  <data name="GH_Markers_KeyNextTag" xml:space="preserve">
+    <value>&lt;tab&gt; следующая метка   </value>
+  </data>
+  <data name="GH_Markers_KeySave" xml:space="preserve">
+    <value>&lt;f2&gt; сохранить</value>
+  </data>
+  <data name="GH_Markers_KeyCancel" xml:space="preserve">
+    <value>&lt;esc&gt; отмена</value>
+  </data>
+  <data name="GH_Markers_Placing" xml:space="preserve">
+    <value>размещаю {0}</value>
+  </data>
+  <data name="GH_Markers_Left" xml:space="preserve">
+    <value>(осталось {0})</value>
+  </data>
+  <data name="GH_Markers_AllPlaced" xml:space="preserve">
+    <value>всё размещено</value>
+  </data>
+  <data name="GH_Stats_Title" xml:space="preserve">
+    <value>Статистика репозитория GitHub</value>
+  </data>
+  <data name="GH_Stats_Failed" xml:space="preserve">
+    <value>Не удалось получить статистику этого репозитория с GitHub.</value>
+  </data>
+  <data name="GH_Stats_Incomplete_Title" xml:space="preserve">
+    <value>Неполные данные</value>
+  </data>
+  <data name="GH_Stats_Incomplete" xml:space="preserve">
+    <value>GitHub вернул не всё, поэтому часть этого экрана неполная:</value>
+  </data>
+  <data name="GH_Stats_Retry" xml:space="preserve">
+    <value>Откройте этот экран снова, чтобы повторить.</value>
+  </data>
+  <data name="GH_Stats_Stars" xml:space="preserve">
+    <value>Звёзды</value>
+  </data>
+  <data name="GH_Stats_Watchers" xml:space="preserve">
+    <value>Наблюдатели</value>
+  </data>
+  <data name="GH_Stats_Forks" xml:space="preserve">
+    <value>Форки</value>
+  </data>
+  <data name="GH_Stats_Activity" xml:space="preserve">
+    <value>Активность коммитов за последний год</value>
+  </data>
+  <data name="GH_Wiki_Failed" xml:space="preserve">
+    <value>Не удалось составить адрес вики.</value>
+  </data>
+  <data name="GH_Wiki_CheckAuth" xml:space="preserve">
+    <value>Проверьте авторизацию GitHub в Настройках и имя проекта на GitHub.</value>
+  </data>
+  <data name="GH_Wiki_OpenFailed" xml:space="preserve">
+    <value>Не удалось открыть вики.</value>
+  </data>
+  <data name="GH_ContinueAction" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="GH_UnknownAuthor" xml:space="preserve">
+    <value>Неизвестный автор</value>
+  </data>
+  <data name="Git_FolderGone" xml:space="preserve">
+    <value>Папка проекта больше не существует:</value>
+  </data>
+  <data name="Git_FolderGone_Title" xml:space="preserve">
+    <value>Папка не найдена</value>
+  </data>
+  <data name="Git_NotARepo" xml:space="preserve">
+    <value>'{0}' не является репозиторием Git.</value>
+  </data>
+  <data name="Git_NotARepo_Title" xml:space="preserve">
+    <value>Не репозиторий Git</value>
+  </data>
+  <data name="Git_InitAsk" xml:space="preserve">
+    <value>Инициализировать его и продолжить?</value>
+  </data>
+  <data name="Git_InitFailed" xml:space="preserve">
+    <value>Не удалось инициализировать репозиторий.</value>
+  </data>
+  <data name="Git_InitFailed_Title" xml:space="preserve">
+    <value>Инициализация Git не удалась</value>
+  </data>
+  <data name="Git_Status" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="Git_Changes" xml:space="preserve">
+    <value>Изменения</value>
+  </data>
+  <data name="Git_Sync" xml:space="preserve">
+    <value>Синхронизация</value>
+  </data>
+  <data name="Git_Branches" xml:space="preserve">
+    <value>Ветки</value>
+  </data>
+  <data name="Git_Stashes" xml:space="preserve">
+    <value>Стэши</value>
+  </data>
+  <data name="Git_Log" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="Git_Diagnostics" xml:space="preserve">
+    <value>Диагностика</value>
+  </data>
+  <data name="Git_CurrentBranch" xml:space="preserve">
+    <value>Текущая ветка</value>
+  </data>
+  <data name="Git_Stage" xml:space="preserve">
+    <value>Индексировать</value>
+  </data>
+  <data name="Git_Commit" xml:space="preserve">
+    <value>Коммит</value>
+  </data>
+  <data name="Git_UndoCommit" xml:space="preserve">
+    <value>Отменить коммит</value>
+  </data>
+  <data name="Git_RedoCommit" xml:space="preserve">
+    <value>Вернуть коммит</value>
+  </data>
+  <data name="Git_SyncAuto" xml:space="preserve">
+    <value>Синхронизация (авто pull+push)</value>
+  </data>
+  <data name="Git_CreateBranch" xml:space="preserve">
+    <value>Создать ветку</value>
+  </data>
+  <data name="Git_SwitchBranch" xml:space="preserve">
+    <value>Переключить ветку</value>
+  </data>
+  <data name="Git_MergeBranch" xml:space="preserve">
+    <value>Слить ветку</value>
+  </data>
+  <data name="Git_DeleteBranch" xml:space="preserve">
+    <value>Удалить ветку</value>
+  </data>
+  <data name="Git_SaveStash" xml:space="preserve">
+    <value>Сохранить стэш</value>
+  </data>
+  <data name="Git_ApplyStash" xml:space="preserve">
+    <value>Применить стэш</value>
+  </data>
+  <data name="Git_PopStash" xml:space="preserve">
+    <value>Извлечь стэш</value>
+  </data>
+  <data name="Git_ListStashes" xml:space="preserve">
+    <value>Список стэшей</value>
+  </data>
+  <data name="Git_StatusTitle" xml:space="preserve">
+    <value>Состояние Git — {0}</value>
+  </data>
+  <data name="Git_WorkingTreeClean" xml:space="preserve">
+    <value>Рабочее дерево чистое</value>
+  </data>
+  <data name="Git_NothingToStage" xml:space="preserve">
+    <value>Нечего индексировать — рабочее дерево чистое.</value>
+  </data>
+  <data name="Git_StageFiles" xml:space="preserve">
+    <value>Индексация файлов</value>
+  </data>
+  <data name="Git_SelectFilesToStage" xml:space="preserve">
+    <value>Выберите файлы для индексации:</value>
+  </data>
+  <data name="Git_ToggleHint" xml:space="preserve">
+    <value>(&lt;space&gt; переключить, &lt;enter&gt; подтвердить)</value>
+  </data>
+  <data name="Git_AllFiles" xml:space="preserve">
+    <value>Все файлы</value>
+  </data>
+  <data name="Git_NothingStaged" xml:space="preserve">
+    <value>Ничего не проиндексировано. Сначала используйте {0}.</value>
+  </data>
+  <data name="Git_FilesToCommit" xml:space="preserve">
+    <value>{0} файл(ов) для коммита</value>
+  </data>
+  <data name="Git_ProceedCommit" xml:space="preserve">
+    <value>Продолжить с этим коммитом?</value>
+  </data>
+  <data name="Git_CommitMessage" xml:space="preserve">
+    <value>Сообщение коммита:</value>
+  </data>
+  <data name="Git_CommittedAs" xml:space="preserve">
+    <value>Коммит создан как {0}: {1}</value>
+  </data>
+  <data name="Git_NothingToDiff" xml:space="preserve">
+    <value>Нечего сравнивать — рабочее дерево чистое.</value>
+  </data>
+  <data name="Git_CommitNotFound" xml:space="preserve">
+    <value>Коммит не найден.</value>
+  </data>
+  <data name="Git_NoChangesInCommit" xml:space="preserve">
+    <value>Этот коммит не содержит изменений.</value>
+  </data>
+  <data name="Git_ChangedFiles" xml:space="preserve">
+    <value>Изменённые файлы</value>
+  </data>
+  <data name="Git_NoDiffForFile" xml:space="preserve">
+    <value>Для этого файла нет diff.</value>
+  </data>
+  <data name="Git_DiffFailed" xml:space="preserve">
+    <value>Не удалось получить diff:</value>
+  </data>
+  <data name="Git_Col_File" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="Git_Col_State" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
+  <data name="Common_Warning" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
+  <data name="Git_UndoWarning" xml:space="preserve">
+    <value>Отмена коммита переписывает историю Git.
+Убедитесь, что понимаете последствия, прежде чем продолжить.</value>
+  </data>
+  <data name="Git_UndoHow" xml:space="preserve">
+    <value>Как отменить коммит?</value>
+  </data>
+  <data name="Git_Undo_Soft" xml:space="preserve">
+    <value>Оставить изменения в индексе (Soft reset)</value>
+  </data>
+  <data name="Git_Undo_Mixed" xml:space="preserve">
+    <value>Оставить изменения вне индекса (Mixed reset)</value>
+  </data>
+  <data name="Git_Undo_Hard" xml:space="preserve">
+    <value>Полностью удалить изменения (Hard reset)</value>
+  </data>
+  <data name="Git_Undo_SoftInfo" xml:space="preserve">
+    <value>Последний коммит будет удалён, но его изменения останутся в индексе.</value>
+  </data>
+  <data name="Git_Undo_MixedInfo" xml:space="preserve">
+    <value>Последний коммит будет удалён, но его изменения останутся в рабочем каталоге.</value>
+  </data>
+  <data name="Git_Undo_HardInfo" xml:space="preserve">
+    <value>Последний коммит и все внесённые им изменения будут удалены безвозвратно.</value>
+  </data>
+  <data name="Git_Undo_GenericInfo" xml:space="preserve">
+    <value>Последний коммит будет отменён.</value>
+  </data>
+  <data name="Git_UndoConfirm" xml:space="preserve">
+    <value>Точно отменить последний коммит?</value>
+  </data>
+  <data name="Git_NoCommits" xml:space="preserve">
+    <value>В репозитории нет коммитов.</value>
+  </data>
+  <data name="Git_FirstCommitUndo" xml:space="preserve">
+    <value>Первый коммит нельзя отменить, потому что возвращаться некуда.</value>
+  </data>
+  <data name="Git_UndoDone" xml:space="preserve">
+    <value>Последний коммит успешно отменён.</value>
+  </data>
+  <data name="Git_RedoWarning" xml:space="preserve">
+    <value>Возврат коммита перезаписывает текущее состояние репозитория.
+Продолжайте, только если уверены, что хотите восстановить именно его.</value>
+  </data>
+  <data name="Git_RedoAsk" xml:space="preserve">
+    <value>Восстановить отменённый коммит?</value>
+  </data>
+  <data name="Git_Redo_NoUndo" xml:space="preserve">
+    <value>Нет отменённого коммита для восстановления.
+Сначала отмените коммит.</value>
+  </data>
+  <data name="Git_Redo_BranchChanged" xml:space="preserve">
+    <value>Текущая ветка изменилась.
+Отмена выполнялась на '{0}',
+а сейчас вы на '{1}'.</value>
+  </data>
+  <data name="Git_Redo_NoSha" xml:space="preserve">
+    <value>Нет коммита для возврата.
+Сначала отмените коммит.</value>
+  </data>
+  <data name="Git_Redo_Dirty" xml:space="preserve">
+    <value>В репозитории есть незакоммиченные изменения.
+Закоммитьте, спрячьте в стэш или отбросьте их перед возвратом коммита.</value>
+  </data>
+  <data name="Git_Redo_Gone" xml:space="preserve">
+    <value>Коммита для восстановления больше нет.
+Его могла удалить сборка мусора Git или другие изменения в репозитории.</value>
+  </data>
+  <data name="Git_RedoDone" xml:space="preserve">
+    <value>Коммит успешно восстановлен!
+Восстановленный коммит: {0}</value>
+  </data>
+  <data name="Git_NoCommitsToPush" xml:space="preserve">
+    <value>Нет коммитов для push.</value>
+  </data>
+  <data name="Git_NoOriginAdd" xml:space="preserve">
+    <value>У этого репозитория нет удалённого 'origin'.
+Добавить его через Helyx?</value>
+  </data>
+  <data name="Git_UsernameUnknown" xml:space="preserve">
+    <value>Не удалось определить ваше имя пользователя GitHub.</value>
+  </data>
+  <data name="Git_PushFailed_Title" xml:space="preserve">
+    <value>Push не удался</value>
+  </data>
+  <data name="Git_OriginAdded" xml:space="preserve">
+    <value>Удалённый {0} добавлен.</value>
+  </data>
+  <data name="Git_RenameToRemote" xml:space="preserve">
+    <value>Ваша ветка '{0}', а на удалённом есть только '{1}'.
+Переименовать ветку в '{1}'?</value>
+  </data>
+  <data name="Git_SetUpstreamAsk" xml:space="preserve">
+    <value>Ветка '{0}' не отслеживает удалённую ветку.
+Настроить это через Helyx?</value>
+  </data>
+  <data name="Git_NowTracks" xml:space="preserve">
+    <value>Ветка {0} теперь отслеживает {1}.</value>
+  </data>
+  <data name="Git_Pushing" xml:space="preserve">
+    <value>Отправка...</value>
+  </data>
+  <data name="Git_RebaseAsk" xml:space="preserve">
+    <value>Сделать rebase на удалённую ветку и повторить?</value>
+  </data>
+  <data name="Git_NoUpstreamRebase" xml:space="preserve">
+    <value>Эта ветка не отслеживает удалённую, поэтому rebase невозможен.</value>
+  </data>
+  <data name="Git_RebaseFailed_Title" xml:space="preserve">
+    <value>Rebase не удался</value>
+  </data>
+  <data name="Git_Rebasing" xml:space="preserve">
+    <value>Выполняется rebase...</value>
+  </data>
+  <data name="Git_Row_Step" xml:space="preserve">
+    <value>Шаг</value>
+  </data>
+  <data name="Git_StepOf" xml:space="preserve">
+    <value>{0} из {1}</value>
+  </data>
+  <data name="Git_UnknownLower" xml:space="preserve">
+    <value>неизвестно</value>
+  </data>
+  <data name="Git_Row_Conflicts" xml:space="preserve">
+    <value>Конфликты</value>
+  </data>
+  <data name="Git_NoneReadyContinue" xml:space="preserve">
+    <value>Нет - можно продолжать</value>
+  </data>
+  <data name="Git_RebaseInProgress" xml:space="preserve">
+    <value>Rebase выполняется</value>
+  </data>
+  <data name="Git_WhatDo" xml:space="preserve">
+    <value>Что вы хотите сделать?</value>
+  </data>
+  <data name="Git_ContinueRebase" xml:space="preserve">
+    <value>Продолжить rebase</value>
+  </data>
+  <data name="Git_MarkResolvedContinue" xml:space="preserve">
+    <value>Отметить конфликты решёнными и продолжить</value>
+  </data>
+  <data name="Git_ResolveHere" xml:space="preserve">
+    <value>Решить конфликт здесь</value>
+  </data>
+  <data name="Git_OpenFolder" xml:space="preserve">
+    <value>Открыть папку проекта</value>
+  </data>
+  <data name="Git_RecheckFiles" xml:space="preserve">
+    <value>Проверить файлы ещё раз</value>
+  </data>
+  <data name="Git_AbortRebase" xml:space="preserve">
+    <value>Прервать rebase</value>
+  </data>
+  <data name="Git_LeaveInProgress" xml:space="preserve">
+    <value>Оставить незавершённым</value>
+  </data>
+  <data name="Git_SelectFileResolve" xml:space="preserve">
+    <value>Выберите файл для разрешения:</value>
+  </data>
+  <data name="Git_StillMarked" xml:space="preserve">
+    <value>В этих файлах остались маркеры конфликта либо их не удалось прочитать:</value>
+  </data>
+  <data name="Git_ResolveBeforeRebase" xml:space="preserve">
+    <value>Разрешите их, чтобы rebase мог продолжиться.</value>
+  </data>
+  <data name="Git_ConflictsNotResolved" xml:space="preserve">
+    <value>Конфликты не разрешены</value>
+  </data>
+  <data name="Git_ContinuingRebase" xml:space="preserve">
+    <value>Продолжаю rebase...</value>
+  </data>
+  <data name="Git_RebaseAborted" xml:space="preserve">
+    <value>Rebase прерван, ветка вернулась в исходное состояние.</value>
+  </data>
+  <data name="Git_RebaseAborted_Title" xml:space="preserve">
+    <value>Rebase прерван</value>
+  </data>
+  <data name="Git_RebaseLeft" xml:space="preserve">
+    <value>Rebase остался незавершённым.
+Завершите или прервите его перед следующим push.</value>
+  </data>
+  <data name="Git_PushedOk" xml:space="preserve">
+    <value>Ветка {0} успешно отправлена!</value>
+  </data>
+  <data name="Git_Pull_UpToDate" xml:space="preserve">
+    <value>Ветка '{0}' уже актуальна.</value>
+  </data>
+  <data name="Git_Pull_FastForward" xml:space="preserve">
+    <value>Ветка {0} успешно получена (fast-forward).</value>
+  </data>
+  <data name="Git_Pull_Merged" xml:space="preserve">
+    <value>Ветка {0} успешно получена и слита.</value>
+  </data>
+  <data name="Git_Pull_Conflicts" xml:space="preserve">
+    <value>Pull завершился конфликтами в {0}. Разрешите их перед продолжением.</value>
+  </data>
+  <data name="Git_Pull_Unexpected" xml:space="preserve">
+    <value>Pull завершился с неожиданным статусом: {0}</value>
+  </data>
+  <data name="Git_PullFailed_Title" xml:space="preserve">
+    <value>Pull не удался</value>
+  </data>
+  <data name="Git_ForcePullAsk" xml:space="preserve">
+    <value>Принудительно выполнить pull? {0}</value>
+  </data>
+  <data name="Git_DiscardWarn" xml:space="preserve">
+    <value>ЭТО ОТБРОСИТ ВАШИ ЛОКАЛЬНЫЕ ИЗМЕНЕНИЯ!</value>
+  </data>
+  <data name="Git_NoOriginConfigured" xml:space="preserve">
+    <value>У этого репозитория не настроен удалённый 'origin'.</value>
+  </data>
+  <data name="Git_NoRemoteToReset" xml:space="preserve">
+    <value>У ветки '{0}' нет удалённой ветки для сброса.</value>
+  </data>
+  <data name="Git_ResetTo" xml:space="preserve">
+    <value>Ветка {0} сброшена к {1}.</value>
+  </data>
+  <data name="Git_FetchFailed_Title" xml:space="preserve">
+    <value>Fetch не удался</value>
+  </data>
+  <data name="Git_Fetched" xml:space="preserve">
+    <value>Последние изменения из '{0}' получены.</value>
+  </data>
+  <data name="Git_SyncDirty" xml:space="preserve">
+    <value>В репозитории есть незакоммиченные изменения, поэтому итог может отличаться от ожидаемого.</value>
+  </data>
+  <data name="Git_PressAnyKey" xml:space="preserve">
+    <value>Нажмите любую клавишу для продолжения...</value>
+  </data>
+  <data name="Git_NoCommitsToSync" xml:space="preserve">
+    <value>Нет коммитов для синхронизации.</value>
+  </data>
+  <data name="Git_NoUpstreamSync" xml:space="preserve">
+    <value>Ветка '{0}' ещё не отслеживает удалённую ветку.
+Сначала выполните push, чтобы создать её.</value>
+  </data>
+  <data name="Git_DivergenceUnknown" xml:space="preserve">
+    <value>Не удалось определить расхождение между локальной и удалённой веткой.</value>
+  </data>
+  <data name="Git_SyncFailed_Title" xml:space="preserve">
+    <value>Синхронизация не удалась</value>
+  </data>
+  <data name="Git_AlreadySynced" xml:space="preserve">
+    <value>Уже синхронизировано.</value>
+  </data>
+  <data name="Git_LocalAhead" xml:space="preserve">
+    <value>Локальная ветка впереди на {0} коммит(ов). Отправка...</value>
+  </data>
+  <data name="Git_RemoteAhead" xml:space="preserve">
+    <value>Удалённая ветка впереди на {0} коммит(ов). Получение...</value>
+  </data>
+  <data name="Git_Diverged" xml:space="preserve">
+    <value>Ветки разошлись.</value>
+  </data>
+  <data name="Git_SelectVersion" xml:space="preserve">
+    <value>Выберите версию, которую хотите оставить:</value>
+  </data>
+  <data name="Git_Local" xml:space="preserve">
+    <value>Локальная</value>
+  </data>
+  <data name="Git_Remote" xml:space="preserve">
+    <value>Удалённая</value>
+  </data>
+  <data name="Git_EnterBranchName" xml:space="preserve">
+    <value>Введите имя новой ветки:</value>
+  </data>
+  <data name="Git_InvalidBranchName" xml:space="preserve">
+    <value>'{0}' не является допустимым именем ветки.</value>
+  </data>
+  <data name="Git_BranchExists" xml:space="preserve">
+    <value>Ветка с именем '{0}' уже существует.</value>
+  </data>
+  <data name="Git_NoBranchBeforeCommit" xml:space="preserve">
+    <value>Ветку нельзя создать до первого коммита.</value>
+  </data>
+  <data name="Git_BranchCreated" xml:space="preserve">
+    <value>Ветка {0} успешно создана!</value>
+  </data>
+  <data name="Git_CreateBranchFailed_Title" xml:space="preserve">
+    <value>Не удалось создать ветку</value>
+  </data>
+  <data name="Git_NoBranchesToSwitch" xml:space="preserve">
+    <value>Нет других локальных веток для переключения.</value>
+  </data>
+  <data name="Git_SelectBranchSwitch" xml:space="preserve">
+    <value>Выберите ветку для переключения:</value>
+  </data>
+  <data name="Git_DirtySwitch" xml:space="preserve">
+    <value>В репозитории есть незакоммиченные изменения.
+Проиндексируйте и закоммитьте их перед сменой ветки.</value>
+  </data>
+  <data name="Git_Switched" xml:space="preserve">
+    <value>Переключено на ветку {0}.</value>
+  </data>
+  <data name="Git_SwitchBranchFailed_Title" xml:space="preserve">
+    <value>Не удалось переключить ветку</value>
+  </data>
+  <data name="Git_NoBranchesToMerge" xml:space="preserve">
+    <value>Нет других локальных веток для слияния.</value>
+  </data>
+  <data name="Git_NothingBeforeCommit" xml:space="preserve">
+    <value>До первого коммита нечего сливать.</value>
+  </data>
+  <data name="Git_SelectBranchMerge" xml:space="preserve">
+    <value>Выберите ветку для слияния в {0}:</value>
+  </data>
+  <data name="Git_DirtyMerge" xml:space="preserve">
+    <value>В репозитории есть незакоммиченные изменения.
+Проиндексируйте и закоммитьте их перед слиянием.</value>
+  </data>
+  <data name="Git_AlreadyMerged" xml:space="preserve">
+    <value>Ветка '{0}' уже слита в '{1}'.</value>
+  </data>
+  <data name="Git_MergeConfirm" xml:space="preserve">
+    <value>Слить {0} ({1}) в {2}?</value>
+  </data>
+  <data name="Git_CommitCountOne" xml:space="preserve">
+    <value>{0} коммит</value>
+  </data>
+  <data name="Git_CommitCountMany" xml:space="preserve">
+    <value>{0} коммитов</value>
+  </data>
+  <data name="Git_Merging" xml:space="preserve">
+    <value>Слияние...</value>
+  </data>
+  <data name="Git_MergeFailed_Title" xml:space="preserve">
+    <value>Слияние не удалось</value>
+  </data>
+  <data name="Git_Merge_FastForward" xml:space="preserve">
+    <value>Ветка '{0}' слита в '{1}' (fast-forward).</value>
+  </data>
+  <data name="Git_Merge_Done" xml:space="preserve">
+    <value>Ветка '{0}' слита в '{1}'.</value>
+  </data>
+  <data name="Git_Merge_Unexpected" xml:space="preserve">
+    <value>Слияние завершилось с неожиданным статусом: {0}</value>
+  </data>
+  <data name="Git_Row_Merging" xml:space="preserve">
+    <value>Слияние</value>
+  </data>
+  <data name="Git_NoneReadyCommit" xml:space="preserve">
+    <value>Нет - можно коммитить</value>
+  </data>
+  <data name="Git_MergeInProgress" xml:space="preserve">
+    <value>Слияние выполняется</value>
+  </data>
+  <data name="Git_CommitMerge" xml:space="preserve">
+    <value>Закоммитить слияние</value>
+  </data>
+  <data name="Git_MarkResolvedCommit" xml:space="preserve">
+    <value>Отметить конфликты решёнными и закоммитить</value>
+  </data>
+  <data name="Git_AbortMerge" xml:space="preserve">
+    <value>Прервать слияние</value>
+  </data>
+  <data name="Git_ResolveBeforeMerge" xml:space="preserve">
+    <value>Разрешите их, чтобы слияние можно было закоммитить.</value>
+  </data>
+  <data name="Git_MergedInto" xml:space="preserve">
+    <value>Ветка {0} слита в {1}.</value>
+  </data>
+  <data name="Git_MergeAborted" xml:space="preserve">
+    <value>Слияние прервано, ветка вернулась в исходное состояние.</value>
+  </data>
+  <data name="Git_MergeAborted_Title" xml:space="preserve">
+    <value>Слияние прервано</value>
+  </data>
+  <data name="Git_MergeLeft" xml:space="preserve">
+    <value>Слияние осталось незавершённым.
+Завершите или прервите его перед следующим коммитом.</value>
+  </data>
+  <data name="Git_NoBranchesToDelete" xml:space="preserve">
+    <value>Нет других локальных веток для удаления.</value>
+  </data>
+  <data name="Git_SelectBranchDelete" xml:space="preserve">
+    <value>Выберите ветку для удаления:</value>
+  </data>
+  <data name="Git_UnmergedWarn" xml:space="preserve">
+    <value>Ветка {0} содержит коммиты, не слитые ни в одну другую ветку.
+Её удаление может сделать их недостижимыми и в итоге потерять.</value>
+  </data>
+  <data name="Git_UnmergedWarn_Title" xml:space="preserve">
+    <value>Обнаружены неслитые коммиты</value>
+  </data>
+  <data name="Git_DeleteBranchConfirm" xml:space="preserve">
+    <value>Точно удалить ветку {0}?</value>
+  </data>
+  <data name="Git_DeleteBranchStill" xml:space="preserve">
+    <value>Всё равно удалить эту ветку?</value>
+  </data>
+  <data name="Git_DeleteBranchFailed_Title" xml:space="preserve">
+    <value>Не удалось удалить ветку</value>
+  </data>
+  <data name="Git_BranchDeleted" xml:space="preserve">
+    <value>Ветка {0} успешно удалена!</value>
+  </data>
+  <data name="Git_NothingToStash" xml:space="preserve">
+    <value>Нет незакоммиченных изменений для стэша.</value>
+  </data>
+  <data name="Git_StashMessage" xml:space="preserve">
+    <value>Сообщение стэша:</value>
+  </data>
+  <data name="Git_StashedNothing" xml:space="preserve">
+    <value>Нечего было прятать в стэш.</value>
+  </data>
+  <data name="Git_StashSaved" xml:space="preserve">
+    <value>Стэш {0} успешно сохранён!</value>
+  </data>
+  <data name="Git_SaveStashFailed_Title" xml:space="preserve">
+    <value>Не удалось сохранить стэш</value>
+  </data>
+  <data name="Git_NoStashes" xml:space="preserve">
+    <value>Стэшей нет.</value>
+  </data>
+  <data name="Git_NoStashesFound" xml:space="preserve">
+    <value>Стэши не найдены.</value>
+  </data>
+  <data name="Git_Col_Stash" xml:space="preserve">
+    <value>Стэш</value>
+  </data>
+  <data name="Git_Col_Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Git_Nav_Apply" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница   &lt;enter&gt; применить   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Git_Nav_Pop" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница   &lt;enter&gt; извлечь   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Git_Nav_View" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница   &lt;enter&gt; открыть   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Common_Page" xml:space="preserve">
+    <value>страница {0}/{1}   ·   {2}/{3}</value>
+  </data>
+  <data name="Common_NavSelect" xml:space="preserve">
+    <value>↑↓ навигация   ←→ страница   &lt;enter&gt; выбрать   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Git_StashApplied" xml:space="preserve">
+    <value>Стэш {0} успешно применён.</value>
+  </data>
+  <data name="Git_StashConflicts" xml:space="preserve">
+    <value>Стэш применён, но вызвал конфликты.
+
+Стэш сохранён — разрешите конфликты вручную.</value>
+  </data>
+  <data name="Git_Conflicts_Title" xml:space="preserve">
+    <value>Конфликты</value>
+  </data>
+  <data name="Git_StashApplyFailed" xml:space="preserve">
+    <value>Не удалось применить стэш: {0}.</value>
+  </data>
+  <data name="Git_ApplyStashFailed_Title" xml:space="preserve">
+    <value>Не удалось применить стэш</value>
+  </data>
+  <data name="Git_StashPopped" xml:space="preserve">
+    <value>Стэш {0} успешно извлечён.</value>
+  </data>
+  <data name="Git_StashPopFailed" xml:space="preserve">
+    <value>Не удалось извлечь стэш: {0}.</value>
+  </data>
+  <data name="Git_PopStashFailed_Title" xml:space="preserve">
+    <value>Не удалось извлечь стэш</value>
+  </data>
+  <data name="Git_Row_Index" xml:space="preserve">
+    <value>Индекс</value>
+  </data>
+  <data name="Git_Row_BasedOn" xml:space="preserve">
+    <value>Основан на</value>
+  </data>
+  <data name="Git_StashInfo" xml:space="preserve">
+    <value>О стэше</value>
+  </data>
+  <data name="Git_NoFileChanges" xml:space="preserve">
+    <value>Изменений файлов нет.</value>
+  </data>
+  <data name="Git_Files" xml:space="preserve">
+    <value>Файлы ({0})</value>
+  </data>
+  <data name="Git_NoChangesInStash" xml:space="preserve">
+    <value>В этом стэше нет изменений.</value>
+  </data>
+  <data name="Git_ReadingLog" xml:space="preserve">
+    <value>Чтение истории...</value>
+  </data>
+  <data name="Git_NoCommitsFound" xml:space="preserve">
+    <value>Коммиты не найдены.</value>
+  </data>
+  <data name="Git_Col_Author" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="Git_Col_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Git_CommitDetails" xml:space="preserve">
+    <value>Детали коммита</value>
+  </data>
+  <data name="Git_Stash_Footer" xml:space="preserve">
+    <value>↑↓ прокрутка   &lt;pgup/pgdn&gt; страница   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Git_Diff_Footer" xml:space="preserve">
+    <value>↑↓ навигация   &lt;tab&gt; сменить панель   &lt;pgup/pgdn&gt; страница   &lt;esc&gt; назад</value>
+  </data>
+  <data name="Git_MoreFiles" xml:space="preserve">
+    <value>+{0} файлов ещё</value>
+  </data>
+  <data name="Git_Row_Branches" xml:space="preserve">
+    <value>Ветки</value>
+  </data>
+  <data name="Git_Row_Parents" xml:space="preserve">
+    <value>Родители</value>
+  </data>
+  <data name="Git_Row_Insertions" xml:space="preserve">
+    <value>Добавлено</value>
+  </data>
+  <data name="Git_Row_Deletions" xml:space="preserve">
+    <value>Удалено</value>
+  </data>
+  <data name="Git_CommitInformation" xml:space="preserve">
+    <value>Информация о коммите</value>
+  </data>
+  <data name="Git_Col_Status" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="Git_CommitActions" xml:space="preserve">
+    <value>Действия с коммитом</value>
+  </data>
+  <data name="Git_ViewDiff" xml:space="preserve">
+    <value>Показать diff</value>
+  </data>
+  <data name="Git_ViewFullMessage" xml:space="preserve">
+    <value>Показать полное сообщение</value>
+  </data>
+  <data name="Git_CommitMessageTitle" xml:space="preserve">
+    <value>Сообщение коммита</value>
+  </data>
+  <data name="Git_PressAnyKeyReturn" xml:space="preserve">
+    <value>Нажмите любую клавишу для возврата...</value>
+  </data>
+  <data name="Git_Col_Check" xml:space="preserve">
+    <value>Проверка</value>
+  </data>
+  <data name="Git_Col_Details" xml:space="preserve">
+    <value>Подробности</value>
+  </data>
+  <data name="Git_Check_Index" xml:space="preserve">
+    <value>Индекс</value>
+  </data>
+  <data name="Git_NotLocked" xml:space="preserve">
+    <value>Не заблокирован</value>
+  </data>
+  <data name="Git_LockedGitRunning" xml:space="preserve">
+    <value>Заблокирован, пока работает процесс git. Дождитесь завершения.</value>
+  </data>
+  <data name="Git_LockedNotEmpty" xml:space="preserve">
+    <value>Заблокирован и не пуст. Возможно, в него ещё пишут.</value>
+  </data>
+  <data name="Git_LockedCrashed" xml:space="preserve">
+    <value>Заблокирован упавшим процессом. Индексация и коммит не сработают.</value>
+  </data>
+  <data name="Git_Check_Operation" xml:space="preserve">
+    <value>Операция</value>
+  </data>
+  <data name="Git_NothingInProgress" xml:space="preserve">
+    <value>Ничего не выполняется</value>
+  </data>
+  <data name="Git_RebaseUnfinished" xml:space="preserve">
+    <value>Rebase так и не был завершён - шаг {0} из {1}. </value>
+  </data>
+  <data name="Git_RebaseUnfinishedByGit" xml:space="preserve">
+    <value>Rebase так и не был завершён. </value>
+  </data>
+  <data name="Git_RebaseFinishInTerminal" xml:space="preserve">
+    <value>Этот rebase запустил Git, поэтому Helyx не может его продолжить или отменить. Завершите его в терминале командой git rebase --continue или git rebase --abort.</value>
+  </data>
+  <data name="Git_StillConflictedOne" xml:space="preserve">
+    <value>{0} файл всё ещё в конфликте.</value>
+  </data>
+  <data name="Git_StillConflictedMany" xml:space="preserve">
+    <value>{0} файлов всё ещё в конфликте.</value>
+  </data>
+  <data name="Git_NoConflictsLeft" xml:space="preserve">
+    <value>Конфликтов не осталось - можно продолжать.</value>
+  </data>
+  <data name="Git_OperationUnfinished" xml:space="preserve">
+    <value>'{0}' так и не был завершён.</value>
+  </data>
+  <data name="Git_OnBranch" xml:space="preserve">
+    <value>На ветке {0}</value>
+  </data>
+  <data name="Git_Detached" xml:space="preserve">
+    <value>Отсоединённый HEAD. Сделанные сейчас коммиты не будут принадлежать ни одной ветке.</value>
+  </data>
+  <data name="Git_Check_LastCommit" xml:space="preserve">
+    <value>Последний коммит</value>
+  </data>
+  <data name="Git_NoCommitsYet" xml:space="preserve">
+    <value>В репозитории пока нет коммитов</value>
+  </data>
+  <data name="Git_Check_GitHubName" xml:space="preserve">
+    <value>Имя на GitHub</value>
+  </data>
+  <data name="Git_GitHubNameMissing" xml:space="preserve">
+    <value>Не задано в Helyx, поэтому все функции GitHub недоступны.</value>
+  </data>
+  <data name="Git_RemoteSuggests" xml:space="preserve">
+    <value> Удалённый предлагает '{0}'.</value>
+  </data>
+  <data name="Git_Check_Remote" xml:space="preserve">
+    <value>Удалённый</value>
+  </data>
+  <data name="Git_NoOriginNothing" xml:space="preserve">
+    <value>Нет удалённого 'origin'. Push и pull невозможны.</value>
+  </data>
+  <data name="Git_RemoteMismatch" xml:space="preserve">
+    <value>Указывает на '{0}', а в Helyx записано '{1}'.</value>
+  </data>
+  <data name="Git_RemoteMismatchHint" xml:space="preserve">
+    <value>Push уходит в первый, а каждый запрос спрашивает про второй.</value>
+  </data>
+  <data name="Git_Check_SyncState" xml:space="preserve">
+    <value>Состояние синхронизации</value>
+  </data>
+  <data name="Git_UpToDateRemote" xml:space="preserve">
+    <value>Совпадает с удалённой</value>
+  </data>
+  <data name="Git_AheadBehind" xml:space="preserve">
+    <value>Впереди на {0} коммит(ов), позади на {1}.</value>
+  </data>
+  <data name="Git_NoRemoteNoCheck" xml:space="preserve">
+    <value>Без удалённого проверить нельзя</value>
+  </data>
+  <data name="Git_TracksNothing" xml:space="preserve">
+    <value>'{0}' ничего не отслеживает, поэтому push невозможен.</value>
+  </data>
+  <data name="Git_Check_BranchName" xml:space="preserve">
+    <value>Имя ветки</value>
+  </data>
+  <data name="Git_LocalRemoteNameDiff" xml:space="preserve">
+    <value>Локально '{0}', а на удалённом есть только '{1}'.</value>
+  </data>
+  <data name="Git_RetrievingStatus" xml:space="preserve">
+    <value>Получение состояния...</value>
+  </data>
+  <data name="Git_Check_WorkingTree" xml:space="preserve">
+    <value>Рабочее дерево</value>
+  </data>
+  <data name="Git_ChangedFileCount" xml:space="preserve">
+    <value>Изменено файлов: {0}</value>
+  </data>
+  <data name="Git_Clean" xml:space="preserve">
+    <value>Чисто</value>
+  </data>
+  <data name="Git_MeasuringFiles" xml:space="preserve">
+    <value>Измерение отслеживаемых файлов...</value>
+  </data>
+  <data name="Git_Check_FileSizes" xml:space="preserve">
+    <value>Размеры файлов</value>
+  </data>
+  <data name="Git_NothingOverLimit" xml:space="preserve">
+    <value>Ничего сверх лимита GitHub в 100 МБ</value>
+  </data>
+  <data name="Git_OversizedFiles" xml:space="preserve">
+    <value>{0} отслеживаемых файлов превышают лимит GitHub в 100 МБ, поэтому каждый push отклоняется:</value>
+  </data>
+  <data name="Git_AndMore" xml:space="preserve">
+    <value>... и ещё {0}</value>
+  </data>
+  <data name="Git_UntrackHint" xml:space="preserve">
+    <value>Прекращение отслеживания поможет только следующему коммиту - уже закоммиченный придётся переписывать вручную.</value>
+  </data>
+  <data name="Git_Check_BuildOutput" xml:space="preserve">
+    <value>Результаты сборки</value>
+  </data>
+  <data name="Git_NotTracked" xml:space="preserve">
+    <value>Не отслеживается</value>
+  </data>
+  <data name="Git_BuildOutputTracked" xml:space="preserve">
+    <value>{0} отслеживаемых файлов в bin/obj/.vs и подобных, {1} МБ. Каждая сборка их переписывает, поэтому каждый коммит несёт их заново.</value>
+  </data>
+  <data name="Git_Check_Identity" xml:space="preserve">
+    <value>Личность</value>
+  </data>
+  <data name="Git_NoProblems" xml:space="preserve">
+    <value>Проблем не найдено.</value>
+  </data>
+  <data name="Git_SelectRepair" xml:space="preserve">
+    <value>Выберите, что нужно исправить:</value>
+  </data>
+  <data name="Git_Fix_RemoveLock" xml:space="preserve">
+    <value>Удалить оставшуюся блокировку индекса</value>
+  </data>
+  <data name="Git_Fix_ContinueRebase" xml:space="preserve">
+    <value>Продолжить незавершённый rebase</value>
+  </data>
+  <data name="Git_Fix_UntrackBuild" xml:space="preserve">
+    <value>Перестать отслеживать результаты сборки (файлы останутся)</value>
+  </data>
+  <data name="Git_Fix_AbortOperation" xml:space="preserve">
+    <value>Прервать незавершённый '{0}'</value>
+  </data>
+  <data name="Git_Fix_AttachHead" xml:space="preserve">
+    <value>Вернуться на ветку</value>
+  </data>
+  <data name="Git_Fix_AddRemote" xml:space="preserve">
+    <value>Добавить удалённый 'origin'</value>
+  </data>
+  <data name="Git_Fix_SetGitHubName" xml:space="preserve">
+    <value>Указать имя репозитория на GitHub</value>
+  </data>
+  <data name="Git_Fix_SetUpstream" xml:space="preserve">
+    <value>Указать upstream-ветку</value>
+  </data>
+  <data name="Git_Fix_RenameBranch" xml:space="preserve">
+    <value>Переименовать ветку под удалённую</value>
+  </data>
+  <data name="Git_LockRemoved" xml:space="preserve">
+    <value>Блокировка индекса удалена.</value>
+  </data>
+  <data name="Git_UntrackWarn" xml:space="preserve">
+    <value>Git перестанет отслеживать {0} файл(ов).
+На диске они останутся нетронутыми - меняется только следующий коммит.
+
+</value>
+  </data>
+  <data name="Git_UntrackWarnHistory" xml:space="preserve">
+    <value>Всё уже закоммиченное остаётся в истории и продолжает отправляться,
+поэтому файл сверх лимита GitHub всё равно придётся переписать вручную.</value>
+  </data>
+  <data name="Git_UntrackTitle" xml:space="preserve">
+    <value>Прекратить отслеживание сборки</value>
+  </data>
+  <data name="Git_UntrackDone" xml:space="preserve">
+    <value>{0} файл(ов) больше не отслеживаются и подготовлены к удалению.
+Закоммитьте это и добавьте {1}, чтобы они не вернулись.</value>
+  </data>
+  <data name="Git_MarkedResolved" xml:space="preserve">
+    <value>{0} отмечен как разрешённый.</value>
+  </data>
+  <data name="Git_RebaseStoppedAgain" xml:space="preserve">
+    <value>Rebase снова остановился на более позднем шаге из-за новых конфликтов.
+Разрешите их и запустите диагностику ещё раз.</value>
+  </data>
+  <data name="Git_RebaseNeedsHand" xml:space="preserve">
+    <value>Rebase остановился на шаге, который нужно завершить вручную,
+например 'edit' или 'reword' в интерактивном rebase.</value>
+  </data>
+  <data name="Git_ContinuingRebaseStep" xml:space="preserve">
+    <value>Продолжаю rebase - шаг {0} из {1}...</value>
+  </data>
+  <data name="Git_RebaseFinished" xml:space="preserve">
+    <value>Rebase завершён, вы снова на {0}.</value>
+  </data>
+  <data name="Git_OperationAborted" xml:space="preserve">
+    <value>Незавершённая операция прервана.</value>
+  </data>
+  <data name="Git_NoLocalBranch" xml:space="preserve">
+    <value>Нет локальной ветки для переключения.</value>
+  </data>
+  <data name="Git_RepairFailed_Title" xml:space="preserve">
+    <value>Не удалось исправить</value>
+  </data>
+  <data name="Git_SelectBranch" xml:space="preserve">
+    <value>Выберите ветку:</value>
+  </data>
+  <data name="Git_SwitchedTo" xml:space="preserve">
+    <value>Переключено на {0}.</value>
+  </data>
+  <data name="Git_UseOriginName" xml:space="preserve">
+    <value>Использовать '{0}' из удалённого 'origin' как имя на GitHub?</value>
+  </data>
+  <data name="Git_GitHubNameSet" xml:space="preserve">
+    <value>Имя на GitHub задано как {0}.</value>
+  </data>
+  <data name="Git_OriginFirst" xml:space="preserve">
+    <value>Сначала нужно добавить удалённый 'origin'.</value>
+  </data>
+  <data name="Git_RenameTargetUnknown" xml:space="preserve">
+    <value>Не удалось определить, во что переименовать ветку.</value>
+  </data>
+  <data name="Git_BranchRenamed" xml:space="preserve">
+    <value>Ветка переименована в {0}.</value>
+  </data>
+  <data name="Git_ConflictResolution" xml:space="preserve">
+    <value>Разрешение конфликта</value>
+  </data>
+  <data name="Git_ConflictNotUtf8" xml:space="preserve">
+    <value>Этот файл не является корректным UTF-8, поэтому его разрешение здесь испортит символы.</value>
+  </data>
+  <data name="Git_ResolveInEditor" xml:space="preserve">
+    <value>Разрешите его лучше в своём редакторе.</value>
+  </data>
+  <data name="Git_NoMarkersFound" xml:space="preserve">
+    <value>В файле не найдено маркеров конфликта.</value>
+  </data>
+  <data name="Git_NoAltScreen" xml:space="preserve">
+    <value>Этот терминал не поддерживает альтернативный экранный буфер.</value>
+  </data>
+  <data name="Git_Kind_Added" xml:space="preserve">
+    <value>Добавлен</value>
+  </data>
+  <data name="Git_Kind_Deleted" xml:space="preserve">
+    <value>Удалён</value>
+  </data>
+  <data name="Git_Kind_Renamed" xml:space="preserve">
+    <value>Переименован</value>
+  </data>
+  <data name="Git_Kind_Modified" xml:space="preserve">
+    <value>Изменён</value>
+  </data>
+  <data name="Git_Staging" xml:space="preserve">
+    <value>Индексация...</value>
+  </data>
+  <data name="Git_Unstaging" xml:space="preserve">
+    <value>Снятие с индексации...</value>
+  </data>
+  <data name="Common_Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Common_Success" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Token_Empty" xml:space="preserve">
+    <value>Токен доступа пуст.</value>
+  </data>
+  <data name="Scripts_Running" xml:space="preserve">
+    <value>Выполняется...</value>
+  </data>
+  <data name="GH_NewIssue_BodyHint" xml:space="preserve">
+    <value>(оставьте пустым, чтобы пропустить)</value>
+  </data>
+  <data name="Git_State_Warn" xml:space="preserve">
+    <value>ВНИМАНИЕ</value>
+  </data>
+  <data name="Git_State_Problem" xml:space="preserve">
+    <value>ПРОБЛЕМА</value>
+  </data>
+  <data name="Git_State_Skip" xml:space="preserve">
+    <value>ПРОПУЩЕНО</value>
+  </data>
+  <data name="Git_Status_StagedPlus" xml:space="preserve">
+    <value>В ИНДЕКСЕ + {0}</value>
+  </data>
+  <data name="Tags_NameEmpty" xml:space="preserve">
+    <value>Имя не может быть пустым.</value>
+  </data>
+  <data name="GH_NoDescription" xml:space="preserve">
+    <value>Описание не указано.</value>
+  </data>
+</root>

@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+	<File Path="LICENSE" />
+  </Folder>
+  <Project Path="Helyx/Helyx.csproj" />
+</Solution>

@@ -1,0 +1,3210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Back" xml:space="preserve">
+    <value>Späť</value>
+  </data>
+  <data name="Common_CtrlClick" xml:space="preserve">
+    <value>(ctrl + klik)</value>
+  </data>
+  <data name="Common_Disable" xml:space="preserve">
+    <value>Vypnúť</value>
+  </data>
+  <data name="Common_Disabled" xml:space="preserve">
+    <value>Vypnuté</value>
+  </data>
+  <data name="Common_Enable" xml:space="preserve">
+    <value>Zapnúť</value>
+  </data>
+  <data name="Common_Enabled" xml:space="preserve">
+    <value>Zapnuté</value>
+  </data>
+  <data name="Common_Found" xml:space="preserve">
+    <value>Nájdené</value>
+  </data>
+  <data name="Common_InitGitHint" xml:space="preserve">
+    <value>Otvorte Git Actions a vytvorte ho, aby ste mohli pokračovať.</value>
+  </data>
+  <data name="Common_No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Common_NotAGitRepo" xml:space="preserve">
+    <value>Tento projekt nie je Git repozitár.</value>
+  </data>
+  <data name="Common_Path" xml:space="preserve">
+    <value>Cesta</value>
+  </data>
+  <data name="Common_ProjectFolderMissing" xml:space="preserve">
+    <value>Priečinok projektu už neexistuje:</value>
+  </data>
+  <data name="Common_ScopesMissing" xml:space="preserve">
+    <value>Vašej autorizácii GitHub chýbajú tieto oprávnenia:</value>
+  </data>
+  <data name="Common_ScopesOutdated_Title" xml:space="preserve">
+    <value>Autorizácia GitHub je zastaraná</value>
+  </data>
+  <data name="Common_SelectAction" xml:space="preserve">
+    <value>Vyberte akciu:</value>
+  </data>
+  <data name="Common_Settings" xml:space="preserve">
+    <value>Nastavenia</value>
+  </data>
+  <data name="Common_Unknown" xml:space="preserve">
+    <value>Neznáme</value>
+  </data>
+  <data name="Common_Yes" xml:space="preserve">
+    <value>Áno</value>
+  </data>
+  <data name="ConfigFile_OpenDirectory" xml:space="preserve">
+    <value>Otvoriť priečinok konfiguračného súboru</value>
+  </data>
+  <data name="ConfigFile_Open_Failed" xml:space="preserve">
+    <value>Priečinok s konfiguráciou sa nepodarilo otvoriť.
+
+{0}</value>
+  </data>
+  <data name="ConfigFile_Reset" xml:space="preserve">
+    <value>Obnoviť konfiguračný súbor</value>
+  </data>
+  <data name="ConfigFile_Reset_Confirm" xml:space="preserve">
+    <value>Naozaj chcete obnoviť konfiguračný súbor?</value>
+  </data>
+  <data name="ConfigFile_Reset_Failed" xml:space="preserve">
+    <value>Konfiguračný súbor sa nepodarilo obnoviť.
+
+{0}</value>
+  </data>
+  <data name="ConfigFile_Restart_Failed" xml:space="preserve">
+    <value>Helyx sa nedokázal reštartovať, spustite ho znova manuálne.
+
+{0}</value>
+  </data>
+  <data name="Config_CreateFailed" xml:space="preserve">
+    <value>Konfiguračný súbor sa nepodarilo vytvoriť v '{0}'.</value>
+  </data>
+  <data name="Config_KeptAs" xml:space="preserve">
+    <value>Pôvodný bol zachovaný ako {0}.</value>
+  </data>
+  <data name="Config_ReadFailed" xml:space="preserve">
+    <value>Konfiguračný súbor sa nepodarilo prečítať a bol obnovený.</value>
+  </data>
+  <data name="Config_SaveFailed" xml:space="preserve">
+    <value>Konfiguračný súbor sa nepodarilo uložiť.</value>
+  </data>
+  <data name="Credits_Title" xml:space="preserve">
+    <value>Helyx vytvoril:</value>
+  </data>
+  <data name="GitHubAuth_Authorize" xml:space="preserve">
+    <value>Autorizovať s GitHubom</value>
+  </data>
+  <data name="GitHubAuth_Outdated_Hint" xml:space="preserve">
+    <value>Opätovná autorizácia nahradí váš token novým, ktorý ich udelí.</value>
+  </data>
+  <data name="GitHubAuth_Reauthorize" xml:space="preserve">
+    <value>Znova autorizovať s GitHubom</value>
+  </data>
+  <data name="GitHubAuth_Unauthorize" xml:space="preserve">
+    <value>Zrušiť autorizáciu GitHub</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Message" xml:space="preserve">
+    <value>Autorizácia GitHub bola úspešne zrušená!</value>
+  </data>
+  <data name="GitHubAuth_Unauthorized_Title" xml:space="preserve">
+    <value>Autorizácia GitHub zrušená</value>
+  </data>
+  <data name="GitHubAuth_Username" xml:space="preserve">
+    <value>Používateľské meno GitHub</value>
+  </data>
+  <data name="Git_RepoOpenFailed" xml:space="preserve">
+    <value>Repozitár sa nepodarilo otvoriť.</value>
+  </data>
+  <data name="Git_Status_Clean" xml:space="preserve">
+    <value>ČISTÉ</value>
+  </data>
+  <data name="Git_Status_Conflict" xml:space="preserve">
+    <value>KONFLIKT</value>
+  </data>
+  <data name="Git_Status_Deleted" xml:space="preserve">
+    <value>ZMAZANÉ</value>
+  </data>
+  <data name="Git_Status_Ignored" xml:space="preserve">
+    <value>IGNOROVANÉ</value>
+  </data>
+  <data name="Git_Status_Missing" xml:space="preserve">
+    <value>CHÝBA</value>
+  </data>
+  <data name="Git_Status_Modified" xml:space="preserve">
+    <value>ZMENENÉ</value>
+  </data>
+  <data name="Git_Status_New" xml:space="preserve">
+    <value>NOVÉ</value>
+  </data>
+  <data name="Git_Status_Renamed" xml:space="preserve">
+    <value>PREMENOVANÉ</value>
+  </data>
+  <data name="Git_Status_StagedAndModified" xml:space="preserve">
+    <value>V INDEXE + ZMENENÉ</value>
+  </data>
+  <data name="Git_Status_StagedAndRenamed" xml:space="preserve">
+    <value>V INDEXE + PREMENOVANÉ</value>
+  </data>
+  <data name="Git_Status_StagedDelete" xml:space="preserve">
+    <value>ZMAZANÉ V INDEXE</value>
+  </data>
+  <data name="Git_Status_StagedModified" xml:space="preserve">
+    <value>ZMENENÉ V INDEXE</value>
+  </data>
+  <data name="Git_Status_StagedNew" xml:space="preserve">
+    <value>NOVÉ V INDEXE</value>
+  </data>
+  <data name="Git_Status_StagedRename" xml:space="preserve">
+    <value>PREMENOVANÉ V INDEXE</value>
+  </data>
+  <data name="Git_Status_StagedTypeChange" xml:space="preserve">
+    <value>ZMENA TYPU V INDEXE</value>
+  </data>
+  <data name="Git_Status_TypeChanged" xml:space="preserve">
+    <value>ZMENENÝ TYP</value>
+  </data>
+  <data name="Git_Status_Unknown" xml:space="preserve">
+    <value>NEZNÁME</value>
+  </data>
+  <data name="Git_Status_Unreadable" xml:space="preserve">
+    <value>NEČITATEĽNÉ</value>
+  </data>
+  <data name="Identity_Current" xml:space="preserve">
+    <value>Aktuálna preferovaná identita</value>
+  </data>
+  <data name="Identity_NeedsAuth" xml:space="preserve">
+    <value>Pred zmenou tohto nastavenia sa musíte autorizovať s GitHubom.</value>
+  </data>
+  <data name="Identity_Select" xml:space="preserve">
+    <value>Vyberte preferovanú identitu:</value>
+  </data>
+  <data name="IDE_Actions_Select" xml:space="preserve">
+    <value>Vyberte akciu IDE:</value>
+  </data>
+  <data name="IDE_ChangePath" xml:space="preserve">
+    <value>Zmeniť cestu k IDE</value>
+  </data>
+  <data name="IDE_Default" xml:space="preserve">
+    <value>Predvolené IDE</value>
+  </data>
+  <data name="IDE_Default_Set" xml:space="preserve">
+    <value>Predvolené IDE nastavené na {0}.</value>
+  </data>
+  <data name="IDE_NoExecutable" xml:space="preserve">
+    <value>Pre {0} nie je nastavený žiadny program.</value>
+  </data>
+  <data name="IDE_OpenIn" xml:space="preserve">
+    <value>Otvoriť v IDE</value>
+  </data>
+  <data name="IDE_OpenInDefault" xml:space="preserve">
+    <value>Otvoriť v predvolenom IDE</value>
+  </data>
+  <data name="IDE_OpenTitle" xml:space="preserve">
+    <value>Otvoriť {0} v IDE</value>
+  </data>
+  <data name="IDE_Path_Changed" xml:space="preserve">
+    <value>Spustiteľný súbor IDE zmenený na {0}.</value>
+  </data>
+  <data name="IDE_Path_Invalid" xml:space="preserve">
+    <value>Neplatný spustiteľný súbor. Skúste to znova.</value>
+  </data>
+  <data name="IDE_Picker_Filter" xml:space="preserve">
+    <value>Spustiteľný súbor (*.exe)|*.exe|Všetky súbory (*.*)|*.*</value>
+  </data>
+  <data name="IDE_Picker_Title" xml:space="preserve">
+    <value>Vyberte nový spustiteľný súbor IDE</value>
+  </data>
+  <data name="IDE_Recommended" xml:space="preserve">
+    <value>(odporúčané)</value>
+  </data>
+  <data name="IDE_Select" xml:space="preserve">
+    <value>Vyberte IDE:</value>
+  </data>
+  <data name="IDE_SetDefault" xml:space="preserve">
+    <value>Nastaviť ako predvolené IDE</value>
+  </data>
+  <data name="IDE_SetOneHint" xml:space="preserve">
+    <value>Nastavte ho v Nastavenia › Nastavenia IDE.</value>
+  </data>
+  <data name="IDE_StartFailed" xml:space="preserve">
+    <value>{0} sa nepodarilo spustiť.</value>
+  </data>
+  <data name="IDE_State_NotFound" xml:space="preserve">
+    <value>Nenájdené</value>
+  </data>
+  <data name="IDE_State_SetByUser" xml:space="preserve">
+    <value>Nastavené používateľom</value>
+  </data>
+  <data name="Language_Current" xml:space="preserve">
+    <value>Aktuálny jazyk</value>
+  </data>
+  <data name="Language_Saved" xml:space="preserve">
+    <value>Jazyk bol uložený.</value>
+  </data>
+  <data name="Language_Select" xml:space="preserve">
+    <value>Vyberte nový jazyk:</value>
+  </data>
+  <data name="MainMenu_Config_Created" xml:space="preserve">
+    <value>Konfiguračný súbor bol úspešne vytvorený!</value>
+  </data>
+  <data name="MainMenu_Config_Creating" xml:space="preserve">
+    <value>Vytváram nový...</value>
+  </data>
+  <data name="MainMenu_Config_NotFound" xml:space="preserve">
+    <value>Konfiguračný súbor sa nenašiel!</value>
+  </data>
+  <data name="MainMenu_Credits" xml:space="preserve">
+    <value>Autori</value>
+  </data>
+  <data name="MainMenu_Exit" xml:space="preserve">
+    <value>Ukončiť</value>
+  </data>
+  <data name="MainMenu_Projects" xml:space="preserve">
+    <value>Projekty</value>
+  </data>
+  <data name="MainMenu_Scopes_Hint" xml:space="preserve">
+    <value>Niektoré funkcie nebudú fungovať, kým sa znova neautorizujete v {0}.</value>
+  </data>
+  <data name="Migrator_Corrupted" xml:space="preserve">
+    <value>Konfiguračný súbor je poškodený alebo nečitateľný. Vytváram nový.</value>
+  </data>
+  <data name="Migrator_Created" xml:space="preserve">
+    <value>Konfiguračný súbor bol vytvorený.</value>
+  </data>
+  <data name="Migrator_Invalid" xml:space="preserve">
+    <value>Konfiguračný súbor neobsahuje platnú konfiguráciu. Vytváram nový.</value>
+  </data>
+  <data name="Migrator_ProjectsToGuid" xml:space="preserve">
+    <value>Položka 'projects' bola prevedená zo zoznamu na formát s Guid kľúčmi.</value>
+  </data>
+  <data name="Migrator_PropertyReset" xml:space="preserve">
+    <value>Vlastnosť '{0}' mala nesprávny tvar a bola obnovená.</value>
+  </data>
+  <data name="Migrator_SaveFailed" xml:space="preserve">
+    <value>Migrovaný konfiguračný súbor sa nepodarilo uložiť: {0}</value>
+  </data>
+  <data name="Migrator_StatusToString" xml:space="preserve">
+    <value>Položka 'Status' projektu bola prevedená z objektu na text.</value>
+  </data>
+  <data name="Migrator_TagsToIds" xml:space="preserve">
+    <value>Stavy a odznaky projektov boli prevedené z názvov na id.</value>
+  </data>
+  <data name="Migrator_UnreadableAfter" xml:space="preserve">
+    <value>Konfiguračný súbor sa po migrácii nepodarilo prečítať. Vytváram nový.</value>
+  </data>
+  <data name="Migrator_Updated" xml:space="preserve">
+    <value>Konfiguračný súbor bol aktualizovaný (migrácia schémy).</value>
+  </data>
+  <data name="Notes_Converted_Decrypted" xml:space="preserve">
+    <value>Dešifrovaných projektov: {0}.</value>
+  </data>
+  <data name="Notes_Converted_Encrypted" xml:space="preserve">
+    <value>Zašifrovaných projektov: {0}.</value>
+  </data>
+  <data name="Notes_Encrypt" xml:space="preserve">
+    <value>Šifrovať poznámky</value>
+  </data>
+  <data name="Notes_Failed" xml:space="preserve">
+    <value>Windows odmietol tieto zašifrovať, takže zostávajú v čitateľnej podobe:</value>
+  </data>
+  <data name="Notes_Result_Disabled" xml:space="preserve">
+    <value>Šifrovanie poznámok je teraz vypnuté.</value>
+  </data>
+  <data name="Notes_Result_Enabled" xml:space="preserve">
+    <value>Šifrovanie poznámok je teraz zapnuté.</value>
+  </data>
+  <data name="Notes_State_Title" xml:space="preserve">
+    <value>Stav šifrovania poznámok</value>
+  </data>
+  <data name="Notes_Title" xml:space="preserve">
+    <value>Šifrovanie poznámok</value>
+  </data>
+  <data name="Notes_Unreadable" xml:space="preserve">
+    <value>Tieto boli zašifrované iným účtom Windows alebo na inom počítači, takže zostali nedotknuté:</value>
+  </data>
+  <data name="Secrets_CreateFailed" xml:space="preserve">
+    <value>Súbor s tajomstvami sa nepodarilo vytvoriť.</value>
+  </data>
+  <data name="Secrets_ReadFailed" xml:space="preserve">
+    <value>Súbor s tajomstvami sa nepodarilo prečítať.</value>
+  </data>
+  <data name="Secrets_SaveFailed" xml:space="preserve">
+    <value>Súbor s tajomstvami sa nepodarilo uložiť.</value>
+  </data>
+  <data name="Settings_GitHubAuthorization" xml:space="preserve">
+    <value>Autorizácia GitHub</value>
+  </data>
+  <data name="Settings_IDE" xml:space="preserve">
+    <value>Nastavenia IDE</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Jazyk</value>
+  </data>
+  <data name="Settings_ManageBadges" xml:space="preserve">
+    <value>Spravovať odznaky</value>
+  </data>
+  <data name="Settings_ManageConfigurationFile" xml:space="preserve">
+    <value>Spravovať konfiguračný súbor</value>
+  </data>
+  <data name="Settings_ManageCustomStatuses" xml:space="preserve">
+    <value>Spravovať vlastné stavy</value>
+  </data>
+  <data name="Settings_Notes" xml:space="preserve">
+    <value>Nastavenia poznámok</value>
+  </data>
+  <data name="Settings_PreferredIdentity" xml:space="preserve">
+    <value>Preferovaná identita</value>
+  </data>
+  <data name="Settings_Updates" xml:space="preserve">
+    <value>Aktualizácie</value>
+  </data>
+  <data name="Token_SaveFailed" xml:space="preserve">
+    <value>Token GitHub sa nepodarilo uložiť.</value>
+  </data>
+  <data name="Update_Available" xml:space="preserve">
+    <value>Je dostupná nová verzia Helyxu! Stiahnite si ju cez odkaz nižšie:</value>
+  </data>
+  <data name="Update_Available_Title" xml:space="preserve">
+    <value>Dostupná aktualizácia</value>
+  </data>
+  <data name="Update_Checking" xml:space="preserve">
+    <value>Hľadám aktualizácie...</value>
+  </data>
+  <data name="Update_ClickHere" xml:space="preserve">
+    <value>Kliknite sem</value>
+  </data>
+  <data name="Update_Current" xml:space="preserve">
+    <value>Aktuálna verzia: v{0}</value>
+  </data>
+  <data name="Update_Error_NoVersion" xml:space="preserve">
+    <value>Najnovšiu verziu sa nepodarilo získať z GitHubu.</value>
+  </data>
+  <data name="Update_Error_Unreadable" xml:space="preserve">
+    <value>Nepodarilo sa načítať aktuálne alebo najnovšie číslo verzie.</value>
+  </data>
+  <data name="Update_Failed" xml:space="preserve">
+    <value>Pri kontrole aktualizácií nastala chyba:</value>
+  </data>
+  <data name="Update_Failed_Title" xml:space="preserve">
+    <value>Kontrola aktualizácií zlyhala</value>
+  </data>
+  <data name="Update_Latest" xml:space="preserve">
+    <value>Najnovšia verzia: {0}</value>
+  </data>
+  <data name="Update_None" xml:space="preserve">
+    <value>Používate najnovšiu verziu.</value>
+  </data>
+  <data name="Update_None_Title" xml:space="preserve">
+    <value>Žiadne aktualizácie</value>
+  </data>
+  <data name="Common_EditName" xml:space="preserve">
+    <value>Upraviť názov</value>
+  </data>
+  <data name="Common_EditColor" xml:space="preserve">
+    <value>Upraviť farbu</value>
+  </data>
+  <data name="Common_SelectEditAction" xml:space="preserve">
+    <value>Vyberte úpravu:</value>
+  </data>
+  <data name="Common_InvalidName" xml:space="preserve">
+    <value>Neplatný názov</value>
+  </data>
+  <data name="Common_NameTaken" xml:space="preserve">
+    <value>Názov je už obsadený</value>
+  </data>
+  <data name="Common_EnterNewName" xml:space="preserve">
+    <value>Zadajte nový názov</value>
+  </data>
+  <data name="Common_ChangeInHelyxOnly" xml:space="preserve">
+    <value>Zmeniť len v Helyxe</value>
+  </data>
+  <data name="Common_DeleteInHelyxOnly" xml:space="preserve">
+    <value>Zmazať len v Helyxe</value>
+  </data>
+  <data name="Status_Active" xml:space="preserve">
+    <value>Aktívny</value>
+  </data>
+  <data name="Status_Inactive" xml:space="preserve">
+    <value>Neaktívny</value>
+  </data>
+  <data name="Status_Paused" xml:space="preserve">
+    <value>Pozastavený</value>
+  </data>
+  <data name="Status_Archived" xml:space="preserve">
+    <value>Archivovaný</value>
+  </data>
+  <data name="Tags_SelectColor" xml:space="preserve">
+    <value>Vyberte farbu:</value>
+  </data>
+  <data name="Tags_NameTooLong" xml:space="preserve">
+    <value>Názov musí mať najviac {0} znakov.</value>
+  </data>
+  <data name="Tags_NameBrackets" xml:space="preserve">
+    <value>Názov nesmie obsahovať hranaté zátvorky.</value>
+  </data>
+  <data name="Tags_NameControl" xml:space="preserve">
+    <value>Názov nesmie obsahovať riadiace znaky.</value>
+  </data>
+  <data name="Other_Title" xml:space="preserve">
+    <value>Ďalšie akcie</value>
+  </data>
+  <data name="Other_OpenIn" xml:space="preserve">
+    <value>Otvoriť v ...</value>
+  </data>
+  <data name="Other_UserScripts" xml:space="preserve">
+    <value>Používateľské skripty</value>
+  </data>
+  <data name="Other_BackupProject" xml:space="preserve">
+    <value>Zálohovať projekt</value>
+  </data>
+  <data name="Other_Notes" xml:space="preserve">
+    <value>Poznámky</value>
+  </data>
+  <data name="Notes_ForeignAccount" xml:space="preserve">
+    <value>Tieto poznámky boli zašifrované iným účtom Windows alebo na inom počítači, takže sa tu nedajú prečítať.</value>
+  </data>
+  <data name="Notes_EditorStaysClosed" xml:space="preserve">
+    <value>Ich otvorenie by ich prepísalo, preto editor zostáva zatvorený.</value>
+  </data>
+  <data name="Notes_ProtectFailed" xml:space="preserve">
+    <value>Windows odmietol tieto poznámky zašifrovať, takže boli uložené v čitateľnej podobe.</value>
+  </data>
+  <data name="Badges_Add" xml:space="preserve">
+    <value>Pridať odznak</value>
+  </data>
+  <data name="Badges_Edit" xml:space="preserve">
+    <value>Upraviť odznak</value>
+  </data>
+  <data name="Badges_Delete" xml:space="preserve">
+    <value>Zmazať odznak</value>
+  </data>
+  <data name="Badges_EnterName" xml:space="preserve">
+    <value>Zadajte názov odznaku:</value>
+  </data>
+  <data name="Badges_NameExists" xml:space="preserve">
+    <value>Odznak s názvom {0} už existuje.</value>
+  </data>
+  <data name="Badges_None_Title" xml:space="preserve">
+    <value>Žiadne odznaky</value>
+  </data>
+  <data name="Badges_NoneToEdit" xml:space="preserve">
+    <value>Nie sú žiadne odznaky na úpravu.</value>
+  </data>
+  <data name="Badges_NoneToDelete" xml:space="preserve">
+    <value>Nie sú žiadne odznaky na zmazanie.</value>
+  </data>
+  <data name="Badges_SelectToEdit" xml:space="preserve">
+    <value>Vyberte odznak na úpravu:</value>
+  </data>
+  <data name="Badges_SelectToDelete" xml:space="preserve">
+    <value>Vyberte odznak na zmazanie:</value>
+  </data>
+  <data name="Badges_Added" xml:space="preserve">
+    <value>Odznak {0} bol pridaný.</value>
+  </data>
+  <data name="Badges_Edited" xml:space="preserve">
+    <value>Odznak {0} bol úspešne upravený!</value>
+  </data>
+  <data name="Badges_Deleted" xml:space="preserve">
+    <value>Odznak {0} bol úspešne zmazaný.</value>
+  </data>
+  <data name="Badges_DeleteConfirm" xml:space="preserve">
+    <value>Naozaj chcete zmazať odznak {0} ?</value>
+  </data>
+  <data name="Badges_RemovedFrom" xml:space="preserve">
+    <value>Bude odstránený z {0} projektov.</value>
+  </data>
+  <data name="Statuses_Add" xml:space="preserve">
+    <value>Pridať vlastný stav</value>
+  </data>
+  <data name="Statuses_Edit" xml:space="preserve">
+    <value>Upraviť vlastný stav</value>
+  </data>
+  <data name="Statuses_Delete" xml:space="preserve">
+    <value>Zmazať vlastný stav</value>
+  </data>
+  <data name="Statuses_EnterName" xml:space="preserve">
+    <value>Zadajte názov stavu:</value>
+  </data>
+  <data name="Statuses_NameExists" xml:space="preserve">
+    <value>Stav s názvom {0} už existuje.</value>
+  </data>
+  <data name="Statuses_None_Title" xml:space="preserve">
+    <value>Žiadne vlastné stavy</value>
+  </data>
+  <data name="Statuses_NoneToEdit" xml:space="preserve">
+    <value>Nie sú žiadne vlastné stavy na úpravu.</value>
+  </data>
+  <data name="Statuses_NoneToDelete" xml:space="preserve">
+    <value>Nie sú žiadne vlastné stavy na zmazanie.</value>
+  </data>
+  <data name="Statuses_SelectToEdit" xml:space="preserve">
+    <value>Vyberte vlastný stav na úpravu:</value>
+  </data>
+  <data name="Statuses_SelectToDelete" xml:space="preserve">
+    <value>Vyberte vlastný stav na zmazanie:</value>
+  </data>
+  <data name="Statuses_Added" xml:space="preserve">
+    <value>Vlastný stav {0} bol pridaný.</value>
+  </data>
+  <data name="Statuses_Edited" xml:space="preserve">
+    <value>Vlastný stav {0} bol úspešne upravený!</value>
+  </data>
+  <data name="Statuses_Deleted" xml:space="preserve">
+    <value>Vlastný stav {0} bol úspešne zmazaný.</value>
+  </data>
+  <data name="Statuses_DeleteConfirm" xml:space="preserve">
+    <value>Naozaj chcete zmazať vlastný stav {0} ?</value>
+  </data>
+  <data name="Statuses_UsedBy" xml:space="preserve">
+    <value>{0} projektov, ktoré ho používajú, sa vráti na Aktívny.</value>
+  </data>
+  <data name="Statuses_ResetToActive" xml:space="preserve">
+    <value>Projekty, ktoré ho používali, boli vrátené na {0}.</value>
+  </data>
+  <data name="Git_Group_Conflicted" xml:space="preserve">
+    <value>Konfliktné</value>
+  </data>
+  <data name="Git_Group_Modified" xml:space="preserve">
+    <value>Zmenené</value>
+  </data>
+  <data name="Git_Group_New" xml:space="preserve">
+    <value>Nové</value>
+  </data>
+  <data name="Git_Group_Deleted" xml:space="preserve">
+    <value>Zmazané</value>
+  </data>
+  <data name="Git_Group_Renamed" xml:space="preserve">
+    <value>Premenované</value>
+  </data>
+  <data name="Git_Group_Other" xml:space="preserve">
+    <value>Ostatné</value>
+  </data>
+  <data name="Program_AlreadyRunning_Title" xml:space="preserve">
+    <value>Už beží</value>
+  </data>
+  <data name="Program_AlreadyRunning" xml:space="preserve">
+    <value>Helyx už beží v inom okne.</value>
+  </data>
+  <data name="Program_Crash_Title" xml:space="preserve">
+    <value>Niečo sa pokazilo</value>
+  </data>
+  <data name="Program_Crash_Closing" xml:space="preserve">
+    <value>Zlyhalo to {0}-krát po sebe, takže sa Helyx zatvorí.</value>
+  </data>
+  <data name="Program_Crash_Return" xml:space="preserve">
+    <value>Stlačte ľubovoľný kláves pre návrat do menu...</value>
+  </data>
+  <data name="Scripts_FolderCreateFailed" xml:space="preserve">
+    <value>Priečinok so skriptami sa nepodarilo vytvoriť.</value>
+  </data>
+  <data name="Scripts_FolderReadFailed" xml:space="preserve">
+    <value>Priečinok so skriptami sa nepodarilo prečítať.</value>
+  </data>
+  <data name="Scripts_SaveFailed" xml:space="preserve">
+    <value>Skript {0} sa nepodarilo uložiť.</value>
+  </data>
+  <data name="Scripts_LoadProblems" xml:space="preserve">
+    <value>Niektoré skripty sa nepodarilo načítať celé:</value>
+  </data>
+  <data name="Scripts_CouldNotRead" xml:space="preserve">
+    <value>{0}: nedá sa prečítať</value>
+  </data>
+  <data name="Scripts_BlocksSkipped" xml:space="preserve">
+    <value>{0}: {1} nečitateľných blokov bolo preskočených</value>
+  </data>
+  <data name="GitHub_AuthFailed_Title" xml:space="preserve">
+    <value>Autorizácia zlyhala</value>
+  </data>
+  <data name="GitHub_Authorized_Title" xml:space="preserve">
+    <value>Autorizované</value>
+  </data>
+  <data name="GitHub_Unreachable" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať:</value>
+  </data>
+  <data name="GitHub_ReturnedError" xml:space="preserve">
+    <value>GitHub vrátil chybu:</value>
+  </data>
+  <data name="GitHub_IncompleteResponse" xml:space="preserve">
+    <value>GitHub vrátil neúplnú odpoveď. Skúste to znova.</value>
+  </data>
+  <data name="GitHub_GoToAndEnter" xml:space="preserve">
+    <value>Prejdite na {0} a zadajte tento kód:</value>
+  </data>
+  <data name="GitHub_CodeCopied" xml:space="preserve">
+    <value>(kód bol skopírovaný do schránky)</value>
+  </data>
+  <data name="GitHub_ClipboardFailed" xml:space="preserve">
+    <value>Kód sa nepodarilo skopírovať do schránky:</value>
+  </data>
+  <data name="GitHub_BrowserFailed" xml:space="preserve">
+    <value>Prehliadač sa nepodarilo otvoriť automaticky, otvorte odkaz ručne:</value>
+  </data>
+  <data name="GitHub_CodeExpired" xml:space="preserve">
+    <value>Autorizačný kód vypršal skôr, než bol potvrdený. Skúste to znova.</value>
+  </data>
+  <data name="GitHub_Waiting" xml:space="preserve">
+    <value>Čakám na GitHub...</value>
+  </data>
+  <data name="GitHub_AuthSuccess" xml:space="preserve">
+    <value>Autorizácia s GitHubom prebehla úspešne!</value>
+  </data>
+  <data name="GitHub_RepoNotFound" xml:space="preserve">
+    <value>Na vašom GitHub profile sa nenašiel zodpovedajúci repozitár.</value>
+  </data>
+  <data name="GitHub_RepoNotFound_Hint" xml:space="preserve">
+    <value>Skontrolujte, či sa názov v Helyxe zhoduje s názvom repozitára na GitHube.</value>
+  </data>
+  <data name="GitHub_CouldNotCheck" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať, takže vaše repozitáre nebolo možné overiť.</value>
+  </data>
+  <data name="GitHub_CouldNotCheck_Hint" xml:space="preserve">
+    <value>Skontrolujte pripojenie na internet a skúste to znova.</value>
+  </data>
+  <data name="GitHub_NoIdentity" xml:space="preserve">
+    <value>Nepodarilo sa zistiť Git identitu.</value>
+  </data>
+  <data name="GitHub_NoIdentity_Hint" xml:space="preserve">
+    <value>Nastavte user.name a user.email v konfigurácii Gitu, alebo sa autorizujte s GitHubom v Nastaveniach.</value>
+  </data>
+  <data name="GitHub_NotLinked" xml:space="preserve">
+    <value>Tento projekt nie je prepojený s GitHub repozitárom.</value>
+  </data>
+  <data name="GitHub_AssignNow" xml:space="preserve">
+    <value>Chcete teraz priradiť GitHub repozitár?</value>
+  </data>
+  <data name="GitHub_LoadingRepos" xml:space="preserve">
+    <value>Načítavam vaše repozitáre...</value>
+  </data>
+  <data name="GitHub_UnreachableSettings" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať.</value>
+  </data>
+  <data name="GitHub_CheckConnection" xml:space="preserve">
+    <value>Skontrolujte pripojenie a autorizáciu v Nastaveniach.</value>
+  </data>
+  <data name="GitHub_NoRepos" xml:space="preserve">
+    <value>Na vašom GitHub účte nie sú žiadne repozitáre.</value>
+  </data>
+  <data name="GitHub_SelectRepo" xml:space="preserve">
+    <value>Vyberte GitHub repozitár:</value>
+  </data>
+  <data name="GitHub_UnknownError" xml:space="preserve">
+    <value>Neznáma chyba</value>
+  </data>
+  <data name="GitHub_Part_Languages" xml:space="preserve">
+    <value>jazyky</value>
+  </data>
+  <data name="GitHub_Part_CommitActivity" xml:space="preserve">
+    <value>aktivita commitov</value>
+  </data>
+  <data name="GitHub_Part_Topics" xml:space="preserve">
+    <value>témy</value>
+  </data>
+  <data name="Scripts_Run" xml:space="preserve">
+    <value>Spustiť skript</value>
+  </data>
+  <data name="Scripts_EditScript" xml:space="preserve">
+    <value>Upraviť skript</value>
+  </data>
+  <data name="Scripts_Create" xml:space="preserve">
+    <value>Vytvoriť skript</value>
+  </data>
+  <data name="Scripts_DeleteScript" xml:space="preserve">
+    <value>Zmazať skript</value>
+  </data>
+  <data name="Scripts_None" xml:space="preserve">
+    <value>Pre tento projekt zatiaľ nie sú žiadne skripty.</value>
+  </data>
+  <data name="Scripts_SelectToRun" xml:space="preserve">
+    <value>Vyberte skript na spustenie:</value>
+  </data>
+  <data name="Scripts_SelectToEdit" xml:space="preserve">
+    <value>Vyberte skript na úpravu:</value>
+  </data>
+  <data name="Scripts_SelectToDelete" xml:space="preserve">
+    <value>Vyberte skript na zmazanie:</value>
+  </data>
+  <data name="Scripts_EnterName" xml:space="preserve">
+    <value>Zadajte názov skriptu:</value>
+  </data>
+  <data name="Scripts_DeleteConfirm" xml:space="preserve">
+    <value>Naozaj chcete zmazať skript {0}?</value>
+  </data>
+  <data name="Scripts_Deleted" xml:space="preserve">
+    <value>Skript {0} bol úspešne zmazaný.</value>
+  </data>
+  <data name="Scripts_AlreadyGone" xml:space="preserve">
+    <value>Súbor pre {0} už neexistoval.</value>
+  </data>
+  <data name="Scripts_DeleteFailed" xml:space="preserve">
+    <value>Skript {0} sa nepodarilo zmazať.</value>
+  </data>
+  <data name="Scripts_Failed_Title" xml:space="preserve">
+    <value>Skript zlyhal</value>
+  </data>
+  <data name="Scripts_Begun" xml:space="preserve">
+    <value>Skript sa spustil!</value>
+  </data>
+  <data name="Scripts_Ended" xml:space="preserve">
+    <value>Skript sa ukončil!</value>
+  </data>
+  <data name="Scripts_SelectOperation" xml:space="preserve">
+    <value>Vyberte operáciu:</value>
+  </data>
+  <data name="Scripts_AddBlock" xml:space="preserve">
+    <value>Pridať blok</value>
+  </data>
+  <data name="Scripts_EditBlock" xml:space="preserve">
+    <value>Upraviť blok</value>
+  </data>
+  <data name="Scripts_RemoveBlock" xml:space="preserve">
+    <value>Odstrániť blok</value>
+  </data>
+  <data name="Scripts_SelectBlockEdit" xml:space="preserve">
+    <value>Vyberte blok na úpravu:</value>
+  </data>
+  <data name="Scripts_SelectBlockRemove" xml:space="preserve">
+    <value>Vyberte blok na odstránenie:</value>
+  </data>
+  <data name="Scripts_ConfirmContinue" xml:space="preserve">
+    <value>Naozaj chcete pokračovať?</value>
+  </data>
+  <data name="Scripts_Guid" xml:space="preserve">
+    <value>GUID skriptu</value>
+  </data>
+  <data name="Scripts_BlockCount" xml:space="preserve">
+    <value>Počet blokov</value>
+  </data>
+  <data name="Scripts_Start" xml:space="preserve">
+    <value>Štart</value>
+  </data>
+  <data name="Scripts_End" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="Common_None" xml:space="preserve">
+    <value>Žiadne</value>
+  </data>
+  <data name="Common_Cancelled" xml:space="preserve">
+    <value>Zrušené</value>
+  </data>
+  <data name="Common_Continue" xml:space="preserve">
+    <value>Chcete pokračovať?</value>
+  </data>
+  <data name="Common_Searching" xml:space="preserve">
+    <value>Hľadám...</value>
+  </data>
+  <data name="Projects_Title" xml:space="preserve">
+    <value>Projekty</value>
+  </data>
+  <data name="Projects_Select" xml:space="preserve">
+    <value>Vyberte projekt:</value>
+  </data>
+  <data name="Projects_Filter" xml:space="preserve">
+    <value>Píšte pre filtrovanie projektov...</value>
+  </data>
+  <data name="Projects_AddNew" xml:space="preserve">
+    <value>+ Pridať nový projekt</value>
+  </data>
+  <data name="Projects_Row_Status" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="Projects_Row_LastModified" xml:space="preserve">
+    <value>Naposledy zmenené</value>
+  </data>
+  <data name="Projects_Row_Badges" xml:space="preserve">
+    <value>Odznaky</value>
+  </data>
+  <data name="Projects_Row_Topics" xml:space="preserve">
+    <value>Témy</value>
+  </data>
+  <data name="Projects_Row_Languages" xml:space="preserve">
+    <value>Jazyky</value>
+  </data>
+  <data name="Projects_Row_ProjectName" xml:space="preserve">
+    <value>Názov projektu</value>
+  </data>
+  <data name="Projects_RetrievingStats" xml:space="preserve">
+    <value>Načítavam štatistiky GitHub repozitára...</value>
+  </data>
+  <data name="Projects_Missing_Title" xml:space="preserve">
+    <value>Projekt chýba</value>
+  </data>
+  <data name="Projects_FolderNotFound" xml:space="preserve">
+    <value>Priečinok projektu {0} sa nenašiel:</value>
+  </data>
+  <data name="Projects_WhatToDo" xml:space="preserve">
+    <value>Čo chcete urobiť?</value>
+  </data>
+  <data name="Projects_SearchAuto" xml:space="preserve">
+    <value>Nájsť priečinok automaticky</value>
+  </data>
+  <data name="Projects_LocateManually" xml:space="preserve">
+    <value>Nájsť priečinok ručne</value>
+  </data>
+  <data name="Projects_NoFolderSelected" xml:space="preserve">
+    <value>Nebol vybraný žiadny priečinok.</value>
+  </data>
+  <data name="Projects_DifferentRepo_Title" xml:space="preserve">
+    <value>Iný repozitár</value>
+  </data>
+  <data name="Projects_DifferentRepo" xml:space="preserve">
+    <value>Vybraný priečinok nie je ten istý repozitár ako pôvodný.</value>
+  </data>
+  <data name="Projects_LinkAnyway" xml:space="preserve">
+    <value>Chcete ho aj tak prepojiť?</value>
+  </data>
+  <data name="Projects_NoFingerprint" xml:space="preserve">
+    <value>Tento projekt nemá uložený odtlačok, takže ho Helyx nevie vyhľadať.</value>
+  </data>
+  <data name="Projects_LocateInstead" xml:space="preserve">
+    <value>Vyberte priečinok ručne.</value>
+  </data>
+  <data name="Projects_NotFound" xml:space="preserve">
+    <value>Priečinok sa nepodarilo nájsť.</value>
+  </data>
+  <data name="Projects_Found_Title" xml:space="preserve">
+    <value>Projekt nájdený</value>
+  </data>
+  <data name="Projects_Linked" xml:space="preserve">
+    <value>{0} bol prepojený s:</value>
+  </data>
+  <data name="Projects_Menu_IDE" xml:space="preserve">
+    <value>Akcie IDE</value>
+  </data>
+  <data name="Projects_Menu_Git" xml:space="preserve">
+    <value>Akcie Git</value>
+  </data>
+  <data name="Projects_Menu_GitHub" xml:space="preserve">
+    <value>Akcie GitHub</value>
+  </data>
+  <data name="Projects_Menu_Manage" xml:space="preserve">
+    <value>Spravovať projekt</value>
+  </data>
+  <data name="Projects_SelectFolder" xml:space="preserve">
+    <value>Vyberte priečinok projektu</value>
+  </data>
+  <data name="Projects_FolderGone" xml:space="preserve">
+    <value>Priečinok {0} už neexistuje.</value>
+  </data>
+  <data name="Projects_FolderNotFound_Title" xml:space="preserve">
+    <value>Priečinok sa nenašiel</value>
+  </data>
+  <data name="Projects_DriveRoot" xml:space="preserve">
+    <value>Koreň disku sa nedá pridať ako projekt. Vyberte priečinok projektu.</value>
+  </data>
+  <data name="Projects_InvalidFolder_Title" xml:space="preserve">
+    <value>Neplatný priečinok</value>
+  </data>
+  <data name="Projects_DuplicateFolder_Title" xml:space="preserve">
+    <value>Duplicitný priečinok</value>
+  </data>
+  <data name="Projects_AlreadyAdded" xml:space="preserve">
+    <value>Tento priečinok je už pridaný ako {0}.</value>
+  </data>
+  <data name="Projects_AddAgain" xml:space="preserve">
+    <value>Chcete ho pridať znova?</value>
+  </data>
+  <data name="Projects_EnterName" xml:space="preserve">
+    <value>Zadajte názov projektu</value>
+  </data>
+  <data name="Projects_NameEmpty" xml:space="preserve">
+    <value>Názov projektu nemôže byť prázdny.</value>
+  </data>
+  <data name="Projects_DuplicateProject_Title" xml:space="preserve">
+    <value>Duplicitný projekt</value>
+  </data>
+  <data name="Projects_NameExists" xml:space="preserve">
+    <value>Projekt s názvom {0} už existuje.</value>
+  </data>
+  <data name="Projects_DetectingLanguages" xml:space="preserve">
+    <value>Zisťujem jazyky...</value>
+  </data>
+  <data name="Projects_ConfirmDetails" xml:space="preserve">
+    <value>Potvrďte údaje projektu</value>
+  </data>
+  <data name="Projects_NoneDetected" xml:space="preserve">
+    <value>Nič sa nenašlo</value>
+  </data>
+  <data name="Projects_AddConfirm" xml:space="preserve">
+    <value>Chcete pridať tento projekt?</value>
+  </data>
+  <data name="Manage_ChangeStatus" xml:space="preserve">
+    <value>Zmeniť stav</value>
+  </data>
+  <data name="Manage_AssignBadges" xml:space="preserve">
+    <value>Priradiť odznaky</value>
+  </data>
+  <data name="Manage_Analyze" xml:space="preserve">
+    <value>Analyzovať projekt</value>
+  </data>
+  <data name="Manage_ChangeName" xml:space="preserve">
+    <value>Zmeniť názov</value>
+  </data>
+  <data name="Manage_RemoveProject" xml:space="preserve">
+    <value>Odstrániť projekt</value>
+  </data>
+  <data name="Manage_SelectNewStatus" xml:space="preserve">
+    <value>Vyberte nový stav:</value>
+  </data>
+  <data name="Manage_NoBadgesToAssign" xml:space="preserve">
+    <value>Nie sú žiadne odznaky na priradenie. Vytvoriť ich môžete v Nastaveniach.</value>
+  </data>
+  <data name="Manage_SelectBadges" xml:space="preserve">
+    <value>Vyberte odznaky, ktoré chcete priradiť:</value>
+  </data>
+  <data name="Manage_ChangeNameOf" xml:space="preserve">
+    <value>Zmeniť názov ...</value>
+  </data>
+  <data name="Manage_EnterNewNameFor" xml:space="preserve">
+    <value>Zadajte nový názov pre {0}</value>
+  </data>
+  <data name="Manage_RemoveConfirm" xml:space="preserve">
+    <value>Odstrániť {0}?</value>
+  </data>
+  <data name="Manage_CannotBeUndone" xml:space="preserve">
+    <value>Toto sa nedá vrátiť späť.</value>
+  </data>
+  <data name="Manage_AlsoDeletes" xml:space="preserve">
+    <value>POZOR, TOTO ZMAŽE AJ VŠETKY ZÁLOHY A SKRIPTY PRIRADENÉ K TOMUTO PROJEKTU!</value>
+  </data>
+  <data name="Manage_CleanupIncomplete" xml:space="preserve">
+    <value>Čistenie neúplné</value>
+  </data>
+  <data name="Manage_CleanupFailed" xml:space="preserve">
+    <value>Niektoré zálohy alebo skripty sa nepodarilo zmazať:</value>
+  </data>
+  <data name="Manage_Removed_Title" xml:space="preserve">
+    <value>Projekt odstránený</value>
+  </data>
+  <data name="Manage_Removed" xml:space="preserve">
+    <value>Projekt {0} bol úspešne odstránený.</value>
+  </data>
+  <data name="Analyze_Running" xml:space="preserve">
+    <value>Analyzujem projekt...</value>
+  </data>
+  <data name="Analyze_ReadingRepo" xml:space="preserve">
+    <value>Čítam repozitár...</value>
+  </data>
+  <data name="Analyze_Files" xml:space="preserve">
+    <value>Súbory</value>
+  </data>
+  <data name="Analyze_Folders" xml:space="preserve">
+    <value>Priečinky</value>
+  </data>
+  <data name="Analyze_SizeOnDisk" xml:space="preserve">
+    <value>Veľkosť na disku</value>
+  </data>
+  <data name="Analyze_Lines" xml:space="preserve">
+    <value>Riadky</value>
+  </data>
+  <data name="Analyze_Tracked" xml:space="preserve">
+    <value>{0} sledovaných</value>
+  </data>
+  <data name="Analyze_NoSourceFiles" xml:space="preserve">
+    <value>žiadne zdrojové súbory</value>
+  </data>
+  <data name="Analyze_InFiles" xml:space="preserve">
+    <value>v {0} súboroch</value>
+  </data>
+  <data name="Analyze_LinesDetail" xml:space="preserve">
+    <value>{0} riadkov</value>
+  </data>
+  <data name="Analyze_Languages" xml:space="preserve">
+    <value>Jazyky</value>
+  </data>
+  <data name="Analyze_Other" xml:space="preserve">
+    <value>Ostatné</value>
+  </data>
+  <data name="Analyze_LargestFiles" xml:space="preserve">
+    <value>Najväčšie súbory</value>
+  </data>
+  <data name="Analyze_Branch" xml:space="preserve">
+    <value>Vetva</value>
+  </data>
+  <data name="Analyze_LocalBranches" xml:space="preserve">
+    <value>{0} lokálnych vetiev</value>
+  </data>
+  <data name="Analyze_LocalBranchOne" xml:space="preserve">
+    <value>{0} lokálna vetva</value>
+  </data>
+  <data name="Analyze_Commits" xml:space="preserve">
+    <value>Commity</value>
+  </data>
+  <data name="Analyze_FirstCommit" xml:space="preserve">
+    <value>Prvý commit</value>
+  </data>
+  <data name="Analyze_Today" xml:space="preserve">
+    <value>dnes</value>
+  </data>
+  <data name="Analyze_DaysAgo" xml:space="preserve">
+    <value>pred {0} dňami</value>
+  </data>
+  <data name="Analyze_MonthsAgo" xml:space="preserve">
+    <value>pred {0} mesiacmi</value>
+  </data>
+  <data name="Analyze_YearsAgo" xml:space="preserve">
+    <value>pred {0} rokmi</value>
+  </data>
+  <data name="Analyze_LastCommit" xml:space="preserve">
+    <value>Posledný commit</value>
+  </data>
+  <data name="Analyze_WorkingTree" xml:space="preserve">
+    <value>Pracovný strom</value>
+  </data>
+  <data name="Analyze_Clean" xml:space="preserve">
+    <value>Čisté</value>
+  </data>
+  <data name="Analyze_Changed" xml:space="preserve">
+    <value>zmenených</value>
+  </data>
+  <data name="Analyze_GitSize" xml:space="preserve">
+    <value>veľkosť .git</value>
+  </data>
+  <data name="Analyze_Footer" xml:space="preserve">
+    <value>↑↓ posun   &lt;pgup/pgdn&gt; strana   &lt;r&gt; znova analyzovať   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Analyze_All" xml:space="preserve">
+    <value>všetko</value>
+  </data>
+  <data name="Common_MultiSelectHint" xml:space="preserve">
+    <value>(&lt;space&gt; prepnúť, &lt;enter&gt; potvrdiť)</value>
+  </data>
+  <data name="Backups_Title" xml:space="preserve">
+    <value>Akcie záloh</value>
+  </data>
+  <data name="Backups_Header" xml:space="preserve">
+    <value>Zálohy</value>
+  </data>
+  <data name="Backups_Create" xml:space="preserve">
+    <value>Vytvoriť zálohu</value>
+  </data>
+  <data name="Backups_Restore" xml:space="preserve">
+    <value>Obnoviť zo zálohy</value>
+  </data>
+  <data name="Backups_Delete" xml:space="preserve">
+    <value>Zmazať zálohu</value>
+  </data>
+  <data name="Backups_CreateConfirm" xml:space="preserve">
+    <value>Naozaj chcete vytvoriť zálohu tohto projektu?</value>
+  </data>
+  <data name="Backups_ProjectMissing" xml:space="preserve">
+    <value>Tento projekt sa nenašiel v konfiguračnom súbore.</value>
+  </data>
+  <data name="Backups_ProjectMissing_Hint" xml:space="preserve">
+    <value>Opravte to ručne, alebo obnovte konfiguračný súbor v Nastaveniach.</value>
+  </data>
+  <data name="Backups_FolderCreateFailed" xml:space="preserve">
+    <value>Priečinok so zálohami sa nepodarilo vytvoriť.</value>
+  </data>
+  <data name="Backups_ScopeQuestion" xml:space="preserve">
+    <value>Čo má záloha obsahovať?</value>
+  </data>
+  <data name="Backups_ScopeSkipIgnored" xml:space="preserve">
+    <value>Všetko okrem súborov ignorovaných cez .gitignore</value>
+  </data>
+  <data name="Backups_ScopeEverything" xml:space="preserve">
+    <value>Všetko v priečinku projektu</value>
+  </data>
+  <data name="Backups_Running" xml:space="preserve">
+    <value>Zálohujem...</value>
+  </data>
+  <data name="Backups_BackingUpFile" xml:space="preserve">
+    <value>Zálohujem {0}</value>
+  </data>
+  <data name="Backups_Failed_Title" xml:space="preserve">
+    <value>Záloha zlyhala</value>
+  </data>
+  <data name="Backups_CreatedWithSkipped" xml:space="preserve">
+    <value>Záloha bola vytvorená, ale {0} súborov bolo zamknutých alebo nečitateľných a boli vynechané:</value>
+  </data>
+  <data name="Backups_AndMore" xml:space="preserve">
+    <value>... a ďalších {0}</value>
+  </data>
+  <data name="Backups_Created" xml:space="preserve">
+    <value>Záloha bola úspešne vytvorená.</value>
+  </data>
+  <data name="Backups_NoneAvailable" xml:space="preserve">
+    <value>Nie sú dostupné žiadne zálohy.</value>
+  </data>
+  <data name="Backups_NoneToRestore" xml:space="preserve">
+    <value>Nie sú žiadne zálohy na obnovenie.</value>
+  </data>
+  <data name="Backups_NoneToDelete" xml:space="preserve">
+    <value>Nie sú žiadne zálohy na zmazanie.</value>
+  </data>
+  <data name="Backups_Col_Project" xml:space="preserve">
+    <value>Projekt</value>
+  </data>
+  <data name="Backups_Col_Date" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="Backups_OverwriteWarning" xml:space="preserve">
+    <value>TOTO PREPÍŠE VÁŠ SÚČASNÝ PROJEKT!</value>
+  </data>
+  <data name="Backups_Restoring" xml:space="preserve">
+    <value>Obnovujem zálohu...</value>
+  </data>
+  <data name="Backups_RestoringFile" xml:space="preserve">
+    <value>Obnovujem {0}</value>
+  </data>
+  <data name="Backups_Swapping" xml:space="preserve">
+    <value>Vymieňam obnovený projekt</value>
+  </data>
+  <data name="Backups_RestoreFailed_Title" xml:space="preserve">
+    <value>Obnovenie zlyhalo</value>
+  </data>
+  <data name="Backups_OriginalLeftAt" xml:space="preserve">
+    <value>Pôvodný projekt zostal v:</value>
+  </data>
+  <data name="Backups_Restored" xml:space="preserve">
+    <value>Záloha bola úspešne obnovená.</value>
+  </data>
+  <data name="Backups_RestoredLeftover" xml:space="preserve">
+    <value>Záloha bola úspešne obnovená, ale kópiu pôvodného projektu sa nepodarilo odstrániť.</value>
+  </data>
+  <data name="Backups_DeleteYourself" xml:space="preserve">
+    <value>Zmažte ju sami, keď ju už nič nedrží otvorenú.</value>
+  </data>
+  <data name="Backups_Deleting" xml:space="preserve">
+    <value>Mažem zálohu...</value>
+  </data>
+  <data name="Backups_DeleteFailed_Title" xml:space="preserve">
+    <value>Mazanie zlyhalo</value>
+  </data>
+  <data name="Backups_Deleted" xml:space="preserve">
+    <value>Záloha bola úspešne zmazaná.</value>
+  </data>
+  <data name="Backups_EntryEscapes" xml:space="preserve">
+    <value>Položka smeruje mimo cieľový priečinok: {0}</value>
+  </data>
+  <data name="Script_Wait" xml:space="preserve">
+    <value>Čakať</value>
+  </data>
+  <data name="Script_Log" xml:space="preserve">
+    <value>Zapísať</value>
+  </data>
+  <data name="Script_CommandDone" xml:space="preserve">
+    <value>dokončené</value>
+  </data>
+  <data name="Script_ExitCode" xml:space="preserve">
+    <value>skončilo s kódom {0}</value>
+  </data>
+  <data name="Script_Execute" xml:space="preserve">
+    <value>Spustiť</value>
+  </data>
+  <data name="Script_Open" xml:space="preserve">
+    <value>Otvoriť</value>
+  </data>
+  <data name="Script_CreateFile" xml:space="preserve">
+    <value>Vytvoriť súbor</value>
+  </data>
+  <data name="Script_CreateFolder" xml:space="preserve">
+    <value>Vytvoriť priečinok</value>
+  </data>
+  <data name="Script_DeleteFile" xml:space="preserve">
+    <value>Zmazať súbor</value>
+  </data>
+  <data name="Script_DeleteFolder" xml:space="preserve">
+    <value>Zmazať priečinok</value>
+  </data>
+  <data name="Script_EnterDuration" xml:space="preserve">
+    <value>Zadajte trvanie v sekundách:</value>
+  </data>
+  <data name="Script_DurationRange" xml:space="preserve">
+    <value>Trvanie musí byť medzi 0 a {0} sekundami</value>
+  </data>
+  <data name="Script_DurationRangeError" xml:space="preserve">
+    <value>Trvanie musí byť medzi 0 a {0} sekundami.</value>
+  </data>
+  <data name="Script_EnterLogMessage" xml:space="preserve">
+    <value>Zadajte text záznamu:</value>
+  </data>
+  <data name="Script_EnterCommand" xml:space="preserve">
+    <value>Zadajte príkaz na spustenie:</value>
+  </data>
+  <data name="Script_NoCommand" xml:space="preserve">
+    <value>Pre tento blok nebol nastavený žiadny príkaz.</value>
+  </data>
+  <data name="Script_CommandFailed" xml:space="preserve">
+    <value>Príkaz sa nepodarilo spustiť: {0}</value>
+  </data>
+  <data name="Script_EnterPathOpen" xml:space="preserve">
+    <value>Zadajte cestu na otvorenie:</value>
+  </data>
+  <data name="Script_NoPath" xml:space="preserve">
+    <value>Pre tento blok nebola nastavená žiadna cesta.</value>
+  </data>
+  <data name="Script_OpenFailed" xml:space="preserve">
+    <value>{0} sa nepodarilo otvoriť: {1}</value>
+  </data>
+  <data name="Script_EnterPathNewFile" xml:space="preserve">
+    <value>Zadajte cestu pre nový súbor:</value>
+  </data>
+  <data name="Script_EnterPathNewFolder" xml:space="preserve">
+    <value>Zadajte cestu pre nový priečinok:</value>
+  </data>
+  <data name="Script_CreateFailed" xml:space="preserve">
+    <value>{0} sa nepodarilo vytvoriť: {1}</value>
+  </data>
+  <data name="Script_EnterPathDeleteFile" xml:space="preserve">
+    <value>Zadajte cestu k súboru na zmazanie:</value>
+  </data>
+  <data name="Script_EnterPathDeleteFolder" xml:space="preserve">
+    <value>Zadajte cestu k priečinku na zmazanie:</value>
+  </data>
+  <data name="Script_DeleteFailed" xml:space="preserve">
+    <value>{0} sa nepodarilo zmazať: {1}</value>
+  </data>
+  <data name="Script_NothingConfigured" xml:space="preserve">
+    <value>Pre tento blok nebola nastavená položka {0}.</value>
+  </data>
+  <data name="Script_InvalidPath" xml:space="preserve">
+    <value>{0} nie je platná položka {1}.</value>
+  </data>
+  <data name="Script_FilePath" xml:space="preserve">
+    <value>cesta k súboru</value>
+  </data>
+  <data name="Script_FolderPath" xml:space="preserve">
+    <value>cesta k priečinku</value>
+  </data>
+  <data name="Script_Folder" xml:space="preserve">
+    <value>priečinok</value>
+  </data>
+  <data name="Script_TooCloseToRoot" xml:space="preserve">
+    <value>Odmietam zmazať {0}, je príliš blízko koreňa disku.</value>
+  </data>
+  <data name="Script_BlockFailed" xml:space="preserve">
+    <value>Blok {0} ({1}) zlyhal:</value>
+  </data>
+  <data name="Script_Stopped" xml:space="preserve">
+    <value>Skript bol zastavený.</value>
+  </data>
+  <data name="GH_NeedAuth" xml:space="preserve">
+    <value>Pred použitím sa musíte pripojiť ku GitHubu v Nastaveniach.</value>
+  </data>
+  <data name="GH_ManageIssues" xml:space="preserve">
+    <value>Spravovať issues</value>
+  </data>
+  <data name="GH_ManagePulls" xml:space="preserve">
+    <value>Spravovať pull requesty</value>
+  </data>
+  <data name="GH_Synchronization" xml:space="preserve">
+    <value>Synchronizácia s GitHubom</value>
+  </data>
+  <data name="GH_ViewStats" xml:space="preserve">
+    <value>Zobraziť štatistiky repozitára</value>
+  </data>
+  <data name="GH_OpenWiki" xml:space="preserve">
+    <value>Otvoriť wiki</value>
+  </data>
+  <data name="GH_Issues" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="GH_PullRequests" xml:space="preserve">
+    <value>Pull requesty</value>
+  </data>
+  <data name="GH_RetrievingIssues" xml:space="preserve">
+    <value>Načítavam issues z GitHubu...</value>
+  </data>
+  <data name="GH_IssuesLoadFailed" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať, takže issues sa nenačítali.</value>
+  </data>
+  <data name="GH_CheckAndRetry" xml:space="preserve">
+    <value>Skontrolujte pripojenie a skúste to znova.</value>
+  </data>
+  <data name="GH_NoIssues" xml:space="preserve">
+    <value>Tento repozitár nemá žiadne issues.</value>
+  </data>
+  <data name="GH_NoPulls" xml:space="preserve">
+    <value>Tento repozitár nemá žiadne pull requesty.</value>
+  </data>
+  <data name="GH_PullsLoadFailed" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať, takže pull requesty sa nenačítali.</value>
+  </data>
+  <data name="GH_CommentsLoadFailed" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať, takže komentáre sa nenačítali.</value>
+  </data>
+  <data name="GH_ReviewsLoadFailed" xml:space="preserve">
+    <value>GitHub sa nepodarilo kontaktovať, takže recenzie sa nenačítali.</value>
+  </data>
+  <data name="GH_RetrievingComments" xml:space="preserve">
+    <value>Načítavam komentáre z GitHubu...</value>
+  </data>
+  <data name="GH_RetrievingPulls" xml:space="preserve">
+    <value>Načítavam pull requesty z GitHubu...</value>
+  </data>
+  <data name="GH_RetrievingPull" xml:space="preserve">
+    <value>Načítavam pull request z GitHubu...</value>
+  </data>
+  <data name="GH_Filter_All" xml:space="preserve">
+    <value>Všetko</value>
+  </data>
+  <data name="GH_Filter_Commented" xml:space="preserve">
+    <value>S komentármi</value>
+  </data>
+  <data name="GH_Filter_Assigned" xml:space="preserve">
+    <value>Priradené</value>
+  </data>
+  <data name="GH_Filter_Labels" xml:space="preserve">
+    <value>So štítkami</value>
+  </data>
+  <data name="GH_Filter_Open" xml:space="preserve">
+    <value>Otvorené</value>
+  </data>
+  <data name="GH_Filter_Drafts" xml:space="preserve">
+    <value>Koncepty</value>
+  </data>
+  <data name="GH_Filter_Reviewed" xml:space="preserve">
+    <value>S recenzentmi</value>
+  </data>
+  <data name="GH_Filter_NoComments" xml:space="preserve">
+    <value>Bez komentárov</value>
+  </data>
+  <data name="GH_Filter_Unassigned" xml:space="preserve">
+    <value>Nepriradené</value>
+  </data>
+  <data name="GH_Filter_Unlabeled" xml:space="preserve">
+    <value>Bez štítkov</value>
+  </data>
+  <data name="GH_Filter_Closed" xml:space="preserve">
+    <value>Zatvorené</value>
+  </data>
+  <data name="GH_Filter_Ready" xml:space="preserve">
+    <value>Hotové</value>
+  </data>
+  <data name="GH_Filter_NoReviewers" xml:space="preserve">
+    <value>Bez recenzentov</value>
+  </data>
+  <data name="GH_Col_State" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="GH_Col_Locked" xml:space="preserve">
+    <value>Zamknuté</value>
+  </data>
+  <data name="GH_Col_Title" xml:space="preserve">
+    <value>Názov</value>
+  </data>
+  <data name="GH_Col_Labels" xml:space="preserve">
+    <value>Štítky</value>
+  </data>
+  <data name="GH_Col_Comments" xml:space="preserve">
+    <value>Komentáre</value>
+  </data>
+  <data name="GH_Col_Updated" xml:space="preserve">
+    <value>Aktualizované</value>
+  </data>
+  <data name="GH_Col_Branch" xml:space="preserve">
+    <value>Vetva</value>
+  </data>
+  <data name="GH_State_Open" xml:space="preserve">
+    <value>Otvorené</value>
+  </data>
+  <data name="GH_State_Closed" xml:space="preserve">
+    <value>Zatvorené</value>
+  </data>
+  <data name="GH_State_Duplicate" xml:space="preserve">
+    <value>Duplikát</value>
+  </data>
+  <data name="GH_State_NotPlanned" xml:space="preserve">
+    <value>Neplánované</value>
+  </data>
+  <data name="GH_State_Merged" xml:space="preserve">
+    <value>Zlúčené</value>
+  </data>
+  <data name="GH_State_Draft" xml:space="preserve">
+    <value>Koncept</value>
+  </data>
+  <data name="GH_NothingMatches" xml:space="preserve">
+    <value>Tomuto filtru nič nezodpovedá.</value>
+  </data>
+  <data name="GH_IssueTitle" xml:space="preserve">
+    <value>Issue #{0}</value>
+  </data>
+  <data name="GH_PullTitle" xml:space="preserve">
+    <value>Pull request #{0}</value>
+  </data>
+  <data name="GH_Footer_Issues" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana  &lt;tab&gt; zmeniť filter   &lt;shift+tab&gt; obrátiť filter  &lt;n&gt; nové  &lt;enter&gt; otvoriť  &lt;esc&gt; späť</value>
+  </data>
+  <data name="GH_Footer_Pulls" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana   &lt;tab&gt; zmeniť filter   &lt;shift+tab&gt; obrátiť filter   &lt;enter&gt; otvoriť   &lt;esc&gt; späť</value>
+  </data>
+  <data name="GH_Page" xml:space="preserve">
+    <value>strana {0}/{1}   ·   issue {2}/{3}</value>
+  </data>
+  <data name="GH_PagePull" xml:space="preserve">
+    <value>strana {0}/{1}   ·   pull request {2}/{3}</value>
+  </data>
+  <data name="GH_PageComment" xml:space="preserve">
+    <value>strana {0}/{1}   ·   komentár {2}/{3}</value>
+  </data>
+  <data name="GH_NewIssue_Title" xml:space="preserve">
+    <value>Nové issue</value>
+  </data>
+  <data name="GH_NewIssue_AskTitle" xml:space="preserve">
+    <value>Názov nového issue:</value>
+  </data>
+  <data name="GH_TitleEmpty" xml:space="preserve">
+    <value>Názov nemôže byť prázdny.</value>
+  </data>
+  <data name="GH_NewIssue_AskBody" xml:space="preserve">
+    <value>Popis {0}:</value>
+  </data>
+  <data name="GH_CreatingIssue" xml:space="preserve">
+    <value>Vytváram issue na GitHube...</value>
+  </data>
+  <data name="GH_IssueNotCreated" xml:space="preserve">
+    <value>Issue sa nevytvorilo:</value>
+  </data>
+  <data name="GH_IssueCreated" xml:space="preserve">
+    <value>Issue {0} bolo vytvorené.</value>
+  </data>
+  <data name="GH_OpeningPost" xml:space="preserve">
+    <value>úvodný príspevok</value>
+  </data>
+  <data name="GH_Review" xml:space="preserve">
+    <value>recenzia</value>
+  </data>
+  <data name="GH_Row_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="GH_Row_Opened" xml:space="preserve">
+    <value>Otvorené</value>
+  </data>
+  <data name="GH_Row_Assignees" xml:space="preserve">
+    <value>Priradení</value>
+  </data>
+  <data name="GH_Row_Branches" xml:space="preserve">
+    <value>Vetvy</value>
+  </data>
+  <data name="GH_Row_Changes" xml:space="preserve">
+    <value>Zmeny</value>
+  </data>
+  <data name="GH_Row_Mergeable" xml:space="preserve">
+    <value>Zlúčiteľné</value>
+  </data>
+  <data name="GH_Row_Reviews" xml:space="preserve">
+    <value>Recenzie</value>
+  </data>
+  <data name="GH_ChangesDetail" xml:space="preserve">
+    <value>v {0} súboroch   ·   {1} commitov</value>
+  </data>
+  <data name="GH_Merge_Computing" xml:space="preserve">
+    <value>GitHub to ešte počíta</value>
+  </data>
+  <data name="GH_Merge_Clean" xml:space="preserve">
+    <value>čisté</value>
+  </data>
+  <data name="GH_Merge_Merged" xml:space="preserve">
+    <value>zlúčené</value>
+  </data>
+  <data name="GH_Reason_Dirty" xml:space="preserve">
+    <value>je v konflikte s {0}</value>
+  </data>
+  <data name="GH_Reason_BaseBranch" xml:space="preserve">
+    <value>základná vetva</value>
+  </data>
+  <data name="GH_Reason_Blocked" xml:space="preserve">
+    <value>chýba povinná recenzia</value>
+  </data>
+  <data name="GH_Reason_Behind" xml:space="preserve">
+    <value>vetvu treba najprv aktualizovať</value>
+  </data>
+  <data name="GH_Reason_Unstable" xml:space="preserve">
+    <value>kontroly zlyhávajú, zlúčenie je aj tak povolené</value>
+  </data>
+  <data name="GH_Reason_Draft" xml:space="preserve">
+    <value>stále koncept</value>
+  </data>
+  <data name="GH_Footer_Issue" xml:space="preserve">
+    <value>↑↓ výber  ←→ strana  &lt;c&gt; komentár  &lt;e&gt; upraviť  </value>
+  </data>
+  <data name="GH_Key_Refresh" xml:space="preserve">
+    <value>&lt;f5&gt; obnoviť  </value>
+  </data>
+  <data name="GH_Key_Delete" xml:space="preserve">
+    <value>&lt;d&gt; zmazať</value>
+  </data>
+  <data name="GH_Key_Close" xml:space="preserve">
+    <value>&lt;x&gt; zatvoriť</value>
+  </data>
+  <data name="GH_Key_Reopen" xml:space="preserve">
+    <value>&lt;x&gt; znova otvoriť</value>
+  </data>
+  <data name="GH_Key_Lock" xml:space="preserve">
+    <value>&lt;k&gt; zamknúť</value>
+  </data>
+  <data name="GH_Key_Unlock" xml:space="preserve">
+    <value>&lt;k&gt; odomknúť</value>
+  </data>
+  <data name="GH_Key_Browser" xml:space="preserve">
+    <value>&lt;o&gt; prehliadač  &lt;esc&gt; späť</value>
+  </data>
+  <data name="GH_Key_Edit" xml:space="preserve">
+    <value>&lt;e&gt; upraviť</value>
+  </data>
+  <data name="GH_Key_Merge" xml:space="preserve">
+    <value>&lt;m&gt; zlúčiť</value>
+  </data>
+  <data name="GH_Key_Review" xml:space="preserve">
+    <value>&lt;r&gt; recenzia</value>
+  </data>
+  <data name="GH_Footer_Pull" xml:space="preserve">
+    <value>↑↓ výber  ←→ strana  &lt;c&gt; komentár  </value>
+  </data>
+  <data name="GH_AnyKey" xml:space="preserve">
+    <value>&lt;ľubovoľný kláves&gt; pokračovať</value>
+  </data>
+  <data name="GH_ChooseHint" xml:space="preserve">
+    <value>←→ výber   &lt;enter&gt; potvrdiť   &lt;esc&gt; zrušiť</value>
+  </data>
+  <data name="GH_Wf_Menu" xml:space="preserve">
+    <value>GitHub Actions</value>
+  </data>
+  <data name="GH_Wf_Title_Short" xml:space="preserve">
+    <value>Behy workflow</value>
+  </data>
+  <data name="GH_Wf_Title" xml:space="preserve">
+    <value>Behy workflow · {0}</value>
+  </data>
+  <data name="GH_Wf_RunTitle" xml:space="preserve">
+    <value>Run #{0} · {1}</value>
+  </data>
+  <data name="GH_Wf_LogTitle" xml:space="preserve">
+    <value>Celý log · beh #{0}</value>
+  </data>
+  <data name="GH_Wf_Page" xml:space="preserve">
+    <value>strana {0}/{1}   ·   beh {2}/{3}</value>
+  </data>
+  <data name="GH_Wf_Retrieving" xml:space="preserve">
+    <value>Načítavam behy workflow...</value>
+  </data>
+  <data name="GH_Wf_RetrievingJobs" xml:space="preserve">
+    <value>Načítavam úlohy...</value>
+  </data>
+  <data name="GH_Wf_DownloadingLog" xml:space="preserve">
+    <value>Sťahujem archív s logom...</value>
+  </data>
+  <data name="GH_Wf_Working" xml:space="preserve">
+    <value>Komunikujem s GitHubom...</value>
+  </data>
+  <data name="GH_Wf_LoadFailed" xml:space="preserve">
+    <value>Behy workflow sa nepodarilo načítať.</value>
+  </data>
+  <data name="GH_Wf_JobsLoadFailed" xml:space="preserve">
+    <value>Úlohy tohto behu sa nepodarilo načítať.</value>
+  </data>
+  <data name="GH_Wf_LogFailed" xml:space="preserve">
+    <value>Log sa nepodarilo stiahnuť. GitHub uchováva logy behov len obmedzený čas.</value>
+  </data>
+  <data name="GH_Wf_NoRuns" xml:space="preserve">
+    <value>Tento repozitár zatiaľ nemá žiadne behy workflow.</value>
+  </data>
+  <data name="GH_Wf_NoRunsFiltered" xml:space="preserve">
+    <value>Pre tento workflow nie sú žiadne behy.</value>
+  </data>
+  <data name="GH_Wf_AllWorkflows" xml:space="preserve">
+    <value>Všetky workflowy</value>
+  </data>
+  <data name="GH_Wf_Col_Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="GH_Wf_Col_Status" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="GH_Wf_Col_Event" xml:space="preserve">
+    <value>Udalosť</value>
+  </data>
+  <data name="GH_Wf_Col_Branch" xml:space="preserve">
+    <value>Vetva</value>
+  </data>
+  <data name="GH_Wf_Col_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Col_When" xml:space="preserve">
+    <value>Kedy</value>
+  </data>
+  <data name="GH_Wf_Row_Conclusion" xml:space="preserve">
+    <value>Výsledok</value>
+  </data>
+  <data name="GH_Wf_Row_Branch" xml:space="preserve">
+    <value>Vetva</value>
+  </data>
+  <data name="GH_Wf_Row_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="GH_Wf_Row_Actor" xml:space="preserve">
+    <value>Spustil</value>
+  </data>
+  <data name="GH_Wf_Row_Started" xml:space="preserve">
+    <value>Začaté</value>
+  </data>
+  <data name="GH_Wf_Row_Duration" xml:space="preserve">
+    <value>Trvanie</value>
+  </data>
+  <data name="GH_Wf_State_Queued" xml:space="preserve">
+    <value>vo fronte</value>
+  </data>
+  <data name="GH_Wf_State_Running" xml:space="preserve">
+    <value>beží</value>
+  </data>
+  <data name="GH_Wf_State_Success" xml:space="preserve">
+    <value>úspech</value>
+  </data>
+  <data name="GH_Wf_State_Failure" xml:space="preserve">
+    <value>zlyhalo</value>
+  </data>
+  <data name="GH_Wf_State_Cancelled" xml:space="preserve">
+    <value>zrušené</value>
+  </data>
+  <data name="GH_Wf_State_Skipped" xml:space="preserve">
+    <value>preskočené</value>
+  </data>
+  <data name="GH_Wf_State_TimedOut" xml:space="preserve">
+    <value>vypršal čas</value>
+  </data>
+  <data name="GH_Wf_State_ActionRequired" xml:space="preserve">
+    <value>vyžaduje zásah</value>
+  </data>
+  <data name="GH_Wf_State_Neutral" xml:space="preserve">
+    <value>neutrálne</value>
+  </data>
+  <data name="GH_Wf_Seconds" xml:space="preserve">
+    <value>{0} s</value>
+  </data>
+  <data name="GH_Wf_Minutes" xml:space="preserve">
+    <value>{0} m {1} s</value>
+  </data>
+  <data name="GH_Wf_Hours" xml:space="preserve">
+    <value>{0} h {1} m</value>
+  </data>
+  <data name="GH_Wf_Jobs_Count" xml:space="preserve">
+    <value>úloh: {0}</value>
+  </data>
+  <data name="GH_Wf_LogLines" xml:space="preserve">
+    <value>riadky {0} až {1} z {2}</value>
+  </data>
+  <data name="GH_Wf_Confirm_Rerun" xml:space="preserve">
+    <value>Spustiť celý tento workflow znova?</value>
+  </data>
+  <data name="GH_Wf_Confirm_RerunFailed" xml:space="preserve">
+    <value>Spustiť znova len zlyhané úlohy?</value>
+  </data>
+  <data name="GH_Wf_Confirm_Cancel" xml:space="preserve">
+    <value>Zrušiť tento beh?</value>
+  </data>
+  <data name="GH_Wf_Rerunning" xml:space="preserve">
+    <value>Beh bol znova zaradený do fronty.</value>
+  </data>
+  <data name="GH_Wf_Cancelled" xml:space="preserve">
+    <value>Beh bol zrušený.</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Pick" xml:space="preserve">
+    <value>Ktorý workflow chcete spustiť?</value>
+  </data>
+  <data name="GH_Wf_Dispatch_Branch" xml:space="preserve">
+    <value>Na ktorej vetve?</value>
+  </data>
+  <data name="GH_Wf_Dispatched" xml:space="preserve">
+    <value>{0} bol spustený na {1}.</value>
+  </data>
+  <data name="GH_Wf_Footer_List" xml:space="preserve">
+    <value>↑↓ výber  ←→ strana  &lt;tab&gt; workflow  </value>
+  </data>
+  <data name="GH_Wf_Footer_Run" xml:space="preserve">
+    <value>↑↓ posun  </value>
+  </data>
+  <data name="GH_Wf_Footer_Log" xml:space="preserve">
+    <value>↑↓ posun  &lt;pgup/pgdn&gt; strana  &lt;home/end&gt; skok  &lt;esc&gt; späť</value>
+  </data>
+  <data name="GH_Wf_Key_Dispatch" xml:space="preserve">
+    <value>&lt;d&gt; spustiť  </value>
+  </data>
+  <data name="GH_Wf_Key_Refresh" xml:space="preserve">
+    <value>&lt;r&gt; obnoviť  </value>
+  </data>
+  <data name="GH_Wf_Key_Browser" xml:space="preserve">
+    <value>&lt;b&gt; prehliadač</value>
+  </data>
+  <data name="GH_Wf_Key_Rerun" xml:space="preserve">
+    <value>&lt;e&gt; spustiť znova</value>
+  </data>
+  <data name="GH_Wf_Key_RerunFailed" xml:space="preserve">
+    <value>&lt;f&gt; len zlyhané</value>
+  </data>
+  <data name="GH_Wf_Key_Cancel" xml:space="preserve">
+    <value>&lt;c&gt; zrušiť</value>
+  </data>
+  <data name="GH_Wf_Key_FullLog" xml:space="preserve">
+    <value>&lt;l&gt; celý log  </value>
+  </data>
+  <data name="GH_Yes" xml:space="preserve">
+    <value>áno</value>
+  </data>
+  <data name="GH_No" xml:space="preserve">
+    <value>nie</value>
+  </data>
+  <data name="GH_NewComment" xml:space="preserve">
+    <value>Nový komentár</value>
+  </data>
+  <data name="GH_EditComment" xml:space="preserve">
+    <value>Upraviť komentár</value>
+  </data>
+  <data name="GH_EditIssue" xml:space="preserve">
+    <value>Upraviť issue</value>
+  </data>
+  <data name="GH_EditPull" xml:space="preserve">
+    <value>Upraviť pull request</value>
+  </data>
+  <data name="GH_ReviewBody" xml:space="preserve">
+    <value>Text recenzie</value>
+  </data>
+  <data name="GH_SendingComment" xml:space="preserve">
+    <value>Odosielam komentár na GitHub...</value>
+  </data>
+  <data name="GH_SendingReview" xml:space="preserve">
+    <value>Odosielam recenziu na GitHub...</value>
+  </data>
+  <data name="GH_Saving" xml:space="preserve">
+    <value>Ukladám na GitHub...</value>
+  </data>
+  <data name="GH_Deleting" xml:space="preserve">
+    <value>Mažem komentár...</value>
+  </data>
+  <data name="GH_Talking" xml:space="preserve">
+    <value>Komunikujem s GitHubom...</value>
+  </data>
+  <data name="GH_Merging" xml:space="preserve">
+    <value>Zlučujem na GitHube...</value>
+  </data>
+  <data name="GH_Recomputing" xml:space="preserve">
+    <value>GitHub počíta zlúčenie, pýtam sa znova...</value>
+  </data>
+  <data name="GH_MergeNotReady" xml:space="preserve">
+    <value>GitHub ešte nedopočítal zlúčenie. Skúste o chvíľu znova.</value>
+  </data>
+  <data name="GH_CommentNotPosted" xml:space="preserve">
+    <value>Komentár sa neodoslal:</value>
+  </data>
+  <data name="GH_CommentNotSaved" xml:space="preserve">
+    <value>Komentár sa neuložil:</value>
+  </data>
+  <data name="GH_CommentNotDeleted" xml:space="preserve">
+    <value>Komentár sa nezmazal:</value>
+  </data>
+  <data name="GH_IssueNotSaved" xml:space="preserve">
+    <value>Issue sa neuložilo:</value>
+  </data>
+  <data name="GH_IssueNotChanged" xml:space="preserve">
+    <value>Issue sa nezmenilo:</value>
+  </data>
+  <data name="GH_PullNotSaved" xml:space="preserve">
+    <value>Pull request sa neuložil:</value>
+  </data>
+  <data name="GH_PullNotChanged" xml:space="preserve">
+    <value>Pull request sa nezmenil:</value>
+  </data>
+  <data name="GH_PullNotMerged" xml:space="preserve">
+    <value>Pull request sa nezlúčil:</value>
+  </data>
+  <data name="GH_ReviewNotSent" xml:space="preserve">
+    <value>Recenzia sa neodoslala:</value>
+  </data>
+  <data name="GH_CannotMerge" xml:space="preserve">
+    <value>Tento pull request sa nedá zlúčiť:</value>
+  </data>
+  <data name="GH_ChangesRequested" xml:space="preserve">
+    <value>recenzia si vyžiadala zmeny</value>
+  </data>
+  <data name="GH_BrowserFailed" xml:space="preserve">
+    <value>Prehliadač sa nepodarilo otvoriť:</value>
+  </data>
+  <data name="GH_DeleteCommentConfirm" xml:space="preserve">
+    <value>Zmazať tento komentár? Nedá sa to vrátiť späť.</value>
+  </data>
+  <data name="GH_ClosePullConfirm" xml:space="preserve">
+    <value>Zatvoriť tento pull request?</value>
+  </data>
+  <data name="GH_ReopenPullConfirm" xml:space="preserve">
+    <value>Znova otvoriť tento pull request?</value>
+  </data>
+  <data name="GH_MergeConfirm" xml:space="preserve">
+    <value>Zlúčiť #{0} do {1}</value>
+  </data>
+  <data name="GH_WhyClosed" xml:space="preserve">
+    <value>Prečo sa zatvára?</value>
+  </data>
+  <data name="GH_WhyLocked" xml:space="preserve">
+    <value>Prečo sa zamyká?</value>
+  </data>
+  <data name="GH_HowMerged" xml:space="preserve">
+    <value>Ako sa má zlúčiť?</value>
+  </data>
+  <data name="GH_WhatReview" xml:space="preserve">
+    <value>Aký druh recenzie?</value>
+  </data>
+  <data name="GH_WriteHint" xml:space="preserve">
+    <value>Píšte text, Markdown je podporovaný.</value>
+  </data>
+  <data name="GH_Editor_Footer" xml:space="preserve">
+    <value>&lt;ctrl+l&gt; zoznam   &lt;ctrl+q&gt; citácia   &lt;f2&gt; odoslať   &lt;esc&gt; zrušiť</value>
+  </data>
+  <data name="GH_Editor_Bold" xml:space="preserve">
+    <value>&lt;ctrl+b&gt; tučné</value>
+  </data>
+  <data name="GH_Editor_Italic" xml:space="preserve">
+    <value>&lt;ctrl+e&gt; kurzíva</value>
+  </data>
+  <data name="GH_Editor_Code" xml:space="preserve">
+    <value>&lt;ctrl+k&gt; kód</value>
+  </data>
+  <data name="GH_Characters" xml:space="preserve">
+    <value>{0} znakov</value>
+  </data>
+  <data name="GH_ContinuedFrom" xml:space="preserve">
+    <value>⋯ pokračovanie z predchádzajúcej strany</value>
+  </data>
+  <data name="GH_ContinuesOn" xml:space="preserve">
+    <value>⋯ pokračuje na ďalšej strane</value>
+  </data>
+  <data name="GH_JustNow" xml:space="preserve">
+    <value>práve teraz</value>
+  </data>
+  <data name="GH_SecondsAgo" xml:space="preserve">
+    <value>pred {0} sekundami</value>
+  </data>
+  <data name="GH_MinutesAgo" xml:space="preserve">
+    <value>pred {0} minútami</value>
+  </data>
+  <data name="GH_HoursAgo" xml:space="preserve">
+    <value>pred {0} hodinami</value>
+  </data>
+  <data name="GH_DaysAgo" xml:space="preserve">
+    <value>pred {0} dňami</value>
+  </data>
+  <data name="GH_MonthsAgo" xml:space="preserve">
+    <value>pred {0} mesiacmi</value>
+  </data>
+  <data name="GH_YearsAgo" xml:space="preserve">
+    <value>pred {0} rokmi</value>
+  </data>
+  <data name="GH_Sync_Select" xml:space="preserve">
+    <value>Vyberte nastavenia, ktoré chcete zapnúť:</value>
+  </data>
+  <data name="GH_Sync_Status" xml:space="preserve">
+    <value>Synchronizovať stav s GitHub repozitárom</value>
+  </data>
+  <data name="GH_Sync_Badges" xml:space="preserve">
+    <value>Synchronizovať odznaky s GitHub repozitárom</value>
+  </data>
+  <data name="GH_Sync_Topics" xml:space="preserve">
+    <value>Načítať témy GitHub repozitára</value>
+  </data>
+  <data name="GH_Sync_Actions" xml:space="preserve">
+    <value>Načítať GitHub Actions</value>
+  </data>
+  <data name="GH_Sync_Stats" xml:space="preserve">
+    <value>Načítať štatistiky GitHub repozitára</value>
+  </data>
+  <data name="GH_Sync_Languages" xml:space="preserve">
+    <value>Použiť detekciu jazykov od GitHubu namiesto Helyxu</value>
+  </data>
+  <data name="GH_BadgesSync" xml:space="preserve">
+    <value>Synchronizácia odznakov</value>
+  </data>
+  <data name="GH_BadgesSyncFailed" xml:space="preserve">
+    <value>Synchronizácia odznakov zlyhala</value>
+  </data>
+  <data name="GH_StatusSync" xml:space="preserve">
+    <value>Synchronizácia stavu</value>
+  </data>
+  <data name="GH_StatusSyncFailed" xml:space="preserve">
+    <value>Synchronizácia stavu zlyhala</value>
+  </data>
+  <data name="GH_PendingBadges" xml:space="preserve">
+    <value>Tieto odznaky sú priradené v Helyxe, ale ešte nie sú v README.md:</value>
+  </data>
+  <data name="GH_AddThemNow" xml:space="preserve">
+    <value>Chcete ich teraz pridať do README.md?</value>
+  </data>
+  <data name="GH_StagedChanges_Status" xml:space="preserve">
+    <value>Sú tam pripravené zmeny, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_CommitOrUnstage_Status" xml:space="preserve">
+    <value>Commitnite ich alebo vyberte z indexu a nastavte stav znova.</value>
+  </data>
+  <data name="GH_StagedChanges_Badges" xml:space="preserve">
+    <value>Sú tam pripravené zmeny, takže odznaky sa zmenili len v Helyxe.</value>
+  </data>
+  <data name="GH_CommitOrUnstage_Badges" xml:space="preserve">
+    <value>Commitnite ich alebo vyberte z indexu a priraďte odznaky znova.</value>
+  </data>
+  <data name="GH_OperationInProgress_Status" xml:space="preserve">
+    <value>Operácia {0} stále prebieha, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_OperationInProgress_Badges" xml:space="preserve">
+    <value>Operácia {0} stále prebieha, takže odznaky sa zmenili len v Helyxe.</value>
+  </data>
+  <data name="GH_NoUpstream_Status" xml:space="preserve">
+    <value>{0} nesleduje vzdialenú vetvu, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_NoUpstream_Badges" xml:space="preserve">
+    <value>{0} nesleduje vzdialenú vetvu, takže odznaky sa zmenili len v Helyxe.</value>
+  </data>
+  <data name="GH_PushOnceFirst" xml:space="preserve">
+    <value>Najprv ju raz pushnite cez Akcie Git, aby vznikla vzdialená vetva.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Status" xml:space="preserve">
+    <value>README.md sa nenašiel, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_ReadmeNotFound_Badges" xml:space="preserve">
+    <value>README.md sa nenašiel, takže odznaky sa zmenili len v Helyxe.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Status" xml:space="preserve">
+    <value>README.md nie je platné UTF-8, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_SaveAsUtf8_Status" xml:space="preserve">
+    <value>Uložte ho ako UTF-8 a nastavte stav znova.</value>
+  </data>
+  <data name="GH_ReadmeNotUtf8_Badges" xml:space="preserve">
+    <value>README.md nie je platné UTF-8, takže odznaky sa zmenili len v Helyxe.</value>
+  </data>
+  <data name="GH_SaveAsUtf8_Badges" xml:space="preserve">
+    <value>Uložte ho ako UTF-8 a priraďte odznaky znova.</value>
+  </data>
+  <data name="GH_MarkersNotFound_Status" xml:space="preserve">
+    <value>Značky Helyxu sa v README.md nenašli, takže stav sa zmenil len v Helyxe.</value>
+  </data>
+  <data name="GH_ExpectedMarkers" xml:space="preserve">
+    <value>Očakávané značky:</value>
+  </data>
+  <data name="GH_BadgeMarkersNotFound" xml:space="preserve">
+    <value>Značky Helyxu pre odznak {0} sa nenašli. Priraďujem len v Helyxe!</value>
+  </data>
+  <data name="GH_ConfirmSync" xml:space="preserve">
+    <value>Toto commitne a pushne zmenu README do {0} repozitárov.</value>
+  </data>
+  <data name="GH_ConfirmSyncOne" xml:space="preserve">
+    <value>Toto commitne a pushne zmenu README do {0} repozitára.</value>
+  </data>
+  <data name="GH_Markers_Title" xml:space="preserve">
+    <value>Umiestniť značky Helyxu · {0}</value>
+  </data>
+  <data name="GH_Markers_Missing" xml:space="preserve">
+    <value>README.md nemá značky Helyxu pre {0} z nich, takže ich nie je kam zapísať.</value>
+  </data>
+  <data name="GH_Markers_How" xml:space="preserve">
+    <value>Ako ich chcete pridať?</value>
+  </data>
+  <data name="GH_Markers_Place" xml:space="preserve">
+    <value>Umiestniť ich teraz do README.md</value>
+  </data>
+  <data name="GH_Markers_Manually" xml:space="preserve">
+    <value>Ukáž mi značky, pridám ich sám</value>
+  </data>
+  <data name="GH_Markers_Skip" xml:space="preserve">
+    <value>Preskočiť, zmeniť len v Helyxe</value>
+  </data>
+  <data name="GH_Markers_AddThese" xml:space="preserve">
+    <value>Pridajte tieto do README.md kamkoľvek ich chcete:</value>
+  </data>
+  <data name="GH_Markers_NotUtf8" xml:space="preserve">
+    <value>README.md nie je platné UTF-8, takže umiestnenie značiek by v ňom zničilo znaky.</value>
+  </data>
+  <data name="GH_SaveAsUtf8Retry" xml:space="preserve">
+    <value>Uložte ho ako UTF-8 a skúste to znova.</value>
+  </data>
+  <data name="GH_Markers_ReadFailed" xml:space="preserve">
+    <value>README.md sa nepodarilo prečítať.</value>
+  </data>
+  <data name="GH_Markers_WriteFailed" xml:space="preserve">
+    <value>README.md sa nepodarilo zapísať.</value>
+  </data>
+  <data name="GH_Markers_Footer" xml:space="preserve">
+    <value>↑↓ pohyb   &lt;enter&gt; nový riadok   </value>
+  </data>
+  <data name="GH_Markers_KeyPlace" xml:space="preserve">
+    <value>&lt;space&gt; umiestniť</value>
+  </data>
+  <data name="GH_Markers_KeyRemove" xml:space="preserve">
+    <value>&lt;del&gt; zrušiť značku</value>
+  </data>
+  <data name="GH_Markers_KeyDeleteLine" xml:space="preserve">
+    <value>&lt;bksp&gt; zmazať riadok</value>
+  </data>
+  <data name="GH_Markers_KeyNextTag" xml:space="preserve">
+    <value>&lt;tab&gt; ďalší štítok   </value>
+  </data>
+  <data name="GH_Markers_KeySave" xml:space="preserve">
+    <value>&lt;f2&gt; uložiť</value>
+  </data>
+  <data name="GH_Markers_KeyCancel" xml:space="preserve">
+    <value>&lt;esc&gt; zrušiť</value>
+  </data>
+  <data name="GH_Markers_Placing" xml:space="preserve">
+    <value>umiestňujem {0}</value>
+  </data>
+  <data name="GH_Markers_Left" xml:space="preserve">
+    <value>(zostáva {0})</value>
+  </data>
+  <data name="GH_Markers_AllPlaced" xml:space="preserve">
+    <value>všetko umiestnené</value>
+  </data>
+  <data name="GH_Stats_Title" xml:space="preserve">
+    <value>Štatistiky GitHub repozitára</value>
+  </data>
+  <data name="GH_Stats_Failed" xml:space="preserve">
+    <value>Štatistiky tohto repozitára sa nepodarilo načítať z GitHubu.</value>
+  </data>
+  <data name="GH_Stats_Incomplete_Title" xml:space="preserve">
+    <value>Neúplné údaje</value>
+  </data>
+  <data name="GH_Stats_Incomplete" xml:space="preserve">
+    <value>GitHub nevrátil všetko, takže časti tejto obrazovky sú neúplné:</value>
+  </data>
+  <data name="GH_Stats_Retry" xml:space="preserve">
+    <value>Otvorte túto obrazovku znova pre nový pokus.</value>
+  </data>
+  <data name="GH_Stats_Stars" xml:space="preserve">
+    <value>Hviezdy</value>
+  </data>
+  <data name="GH_Stats_Watchers" xml:space="preserve">
+    <value>Sledujúci</value>
+  </data>
+  <data name="GH_Stats_Forks" xml:space="preserve">
+    <value>Forky</value>
+  </data>
+  <data name="GH_Stats_Activity" xml:space="preserve">
+    <value>Aktivita commitov za posledný rok</value>
+  </data>
+  <data name="GH_Wiki_Failed" xml:space="preserve">
+    <value>Adresu wiki sa nepodarilo zostaviť.</value>
+  </data>
+  <data name="GH_Wiki_CheckAuth" xml:space="preserve">
+    <value>Skontrolujte autorizáciu GitHub v Nastaveniach a GitHub názov tohto projektu.</value>
+  </data>
+  <data name="GH_Wiki_OpenFailed" xml:space="preserve">
+    <value>Wiki sa nepodarilo otvoriť.</value>
+  </data>
+  <data name="GH_ContinueAction" xml:space="preserve">
+    <value>Pokračovať</value>
+  </data>
+  <data name="GH_UnknownAuthor" xml:space="preserve">
+    <value>Neznámy autor</value>
+  </data>
+  <data name="Git_FolderGone" xml:space="preserve">
+    <value>Priečinok projektu už neexistuje:</value>
+  </data>
+  <data name="Git_FolderGone_Title" xml:space="preserve">
+    <value>Priečinok sa nenašiel</value>
+  </data>
+  <data name="Git_NotARepo" xml:space="preserve">
+    <value>'{0}' nie je Git repozitár.</value>
+  </data>
+  <data name="Git_NotARepo_Title" xml:space="preserve">
+    <value>Nie je to Git repozitár</value>
+  </data>
+  <data name="Git_InitAsk" xml:space="preserve">
+    <value>Chcete ho inicializovať a pokračovať?</value>
+  </data>
+  <data name="Git_InitFailed" xml:space="preserve">
+    <value>Repozitár sa nepodarilo inicializovať.</value>
+  </data>
+  <data name="Git_InitFailed_Title" xml:space="preserve">
+    <value>Inicializácia zlyhala</value>
+  </data>
+  <data name="Git_Status" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="Git_Changes" xml:space="preserve">
+    <value>Zmeny</value>
+  </data>
+  <data name="Git_Sync" xml:space="preserve">
+    <value>Synchronizácia</value>
+  </data>
+  <data name="Git_Branches" xml:space="preserve">
+    <value>Vetvy</value>
+  </data>
+  <data name="Git_Stashes" xml:space="preserve">
+    <value>Stashe</value>
+  </data>
+  <data name="Git_Log" xml:space="preserve">
+    <value>História</value>
+  </data>
+  <data name="Git_Diagnostics" xml:space="preserve">
+    <value>Diagnostika</value>
+  </data>
+  <data name="Git_CurrentBranch" xml:space="preserve">
+    <value>Aktuálna vetva</value>
+  </data>
+  <data name="Git_Stage" xml:space="preserve">
+    <value>Pripraviť</value>
+  </data>
+  <data name="Git_Commit" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="Git_UndoCommit" xml:space="preserve">
+    <value>Vrátiť commit</value>
+  </data>
+  <data name="Git_RedoCommit" xml:space="preserve">
+    <value>Obnoviť commit</value>
+  </data>
+  <data name="Git_SyncAuto" xml:space="preserve">
+    <value>Synchronizácia (auto pull+push)</value>
+  </data>
+  <data name="Git_CreateBranch" xml:space="preserve">
+    <value>Vytvoriť vetvu</value>
+  </data>
+  <data name="Git_SwitchBranch" xml:space="preserve">
+    <value>Prepnúť vetvu</value>
+  </data>
+  <data name="Git_MergeBranch" xml:space="preserve">
+    <value>Zlúčiť vetvu</value>
+  </data>
+  <data name="Git_DeleteBranch" xml:space="preserve">
+    <value>Zmazať vetvu</value>
+  </data>
+  <data name="Git_SaveStash" xml:space="preserve">
+    <value>Uložiť stash</value>
+  </data>
+  <data name="Git_ApplyStash" xml:space="preserve">
+    <value>Použiť stash</value>
+  </data>
+  <data name="Git_PopStash" xml:space="preserve">
+    <value>Vybrať stash</value>
+  </data>
+  <data name="Git_ListStashes" xml:space="preserve">
+    <value>Zoznam stashov</value>
+  </data>
+  <data name="Git_StatusTitle" xml:space="preserve">
+    <value>Stav Gitu — {0}</value>
+  </data>
+  <data name="Git_WorkingTreeClean" xml:space="preserve">
+    <value>Pracovný strom je čistý</value>
+  </data>
+  <data name="Git_NothingToStage" xml:space="preserve">
+    <value>Niet čo pripraviť — pracovný strom je čistý.</value>
+  </data>
+  <data name="Git_StageFiles" xml:space="preserve">
+    <value>Príprava súborov</value>
+  </data>
+  <data name="Git_SelectFilesToStage" xml:space="preserve">
+    <value>Vyberte súbory na prípravu:</value>
+  </data>
+  <data name="Git_ToggleHint" xml:space="preserve">
+    <value>(&lt;space&gt; prepnúť, &lt;enter&gt; potvrdiť)</value>
+  </data>
+  <data name="Git_AllFiles" xml:space="preserve">
+    <value>Všetky súbory</value>
+  </data>
+  <data name="Git_NothingStaged" xml:space="preserve">
+    <value>Nič nie je pripravené. Najprv použite {0}.</value>
+  </data>
+  <data name="Git_FilesToCommit" xml:space="preserve">
+    <value>{0} súbor(ov) na commit</value>
+  </data>
+  <data name="Git_ProceedCommit" xml:space="preserve">
+    <value>Pokračovať s týmto commitom?</value>
+  </data>
+  <data name="Git_CommitMessage" xml:space="preserve">
+    <value>Správa commitu:</value>
+  </data>
+  <data name="Git_CommittedAs" xml:space="preserve">
+    <value>Commitnuté ako {0}: {1}</value>
+  </data>
+  <data name="Git_NothingToDiff" xml:space="preserve">
+    <value>Niet čo porovnať — pracovný strom je čistý.</value>
+  </data>
+  <data name="Git_CommitNotFound" xml:space="preserve">
+    <value>Commit sa nenašiel.</value>
+  </data>
+  <data name="Git_NoChangesInCommit" xml:space="preserve">
+    <value>Tento commit neobsahuje žiadne zmeny.</value>
+  </data>
+  <data name="Git_ChangedFiles" xml:space="preserve">
+    <value>Zmenené súbory</value>
+  </data>
+  <data name="Git_NoDiffForFile" xml:space="preserve">
+    <value>Pre tento súbor nie je k dispozícii žiadny diff.</value>
+  </data>
+  <data name="Git_DiffFailed" xml:space="preserve">
+    <value>Diff sa nepodarilo vytvoriť:</value>
+  </data>
+  <data name="Git_Col_File" xml:space="preserve">
+    <value>Súbor</value>
+  </data>
+  <data name="Git_Col_State" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="Common_Warning" xml:space="preserve">
+    <value>Upozornenie</value>
+  </data>
+  <data name="Git_UndoWarning" xml:space="preserve">
+    <value>Vrátenie commitu prepíše históriu Gitu.
+Predtým, než budete pokračovať, uistite sa, že viete, čo sa stane.</value>
+  </data>
+  <data name="Git_UndoHow" xml:space="preserve">
+    <value>Ako sa má commit vrátiť?</value>
+  </data>
+  <data name="Git_Undo_Soft" xml:space="preserve">
+    <value>Nechať zmeny pripravené (Soft reset)</value>
+  </data>
+  <data name="Git_Undo_Mixed" xml:space="preserve">
+    <value>Nechať zmeny nepripravené (Mixed reset)</value>
+  </data>
+  <data name="Git_Undo_Hard" xml:space="preserve">
+    <value>Zmazať zmeny úplne (Hard reset)</value>
+  </data>
+  <data name="Git_Undo_SoftInfo" xml:space="preserve">
+    <value>Posledný commit sa odstráni, ale jeho zmeny zostanú pripravené.</value>
+  </data>
+  <data name="Git_Undo_MixedInfo" xml:space="preserve">
+    <value>Posledný commit sa odstráni, ale jeho zmeny zostanú v pracovnom priečinku.</value>
+  </data>
+  <data name="Git_Undo_HardInfo" xml:space="preserve">
+    <value>Posledný commit a všetky zmeny, ktoré priniesol, sa natrvalo odstránia.</value>
+  </data>
+  <data name="Git_Undo_GenericInfo" xml:space="preserve">
+    <value>Posledný commit sa vráti späť.</value>
+  </data>
+  <data name="Git_UndoConfirm" xml:space="preserve">
+    <value>Naozaj chcete vrátiť posledný commit?</value>
+  </data>
+  <data name="Git_NoCommits" xml:space="preserve">
+    <value>Repozitár nemá žiadne commity.</value>
+  </data>
+  <data name="Git_FirstCommitUndo" xml:space="preserve">
+    <value>Prvý commit sa nedá vrátiť, pretože nie je kam sa vrátiť.</value>
+  </data>
+  <data name="Git_UndoDone" xml:space="preserve">
+    <value>Posledný commit bol úspešne vrátený.</value>
+  </data>
+  <data name="Git_RedoWarning" xml:space="preserve">
+    <value>Obnovenie commitu prepíše aktuálny stav repozitára.
+Pokračujte len vtedy, ak ste si istý, že chcete obnoviť práve tento commit.</value>
+  </data>
+  <data name="Git_RedoAsk" xml:space="preserve">
+    <value>Chcete obnoviť vrátený commit?</value>
+  </data>
+  <data name="Git_Redo_NoUndo" xml:space="preserve">
+    <value>Nie je čo obnoviť.
+Najprv vráťte nejaký commit a potom ho môžete obnoviť.</value>
+  </data>
+  <data name="Git_Redo_BranchChanged" xml:space="preserve">
+    <value>Aktuálna vetva sa zmenila.
+Vrátenie prebehlo na '{0}',
+ale teraz si na '{1}'.</value>
+  </data>
+  <data name="Git_Redo_NoSha" xml:space="preserve">
+    <value>Nie je žiadny commit na obnovenie.
+Najprv vráťte nejaký commit a potom ho môžete obnoviť.</value>
+  </data>
+  <data name="Git_Redo_Dirty" xml:space="preserve">
+    <value>Repozitár má necommitnuté zmeny.
+Pred obnovením commitu ich commitnite, odložte do stashu alebo zahoďte.</value>
+  </data>
+  <data name="Git_Redo_Gone" xml:space="preserve">
+    <value>Commit, ktorý sa mal obnoviť, už neexistuje.
+Mohol ho odstrániť garbage collector Gitu alebo iné zmeny v repozitári.</value>
+  </data>
+  <data name="Git_RedoDone" xml:space="preserve">
+    <value>Commit bol úspešne obnovený!
+Obnovený commit: {0}</value>
+  </data>
+  <data name="Git_NoCommitsToPush" xml:space="preserve">
+    <value>Nie sú žiadne commity na push.</value>
+  </data>
+  <data name="Git_NoOriginAdd" xml:space="preserve">
+    <value>Tento repozitár nemá remote 'origin'.
+Má ho Helyx pridať?</value>
+  </data>
+  <data name="Git_UsernameUnknown" xml:space="preserve">
+    <value>Tvoje používateľské meno na GitHube sa nepodarilo zistiť.</value>
+  </data>
+  <data name="Git_PushFailed_Title" xml:space="preserve">
+    <value>Push zlyhal</value>
+  </data>
+  <data name="Git_OriginAdded" xml:space="preserve">
+    <value>Remote {0} bol pridaný.</value>
+  </data>
+  <data name="Git_RenameToRemote" xml:space="preserve">
+    <value>Vaša vetva je '{0}', ale na remote je len '{1}'.
+Chcete vetvu premenovať na '{1}'?</value>
+  </data>
+  <data name="Git_SetUpstreamAsk" xml:space="preserve">
+    <value>Vetva '{0}' nesleduje žiadnu vzdialenú vetvu.
+Má to Helyx nastaviť?</value>
+  </data>
+  <data name="Git_NowTracks" xml:space="preserve">
+    <value>Vetva {0} teraz sleduje {1}.</value>
+  </data>
+  <data name="Git_Pushing" xml:space="preserve">
+    <value>Pushujem...</value>
+  </data>
+  <data name="Git_RebaseAsk" xml:space="preserve">
+    <value>Chcete spraviť rebase na vzdialenú vetvu a skúsiť to znova?</value>
+  </data>
+  <data name="Git_NoUpstreamRebase" xml:space="preserve">
+    <value>Táto vetva nesleduje žiadnu vzdialenú vetvu, takže sa nedá rebasnúť.</value>
+  </data>
+  <data name="Git_RebaseFailed_Title" xml:space="preserve">
+    <value>Rebase zlyhal</value>
+  </data>
+  <data name="Git_Rebasing" xml:space="preserve">
+    <value>Rebasujem...</value>
+  </data>
+  <data name="Git_Row_Step" xml:space="preserve">
+    <value>Krok</value>
+  </data>
+  <data name="Git_StepOf" xml:space="preserve">
+    <value>{0} z {1}</value>
+  </data>
+  <data name="Git_UnknownLower" xml:space="preserve">
+    <value>neznámy</value>
+  </data>
+  <data name="Git_Row_Conflicts" xml:space="preserve">
+    <value>Konflikty</value>
+  </data>
+  <data name="Git_NoneReadyContinue" xml:space="preserve">
+    <value>Žiadne - dá sa pokračovať</value>
+  </data>
+  <data name="Git_RebaseInProgress" xml:space="preserve">
+    <value>Rebase prebieha</value>
+  </data>
+  <data name="Git_WhatDo" xml:space="preserve">
+    <value>Čo chcete urobiť?</value>
+  </data>
+  <data name="Git_ContinueRebase" xml:space="preserve">
+    <value>Pokračovať v rebase</value>
+  </data>
+  <data name="Git_MarkResolvedContinue" xml:space="preserve">
+    <value>Označiť konflikty za vyriešené a pokračovať</value>
+  </data>
+  <data name="Git_ResolveHere" xml:space="preserve">
+    <value>Vyriešiť konflikt tu</value>
+  </data>
+  <data name="Git_OpenFolder" xml:space="preserve">
+    <value>Otvoriť priečinok projektu</value>
+  </data>
+  <data name="Git_RecheckFiles" xml:space="preserve">
+    <value>Skontrolovať súbory znova</value>
+  </data>
+  <data name="Git_AbortRebase" xml:space="preserve">
+    <value>Zrušiť rebase</value>
+  </data>
+  <data name="Git_LeaveInProgress" xml:space="preserve">
+    <value>Nechať rozrobené</value>
+  </data>
+  <data name="Git_SelectFileResolve" xml:space="preserve">
+    <value>Vyberte súbor, ktorý chcete vyriešiť:</value>
+  </data>
+  <data name="Git_StillMarked" xml:space="preserve">
+    <value>Tieto súbory stále obsahujú značky konfliktu alebo sa nedali prečítať:</value>
+  </data>
+  <data name="Git_ResolveBeforeRebase" xml:space="preserve">
+    <value>Vyriešte ich, aby mohol rebase pokračovať.</value>
+  </data>
+  <data name="Git_ConflictsNotResolved" xml:space="preserve">
+    <value>Konflikty nie sú vyriešené</value>
+  </data>
+  <data name="Git_ContinuingRebase" xml:space="preserve">
+    <value>Pokračujem v rebase...</value>
+  </data>
+  <data name="Git_RebaseAborted" xml:space="preserve">
+    <value>Rebase bol zrušený, vetva je späť tam, kde začala.</value>
+  </data>
+  <data name="Git_RebaseAborted_Title" xml:space="preserve">
+    <value>Rebase zrušený</value>
+  </data>
+  <data name="Git_RebaseLeft" xml:space="preserve">
+    <value>Rebase zostal rozrobený.
+Dokončite ho alebo zrušte, kým znova pushnete.</value>
+  </data>
+  <data name="Git_PushedOk" xml:space="preserve">
+    <value>Vetva {0} bola úspešne pushnutá!</value>
+  </data>
+  <data name="Git_Pull_UpToDate" xml:space="preserve">
+    <value>Vetva '{0}' je už aktuálna.</value>
+  </data>
+  <data name="Git_Pull_FastForward" xml:space="preserve">
+    <value>Vetva {0} bola úspešne stiahnutá (fast-forward).</value>
+  </data>
+  <data name="Git_Pull_Merged" xml:space="preserve">
+    <value>Vetva {0} bola úspešne stiahnutá a zlúčená.</value>
+  </data>
+  <data name="Git_Pull_Conflicts" xml:space="preserve">
+    <value>Pull skončil s konfliktmi na {0}. Vyriešte ich, kým budete pokračovať.</value>
+  </data>
+  <data name="Git_Pull_Unexpected" xml:space="preserve">
+    <value>Pull skončil s neočakávaným stavom: {0}</value>
+  </data>
+  <data name="Git_PullFailed_Title" xml:space="preserve">
+    <value>Pull zlyhal</value>
+  </data>
+  <data name="Git_ForcePullAsk" xml:space="preserve">
+    <value>Chcete vynútiť pull? {0}</value>
+  </data>
+  <data name="Git_DiscardWarn" xml:space="preserve">
+    <value>TOTO ZAHODÍ TVOJE LOKÁLNE ZMENY!</value>
+  </data>
+  <data name="Git_NoOriginConfigured" xml:space="preserve">
+    <value>Tento repozitár nemá nastavený remote 'origin'.</value>
+  </data>
+  <data name="Git_NoRemoteToReset" xml:space="preserve">
+    <value>Vetva '{0}' nemá vzdialenú vetvu, na ktorú sa dá resetovať.</value>
+  </data>
+  <data name="Git_ResetTo" xml:space="preserve">
+    <value>Vetva {0} bola resetovaná na {1}.</value>
+  </data>
+  <data name="Git_FetchFailed_Title" xml:space="preserve">
+    <value>Fetch zlyhal</value>
+  </data>
+  <data name="Git_Fetched" xml:space="preserve">
+    <value>Najnovšie zmeny z '{0}' boli stiahnuté.</value>
+  </data>
+  <data name="Git_SyncDirty" xml:space="preserve">
+    <value>Tento repozitár má necommitnuté zmeny, takže výsledok sa môže líšiť od toho, čo čakáš.</value>
+  </data>
+  <data name="Git_PressAnyKey" xml:space="preserve">
+    <value>Pokračuj stlačením ľubovoľnej klávesy...</value>
+  </data>
+  <data name="Git_NoCommitsToSync" xml:space="preserve">
+    <value>Nie sú žiadne commity na synchronizáciu.</value>
+  </data>
+  <data name="Git_NoUpstreamSync" xml:space="preserve">
+    <value>Vetva '{0}' zatiaľ nesleduje žiadnu vzdialenú vetvu.
+Najprv ju raz pushnite, aby vzdialená vetva vznikla.</value>
+  </data>
+  <data name="Git_DivergenceUnknown" xml:space="preserve">
+    <value>Rozdiel medzi lokálnou a vzdialenou vetvou sa nepodarilo zistiť.</value>
+  </data>
+  <data name="Git_SyncFailed_Title" xml:space="preserve">
+    <value>Synchronizácia zlyhala</value>
+  </data>
+  <data name="Git_AlreadySynced" xml:space="preserve">
+    <value>Už je zosynchronizované.</value>
+  </data>
+  <data name="Git_LocalAhead" xml:space="preserve">
+    <value>Lokálna vetva je o {0} commit(ov) vpredu. Pushujem...</value>
+  </data>
+  <data name="Git_RemoteAhead" xml:space="preserve">
+    <value>Vzdialená vetva je o {0} commit(ov) vpredu. Sťahujem...</value>
+  </data>
+  <data name="Git_Diverged" xml:space="preserve">
+    <value>Vetvy sa rozišli.</value>
+  </data>
+  <data name="Git_SelectVersion" xml:space="preserve">
+    <value>Vyberte verziu, ktorú chcete nechať:</value>
+  </data>
+  <data name="Git_Local" xml:space="preserve">
+    <value>Lokálna</value>
+  </data>
+  <data name="Git_Remote" xml:space="preserve">
+    <value>Vzdialená</value>
+  </data>
+  <data name="Git_EnterBranchName" xml:space="preserve">
+    <value>Zadajte názov novej vetvy:</value>
+  </data>
+  <data name="Git_InvalidBranchName" xml:space="preserve">
+    <value>'{0}' nie je platný názov vetvy.</value>
+  </data>
+  <data name="Git_BranchExists" xml:space="preserve">
+    <value>Vetva s názvom '{0}' už existuje.</value>
+  </data>
+  <data name="Git_NoBranchBeforeCommit" xml:space="preserve">
+    <value>Vetvu sa nedá vytvoriť pred prvým commitom.</value>
+  </data>
+  <data name="Git_BranchCreated" xml:space="preserve">
+    <value>Vetva {0} bola úspešne vytvorená!</value>
+  </data>
+  <data name="Git_CreateBranchFailed_Title" xml:space="preserve">
+    <value>Vytvorenie vetvy zlyhalo</value>
+  </data>
+  <data name="Git_NoBranchesToSwitch" xml:space="preserve">
+    <value>Nie sú žiadne iné lokálne vetvy, na ktoré sa dá prepnúť.</value>
+  </data>
+  <data name="Git_SelectBranchSwitch" xml:space="preserve">
+    <value>Vyberte vetvu, na ktorú sa chcete prepnúť:</value>
+  </data>
+  <data name="Git_DirtySwitch" xml:space="preserve">
+    <value>Tento repozitár má necommitnuté zmeny.
+Pred prepnutím vetvy ich pripravte a commitnite.</value>
+  </data>
+  <data name="Git_Switched" xml:space="preserve">
+    <value>Prepnuté na vetvu {0}.</value>
+  </data>
+  <data name="Git_SwitchBranchFailed_Title" xml:space="preserve">
+    <value>Prepnutie vetvy zlyhalo</value>
+  </data>
+  <data name="Git_NoBranchesToMerge" xml:space="preserve">
+    <value>Nie sú žiadne iné lokálne vetvy na zlúčenie.</value>
+  </data>
+  <data name="Git_NothingBeforeCommit" xml:space="preserve">
+    <value>Pred prvým commitom sa nedá nič zlúčiť.</value>
+  </data>
+  <data name="Git_SelectBranchMerge" xml:space="preserve">
+    <value>Vyberte vetvu, ktorú chcete zlúčiť do {0}:</value>
+  </data>
+  <data name="Git_DirtyMerge" xml:space="preserve">
+    <value>Tento repozitár má necommitnuté zmeny.
+Pred zlúčením ich pripravte a commitnite.</value>
+  </data>
+  <data name="Git_AlreadyMerged" xml:space="preserve">
+    <value>Vetva '{0}' je už zlúčená do '{1}'.</value>
+  </data>
+  <data name="Git_MergeConfirm" xml:space="preserve">
+    <value>Zlúčiť {0} ({1}) do {2}?</value>
+  </data>
+  <data name="Git_CommitCountOne" xml:space="preserve">
+    <value>{0} commit</value>
+  </data>
+  <data name="Git_CommitCountMany" xml:space="preserve">
+    <value>{0} commitov</value>
+  </data>
+  <data name="Git_Merging" xml:space="preserve">
+    <value>Zlučujem...</value>
+  </data>
+  <data name="Git_MergeFailed_Title" xml:space="preserve">
+    <value>Zlúčenie zlyhalo</value>
+  </data>
+  <data name="Git_Merge_FastForward" xml:space="preserve">
+    <value>Vetva '{0}' bola zlúčená do '{1}' (fast-forward).</value>
+  </data>
+  <data name="Git_Merge_Done" xml:space="preserve">
+    <value>Vetva '{0}' bola zlúčená do '{1}'.</value>
+  </data>
+  <data name="Git_Merge_Unexpected" xml:space="preserve">
+    <value>Zlúčenie skončilo s neočakávaným stavom: {0}</value>
+  </data>
+  <data name="Git_Row_Merging" xml:space="preserve">
+    <value>Zlučovanie</value>
+  </data>
+  <data name="Git_NoneReadyCommit" xml:space="preserve">
+    <value>Žiadne - dá sa commitnúť</value>
+  </data>
+  <data name="Git_MergeInProgress" xml:space="preserve">
+    <value>Zlúčenie prebieha</value>
+  </data>
+  <data name="Git_CommitMerge" xml:space="preserve">
+    <value>Commitnúť zlúčenie</value>
+  </data>
+  <data name="Git_MarkResolvedCommit" xml:space="preserve">
+    <value>Označiť konflikty za vyriešené a commitnúť</value>
+  </data>
+  <data name="Git_AbortMerge" xml:space="preserve">
+    <value>Zrušiť zlúčenie</value>
+  </data>
+  <data name="Git_ResolveBeforeMerge" xml:space="preserve">
+    <value>Vyriešte ich, aby sa zlúčenie dalo commitnúť.</value>
+  </data>
+  <data name="Git_MergedInto" xml:space="preserve">
+    <value>Vetva {0} bola zlúčená do {1}.</value>
+  </data>
+  <data name="Git_MergeAborted" xml:space="preserve">
+    <value>Zlúčenie bolo zrušené, vetva je späť tam, kde začala.</value>
+  </data>
+  <data name="Git_MergeAborted_Title" xml:space="preserve">
+    <value>Zlúčenie zrušené</value>
+  </data>
+  <data name="Git_MergeLeft" xml:space="preserve">
+    <value>Zlúčenie zostalo rozrobené.
+Dokončite ho alebo zrušte, kým znova commitnete.</value>
+  </data>
+  <data name="Git_NoBranchesToDelete" xml:space="preserve">
+    <value>Nie sú žiadne iné lokálne vetvy na zmazanie.</value>
+  </data>
+  <data name="Git_SelectBranchDelete" xml:space="preserve">
+    <value>Vyberte vetvu, ktorú chcete odstrániť:</value>
+  </data>
+  <data name="Git_UnmergedWarn" xml:space="preserve">
+    <value>Vetva {0} obsahuje commity, ktoré nie sú zlúčené do žiadnej inej vetvy.
+Jej zmazaním sa môžu stať nedostupnými a časom sa stratia.</value>
+  </data>
+  <data name="Git_UnmergedWarn_Title" xml:space="preserve">
+    <value>Zistené nezlúčené commity</value>
+  </data>
+  <data name="Git_DeleteBranchConfirm" xml:space="preserve">
+    <value>Naozaj chcete zmazať vetvu {0}?</value>
+  </data>
+  <data name="Git_DeleteBranchStill" xml:space="preserve">
+    <value>Chcete túto vetvu aj tak zmazať?</value>
+  </data>
+  <data name="Git_DeleteBranchFailed_Title" xml:space="preserve">
+    <value>Zmazanie vetvy zlyhalo</value>
+  </data>
+  <data name="Git_BranchDeleted" xml:space="preserve">
+    <value>Vetva {0} bola úspešne zmazaná!</value>
+  </data>
+  <data name="Git_NothingToStash" xml:space="preserve">
+    <value>Nie sú žiadne necommitnuté zmeny na odloženie.</value>
+  </data>
+  <data name="Git_StashMessage" xml:space="preserve">
+    <value>Správa stashu:</value>
+  </data>
+  <data name="Git_StashedNothing" xml:space="preserve">
+    <value>Nebolo čo odložiť.</value>
+  </data>
+  <data name="Git_StashSaved" xml:space="preserve">
+    <value>Stash {0} bol úspešne uložený!</value>
+  </data>
+  <data name="Git_SaveStashFailed_Title" xml:space="preserve">
+    <value>Uloženie stashu zlyhalo</value>
+  </data>
+  <data name="Git_NoStashes" xml:space="preserve">
+    <value>Nie sú žiadne stashe.</value>
+  </data>
+  <data name="Git_NoStashesFound" xml:space="preserve">
+    <value>Nenašli sa žiadne stashe.</value>
+  </data>
+  <data name="Git_Col_Stash" xml:space="preserve">
+    <value>Stash</value>
+  </data>
+  <data name="Git_Col_Message" xml:space="preserve">
+    <value>Správa</value>
+  </data>
+  <data name="Git_Nav_Apply" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana   &lt;enter&gt; použiť   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_Nav_Pop" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana   &lt;enter&gt; vyňať   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_Nav_View" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana   &lt;enter&gt; zobraziť   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_StashApplied" xml:space="preserve">
+    <value>Stash {0} bol úspešne použitý.</value>
+  </data>
+  <data name="Git_StashConflicts" xml:space="preserve">
+    <value>Stash bol použitý, ale spôsobil konflikty.
+
+Stash zostal zachovaný — konflikty vyriešte ručne.</value>
+  </data>
+  <data name="Git_Conflicts_Title" xml:space="preserve">
+    <value>Konflikty</value>
+  </data>
+  <data name="Git_StashApplyFailed" xml:space="preserve">
+    <value>Stash sa nepodarilo použiť: {0}.</value>
+  </data>
+  <data name="Git_ApplyStashFailed_Title" xml:space="preserve">
+    <value>Použitie stashu zlyhalo</value>
+  </data>
+  <data name="Git_StashPopped" xml:space="preserve">
+    <value>Stash {0} bol úspešne vybratý.</value>
+  </data>
+  <data name="Git_StashPopFailed" xml:space="preserve">
+    <value>Stash sa nepodarilo vybrať: {0}.</value>
+  </data>
+  <data name="Git_PopStashFailed_Title" xml:space="preserve">
+    <value>Vybratie stashu zlyhalo</value>
+  </data>
+  <data name="Git_Row_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Git_Row_BasedOn" xml:space="preserve">
+    <value>Založený na</value>
+  </data>
+  <data name="Git_StashInfo" xml:space="preserve">
+    <value>Info o stashi</value>
+  </data>
+  <data name="Git_NoFileChanges" xml:space="preserve">
+    <value>Žiadne zmeny súborov.</value>
+  </data>
+  <data name="Git_Files" xml:space="preserve">
+    <value>Súbory ({0})</value>
+  </data>
+  <data name="Git_NoChangesInStash" xml:space="preserve">
+    <value>V tomto stashi nie sú žiadne zmeny.</value>
+  </data>
+  <data name="Git_ReadingLog" xml:space="preserve">
+    <value>Čítam históriu...</value>
+  </data>
+  <data name="Git_NoCommitsFound" xml:space="preserve">
+    <value>Nenašli sa žiadne commity.</value>
+  </data>
+  <data name="Git_Col_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Git_Col_Date" xml:space="preserve">
+    <value>Dátum</value>
+  </data>
+  <data name="Git_CommitDetails" xml:space="preserve">
+    <value>Detail commitu</value>
+  </data>
+  <data name="Git_Stash_Footer" xml:space="preserve">
+    <value>↑↓ posun   &lt;pgup/pgdn&gt; strana   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_Diff_Footer" xml:space="preserve">
+    <value>↑↓ navigácia   &lt;tab&gt; prepnúť panel   &lt;pgup/pgdn&gt; strana   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_MoreFiles" xml:space="preserve">
+    <value>+{0} ďalších súborov</value>
+  </data>
+  <data name="Git_Row_Branches" xml:space="preserve">
+    <value>Vetvy</value>
+  </data>
+  <data name="Git_Row_Parents" xml:space="preserve">
+    <value>Rodičia</value>
+  </data>
+  <data name="Git_Row_Insertions" xml:space="preserve">
+    <value>Pridané</value>
+  </data>
+  <data name="Git_Row_Deletions" xml:space="preserve">
+    <value>Odstránené</value>
+  </data>
+  <data name="Git_CommitInformation" xml:space="preserve">
+    <value>Informácie o commite</value>
+  </data>
+  <data name="Git_Col_Status" xml:space="preserve">
+    <value>Stav</value>
+  </data>
+  <data name="Git_CommitActions" xml:space="preserve">
+    <value>Akcie commitu</value>
+  </data>
+  <data name="Git_ViewDiff" xml:space="preserve">
+    <value>Zobraziť diff</value>
+  </data>
+  <data name="Git_ViewFullMessage" xml:space="preserve">
+    <value>Zobraziť celú správu</value>
+  </data>
+  <data name="Git_CommitMessageTitle" xml:space="preserve">
+    <value>Správa commitu</value>
+  </data>
+  <data name="Git_PressAnyKeyReturn" xml:space="preserve">
+    <value>Vráť sa stlačením ľubovoľnej klávesy...</value>
+  </data>
+  <data name="Git_Col_Check" xml:space="preserve">
+    <value>Kontrola</value>
+  </data>
+  <data name="Git_Col_Details" xml:space="preserve">
+    <value>Detaily</value>
+  </data>
+  <data name="Git_Check_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Git_NotLocked" xml:space="preserve">
+    <value>Nie je zamknutý</value>
+  </data>
+  <data name="Git_LockedGitRunning" xml:space="preserve">
+    <value>Zamknutý, kým beží proces gitu. Počkaj, kým skončí.</value>
+  </data>
+  <data name="Git_LockedNotEmpty" xml:space="preserve">
+    <value>Zamknutý a nie je prázdny. Niečo doň možno ešte zapisuje.</value>
+  </data>
+  <data name="Git_LockedCrashed" xml:space="preserve">
+    <value>Zamknutý spadnutým procesom. Príprava aj commit zlyhajú.</value>
+  </data>
+  <data name="Git_Check_Operation" xml:space="preserve">
+    <value>Operácia</value>
+  </data>
+  <data name="Git_NothingInProgress" xml:space="preserve">
+    <value>Nič neprebieha</value>
+  </data>
+  <data name="Git_RebaseUnfinished" xml:space="preserve">
+    <value>Rebase nebol nikdy dokončený - krok {0} z {1}. </value>
+  </data>
+  <data name="Git_RebaseUnfinishedByGit" xml:space="preserve">
+    <value>Rebase nebol nikdy dokončený. </value>
+  </data>
+  <data name="Git_RebaseFinishInTerminal" xml:space="preserve">
+    <value>Tento rebase spustil Git, takže ho Helyx nedokáže dokončiť ani zrušiť. Dokončite ho v termináli príkazom git rebase --continue alebo git rebase --abort.</value>
+  </data>
+  <data name="Git_StillConflictedOne" xml:space="preserve">
+    <value>{0} súbor je stále v konflikte.</value>
+  </data>
+  <data name="Git_StillConflictedMany" xml:space="preserve">
+    <value>{0} súborov je stále v konflikte.</value>
+  </data>
+  <data name="Git_NoConflictsLeft" xml:space="preserve">
+    <value>Žiadne konflikty - dá sa pokračovať.</value>
+  </data>
+  <data name="Git_OperationUnfinished" xml:space="preserve">
+    <value>'{0}' nebol nikdy dokončený.</value>
+  </data>
+  <data name="Git_OnBranch" xml:space="preserve">
+    <value>Na vetve {0}</value>
+  </data>
+  <data name="Git_Detached" xml:space="preserve">
+    <value>Odpojená HEAD. Commity spravené teraz nebudú patriť žiadnej vetve.</value>
+  </data>
+  <data name="Git_Check_LastCommit" xml:space="preserve">
+    <value>Posledný commit</value>
+  </data>
+  <data name="Git_NoCommitsYet" xml:space="preserve">
+    <value>Repozitár zatiaľ nemá žiadne commity</value>
+  </data>
+  <data name="Git_Check_GitHubName" xml:space="preserve">
+    <value>Názov na GitHube</value>
+  </data>
+  <data name="Git_GitHubNameMissing" xml:space="preserve">
+    <value>V Helyxe nie je nastavený, takže všetky funkcie GitHubu sú nedostupné.</value>
+  </data>
+  <data name="Git_RemoteSuggests" xml:space="preserve">
+    <value> Remote napovedá '{0}'.</value>
+  </data>
+  <data name="Git_Check_Remote" xml:space="preserve">
+    <value>Remote</value>
+  </data>
+  <data name="Git_NoOriginNothing" xml:space="preserve">
+    <value>Žiadny remote 'origin'. Nedá sa nič pushnúť ani stiahnuť.</value>
+  </data>
+  <data name="Git_RemoteMismatch" xml:space="preserve">
+    <value>Ukazuje na '{0}', ale Helyx má '{1}'.</value>
+  </data>
+  <data name="Git_RemoteMismatchHint" xml:space="preserve">
+    <value>Push ide na prvý, ale každé vyhľadanie sa pýta na druhý.</value>
+  </data>
+  <data name="Git_Check_SyncState" xml:space="preserve">
+    <value>Stav synchronizácie</value>
+  </data>
+  <data name="Git_UpToDateRemote" xml:space="preserve">
+    <value>Zhodné so vzdialenou vetvou</value>
+  </data>
+  <data name="Git_AheadBehind" xml:space="preserve">
+    <value>{0} commit(ov) vpredu, {1} commit(ov) pozadu.</value>
+  </data>
+  <data name="Git_NoRemoteNoCheck" xml:space="preserve">
+    <value>Bez remote sa to nedá skontrolovať</value>
+  </data>
+  <data name="Git_TracksNothing" xml:space="preserve">
+    <value>'{0}' nič nesleduje, takže sa nedá pushnúť.</value>
+  </data>
+  <data name="Git_Check_BranchName" xml:space="preserve">
+    <value>Názov vetvy</value>
+  </data>
+  <data name="Git_LocalRemoteNameDiff" xml:space="preserve">
+    <value>Lokálne je '{0}', ale na remote je len '{1}'.</value>
+  </data>
+  <data name="Git_RetrievingStatus" xml:space="preserve">
+    <value>Zisťujem stav...</value>
+  </data>
+  <data name="Git_Check_WorkingTree" xml:space="preserve">
+    <value>Pracovný strom</value>
+  </data>
+  <data name="Git_ChangedFileCount" xml:space="preserve">
+    <value>{0} zmenených súborov</value>
+  </data>
+  <data name="Git_Clean" xml:space="preserve">
+    <value>Čistý</value>
+  </data>
+  <data name="Git_MeasuringFiles" xml:space="preserve">
+    <value>Meriam sledované súbory...</value>
+  </data>
+  <data name="Git_Check_FileSizes" xml:space="preserve">
+    <value>Veľkosti súborov</value>
+  </data>
+  <data name="Git_NothingOverLimit" xml:space="preserve">
+    <value>Nič nad limitom GitHubu 100 MB</value>
+  </data>
+  <data name="Git_OversizedFiles" xml:space="preserve">
+    <value>{0} sledovaných súborov je nad limitom GitHubu 100 MB, takže každý push je odmietnutý:</value>
+  </data>
+  <data name="Git_AndMore" xml:space="preserve">
+    <value>... a ďalších {0}</value>
+  </data>
+  <data name="Git_UntrackHint" xml:space="preserve">
+    <value>Prestať ich sledovať pomôže len ďalšiemu commitu - ten, čo už je commitnutý, sa musí prepísať ručne.</value>
+  </data>
+  <data name="Git_Check_BuildOutput" xml:space="preserve">
+    <value>Výstup buildu</value>
+  </data>
+  <data name="Git_NotTracked" xml:space="preserve">
+    <value>Nesledovaný</value>
+  </data>
+  <data name="Git_BuildOutputTracked" xml:space="preserve">
+    <value>{0} sledovaných súborov v bin/obj/.vs a podobných, {1} MB. Každý build ich prepíše, takže ich každý commit nesie znova.</value>
+  </data>
+  <data name="Git_Check_Identity" xml:space="preserve">
+    <value>Identita</value>
+  </data>
+  <data name="Git_NoProblems" xml:space="preserve">
+    <value>Nenašli sa žiadne problémy.</value>
+  </data>
+  <data name="Git_SelectRepair" xml:space="preserve">
+    <value>Vyberte, čo chcete opraviť:</value>
+  </data>
+  <data name="Git_Fix_RemoveLock" xml:space="preserve">
+    <value>Odstrániť zabudnutý zámok indexu</value>
+  </data>
+  <data name="Git_Fix_ContinueRebase" xml:space="preserve">
+    <value>Pokračovať v nedokončenom rebase</value>
+  </data>
+  <data name="Git_Fix_UntrackBuild" xml:space="preserve">
+    <value>Prestať sledovať výstup buildu (súbory zostanú)</value>
+  </data>
+  <data name="Git_Fix_AbortOperation" xml:space="preserve">
+    <value>Zrušiť nedokončený '{0}'</value>
+  </data>
+  <data name="Git_Fix_AttachHead" xml:space="preserve">
+    <value>Prepnúť sa späť na vetvu</value>
+  </data>
+  <data name="Git_Fix_AddRemote" xml:space="preserve">
+    <value>Pridať remote 'origin'</value>
+  </data>
+  <data name="Git_Fix_SetGitHubName" xml:space="preserve">
+    <value>Nastaviť názov repozitára na GitHube</value>
+  </data>
+  <data name="Git_Fix_SetUpstream" xml:space="preserve">
+    <value>Nastaviť upstream vetvu</value>
+  </data>
+  <data name="Git_Fix_RenameBranch" xml:space="preserve">
+    <value>Premenovať vetvu podľa remote</value>
+  </data>
+  <data name="Git_LockRemoved" xml:space="preserve">
+    <value>Zámok indexu bol odstránený.</value>
+  </data>
+  <data name="Git_UntrackWarn" xml:space="preserve">
+    <value>{0} súborov prestane Git sledovať.
+Na disku zostanú nedotknuté - zmení sa len ďalší commit.
+
+</value>
+  </data>
+  <data name="Git_UntrackWarnHistory" xml:space="preserve">
+    <value>Čokoľvek už commitnuté zostáva v histórii a stále sa pushuje,
+takže súbor nad limitom GitHubu treba aj tak prepísať ručne.</value>
+  </data>
+  <data name="Git_UntrackTitle" xml:space="preserve">
+    <value>Prestať sledovať výstup buildu</value>
+  </data>
+  <data name="Git_UntrackDone" xml:space="preserve">
+    <value>{0} súborov už nie je sledovaných a sú pripravené na odstránenie.
+Commitnite to a pridajte {1}, aby sa nevrátili.</value>
+  </data>
+  <data name="Git_MarkedResolved" xml:space="preserve">
+    <value>{0} bol označený za vyriešený.</value>
+  </data>
+  <data name="Git_RebaseStoppedAgain" xml:space="preserve">
+    <value>Rebase sa znova zastavil na neskoršom kroku kvôli novým konfliktom.
+Vyriešte ich a spustite diagnostiku znova.</value>
+  </data>
+  <data name="Git_RebaseNeedsHand" xml:space="preserve">
+    <value>Rebase sa zastavil na kroku, ktorý treba dokončiť ručne,
+napríklad 'edit' alebo 'reword' v interaktívnom rebase.</value>
+  </data>
+  <data name="Git_ContinuingRebaseStep" xml:space="preserve">
+    <value>Pokračujem v rebase - krok {0} z {1}...</value>
+  </data>
+  <data name="Git_RebaseFinished" xml:space="preserve">
+    <value>Rebase skončil, si späť na {0}.</value>
+  </data>
+  <data name="Git_OperationAborted" xml:space="preserve">
+    <value>Nedokončená operácia bola zrušená.</value>
+  </data>
+  <data name="Git_NoLocalBranch" xml:space="preserve">
+    <value>Nie je žiadna lokálna vetva, na ktorú sa dá prepnúť.</value>
+  </data>
+  <data name="Git_RepairFailed_Title" xml:space="preserve">
+    <value>Oprava zlyhala</value>
+  </data>
+  <data name="Git_SelectBranch" xml:space="preserve">
+    <value>Vyberte vetvu:</value>
+  </data>
+  <data name="Git_SwitchedTo" xml:space="preserve">
+    <value>Prepnuté na {0}.</value>
+  </data>
+  <data name="Git_UseOriginName" xml:space="preserve">
+    <value>Použiť '{0}' z remote 'origin' ako názov na GitHube?</value>
+  </data>
+  <data name="Git_GitHubNameSet" xml:space="preserve">
+    <value>Názov na GitHube bol nastavený na {0}.</value>
+  </data>
+  <data name="Git_OriginFirst" xml:space="preserve">
+    <value>Najprv treba pridať remote 'origin'.</value>
+  </data>
+  <data name="Git_RenameTargetUnknown" xml:space="preserve">
+    <value>Nepodarilo sa určiť, na akú vetvu premenovať.</value>
+  </data>
+  <data name="Git_BranchRenamed" xml:space="preserve">
+    <value>Vetva bola premenovaná na {0}.</value>
+  </data>
+  <data name="Git_ConflictResolution" xml:space="preserve">
+    <value>Riešenie konfliktu</value>
+  </data>
+  <data name="Git_ConflictNotUtf8" xml:space="preserve">
+    <value>Tento súbor nie je platné UTF-8, takže jeho riešenie tu by v ňom zničilo znaky.</value>
+  </data>
+  <data name="Git_ResolveInEditor" xml:space="preserve">
+    <value>Vyriešte ho radšej vo svojom editore.</value>
+  </data>
+  <data name="Git_NoMarkersFound" xml:space="preserve">
+    <value>V súbore sa nenašli žiadne značky konfliktu.</value>
+  </data>
+  <data name="Git_NoAltScreen" xml:space="preserve">
+    <value>Tento terminál nepodporuje alternatívnu obrazovku.</value>
+  </data>
+  <data name="Git_Kind_Added" xml:space="preserve">
+    <value>Pridaný</value>
+  </data>
+  <data name="Git_Kind_Deleted" xml:space="preserve">
+    <value>Zmazaný</value>
+  </data>
+  <data name="Git_Kind_Renamed" xml:space="preserve">
+    <value>Premenovaný</value>
+  </data>
+  <data name="Git_Kind_Modified" xml:space="preserve">
+    <value>Zmenený</value>
+  </data>
+  <data name="Git_Staging" xml:space="preserve">
+    <value>Pripravujem...</value>
+  </data>
+  <data name="Git_Unstaging" xml:space="preserve">
+    <value>Ruším prípravu...</value>
+  </data>
+  <data name="Common_Error" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
+  <data name="Common_Success" xml:space="preserve">
+    <value>Hotovo</value>
+  </data>
+  <data name="Token_Empty" xml:space="preserve">
+    <value>Prístupový token je prázdny.</value>
+  </data>
+  <data name="Scripts_Running" xml:space="preserve">
+    <value>Bežím...</value>
+  </data>
+  <data name="GH_NewIssue_BodyHint" xml:space="preserve">
+    <value>(nechajte prázdne pre preskočenie)</value>
+  </data>
+  <data name="Git_State_Warn" xml:space="preserve">
+    <value>POZOR</value>
+  </data>
+  <data name="Git_State_Problem" xml:space="preserve">
+    <value>PROBLÉM</value>
+  </data>
+  <data name="Git_State_Skip" xml:space="preserve">
+    <value>PRESKOČENÉ</value>
+  </data>
+  <data name="Common_Page" xml:space="preserve">
+    <value>strana {0}/{1}   ·   {2}/{3}</value>
+  </data>
+  <data name="Common_NavSelect" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ strana   &lt;enter&gt; vybrať   &lt;esc&gt; späť</value>
+  </data>
+  <data name="Git_Status_StagedPlus" xml:space="preserve">
+    <value>V INDEXE + {0}</value>
+  </data>
+  <data name="Tags_NameEmpty" xml:space="preserve">
+    <value>Názov nemôže byť prázdny.</value>
+  </data>
+  <data name="GH_NoDescription" xml:space="preserve">
+    <value>Bez popisu.</value>
+  </data>
+</root>
