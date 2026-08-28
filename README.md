@@ -9,8 +9,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-10-512BD4.svg)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#run-it-locally)
-[![Languages](https://img.shields.io/badge/languages-8-green.svg)](#helyx-speaks-your-language)
-<!-- HELYX_STATUS_START -->
+[![Languages](https://img.shields.io/badge/languages-8-green.svg)](#helyx-speaks-your-language)<!-- HELYX_STATUS_START -->
 ![Status](https://img.shields.io/badge/status-Active-008000)
 <!-- HELYX_STATUS_END -->
 
