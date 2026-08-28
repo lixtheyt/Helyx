@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Shared;
 using Helyx.Data;
 using Spectre.Console;
@@ -40,7 +41,7 @@ namespace Helyx.Projects
                         {
                             Action.OpenInDefaultIDE => Strings.IDE_OpenInDefault,
                             Action.OpenInIDE => Strings.IDE_OpenIn,
-                            Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.ToString()
                         }));
 
@@ -66,7 +67,7 @@ namespace Helyx.Projects
 
             if (!Directory.Exists(project.Path))
             {
-                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[grey]{Markup.Escape(project.Path)}[/]", Strings.IDE_OpenIn);
+                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[{Color.Grey}]{Markup.Escape(project.Path)}[/]", Strings.IDE_OpenIn);
                 Console.ReadKey();
                 return;
             }
@@ -127,7 +128,7 @@ namespace Helyx.Projects
 
             IDE? nativeIde = ranked[0].Score > 0 ? ranked[0].Ide : null;
 
-            AnsiConsole.Write(new Rule($"[blue bold]{string.Format(Strings.IDE_OpenTitle, Markup.Escape(project.HelyxName))}[/]").LeftJustified());
+            AnsiConsole.Write(new Rule($"[bold {Color.Blue}]{string.Format(Strings.IDE_OpenTitle, Markup.Escape(project.HelyxName))}[/]").LeftJustified());
             AnsiConsole.WriteLine();
 
             var choice = AnsiConsole.Prompt(
@@ -136,8 +137,8 @@ namespace Helyx.Projects
                     .AddChoices(ranked.Select(x => (IDE?)x.Ide).Append(null))
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
-                        _ when x == nativeIde => $"{x}[Orange1] {Strings.IDE_Recommended}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
+                        _ when x == nativeIde => $"{x}[{Color.Orange1}] {Strings.IDE_Recommended}[/]",
                         _ => x.ToString()
                     }));
 

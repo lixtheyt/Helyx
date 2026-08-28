@@ -50,7 +50,7 @@ namespace Helyx.Projects
                         GitHubAction.ViewGitHubRepoStats => Strings.GH_ViewStats,
                         GitHubAction.WorkflowRuns => Strings.GH_Wf_Menu,
                         GitHubAction.OpenWiki => Strings.GH_OpenWiki,
-                        GitHubAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        GitHubAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })
             );
@@ -150,7 +150,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3)
                     );
 
-                var header1 = new Rule($"[blue bold]{Strings.GH_Issues} · {Markup.Escape(GetProject(guid).GitHubName)}[/]")
+                var header1 = new Rule($"[bold {Color.Blue}]{Strings.GH_Issues} · {Markup.Escape(GetProject(guid).GitHubName)}[/]")
                     .LeftJustified();
 
                 rootLayout1["Header"].Update(header1);
@@ -220,7 +220,7 @@ namespace Helyx.Projects
                                             ? "red"
                                             : "Aqua";
 
-                                    return new[] { "[grey]•[/]", $"[{color}]{name}[/]" };
+                                    return new[] { $"[{Color.Grey}]•[/]", $"[{color}]{name}[/]" };
                                 })
                                 .Skip(1)
                                 .ToArray();
@@ -244,13 +244,13 @@ namespace Helyx.Projects
                                 .Border(TableBorder.Rounded)
                                 .ShowRowSeparators()
                                 .AddColumn(new TableColumn("").Width(2))
-                                .AddColumn("[grey]#[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_State}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Locked}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Title}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Labels}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Comments}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Updated}[/]")
+                                .AddColumn($"[{Color.Grey}]#[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_State}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Locked}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Title}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Labels}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Comments}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Updated}[/]")
                                 .Expand();
 
                             for (int i = firstRow; i < lastRow; i++)
@@ -259,24 +259,24 @@ namespace Helyx.Projects
 
                                 if (i == selectedIndex1)
                                     list.AddRow(
-                                        "[Aqua]▸[/]",
-                                        $"[Aqua]{issue.Number}[/]",
+                                        $"[{Color.Aqua}]▸[/]",
+                                        $"[{Color.Aqua}]{issue.Number}[/]",
                                         (issue.State, issue.StateReason) switch
                                         {
                                             (null, null) => Strings.Common_None,
-                                            ("open", _) => $"[Aqua]● {Strings.GH_State_Open}[/]",
-                                            ("closed", "completed") => $"[Aqua]● {Strings.GH_State_Closed}[/]",
-                                            ("closed", "duplicate") => $"[Aqua]● {Strings.GH_State_Duplicate}[/]",
-                                            ("closed", "not_planned") => $"[Aqua]● {Strings.GH_State_NotPlanned}[/]",
+                                            ("open", _) => $"[{Color.Aqua}]● {Strings.GH_State_Open}[/]",
+                                            ("closed", "completed") => $"[{Color.Aqua}]● {Strings.GH_State_Closed}[/]",
+                                            ("closed", "duplicate") => $"[{Color.Aqua}]● {Strings.GH_State_Duplicate}[/]",
+                                            ("closed", "not_planned") => $"[{Color.Aqua}]● {Strings.GH_State_NotPlanned}[/]",
                                             _ => Strings.Common_Unknown
                                         },
-                                        $"[Aqua]{(issue.Locked ? "✓" : "✗")}[/]",
-                                        $"[Aqua]{Markup.Escape(issue.Title ?? "")}[/]",
+                                        $"[{Color.Aqua}]{(issue.Locked ? "✓" : "✗")}[/]",
+                                        $"[{Color.Aqua}]{Markup.Escape(issue.Title ?? "")}[/]",
                                         issue.Labels.Count > 0
-                                            ? string.Join(", ", issue.Labels.Select(x => $"[Aqua]{Markup.Escape(x.Name!)}[/]"))
-                                            : $"[Aqua]{Strings.Common_None}[/]",
-                                        $"[Aqua]{issue.Comments}[/]",
-                                        $"[Aqua]{ConvertDateTimeOffsetToText(issue.UpdatedAt.ToLocalTime().DateTime)}[/]");
+                                            ? string.Join(", ", issue.Labels.Select(x => $"[{Color.Aqua}]{Markup.Escape(x.Name!)}[/]"))
+                                            : $"[{Color.Aqua}]{Strings.Common_None}[/]",
+                                        $"[{Color.Aqua}]{issue.Comments}[/]",
+                                        $"[{Color.Aqua}]{ConvertDateTimeOffsetToText(issue.UpdatedAt.ToLocalTime().DateTime)}[/]");
                                 else
                                     list.AddRow(
                                         "",
@@ -284,13 +284,13 @@ namespace Helyx.Projects
                                         (issue.State, issue.StateReason) switch
                                         {
                                             (null, null) => Strings.Common_None,
-                                            ("open", _) => $"[Green3_1]● {Strings.GH_State_Open}[/]",
-                                            ("closed", "completed") => $"[Red3_1]● {Strings.GH_State_Closed}[/]",
-                                            ("closed", "duplicate") => $"[Yellow3_1]● {Strings.GH_State_Duplicate}[/]",
-                                            ("closed", "not_planned") => $"[LightSteelBlue]● {Strings.GH_State_NotPlanned}[/]",
+                                            ("open", _) => $"[{Color.Green3_1}]● {Strings.GH_State_Open}[/]",
+                                            ("closed", "completed") => $"[{Color.Red3_1}]● {Strings.GH_State_Closed}[/]",
+                                            ("closed", "duplicate") => $"[{Color.Yellow3_1}]● {Strings.GH_State_Duplicate}[/]",
+                                            ("closed", "not_planned") => $"[{Color.LightSteelBlue}]● {Strings.GH_State_NotPlanned}[/]",
                                             _ => Strings.Common_Unknown
                                         },
-                                        $"{(issue.Locked ? "[Green3_1]✓[/]" : "[Red3_1]✗[/]")}",
+                                        $"{(issue.Locked ? "[{Color.Green3_1}]✓[/]" : "[{Color.Red3_1}]✗[/]")}",
                                         Markup.Escape(issue.Title ?? ""),
                                         issue.Labels.Count > 0
                                             ? string.Join(", ", issue.Labels.Select(x => $"[#{Tags.SafeHex(x.Color)}]{Markup.Escape(x.Name!)}[/]"))
@@ -300,7 +300,7 @@ namespace Helyx.Projects
                             }
 
                             rootLayout1["List"].Update(visible.Count == 0
-                                ? new Markup($"\n    [Red3_1]{Strings.GH_NothingMatches}[/]")
+                                ? new Markup($"\n    [{Color.Red3_1}]{Strings.GH_NothingMatches}[/]")
                                 : list);
 
                             rootLayout1["Footer"].Update(new Panel(
@@ -309,8 +309,8 @@ namespace Helyx.Projects
                                         .AddColumn(new GridColumn().RightAligned())
                                         .Expand()
                                         .AddRow(
-                                            $"[grey]{Strings.GH_Footer_Issues}[/]",
-                                            $"[grey]{string.Format(Strings.GH_Page, visible.Count == 0 ? 0 : currentPage + 1, visible.Count == 0 ? 0 : lastPage, visible.Count == 0 ? 0 : selectedIndex1 + 1, visible.Count)}[/]"))
+                                            $"[{Color.Grey}]{Strings.GH_Footer_Issues}[/]",
+                                            $"[{Color.Grey}]{string.Format(Strings.GH_Page, visible.Count == 0 ? 0 : currentPage + 1, visible.Count == 0 ? 0 : lastPage, visible.Count == 0 ? 0 : selectedIndex1 + 1, visible.Count)}[/]"))
                                 .RoundedBorder()
                                 .Expand()
                                 .Padding(1, 0));
@@ -387,7 +387,7 @@ namespace Helyx.Projects
                     }
 
                     var newBody = AnsiConsole.Prompt(
-                        new TextPrompt<string>(string.Format(Strings.GH_NewIssue_AskBody, $"[grey]{Strings.GH_NewIssue_BodyHint}[/]"))
+                        new TextPrompt<string>(string.Format(Strings.GH_NewIssue_AskBody, $"[{Color.Grey}]{Strings.GH_NewIssue_BodyHint}[/]"))
                             .AllowEmpty());
 
                     GitHubIssue? created = null;
@@ -404,7 +404,7 @@ namespace Helyx.Projects
                     if (created == null)
                         UI.Error($"{Strings.GH_IssueNotCreated}\n{Markup.Escape(failure ?? Strings.GitHub_UnknownError)}", Strings.GH_NewIssue_Title);
                     else
-                        UI.Success(string.Format(Strings.GH_IssueCreated, $"[Aqua]#{created.Number}[/]"), Strings.GH_NewIssue_Title);
+                        UI.Success(string.Format(Strings.GH_IssueCreated, $"[{Color.Aqua}]#{created.Number}[/]"), Strings.GH_NewIssue_Title);
 
                     Console.ReadKey();
                     AnsiConsole.Clear();
@@ -426,7 +426,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3)
                     );
 
-                var header2 = new Rule($"[blue bold]{string.Format(Strings.GH_IssueTitle, selectedIssue.Number)}[/]").LeftJustified();
+                var header2 = new Rule($"[bold {Color.Blue}]{string.Format(Strings.GH_IssueTitle, selectedIssue.Number)}[/]").LeftJustified();
 
                 rootLayout2["Header"].Update(new Padder(header2, new Spectre.Console.Padding(0, 0, 0, 1)));
 
@@ -439,7 +439,7 @@ namespace Helyx.Projects
                 var originalBody = UI.MarkdownToMarkup(selectedIssue.Body, guid);
 
                 var originalComment = new Panel(originalBody)
-                    .Header($"\u2800[white]{UI.Link(selectedIssue.User?.HtmlUrl ?? "https://github.com/404", selectedIssue.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(selectedIssue.AuthorAssociation)}]{(selectedIssue.AuthorAssociation == "NONE" ? "USER" : selectedIssue.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(selectedIssue.CreatedAt)} • [bold Red3_1]{Strings.GH_OpeningPost}[/][/]\u2800")
+                    .Header($"\u2800[{Color.White}]{UI.Link(selectedIssue.User?.HtmlUrl ?? "https://github.com/404", selectedIssue.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(selectedIssue.AuthorAssociation)}]{(selectedIssue.AuthorAssociation == "NONE" ? "USER" : selectedIssue.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(selectedIssue.CreatedAt)} • [bold {Color.Red3_1}]{Strings.GH_OpeningPost}[/][/]\u2800")
                     .BorderColor(Color.SkyBlue1)
                     .RoundedBorder();
 
@@ -488,7 +488,7 @@ namespace Helyx.Projects
                             var body = UI.MarkdownToMarkup(x.Body, guid);
 
                             var panel = new Panel(body)
-                                .Header($"\u2800[white]{UI.Link(x.User?.HtmlUrl ?? "https://github.com/404", x.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(x.AuthorAssociation)}]{(x.AuthorAssociation == "NONE" ? "USER" : x.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(x.CreatedAt)}[/]\u2800")
+                                .Header($"\u2800[{Color.White}]{UI.Link(x.User?.HtmlUrl ?? "https://github.com/404", x.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(x.AuthorAssociation)}]{(x.AuthorAssociation == "NONE" ? "USER" : x.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(x.CreatedAt)}[/]\u2800")
                                 .BorderColor(string.Equals(x.User?.Login, selectedIssue.User?.Login, StringComparison.OrdinalIgnoreCase) ? Color.SkyBlue1 : Color.Grey)
                                 .RoundedBorder();
 
@@ -530,27 +530,27 @@ namespace Helyx.Projects
                            .AddColumn(new GridColumn())
                            .AddColumn(new GridColumn())
                            .AddColumn(new GridColumn())
-                           .AddRow($"[grey]{Strings.GH_Col_State}[/]", (selectedIssue.State, selectedIssue.StateReason) switch
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Col_State}[/]", (selectedIssue.State, selectedIssue.StateReason) switch
                            {
                                (null, null) => Strings.Common_None,
-                               ("open", _) => $"[Green3_1]● {Strings.GH_State_Open}[/]",
-                               ("closed", "completed") => $"[Red3_1]● {Strings.GH_State_Closed}[/]",
-                               ("closed", "duplicate") => $"[Yellow3_1]● {Strings.GH_State_Duplicate}[/]",
-                               ("closed", "not_planned") => $"[LightSteelBlue]● {Strings.GH_State_NotPlanned}[/]",
+                               ("open", _) => $"[{Color.Green3_1}]● {Strings.GH_State_Open}[/]",
+                               ("closed", "completed") => $"[{Color.Red3_1}]● {Strings.GH_State_Closed}[/]",
+                               ("closed", "duplicate") => $"[{Color.Yellow3_1}]● {Strings.GH_State_Duplicate}[/]",
+                               ("closed", "not_planned") => $"[{Color.LightSteelBlue}]● {Strings.GH_State_NotPlanned}[/]",
                                _ => Strings.Common_Unknown
                            })
-                           .AddRow($"[grey]{Strings.GH_Col_Locked}[/]", $"{(selectedIssue.Locked ? "[Green3_1]✓[/]" : "[Red3_1]✗[/]")}")
-                           .AddRow($"[grey]{Strings.GH_Row_Author}[/]", $"{UI.Link(selectedIssue.User?.HtmlUrl ?? "https://github.com", selectedIssue.User?.Login ?? Strings.GH_UnknownAuthor)}")
-                           .AddRow($"[grey]{Strings.GH_Row_Opened}[/]", selectedIssue.CreatedAt.ToString("g", CultureInfo.CurrentCulture))
-                           .AddRow($"[grey]{Strings.GH_Col_Labels}[/]", selectedIssue.Labels.Count > 0
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Col_Locked}[/]", $"{(selectedIssue.Locked ? "[{Color.Green3_1}]✓[/]" : "[{Color.Red3_1}]✗[/]")}")
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Row_Author}[/]", $"{UI.Link(selectedIssue.User?.HtmlUrl ?? "https://github.com", selectedIssue.User?.Login ?? Strings.GH_UnknownAuthor)}")
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Row_Opened}[/]", selectedIssue.CreatedAt.ToString("g", CultureInfo.CurrentCulture))
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Col_Labels}[/]", selectedIssue.Labels.Count > 0
                                ? string.Join(", ", selectedIssue.Labels.Select(x => $"[#{Tags.SafeHex(x.Color)}]{Markup.Escape(x.Name!)}[/]"))
                                : Strings.Common_None)
-                           .AddRow($"[grey]{Strings.GH_Row_Assignees}[/]", selectedIssue.Assignees.Count > 0
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Row_Assignees}[/]", selectedIssue.Assignees.Count > 0
                                ? string.Join(", ", selectedIssue.Assignees.Select(x => $"{UI.Link(x.HtmlUrl, Markup.Escape(x.Login ?? ""))}"))
                                : Strings.Common_None);
 
                            rootLayout2["Details"].Update(new Panel(details)
-                           .Header($"\u2800[bold SteelBlue1]{UI.Link(selectedIssue.HtmlUrl, Markup.Escape(selectedIssue.Title ?? ""))}[/]\u2800")
+                           .Header($"\u2800[bold {Color.SteelBlue1}]{UI.Link(selectedIssue.HtmlUrl, Markup.Escape(selectedIssue.Title ?? ""))}[/]\u2800")
                            .RoundedBorder()
                            .Expand());
                        }
@@ -655,12 +655,12 @@ namespace Helyx.Projects
                                        .AddColumn(new GridColumn().RightAligned())
                                        .Expand()
                                        .AddRow(
-                                            $"[grey]{Strings.GH_Key_Refresh}" +
+                                            $"[{Color.Grey}]{Strings.GH_Key_Refresh}" +
                                             $"{Strings.GH_Footer_Issue}" +
                                             $"[{(selectedData == null ? "grey50" : "grey")}]{Strings.GH_Key_Delete}[/]  " +
                                             $"{(selectedIssue.State == "open" ? Strings.GH_Key_Close : Strings.GH_Key_Reopen)}  " +
                                             $"{(selectedIssue.Locked ? Strings.GH_Key_Unlock : Strings.GH_Key_Lock)}  {Strings.GH_Key_Browser}[/]",
-                                            $"[grey]{string.Format(Strings.GH_PageComment, currentPage + 1, pages.Count, selectedComment + 1, issueComments.Count)}[/]"))
+                                            $"[{Color.Grey}]{string.Format(Strings.GH_PageComment, currentPage + 1, pages.Count, selectedComment + 1, issueComments.Count)}[/]"))
                                .RoundedBorder()
                                .Expand()
                                .Padding(1, 0));
@@ -696,13 +696,13 @@ namespace Helyx.Projects
                                        if (text == null)
                                            break;
 
-                                       Report($"[italic grey]{Strings.GH_SendingComment}[/]", false);
+                                       Report($"[italic {Color.Grey}]{Strings.GH_SendingComment}[/]", false);
 
                                        var (posted, error) = await GitHubCalls.CommentOnIssue(guid, selectedIssue.Number, text);
 
                                        if (posted == null)
                                        {
-                                           Report($"[Red3_1]{Strings.GH_CommentNotPosted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                           Report($"[{Color.Red3_1}]{Strings.GH_CommentNotPosted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                            break;
                                        }
 
@@ -718,7 +718,7 @@ namespace Helyx.Projects
                                        if (edited == null)
                                            break;
 
-                                       Report($"[italic grey]{Strings.GH_Saving}[/]", false);
+                                       Report($"[italic {Color.Grey}]{Strings.GH_Saving}[/]", false);
 
                                        if (selectedData == null)
                                        {
@@ -726,7 +726,7 @@ namespace Helyx.Projects
 
                                            if (changed == null)
                                            {
-                                               Report($"[Red3_1]{Strings.GH_IssueNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                               Report($"[{Color.Red3_1}]{Strings.GH_IssueNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                                break;
                                            }
 
@@ -740,7 +740,7 @@ namespace Helyx.Projects
 
                                            if (changed == null)
                                            {
-                                               Report($"[Red3_1]{Strings.GH_CommentNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                               Report($"[{Color.Red3_1}]{Strings.GH_CommentNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                                break;
                                            }
 
@@ -755,13 +755,13 @@ namespace Helyx.Projects
                                        if (!Ask(Strings.GH_DeleteCommentConfirm))
                                            break;
 
-                                       Report($"[italic grey]{Strings.GH_Deleting}[/]", false);
+                                       Report($"[italic {Color.Grey}]{Strings.GH_Deleting}[/]", false);
 
                                        var (deleted, error) = await GitHubCalls.DeleteIssueComment(guid, selectedData.Id);
 
                                        if (!deleted)
                                        {
-                                           Report($"[Red3_1]{Strings.GH_CommentNotDeleted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                           Report($"[{Color.Red3_1}]{Strings.GH_CommentNotDeleted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                            break;
                                        }
 
@@ -785,7 +785,7 @@ namespace Helyx.Projects
                                        if (reason == null)
                                            break;
 
-                                       Report($"[italic grey]{Strings.GH_Talking}[/]", false);
+                                       Report($"[italic {Color.Grey}]{Strings.GH_Talking}[/]", false);
 
                                        var (changed, error) = closing
                                            ? await GitHubCalls.CloseIssue(guid, selectedIssue.Number, reason)
@@ -793,7 +793,7 @@ namespace Helyx.Projects
 
                                        if (changed == null)
                                        {
-                                           Report($"[Red3_1]{Strings.GH_IssueNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                           Report($"[{Color.Red3_1}]{Strings.GH_IssueNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                            break;
                                        }
 
@@ -812,7 +812,7 @@ namespace Helyx.Projects
                                        if (reason == null)
                                            break;
 
-                                       Report($"[italic grey]{Strings.GH_Talking}[/]", false);
+                                       Report($"[italic {Color.Grey}]{Strings.GH_Talking}[/]", false);
 
                                        var (done, error) = locking
                                            ? await GitHubCalls.LockIssue(guid, selectedIssue.Number, reason)
@@ -820,7 +820,7 @@ namespace Helyx.Projects
 
                                        if (!done)
                                        {
-                                           Report($"[Red3_1]{Strings.GH_IssueNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                           Report($"[{Color.Red3_1}]{Strings.GH_IssueNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                            break;
                                        }
 
@@ -840,7 +840,7 @@ namespace Helyx.Projects
                                        }
                                        catch (Exception ex)
                                        {
-                                           Report($"[Red3_1]{Strings.GH_BrowserFailed}[/] {Markup.Escape(ex.Message)}", true);
+                                           Report($"[{Color.Red3_1}]{Strings.GH_BrowserFailed}[/] {Markup.Escape(ex.Message)}", true);
                                        }
 
                                        break;
@@ -856,7 +856,7 @@ namespace Helyx.Projects
                        void Report(string message, bool wait)
                        {
                            rootLayout2["Footer"].Update(new Panel(
-                                   new Markup(wait ? message + $"   [grey]{Strings.GH_AnyKey}[/]" : message))
+                                   new Markup(wait ? message + $"   [{Color.Grey}]{Strings.GH_AnyKey}[/]" : message))
                                .RoundedBorder()
                                .Expand()
                                .Padding(1, 0));
@@ -876,7 +876,7 @@ namespace Helyx.Projects
                                rootLayout2["Footer"].Update(new Panel(
                                        new Markup($"{Markup.Escape(question)}   " +
                                                   $"[{(yes ? "Red3_1" : "grey")}]{Strings.GH_Yes}[/]   [{(yes ? "grey" : "Aqua")}]{Strings.GH_No}[/]   " +
-                                                  $"[grey]{Strings.GH_ChooseHint}[/]"))
+                                                  $"[{Color.Grey}]{Strings.GH_ChooseHint}[/]"))
                                    .RoundedBorder()
                                    .Expand()
                                    .Padding(1, 0));
@@ -906,7 +906,7 @@ namespace Helyx.Projects
                                        new Markup($"{Markup.Escape(question)}   " +
                                                   string.Join("   ", options.Select((x, i) =>
                                                       $"[{(i == picked ? "Aqua" : "grey")}]{Markup.Escape(x)}[/]")) +
-                                                  $"   [grey]{Strings.GH_ChooseHint}[/]"))
+                                                  $"   [{Color.Grey}]{Strings.GH_ChooseHint}[/]"))
                                    .RoundedBorder()
                                    .Expand()
                                    .Padding(1, 0));
@@ -950,7 +950,7 @@ namespace Helyx.Projects
                        async Task Reload()
                        {
                            rootLayout2["Comments"].Update(
-                               new Markup($"\n    [grey]{Strings.GH_RetrievingComments}[/]"));
+                               new Markup($"\n    [{Color.Grey}]{Strings.GH_RetrievingComments}[/]"));
 
                            ctx.Refresh();
 
@@ -1001,7 +1001,7 @@ namespace Helyx.Projects
                            var body = UI.MarkdownToMarkup(posted.Body, guid);
 
                            var panel = new Panel(body)
-                               .Header($"⠀[white]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.CreatedAt)}[/]⠀")
+                               .Header($"⠀[{Color.White}]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.CreatedAt)}[/]⠀")
                                .BorderColor(Color.SkyBlue1)
                                .RoundedBorder();
 
@@ -1032,11 +1032,11 @@ namespace Helyx.Projects
                            while (writing)
                            {
                                rootLayout2["Comments"].Update(new Panel(content.Length == 0
-                                        ? $"[italic grey]{Strings.GH_WriteHint}[/]"
+                                        ? $"[italic {Color.Grey}]{Strings.GH_WriteHint}[/]"
                                         : Markup.Escape(content.ToString(0, cursorPos)) +
-                                    "[SkyBlue1]|[/]" +
+                                    $"[{Color.SkyBlue1}]|[/]" +
                                     Markup.Escape(content.ToString(cursorPos, content.Length - cursorPos)))
-                               .Header($"⠀[white]{Markup.Escape(title)}[/]⠀")
+                               .Header($"⠀[{Color.White}]{Markup.Escape(title)}[/]⠀")
                                .BorderColor(Color.SkyBlue1)
                                .RoundedBorder()
                                .Expand());
@@ -1050,8 +1050,8 @@ namespace Helyx.Projects
                                            $"[{(bold ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Bold}[/]   " +
                                            $"[{(italic ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Italic}[/]   " +
                                            $"[{(code ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Code}[/]   " +
-                                           $"[grey]{Strings.GH_Editor_Footer}[/]",
-                                           $"[grey]{string.Format(Strings.GH_Characters, content.Length)}[/]"))
+                                           $"[{Color.Grey}]{Strings.GH_Editor_Footer}[/]",
+                                           $"[{Color.Grey}]{string.Format(Strings.GH_Characters, content.Length)}[/]"))
                                .RoundedBorder()
                                .Expand()
                                .Padding(1, 0));
@@ -1152,10 +1152,10 @@ namespace Helyx.Projects
                            var body = string.Join("\n", lines);
 
                            if (continued)
-                               body = $"[italic grey]{Strings.GH_ContinuedFrom}[/]\n" + body;
+                               body = $"[italic {Color.Grey}]{Strings.GH_ContinuedFrom}[/]\n" + body;
 
                            if (continues)
-                               body += $"\n[italic grey]{Strings.GH_ContinuesOn}[/]";
+                               body += $"\n[italic {Color.Grey}]{Strings.GH_ContinuesOn}[/]";
 
                            var panel = new Panel(body)
                            {
@@ -1244,7 +1244,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3)
                     );
 
-                var header1 = new Rule($"[blue bold]{Strings.GH_PullRequests} · {Markup.Escape(GetProject(guid).GitHubName)}[/]")
+                var header1 = new Rule($"[bold {Color.Blue}]{Strings.GH_PullRequests} · {Markup.Escape(GetProject(guid).GitHubName)}[/]")
                     .LeftJustified();
 
                 rootLayout1["Header"].Update(header1);
@@ -1318,7 +1318,7 @@ namespace Helyx.Projects
                                         ? "red"
                                         : "Aqua";
 
-                                return new[] { "[grey]•[/]", $"[{color}]{name}[/]" };
+                                return new[] { $"[{Color.Grey}]•[/]", $"[{color}]{name}[/]" };
                             })
                             .Skip(1)
                             .ToArray();
@@ -1342,11 +1342,11 @@ namespace Helyx.Projects
                                 .Border(TableBorder.Rounded)
                                 .ShowRowSeparators()
                                 .AddColumn(new TableColumn("").Width(2))
-                                .AddColumn("[grey]#[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_State}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Title}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Branch}[/]")
-                                .AddColumn($"[grey]{Strings.GH_Col_Updated}[/]")
+                                .AddColumn($"[{Color.Grey}]#[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_State}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Title}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Branch}[/]")
+                                .AddColumn($"[{Color.Grey}]{Strings.GH_Col_Updated}[/]")
                                 .Expand();
 
                             for (int i = firstRow; i < lastRow; i++)
@@ -1359,29 +1359,29 @@ namespace Helyx.Projects
 
                                 if (i == selectedIndex1)
                                     list.AddRow(
-                                        "[Aqua]▸[/]",
-                                        $"[Aqua]{pull.Number}[/]",
+                                        $"[{Color.Aqua}]▸[/]",
+                                        $"[{Color.Aqua}]{pull.Number}[/]",
                                         (pull.MergedAt, pull.State, pull.Draft) switch
                                         {
-                                            (not null, _, _) => $"[Aqua]● {Strings.GH_State_Merged}[/]",
-                                            (_, "open", true) => $"[Aqua]● {Strings.GH_State_Draft}[/]",
-                                            (_, "open", _) => $"[Aqua]● {Strings.GH_State_Open}[/]",
-                                            (_, "closed", _) => $"[Aqua]● {Strings.GH_State_Closed}[/]",
+                                            (not null, _, _) => $"[{Color.Aqua}]● {Strings.GH_State_Merged}[/]",
+                                            (_, "open", true) => $"[{Color.Aqua}]● {Strings.GH_State_Draft}[/]",
+                                            (_, "open", _) => $"[{Color.Aqua}]● {Strings.GH_State_Open}[/]",
+                                            (_, "closed", _) => $"[{Color.Aqua}]● {Strings.GH_State_Closed}[/]",
                                             _ => Strings.Common_Unknown
                                         },
-                                        $"[Aqua]{Markup.Escape(pull.Title ?? "")}[/]",
-                                        $"[Aqua]{Markup.Escape(branches)}[/]",
-                                        $"[Aqua]{ConvertDateTimeOffsetToText(pull.UpdatedAt.ToLocalTime())}[/]");
+                                        $"[{Color.Aqua}]{Markup.Escape(pull.Title ?? "")}[/]",
+                                        $"[{Color.Aqua}]{Markup.Escape(branches)}[/]",
+                                        $"[{Color.Aqua}]{ConvertDateTimeOffsetToText(pull.UpdatedAt.ToLocalTime())}[/]");
                                 else
                                     list.AddRow(
                                         "",
                                         pull.Number.ToString(),
                                         (pull.MergedAt, pull.State, pull.Draft) switch
                                         {
-                                            (not null, _, _) => $"[MediumPurple1]● {Strings.GH_State_Merged}[/]",
-                                            (_, "open", true) => $"[grey]● {Strings.GH_State_Draft}[/]",
-                                            (_, "open", _) => $"[Green3_1]● {Strings.GH_State_Open}[/]",
-                                            (_, "closed", _) => $"[Red3_1]● {Strings.GH_State_Closed}[/]",
+                                            (not null, _, _) => $"[{Color.MediumPurple1}]● {Strings.GH_State_Merged}[/]",
+                                            (_, "open", true) => $"[{Color.Grey}]● {Strings.GH_State_Draft}[/]",
+                                            (_, "open", _) => $"[{Color.Green3_1}]● {Strings.GH_State_Open}[/]",
+                                            (_, "closed", _) => $"[{Color.Red3_1}]● {Strings.GH_State_Closed}[/]",
                                             _ => Strings.Common_Unknown
                                         },
                                         Markup.Escape(pull.Title ?? ""),
@@ -1390,7 +1390,7 @@ namespace Helyx.Projects
                             }
 
                             rootLayout1["List"].Update(visible.Count == 0
-                                ? new Markup($"\n    [Red3_1]{Strings.GH_NothingMatches}[/]")
+                                ? new Markup($"\n    [{Color.Red3_1}]{Strings.GH_NothingMatches}[/]")
                                 : list);
 
                             rootLayout1["Footer"].Update(new Panel(
@@ -1399,8 +1399,8 @@ namespace Helyx.Projects
                                 .AddColumn(new GridColumn().RightAligned())
                                 .Expand()
                                 .AddRow(
-                                    $"[grey]{Strings.GH_Footer_Pulls}[/]",
-                                    $"[grey]{string.Format(Strings.GH_PagePull, visible.Count == 0 ? 0 : currentPage + 1, visible.Count == 0 ? 0 : lastPage, visible.Count == 0 ? 0 : selectedIndex1 + 1, visible.Count)}[/]"))
+                                    $"[{Color.Grey}]{Strings.GH_Footer_Pulls}[/]",
+                                    $"[{Color.Grey}]{string.Format(Strings.GH_PagePull, visible.Count == 0 ? 0 : currentPage + 1, visible.Count == 0 ? 0 : lastPage, visible.Count == 0 ? 0 : selectedIndex1 + 1, visible.Count)}[/]"))
                                 .RoundedBorder()
                                 .Expand()
                                 .Padding(1, 0));
@@ -1473,7 +1473,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3)
                     );
 
-                var header2 = new Rule($"[blue bold]{string.Format(Strings.GH_PullTitle, selectedPull.Number)}[/]")
+                var header2 = new Rule($"[bold {Color.Blue}]{string.Format(Strings.GH_PullTitle, selectedPull.Number)}[/]")
                     .LeftJustified();
 
                 rootLayout2["Header"].Update(new Padder(header2, new Spectre.Console.Padding(0, 0, 0, 1)));
@@ -1513,7 +1513,7 @@ namespace Helyx.Projects
                 var originalBody = UI.MarkdownToMarkup(selectedPull.Body, guid);
 
                 var originalComment = new Panel(originalBody)
-                    .Header($"\u2800[white]{UI.Link(selectedPull.User?.HtmlUrl ?? "https://github.com/404", selectedPull.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(selectedPull.AuthorAssociation)}]{(selectedPull.AuthorAssociation == "NONE" ? "USER" : selectedPull.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(selectedPull.CreatedAt)} • [bold Red3_1]{Strings.GH_OpeningPost}[/][/]\u2800")
+                    .Header($"\u2800[{Color.White}]{UI.Link(selectedPull.User?.HtmlUrl ?? "https://github.com/404", selectedPull.User?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(selectedPull.AuthorAssociation)}]{(selectedPull.AuthorAssociation == "NONE" ? "USER" : selectedPull.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(selectedPull.CreatedAt)} • [bold {Color.Red3_1}]{Strings.GH_OpeningPost}[/][/]\u2800")
                     .BorderColor(Color.SkyBlue1)
                     .RoundedBorder();
 
@@ -1580,7 +1580,7 @@ namespace Helyx.Projects
                                     : x.Review.AuthorAssociation;
 
                                 var panel = new Panel(body)
-                                    .Header($"\u2800[white]{UI.Link(author?.HtmlUrl ?? "https://github.com/404", author?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(association)}]{(association == "NONE" ? "USER" : association)}[/] • {ConvertDateTimeOffsetToText(x.Date)}{(x.Review == null ? "" : $" • [bold Turquoise2]{Strings.GH_Review}[/]")}[/]\u2800")
+                                    .Header($"\u2800[{Color.White}]{UI.Link(author?.HtmlUrl ?? "https://github.com/404", author?.Login ?? Strings.GH_UnknownAuthor)} • [{DetermineColor(association)}]{(association == "NONE" ? "USER" : association)}[/] • {ConvertDateTimeOffsetToText(x.Date)}{(x.Review == null ? "" : $" • [bold {Color.Turquoise2}]{Strings.GH_Review}[/]")}[/]\u2800")
                                     .BorderColor(string.Equals(author?.Login, selectedPull.User?.Login, StringComparison.OrdinalIgnoreCase)
                                         ? Color.SkyBlue1
                                         : Color.Grey
@@ -1636,25 +1636,25 @@ namespace Helyx.Projects
                             var details = new Grid()
                                 .AddColumn(new GridColumn())
                                 .AddColumn(new GridColumn())
-                                .AddRow($"[grey]{Strings.GH_Col_State}[/]", (selectedPull.MergedAt, selectedPull.State, selectedPull.Draft) switch
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Col_State}[/]", (selectedPull.MergedAt, selectedPull.State, selectedPull.Draft) switch
                                 {
-                                    (not null, _, _) => $"[MediumPurple1]● {Strings.GH_State_Merged}[/]",
-                                    (_, "open", true) => $"[grey]● {Strings.GH_State_Draft}[/]",
-                                    (_, "open", _) => $"[Green3_1]● {Strings.GH_State_Open}[/]",
-                                    (_, "closed", _) => $"[Red3_1]● {Strings.GH_State_Closed}[/]",
+                                    (not null, _, _) => $"[{Color.MediumPurple1}]● {Strings.GH_State_Merged}[/]",
+                                    (_, "open", true) => $"[{Color.Grey}]● {Strings.GH_State_Draft}[/]",
+                                    (_, "open", _) => $"[{Color.Green3_1}]● {Strings.GH_State_Open}[/]",
+                                    (_, "closed", _) => $"[{Color.Red3_1}]● {Strings.GH_State_Closed}[/]",
                                     _ => Strings.Common_Unknown
                                 })
-                                .AddRow($"[grey]{Strings.GH_Row_Author}[/]", $"{UI.Link(selectedPull.User?.HtmlUrl ?? "https://github.com", selectedPull.User?.Login ?? Strings.GH_UnknownAuthor)}")
-                                .AddRow($"[grey]{Strings.GH_Row_Branches}[/]", $"{Markup.Escape(selectedPull.Head?.Ref ?? "")}  →  {Markup.Escape(selectedPull.Base?.Ref ?? "")}")
-                                .AddRow($"[grey]{Strings.GH_Row_Changes}[/]", $"[Green3_1]+{selectedPull.Additions}[/]  [Red3_1]-{selectedPull.Deletions}[/] {string.Format(Strings.GH_ChangesDetail, selectedPull.ChangedFiles, selectedPull.Commits)}")
-                                .AddRow($"[grey]{Strings.GH_Row_Mergeable}[/]", (selectedPull.MergedAt, selectedPull.Mergeable) switch
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Row_Author}[/]", $"{UI.Link(selectedPull.User?.HtmlUrl ?? "https://github.com", selectedPull.User?.Login ?? Strings.GH_UnknownAuthor)}")
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Row_Branches}[/]", $"{Markup.Escape(selectedPull.Head?.Ref ?? "")}  →  {Markup.Escape(selectedPull.Base?.Ref ?? "")}")
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Row_Changes}[/]", $"[{Color.Green3_1}]+{selectedPull.Additions}[/]  [{Color.Red3_1}]-{selectedPull.Deletions}[/] {string.Format(Strings.GH_ChangesDetail, selectedPull.ChangedFiles, selectedPull.Commits)}")
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Row_Mergeable}[/]", (selectedPull.MergedAt, selectedPull.Mergeable) switch
                                 {
-                                    (not null, _) => $"[MediumPurple1]{Strings.GH_Merge_Merged}[/]",
-                                    (_, null) => $"[grey]{Strings.GH_Merge_Computing}[/]",
-                                    (_, true) => $"[Green3_1]✓ {Strings.GH_Merge_Clean}[/]",
-                                    _ => $"[Red3_1]✗ {Markup.Escape(selectedPull.MergeableState ?? "")}[/] - {Markup.Escape(reason)}"
+                                    (not null, _) => $"[{Color.MediumPurple1}]{Strings.GH_Merge_Merged}[/]",
+                                    (_, null) => $"[{Color.Grey}]{Strings.GH_Merge_Computing}[/]",
+                                    (_, true) => $"[{Color.Green3_1}]✓ {Strings.GH_Merge_Clean}[/]",
+                                    _ => $"[{Color.Red3_1}]✗ {Markup.Escape(selectedPull.MergeableState ?? "")}[/] - {Markup.Escape(reason)}"
                                 })
-                                .AddRow($"[grey]{Strings.GH_Row_Reviews}[/]", latest.Count == 0
+                                .AddRow($"[{Color.Grey}]{Strings.GH_Row_Reviews}[/]", latest.Count == 0
                                     ? Strings.Common_None
                                     : string.Join("   ", latest.Select(x => $"[{x.State switch
                                     {
@@ -1665,7 +1665,7 @@ namespace Helyx.Projects
                                 );
 
                             rootLayout2["Details"].Update(new Panel(details)
-                                .Header($"\u2800[bold SteelBlue1]{UI.Link(selectedPull.HtmlUrl, Markup.Escape(selectedPull.Title ?? ""))}[/]\u2800")
+                                .Header($"\u2800[bold {Color.SteelBlue1}]{UI.Link(selectedPull.HtmlUrl, Markup.Escape(selectedPull.Title ?? ""))}[/]\u2800")
                                 .RoundedBorder()
                                 .Expand()
                             );
@@ -1787,14 +1787,14 @@ namespace Helyx.Projects
                                     .AddColumn(new GridColumn().RightAligned())
                                     .Expand()
                                     .AddRow(
-                                            $"[grey]{Strings.GH_Key_Refresh}" +
+                                            $"[{Color.Grey}]{Strings.GH_Key_Refresh}" +
                                             $"{Strings.GH_Footer_Pull}" +
                                             $"[{(selectedComment == 0 || selectedData != null ? "grey" : "grey50")}]{Strings.GH_Key_Edit}[/]  " +
                                             $"[{(selectedData == null ? "grey50" : "grey")}]{Strings.GH_Key_Delete}[/]  " +
                                             $"[{(canMerge ? "grey" : "grey50")}]{Strings.GH_Key_Merge}[/]  " +
                                             $"[{(mine || !open ? "grey50" : "grey")}]{Strings.GH_Key_Review}[/]  " +
                                             $"{(open ? Strings.GH_Key_Close : Strings.GH_Key_Reopen)}  {Strings.GH_Key_Browser}[/]",
-                                            $"[grey]{string.Format(Strings.GH_PageComment, currentPage + 1, pages.Count, selectedComment + 1, pullComments.Count)}[/]"))
+                                            $"[{Color.Grey}]{string.Format(Strings.GH_PageComment, currentPage + 1, pages.Count, selectedComment + 1, pullComments.Count)}[/]"))
                                 .RoundedBorder()
                                 .Expand()
                                 .Padding(1, 0));
@@ -1830,13 +1830,13 @@ namespace Helyx.Projects
                                         if (text == null)
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_SendingComment}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_SendingComment}[/]", false);
 
                                         var (posted, error) = await GitHubCalls.CommentOnIssue(guid, selectedPull.Number, text);
 
                                         if (posted == null)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_CommentNotPosted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_CommentNotPosted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                             break;
                                         }
 
@@ -1853,7 +1853,7 @@ namespace Helyx.Projects
                                         if (edited == null)
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_Saving}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_Saving}[/]", false);
 
                                         if (selectedComment == 0)
                                         {
@@ -1861,7 +1861,7 @@ namespace Helyx.Projects
 
                                             if (changed == null)
                                             {
-                                                Report($"[Red3_1]{Strings.GH_PullNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                                Report($"[{Color.Red3_1}]{Strings.GH_PullNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
 
                                                 break;
                                             }
@@ -1876,7 +1876,7 @@ namespace Helyx.Projects
 
                                             if (changed == null)
                                             {
-                                                Report($"[Red3_1]{Strings.GH_CommentNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                                Report($"[{Color.Red3_1}]{Strings.GH_CommentNotSaved}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                                 break;
                                             }
 
@@ -1891,13 +1891,13 @@ namespace Helyx.Projects
                                         if (!Ask(Strings.GH_DeleteCommentConfirm))
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_Deleting}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_Deleting}[/]", false);
 
                                         var (deleted, error) = await GitHubCalls.DeleteIssueComment(guid, selectedData.Id);
 
                                         if (!deleted)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_CommentNotDeleted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_CommentNotDeleted}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                             break;
                                         }
 
@@ -1915,21 +1915,21 @@ namespace Helyx.Projects
                                     {
                                         if (selectedPull.Mergeable == null)
                                         {
-                                            Report($"[italic grey]{Strings.GH_Recomputing}[/]", false);
+                                            Report($"[italic {Color.Grey}]{Strings.GH_Recomputing}[/]", false);
 
                                             selectedPull = await GitHubCalls.GetPullRequest(guid, selectedPull.Number) ?? selectedPull;
 
                                             RefreshDetails();
 
                                             if (selectedPull.Mergeable == null)
-                                                Report($"[grey]{Strings.GH_MergeNotReady}[/]", true);
+                                                Report($"[{Color.Grey}]{Strings.GH_MergeNotReady}[/]", true);
 
                                             break;
                                         }
 
                                         if (!canMerge)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_CannotMerge}[/] {Markup.Escape(selectedPull.Draft ? Strings.GH_Reason_Draft : changesRequested ? Strings.GH_ChangesRequested : selectedPull.MergeableState ?? Strings.Common_Unknown)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_CannotMerge}[/] {Markup.Escape(selectedPull.Draft ? Strings.GH_Reason_Draft : changesRequested ? Strings.GH_ChangesRequested : selectedPull.MergeableState ?? Strings.Common_Unknown)}", true);
                                             break;
                                         }
 
@@ -1941,13 +1941,13 @@ namespace Helyx.Projects
                                         if (!Ask(string.Format(Strings.GH_MergeConfirm, selectedPull.Number, selectedPull.Base?.Ref ?? Strings.GH_Reason_BaseBranch)))
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_Merging}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_Merging}[/]", false);
 
                                         var (merged, error) = await GitHubCalls.MergePullRequest(guid, selectedPull.Number, method);
 
                                         if (merged == null || !merged.Merged)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_PullNotMerged}[/] {Markup.Escape(error ?? merged?.Message ?? Strings.GitHub_UnknownError)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_PullNotMerged}[/] {Markup.Escape(error ?? merged?.Message ?? Strings.GitHub_UnknownError)}", true);
                                             break;
                                         }
 
@@ -1968,13 +1968,13 @@ namespace Helyx.Projects
                                         if (text == null)
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_SendingReview}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_SendingReview}[/]", false);
 
                                         var (submitted, error) = await GitHubCalls.ReviewPullRequest(guid, selectedPull.Number, reviewEvent, text);
 
                                         if (submitted == null)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_ReviewNotSent}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_ReviewNotSent}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                             break;
                                         }
 
@@ -1988,7 +1988,7 @@ namespace Helyx.Projects
                                         if (!Ask(open ? Strings.GH_ClosePullConfirm : Strings.GH_ReopenPullConfirm))
                                             break;
 
-                                        Report($"[italic grey]{Strings.GH_Talking}[/]", false);
+                                        Report($"[italic {Color.Grey}]{Strings.GH_Talking}[/]", false);
 
                                         var (changed, error) = open
                                             ? await GitHubCalls.ClosePullRequest(guid, selectedPull.Number)
@@ -1996,7 +1996,7 @@ namespace Helyx.Projects
 
                                         if (changed == null)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_PullNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_PullNotChanged}[/] {Markup.Escape(error ?? Strings.GitHub_UnknownError)}", true);
                                             break;
                                         }
 
@@ -2016,7 +2016,7 @@ namespace Helyx.Projects
                                         }
                                         catch (Exception ex)
                                         {
-                                            Report($"[Red3_1]{Strings.GH_BrowserFailed}[/] {Markup.Escape(ex.Message)}", true);
+                                            Report($"[{Color.Red3_1}]{Strings.GH_BrowserFailed}[/] {Markup.Escape(ex.Message)}", true);
                                         }
 
                                         break;
@@ -2041,7 +2041,7 @@ namespace Helyx.Projects
                                 : $"\n{UI.MarkdownToMarkup(posted.Body, guid)}");
 
                             var panel = new Panel(body)
-                                .Header($" [white]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.SubmittedAt ?? DateTimeOffset.Now)} • [bold Turquoise2]{Strings.GH_Review}[/][/] ")
+                                .Header($" [{Color.White}]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.SubmittedAt ?? DateTimeOffset.Now)} • [bold {Color.Turquoise2}]{Strings.GH_Review}[/][/] ")
                                 .BorderColor(Color.Grey)
                                 .RoundedBorder();
 
@@ -2058,7 +2058,7 @@ namespace Helyx.Projects
                         void Report(string message, bool wait)
                         {
                             rootLayout2["Footer"].Update(new Panel(
-                                    new Markup(wait ? message + $"   [grey]{Strings.GH_AnyKey}[/]" : message))
+                                    new Markup(wait ? message + $"   [{Color.Grey}]{Strings.GH_AnyKey}[/]" : message))
                                 .RoundedBorder()
                                 .Expand()
                                 .Padding(1, 0));
@@ -2078,7 +2078,7 @@ namespace Helyx.Projects
                                 rootLayout2["Footer"].Update(new Panel(
                                         new Markup($"{Markup.Escape(question)}   " +
                                                    $"[{(yes ? "Red3_1" : "grey")}]{Strings.GH_Yes}[/]   [{(yes ? "grey" : "Aqua")}]{Strings.GH_No}[/]   " +
-                                                   $"[grey]{Strings.GH_ChooseHint}[/]"))
+                                                   $"[{Color.Grey}]{Strings.GH_ChooseHint}[/]"))
                                     .RoundedBorder()
                                     .Expand()
                                     .Padding(1, 0));
@@ -2108,7 +2108,7 @@ namespace Helyx.Projects
                                         new Markup($"{Markup.Escape(question)}   " +
                                                    string.Join("   ", options.Select((x, i) =>
                                                        $"[{(i == picked ? "Aqua" : "grey")}]{Markup.Escape(x)}[/]")) +
-                                                   $"   [grey]{Strings.GH_ChooseHint}[/]"))
+                                                   $"   [{Color.Grey}]{Strings.GH_ChooseHint}[/]"))
                                     .RoundedBorder()
                                     .Expand()
                                     .Padding(1, 0));
@@ -2152,7 +2152,7 @@ namespace Helyx.Projects
                         async Task Reload()
                         {
                             rootLayout2["Comments"].Update(
-                                new Markup($"\n    [grey]{Strings.GH_RetrievingComments}[/]"));
+                                new Markup($"\n    [{Color.Grey}]{Strings.GH_RetrievingComments}[/]"));
 
                             ctx.Refresh();
 
@@ -2203,7 +2203,7 @@ namespace Helyx.Projects
                             var body = UI.MarkdownToMarkup(posted.Body, guid);
 
                             var panel = new Panel(body)
-                                .Header($"⠀[white]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.CreatedAt)}[/]⠀")
+                                .Header($"⠀[{Color.White}]{UI.Link(posted.User?.HtmlUrl ?? "https://github.com/404", Markup.Escape(posted.User?.Login ?? Strings.GH_UnknownAuthor))} • [{DetermineColor(posted.AuthorAssociation)}]{(posted.AuthorAssociation == "NONE" ? "USER" : posted.AuthorAssociation)}[/] • {ConvertDateTimeOffsetToText(posted.CreatedAt)}[/]⠀")
                                 .BorderColor(Color.SkyBlue1)
                                 .RoundedBorder();
 
@@ -2234,11 +2234,11 @@ namespace Helyx.Projects
                             while (writing)
                             {
                                 rootLayout2["Comments"].Update(new Panel(content.Length == 0
-                                         ? $"[italic grey]{Strings.GH_WriteHint}[/]"
+                                         ? $"[italic {Color.Grey}]{Strings.GH_WriteHint}[/]"
                                          : Markup.Escape(content.ToString(0, cursorPos)) +
-                                     "[SkyBlue1]|[/]" +
+                                     "[{Color.SkyBlue1}]|[/]" +
                                      Markup.Escape(content.ToString(cursorPos, content.Length - cursorPos)))
-                                .Header($"⠀[white]{Markup.Escape(title)}[/]⠀")
+                                .Header($"⠀[{Color.White}]{Markup.Escape(title)}[/]⠀")
                                 .BorderColor(Color.SkyBlue1)
                                 .RoundedBorder()
                                 .Expand());
@@ -2252,8 +2252,8 @@ namespace Helyx.Projects
                                             $"[{(bold ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Bold}[/]   " +
                                             $"[{(italic ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Italic}[/]   " +
                                             $"[{(code ? "SkyBlue1" : "grey")}]{Strings.GH_Editor_Code}[/]   " +
-                                            $"[grey]{Strings.GH_Editor_Footer}[/]",
-                                            $"[grey]{string.Format(Strings.GH_Characters, content.Length)}[/]"))
+                                            $"[{Color.Grey}]{Strings.GH_Editor_Footer}[/]",
+                                            $"[{Color.Grey}]{string.Format(Strings.GH_Characters, content.Length)}[/]"))
                                 .RoundedBorder()
                                 .Expand()
                                 .Padding(1, 0));
@@ -2354,10 +2354,10 @@ namespace Helyx.Projects
                             var body = string.Join("\n", lines);
 
                             if (continued)
-                                body = $"[italic grey]{Strings.GH_ContinuedFrom}[/]\n" + body;
+                                body = $"[italic {Color.Grey}]{Strings.GH_ContinuedFrom}[/]\n" + body;
 
                             if (continues)
-                                body += $"\n[italic grey]{Strings.GH_ContinuesOn}[/]";
+                                body += $"\n[italic {Color.Grey}]{Strings.GH_ContinuesOn}[/]";
 
                             var panel = new Panel(body)
                             {
@@ -2441,9 +2441,9 @@ namespace Helyx.Projects
                 .Expand()
                 .AddRow(
                     $"[{(selected ? "Aqua" : "grey35")}]{(selected ? "▸" : "•")}[/]  " +
-                    $"[white]{UI.Link(happened.Actor?.HtmlUrl ?? "https://github.com/404", happened.Actor?.Login ?? Strings.GH_UnknownAuthor)}[/] " +
-                    $"[grey]{text}[/]",
-                    $"[grey35]{ConvertDateTimeOffsetToText(happened.CreatedAt)}[/]");
+                    $"[{Color.White}]{UI.Link(happened.Actor?.HtmlUrl ?? "https://github.com/404", happened.Actor?.Login ?? Strings.GH_UnknownAuthor)}[/] " +
+                    $"[{Color.Grey}]{text}[/]",
+                    $"[{Color.Grey35}]{ConvertDateTimeOffsetToText(happened.CreatedAt)}[/]");
 
             var panel = new Panel(grid)
             {
@@ -2526,7 +2526,7 @@ namespace Helyx.Projects
                 .Title(Strings.GH_Sync_Select)
                 .AddChoices(Enum.GetValues<GitHubSync>())
                 .PageSize(15)
-                .InstructionsText($"[grey]{Strings.Common_MultiSelectHint}[/]")
+                .InstructionsText($"[{Color.Grey}]{Strings.Common_MultiSelectHint}[/]")
                 .UseConverter(x => x switch
                 {
                     GitHubSync.SyncStatusWithGitHubRepo => Strings.GH_Sync_Status,
@@ -2641,7 +2641,7 @@ namespace Helyx.Projects
                 UI.Warning(
                     Strings.GH_Stats_Incomplete + "\n" +
                     $"[bold]{Markup.Escape(string.Join(", ", githubRepo.FailedParts))}[/]\n\n" +
-                    $"[grey]{Strings.GH_Stats_Retry}[/]",
+                    $"[{Color.Grey}]{Strings.GH_Stats_Retry}[/]",
                     Strings.GH_Stats_Incomplete_Title);
 
                 Console.ReadKey();
@@ -2685,7 +2685,7 @@ namespace Helyx.Projects
 
             var panel3 = new Align(
                     new Rows(
-                        new Markup($"[bold blue]{Strings.GH_Stats_Activity}[/]"),
+                        new Markup($"[bold {Color.Blue}]{Strings.GH_Stats_Activity}[/]"),
                         new Panel(new Columns(calendars))
                     ), HorizontalAlignment.Center
                 );
@@ -2750,7 +2750,7 @@ namespace Helyx.Projects
                 if (probe.RetrieveStatus(GitHelper.FastStatus).Any(x => GitHelper.IsStagedInIndex(x.State)))
                 {
                     UI.Warning(Strings.GH_StagedChanges_Status + "\n\n" +
-                               $"[grey]{Strings.GH_CommitOrUnstage_Status}[/]", Strings.GH_StatusSync);
+                               $"[{Color.Grey}]{Strings.GH_CommitOrUnstage_Status}[/]", Strings.GH_StatusSync);
                     Console.ReadKey();
 
                     return;
@@ -2789,7 +2789,7 @@ namespace Helyx.Projects
                         if (repo.Head.TrackedBranch == null)
                         {
                             warning.Add(string.Format(Strings.GH_NoUpstream_Status, $"'{Markup.Escape(repo.Head.FriendlyName)}'") + "\n\n" +
-                                        $"[grey]{Strings.GH_PushOnceFirst}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_PushOnceFirst}[/]");
                             return;
                         }
 
@@ -2812,7 +2812,7 @@ namespace Helyx.Projects
                         if (!TextFile.Decoded(content))
                         {
                             warning.Add(Strings.GH_ReadmeNotUtf8_Status + "\n\n" +
-                                        $"[grey]{Strings.GH_SaveAsUtf8_Status}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_SaveAsUtf8_Status}[/]");
                             return;
                         }
 
@@ -2822,7 +2822,7 @@ namespace Helyx.Projects
                         if (startIndex == -1 || endIndex == -1 || endIndex < startIndex)
                         {
                             warning.Add(Strings.GH_MarkersNotFound_Status + "\n\n" +
-                                      $"[grey]{Strings.GH_ExpectedMarkers}\n\n{Markup.Escape(start)}\n...\n{Markup.Escape(end)}[/]");
+                                      $"[{Color.Grey}]{Strings.GH_ExpectedMarkers}\n\n{Markup.Escape(start)}\n...\n{Markup.Escape(end)}[/]");
                             return;
                         }
 
@@ -2840,7 +2840,7 @@ namespace Helyx.Projects
                         if (repo.RetrieveStatus(GitHelper.FastStatus).Any(x => GitHelper.IsStagedInIndex(x.State)))
                         {
                             warning.Add(Strings.GH_StagedChanges_Status + "\n\n" +
-                                        $"[grey]{Strings.GH_CommitOrUnstage_Status}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_CommitOrUnstage_Status}[/]");
                             return;
                         }
 
@@ -2931,7 +2931,7 @@ namespace Helyx.Projects
                 if (probe.RetrieveStatus(GitHelper.FastStatus).Any(x => GitHelper.IsStagedInIndex(x.State)))
                 {
                     UI.Warning(Strings.GH_StagedChanges_Badges + "\n\n" +
-                               $"[grey]{Strings.GH_CommitOrUnstage_Badges}[/]", Strings.GH_BadgesSync);
+                               $"[{Color.Grey}]{Strings.GH_CommitOrUnstage_Badges}[/]", Strings.GH_BadgesSync);
                     Console.ReadKey();
 
                     return;
@@ -2977,7 +2977,7 @@ namespace Helyx.Projects
                         if (repo.Head.TrackedBranch == null)
                         {
                             warning.Add(string.Format(Strings.GH_NoUpstream_Badges, $"'{Markup.Escape(repo.Head.FriendlyName)}'") + "\n\n" +
-                                        $"[grey]{Strings.GH_PushOnceFirst}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_PushOnceFirst}[/]");
                             return;
                         }
 
@@ -2997,7 +2997,7 @@ namespace Helyx.Projects
                         if (!TextFile.Decoded(content))
                         {
                             warning.Add(Strings.GH_ReadmeNotUtf8_Badges + "\n\n" +
-                                        $"[grey]{Strings.GH_SaveAsUtf8_Badges}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_SaveAsUtf8_Badges}[/]");
                             return;
                         }
 
@@ -3020,7 +3020,7 @@ namespace Helyx.Projects
                             if (startIndex == -1 || endIndex == -1 || endIndex < startIndex)
                             {
                                 warning.Add(string.Format(Strings.GH_BadgeMarkersNotFound, $"'{(badge == null ? Markup.Escape(badgeGuid.ToString()) : $"[#{Tags.SafeHex(badge.Hex)}][[{Markup.Escape(badge.Name)}]][/]")}'") + "\n\n" +
-                                          $"[grey]{Strings.GH_ExpectedMarkers}\n\n{Markup.Escape(start)}\n...\n{Markup.Escape(end)}[/]");
+                                          $"[{Color.Grey}]{Strings.GH_ExpectedMarkers}\n\n{Markup.Escape(start)}\n...\n{Markup.Escape(end)}[/]");
                                 continue;
                             }
 
@@ -3039,7 +3039,7 @@ namespace Helyx.Projects
                         if (repo.RetrieveStatus(GitHelper.FastStatus).Any(x => GitHelper.IsStagedInIndex(x.State)))
                         {
                             warning.Add(Strings.GH_StagedChanges_Badges + "\n\n" +
-                                        $"[grey]{Strings.GH_CommitOrUnstage_Badges}[/]");
+                                        $"[{Color.Grey}]{Strings.GH_CommitOrUnstage_Badges}[/]");
                             return;
                         }
 
@@ -3104,7 +3104,7 @@ namespace Helyx.Projects
             if (!TextFile.Decoded(content))
             {
                 UI.Error(Strings.GH_Markers_NotUtf8 + "\n\n" +
-                         $"[grey]{Strings.GH_SaveAsUtf8Retry}[/]", title);
+                         $"[{Color.Grey}]{Strings.GH_SaveAsUtf8Retry}[/]", title);
                 Console.ReadKey();
 
                 return false;
@@ -3122,7 +3122,7 @@ namespace Helyx.Projects
                     {
                         MarkerAction.Place => Strings.GH_Markers_Place,
                         MarkerAction.Manually => Strings.GH_Markers_Manually,
-                        MarkerAction.Skip => $"[Red3_1]{Strings.GH_Markers_Skip}[/]",
+                        MarkerAction.Skip => $"[{Color.Red3_1}]{Strings.GH_Markers_Skip}[/]",
                         _ => x.ToString()
                     }));
 
@@ -3130,7 +3130,7 @@ namespace Helyx.Projects
             {
                 case MarkerAction.Manually:
                     UI.Info(Strings.GH_Markers_AddThese + "\n\n" +
-                            string.Join("\n\n", missing.Select(x => $"[grey]{Markup.Escape(x.Start)}\n{Markup.Escape(x.End)}[/]")), title);
+                            string.Join("\n\n", missing.Select(x => $"[{Color.Grey}]{Markup.Escape(x.Start)}\n{Markup.Escape(x.End)}[/]")), title);
                     Console.ReadKey();
                     return false;
 
@@ -3168,7 +3168,7 @@ namespace Helyx.Projects
                 rows.Add((-1, false, ShieldMarkup(name, definitions, lines
                         .Skip(i + 1)
                         .Take(close - i - 1)
-                        .FirstOrDefault(x => x.Contains("img.shields.io/badge/"))) ?? $"[grey35]{Markup.Escape(trimmed)}[/]",
+                        .FirstOrDefault(x => x.Contains("img.shields.io/badge/"))) ?? $"[{Color.Grey35}]{Markup.Escape(trimmed)}[/]",
                     lines.Skip(i).Take(close - i + 1).ToArray()));
 
                 i = close + 1;
@@ -3186,7 +3186,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(new Padder(
-                new Rule($"[blue bold]{string.Format(Strings.GH_Markers_Title, Markup.Escape(title))}[/]").LeftJustified(),
+                new Rule($"[bold {Color.Blue}]{string.Format(Strings.GH_Markers_Title, Markup.Escape(title))}[/]").LeftJustified(),
                 new Spectre.Console.Padding(0, 0, 0, 1)));
 
             AnsiConsole.Clear();
@@ -3221,7 +3221,7 @@ namespace Helyx.Projects
                         var grid = new Grid().AddColumn();
 
                         for (var i = scroll; i < Math.Min(scroll + height, rows.Count); i++)
-                            grid.AddRow($"{(i == selected ? "[Aqua]▸[/]" : " ")} [grey]{(i + 1).ToString().PadLeft(numberWidth)} │[/] {rows[i].Markup}");
+                            grid.AddRow($"{(i == selected ? "[{Color.Aqua}]▸[/]" : " ")} [{Color.Grey}]{(i + 1).ToString().PadLeft(numberWidth)} │[/] {rows[i].Markup}");
 
                         layout["List"].Update(new Panel(grid)
                             .RoundedBorder()
@@ -3234,13 +3234,13 @@ namespace Helyx.Projects
                                     .AddColumn(new GridColumn().RightAligned())
                                     .Expand()
                                     .AddRow(
-                                        $"[grey]{Strings.GH_Markers_Footer}[{(current >= 0 ? "grey" : "grey50")}]{Strings.GH_Markers_KeyPlace}[/]   " +
+                                        $"[{Color.Grey}]{Strings.GH_Markers_Footer}[{(current >= 0 ? "grey" : "grey50")}]{Strings.GH_Markers_KeyPlace}[/]   " +
                                         $"[{(rows[selected].Tag >= 0 ? "grey" : "grey50")}]{Strings.GH_Markers_KeyRemove}[/]   " +
                                         $"[{(rows[selected].Added ? "grey" : "grey50")}]{Strings.GH_Markers_KeyDeleteLine}[/]   {Strings.GH_Markers_KeyNextTag}" +
                                         $"[{(pending.Count == 0 ? "Green3_1" : "grey50")}]{Strings.GH_Markers_KeySave}[/]   {Strings.GH_Markers_KeyCancel}[/]",
                                         current >= 0
-                                            ? $"{string.Format(Strings.GH_Markers_Placing, missing[current].Label)} [grey]{string.Format(Strings.GH_Markers_Left, pending.Count)}[/]"
-                                            : $"[Green3_1]{Strings.GH_Markers_AllPlaced}[/]"))
+                                            ? $"{string.Format(Strings.GH_Markers_Placing, missing[current].Label)} [{Color.Grey}]{string.Format(Strings.GH_Markers_Left, pending.Count)}[/]"
+                                            : $"[{Color.Green3_1}]{Strings.GH_Markers_AllPlaced}[/]"))
                             .RoundedBorder()
                             .Expand()
                             .Padding(1, 0));

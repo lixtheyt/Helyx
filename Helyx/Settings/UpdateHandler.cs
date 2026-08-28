@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -60,7 +61,7 @@ namespace Helyx.Settings
             {
                 UI.Success(Strings.Update_Available + "\n\n" +
                            $"[link={UpdatesLink}]{Strings.Update_ClickHere}[/]\n" +
-                           $"[italic grey]{Strings.Common_CtrlClick}[/]\n\n" +
+                           $"[italic {Color.Grey}]{Strings.Common_CtrlClick}[/]\n\n" +
                            string.Format(Strings.Update_Current, Program.Version) + "\n" +
                            string.Format(Strings.Update_Latest, latestVersion), Strings.Update_Available_Title);
             }

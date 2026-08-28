@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -19,7 +20,7 @@ namespace Helyx.Settings
                     .UseConverter(x => x switch
                     {
                         Action.EncryptNotes => Strings.Notes_Encrypt,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })
                 );
@@ -38,8 +39,8 @@ namespace Helyx.Settings
         private static void EncryptNotes()
         {
             UI.Info(ConfigurationHandler.GetConfig().NotesEncryption
-                ? $"[Green]{Strings.Common_Enabled}[/]"
-                : $"[Red]{Strings.Common_Disabled}[/]"
+                ? $"[{Color.Green}]{Strings.Common_Enabled}[/]"
+                : $"[{Color.Red}]{Strings.Common_Disabled}[/]"
                 , Strings.Notes_State_Title);
 
             var choice = AnsiConsole.Prompt(
@@ -49,7 +50,7 @@ namespace Helyx.Settings
                 {
                     true => Strings.Common_Enable,
                     false => Strings.Common_Disable,
-                    null => $"[Red3_1]{Strings.Common_Back}[/]"
+                    null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                 })
             );
 
@@ -100,7 +101,7 @@ namespace Helyx.Settings
             if (!saved)
                 return;
 
-            var summary = (enable ? $"[Green]{Strings.Notes_Result_Enabled}[/]" : $"[Red]{Strings.Notes_Result_Disabled}[/]") + "\n" +
+            var summary = (enable ? $"[{Color.Green}]{Strings.Notes_Result_Enabled}[/]" : $"[{Color.Red}]{Strings.Notes_Result_Disabled}[/]") + "\n" +
                           string.Format(enable ? Strings.Notes_Converted_Encrypted : Strings.Notes_Converted_Decrypted, converted);
 
             if (unreadable.Count == 0 && failed.Count == 0)
@@ -110,11 +111,11 @@ namespace Helyx.Settings
                            (unreadable.Count == 0
                                ? string.Empty
                                : "\n\n" + Strings.Notes_Unreadable + "\n" +
-                                 string.Join("\n", unreadable.Select(y => $"[grey]{Markup.Escape(y)}[/]"))) +
+                                 string.Join("\n", unreadable.Select(y => $"[{Color.Grey}]{Markup.Escape(y)}[/]"))) +
                            (failed.Count == 0
                                ? string.Empty
                                : "\n\n" + Strings.Notes_Failed + "\n" +
-                                 string.Join("\n", failed.Select(y => $"[grey]{Markup.Escape(y)}[/]"))),
+                                 string.Join("\n", failed.Select(y => $"[{Color.Grey}]{Markup.Escape(y)}[/]"))),
                     Strings.Notes_Title);
 
             Console.ReadKey();

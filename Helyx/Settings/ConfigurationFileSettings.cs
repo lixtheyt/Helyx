@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -15,13 +16,13 @@ namespace Helyx.Settings
 
                 var action = AnsiConsole.Prompt(
                     new SelectionPrompt<Action>()
-                        .Title($"[blue]{Strings.Settings_ManageConfigurationFile}[/]")
+                        .Title($"[{Color.Blue}]{Strings.Settings_ManageConfigurationFile}[/]")
                         .AddChoices(Enum.GetValues<Action>())
                         .UseConverter(a => a switch
                         {
                             Action.ResetConfigurationFile => Strings.ConfigFile_Reset,
                             Action.OpenConfigurationFileDirectory => Strings.ConfigFile_OpenDirectory,
-                            Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => a.ToString()
                         }));
 
@@ -46,7 +47,7 @@ namespace Helyx.Settings
         {
             var confirm = AnsiConsole.Prompt(
                 new SelectionPrompt<Confirm>()
-                    .Title($"[red]{Strings.ConfigFile_Reset_Confirm}[/]")
+                    .Title($"[{Color.Red}]{Strings.ConfigFile_Reset_Confirm}[/]")
                     .AddChoices(Enum.GetValues<Confirm>())
                     .UseConverter(c => c switch
                     {

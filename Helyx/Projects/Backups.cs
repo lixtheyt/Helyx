@@ -86,7 +86,7 @@ namespace Helyx.Projects
                         Action.CreateBackup => Strings.Backups_Create,
                         Action.RestoreBackup => Strings.Backups_Restore,
                         Action.DeleteBackup => Strings.Backups_Delete,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })))
                 {
@@ -126,7 +126,7 @@ namespace Helyx.Projects
 
             if (!Directory.Exists(project.Path))
             {
-                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[grey]{Markup.Escape(project.Path)}[/]", Strings.Backups_Create);
+                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[{Color.Grey}]{Markup.Escape(project.Path)}[/]", Strings.Backups_Create);
                 Console.ReadKey();
                 return;
             }
@@ -255,8 +255,8 @@ namespace Helyx.Projects
             else if (skipped.Count > 0)
                 UI.Warning(
                     string.Format(Strings.Backups_CreatedWithSkipped, skipped.Count) + "\n\n" +
-                    string.Join("\n", skipped.Take(10).Select(x => $"[grey]{Markup.Escape(x)}[/]")) +
-                    (skipped.Count > 10 ? $"\n[grey]{string.Format(Strings.Backups_AndMore, skipped.Count - 10)}[/]" : string.Empty),
+                    string.Join("\n", skipped.Take(10).Select(x => $"[{Color.Grey}]{Markup.Escape(x)}[/]")) +
+                    (skipped.Count > 10 ? $"\n[{Color.Grey}]{string.Format(Strings.Backups_AndMore, skipped.Count - 10)}[/]" : string.Empty),
                     Strings.Backups_Create);
             else
                 UI.Success(Strings.Backups_Created, Strings.Backups_Create);
@@ -305,7 +305,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(header);
-            layout["Title"].Update(new Rule($"[blue bold]{Strings.Backups_Header}[/]").LeftJustified());
+            layout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Backups_Header}[/]").LeftJustified());
 
             int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
             int selectedIndex = 0;
@@ -336,9 +336,9 @@ namespace Helyx.Projects
                                 .ToLocalTime();
 
                             table.AddRow(
-                                i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                $"[DarkOrange3]{Markup.Escape(projectName)}[/]",
-                                $"[CadetBlue]{date}[/]"
+                                i == selectedIndex ? $"[{Color.SpringGreen1}]>[/]" : " ",
+                                $"[{Color.DarkOrange3}]{Markup.Escape(projectName)}[/]",
+                                $"[{Color.CadetBlue}]{date}[/]"
                             );
                         }
 
@@ -350,8 +350,8 @@ namespace Helyx.Projects
                                 .AddColumn(new GridColumn().RightAligned())
                                 .Expand()
                                 .AddRow(
-                                    $"[grey]{Strings.Common_NavSelect}[/]",
-                                    $"[grey]{string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, orderedBackups.Count)}[/]"))
+                                    $"[{Color.Grey}]{Strings.Common_NavSelect}[/]",
+                                    $"[{Color.Grey}]{string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, orderedBackups.Count)}[/]"))
                             .RoundedBorder()
                             .Expand()
                             .Padding(1, 0));
@@ -523,7 +523,7 @@ namespace Helyx.Projects
                 UI.Error(Markup.Escape(err.Message) +
                          (leftover == null
                              ? string.Empty
-                             : "\n\n" + Strings.Backups_OriginalLeftAt + $"\n[grey]{Markup.Escape(leftover)}[/]"),
+                             : "\n\n" + Strings.Backups_OriginalLeftAt + $"\n[{Color.Grey}]{Markup.Escape(leftover)}[/]"),
                     Strings.Backups_RestoreFailed_Title);
                 Console.ReadKey();
                 return;
@@ -533,7 +533,7 @@ namespace Helyx.Projects
                 UI.Success(Strings.Backups_Restored, Strings.Backups_Restore);
             else
                 UI.Warning(Strings.Backups_RestoredLeftover + "\n\n" +
-                           $"[grey]{Markup.Escape(leftover)}[/]\n\n" +
+                           $"[{Color.Grey}]{Markup.Escape(leftover)}[/]\n\n" +
                            Strings.Backups_DeleteYourself, Strings.Backups_Restore);
 
             Console.ReadKey();
@@ -580,7 +580,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(header);
-            layout["Title"].Update(new Rule($"[blue bold]{Strings.Backups_Header}[/]").LeftJustified());
+            layout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Backups_Header}[/]").LeftJustified());
 
             int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
             int selectedIndex = 0;
@@ -611,9 +611,9 @@ namespace Helyx.Projects
                             .ToLocalTime();
 
                             table.AddRow(
-                                i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                $"[DarkOrange3]{Markup.Escape(projectName)}[/]",
-                                $"[CadetBlue]{date}[/]"
+                                i == selectedIndex ? $"[{Color.SpringGreen1}]>[/]" : " ",
+                                $"[{Color.DarkOrange3}]{Markup.Escape(projectName)}[/]",
+                                $"[{Color.CadetBlue}]{date}[/]"
                             );
                         }
 
@@ -625,8 +625,8 @@ namespace Helyx.Projects
                                 .AddColumn(new GridColumn().RightAligned())
                                 .Expand()
                                 .AddRow(
-                                    $"[grey]{Strings.Common_NavSelect}[/]",
-                                    $"[grey]{string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, orderedBackups.Count)}[/]"))
+                                    $"[{Color.Grey}]{Strings.Common_NavSelect}[/]",
+                                    $"[{Color.Grey}]{string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, orderedBackups.Count)}[/]"))
                             .RoundedBorder()
                             .Expand()
                             .Padding(1, 0));
@@ -699,7 +699,7 @@ namespace Helyx.Projects
 
             await AnsiConsole.Status()
                 .Spinner(Spinner.Known.Dots)
-                .StartAsync(Strings.Backups_Deleting, async ctx =>
+                .StartAsync(Strings.Backups_Deleting, ctx =>
                 {
                     try
                     {
@@ -709,6 +709,8 @@ namespace Helyx.Projects
                     {
                         err = ex;
                     }
+
+                    return Task.CompletedTask;
                 });
 
             if (err != null)

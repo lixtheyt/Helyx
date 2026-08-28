@@ -23,18 +23,18 @@ namespace Helyx.Projects
 
                 if (!Directory.Exists(project.Path))
                 {
-                    UI.Error($"{Strings.Git_FolderGone}\n[grey]{project.Path}[/]", Strings.Git_FolderGone_Title);
+                    UI.Error($"{Strings.Git_FolderGone}\n[{Color.Grey}]{project.Path}[/]", Strings.Git_FolderGone_Title);
                     Console.ReadKey();
                     return;
                 }
 
                 if (!Repository.IsValid(project.Path))
                 {
-                    UI.Error(string.Format(Strings.Git_NotARepo, $"[SteelBlue1]{Markup.Escape(project.HelyxName)}[/]"), Strings.Git_NotARepo_Title);
+                    UI.Error(string.Format(Strings.Git_NotARepo, $"[{Color.SteelBlue1}]{Markup.Escape(project.HelyxName)}[/]"), Strings.Git_NotARepo_Title);
 
                     var initConfirm = AnsiConsole.Prompt(
                         new SelectionPrompt<Confirm>()
-                            .Title($"[green]{Strings.Git_InitAsk}[/]")
+                            .Title($"[{Color.Green}]{Strings.Git_InitAsk}[/]")
                             .AddChoices(Enum.GetValues<Confirm>())
                             .UseConverter(UI.ConfirmName));
 
@@ -72,13 +72,13 @@ namespace Helyx.Projects
                         .UseConverter(x => x switch
                         {
                             Action1.Status => Strings.Git_Status,
-                            Action1.Changes => Strings.Git_Changes.PadRight(arrow) + "[grey]▸[/]",
-                            Action1.Sync => Strings.Git_Sync.PadRight(arrow) + "[grey]▸[/]",
-                            Action1.Branches => Strings.Git_Branches.PadRight(arrow) + "[grey]▸[/]",
-                            Action1.Stashes => Strings.Git_Stashes.PadRight(arrow) + "[grey]▸[/]",
+                            Action1.Changes => Strings.Git_Changes.PadRight(arrow) + $"[{Color.Grey}]▸[/]",
+                            Action1.Sync => Strings.Git_Sync.PadRight(arrow) + $"[{Color.Grey}]▸[/]",
+                            Action1.Branches => Strings.Git_Branches.PadRight(arrow) + $"[{Color.Grey}]▸[/]",
+                            Action1.Stashes => Strings.Git_Stashes.PadRight(arrow) + $"[{Color.Grey}]▸[/]",
                             Action1.Log => Strings.Git_Log,
                             Action1.Diagnostics => Strings.Git_Diagnostics,
-                            Action1.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action1.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.ToString()
                         })
                 );
@@ -180,7 +180,7 @@ namespace Helyx.Projects
                             Action2.ApplyStash => Strings.Git_ApplyStash,
                             Action2.PopStash => Strings.Git_PopStash,
                             Action2.ListStashes => Strings.Git_ListStashes,
-                            Action2.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action2.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.ToString()
                         }));
 
@@ -232,7 +232,7 @@ namespace Helyx.Projects
 
             AnsiConsole.Clear();
 
-            AnsiConsole.Write(new Rule($"[blue bold]{string.Format(Strings.Git_StatusTitle, Markup.Escape(project.HelyxName))}[/]").LeftJustified());
+            AnsiConsole.Write(new Rule($"[bold {Color.Blue}]{string.Format(Strings.Git_StatusTitle, Markup.Escape(project.HelyxName))}[/]").LeftJustified());
             AnsiConsole.WriteLine();
 
             var table = new Table()
@@ -243,7 +243,7 @@ namespace Helyx.Projects
 
             if (status.Count(x => x.State == FileStatus.Unaltered) == status.Count())
             {
-                table.AddRow($"[grey]{Strings.Git_WorkingTreeClean}[/]", "[grey]—[/]");
+                table.AddRow($"[{Color.Grey}]{Strings.Git_WorkingTreeClean}[/]", $"[{Color.Grey}]—[/]");
             }
             else
             {
@@ -306,7 +306,7 @@ namespace Helyx.Projects
             var prompt = new MultiSelectionPrompt<string>()
                 .Title(Strings.Git_SelectFilesToStage)
                 .PageSize(15)
-                .InstructionsText($"[grey]{Strings.Git_ToggleHint}[/]")
+                .InstructionsText($"[{Color.Grey}]{Strings.Git_ToggleHint}[/]")
                 .UseConverter(x => entriesByPath.TryGetValue(x, out var entry)
                     ? $"{Markup.Escape(entry.FilePath)} " +
                       $"[{GitHelper.StatusColorLabel(entry.State).color}]" +
@@ -422,7 +422,7 @@ namespace Helyx.Projects
                     .UseConverter(x => x switch
                     {
                         Confirm.Yes => Strings.Common_Yes,
-                        Confirm.No => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Confirm.No => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     }));
 
@@ -458,7 +458,7 @@ namespace Helyx.Projects
                 return;
             }
 
-            UI.Success(string.Format(Strings.Git_CommittedAs, $"[DarkOrange3]{commit.Sha[..7]}[/]", Markup.Escape(message)), Strings.Git_Commit);
+            UI.Success(string.Format(Strings.Git_CommittedAs, $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/]", Markup.Escape(message)), Strings.Git_Commit);
             Console.ReadKey();
         }
         private static void Diff(Guid guid)
@@ -734,7 +734,7 @@ namespace Helyx.Projects
                 var (color, label) = GitHelper.StatusColorLabel(entry.State);
 
                 bool isSelected = i == selectedIndex;
-                string marker = isSelected ? "[Aqua]>[/] " : "  ";
+                string marker = isSelected ? $"[{Color.Aqua}]>[/] " : "  ";
                 string name = isSelected ? $"[bold]{Markup.Escape(entry.FilePath)}[/]" : Markup.Escape(entry.FilePath);
 
                 filesGrid.AddRow($"{marker}{name} [{color}]({label})[/]");
@@ -742,7 +742,7 @@ namespace Helyx.Projects
 
             layout["Files"].Update(
                 new Panel(filesGrid)
-                    .Header($"[blue bold] {Strings.Git_ChangedFiles} [/][grey]({selectedIndex + 1}/{changedEntries.Count})[/]")
+                    .Header($"[bold {Color.Blue}] {Strings.Git_ChangedFiles} [/][{Color.Grey}]({selectedIndex + 1}/{changedEntries.Count})[/]")
                     .RoundedBorder()
                     .BorderColor(focus == DiffFocus.Files ? Color.Aqua : Color.Grey)
                     .Padding(1, 1)
@@ -759,7 +759,7 @@ namespace Helyx.Projects
 
             string diffText = visibleLines.Count > 0
                 ? string.Join("\n", visibleLines)
-                : $"[grey]{Strings.Git_NoDiffForFile}[/]";
+                : $"[{Color.Grey}]{Strings.Git_NoDiffForFile}[/]";
 
             int lastVisibleLine = Math.Min(scrollOffset + paneHeight, diffLines.Count);
             string scrollInfo = diffLines.Count > paneHeight
@@ -770,13 +770,13 @@ namespace Helyx.Projects
 
             layout["Diff"].Update(
                 new Panel(diffText)
-                    .Header($"[blue bold] Diff — {Markup.Escape(selectedEntry.FilePath)}{scrollInfo} [/]")
+                    .Header($"[bold {Color.Blue}] Diff — {Markup.Escape(selectedEntry.FilePath)}{scrollInfo} [/]")
                     .RoundedBorder()
                     .BorderColor(focus == DiffFocus.Diff ? Color.Aqua : Color.Grey)
                     .Padding(1, 1)
                     .Expand());
 
-            layout["Footer"].Update(new Panel($"[grey]{Strings.Git_Diff_Footer}[/]")
+            layout["Footer"].Update(new Panel($"[{Color.Grey}]{Strings.Git_Diff_Footer}[/]")
                 .RoundedBorder()
                 .BorderColor(Color.Grey)
                 .Expand()
@@ -793,14 +793,14 @@ namespace Helyx.Projects
 
                 var (color, label) = entry.Status switch
                 {
-                    ChangeKind.Added => ("green", Strings.Git_Kind_Added),
-                    ChangeKind.Deleted => ("red", Strings.Git_Kind_Deleted),
-                    ChangeKind.Renamed => ("cyan", Strings.Git_Kind_Renamed),
-                    _ => ("yellow", Strings.Git_Kind_Modified)
+                    ChangeKind.Added => (Color.Green, Strings.Git_Kind_Added),
+                    ChangeKind.Deleted => (Color.Red, Strings.Git_Kind_Deleted),
+                    ChangeKind.Renamed => (Color.Cyan, Strings.Git_Kind_Renamed),
+                    _ => (Color.Yellow, Strings.Git_Kind_Modified)
                 };
 
                 bool isSelected = i == selectedIndex;
-                string marker = isSelected ? "[Aqua]>[/] " : "  ";
+                string marker = isSelected ? $"[{Color.Aqua}]>[/] " : "  ";
                 string name = isSelected ? $"[bold]{Markup.Escape(entry.Path)}[/]" : Markup.Escape(entry.Path);
 
                 filesGrid.AddRow(
@@ -809,7 +809,7 @@ namespace Helyx.Projects
 
             layout["Files"].Update(
                 new Panel(filesGrid)
-                    .Header($"[blue bold] {Strings.Git_ChangedFiles} [/][grey]({selectedIndex + 1}/{changedEntries.Count})[/]")
+                    .Header($"[bold {Color.Blue}] {Strings.Git_ChangedFiles} [/][{Color.Grey}]({selectedIndex + 1}/{changedEntries.Count})[/]")
                     .RoundedBorder()
                     .BorderColor(focus == DiffFocus.Files ? Color.Aqua : Color.Grey)
                     .Padding(1, 1)
@@ -826,7 +826,7 @@ namespace Helyx.Projects
 
             string diffText = visibleLines.Count > 0
                 ? string.Join("\n", visibleLines)
-                : $"[grey]{Strings.Git_NoDiffForFile}[/]";
+                : $"[{Color.Grey}]{Strings.Git_NoDiffForFile}[/]";
 
             int lastVisibleLine = Math.Min(scrollOffset + paneHeight, diffLines.Count);
 
@@ -838,13 +838,13 @@ namespace Helyx.Projects
 
             layout["Diff"].Update(
                 new Panel(diffText)
-                    .Header($"[blue bold] Diff — {Markup.Escape(selectedEntry.Path)}{scrollInfo} [/]")
+                    .Header($"[bold {Color.Blue}] Diff — {Markup.Escape(selectedEntry.Path)}{scrollInfo} [/]")
                     .RoundedBorder()
                     .BorderColor(focus == DiffFocus.Diff ? Color.Aqua : Color.Grey)
                     .Padding(1, 1)
                     .Expand());
 
-            layout["Footer"].Update(new Panel($"[grey]{Strings.Git_Diff_Footer}[/]")
+            layout["Footer"].Update(new Panel($"[{Color.Grey}]{Strings.Git_Diff_Footer}[/]")
                 .RoundedBorder()
                 .BorderColor(Color.Grey)
                 .Expand()
@@ -871,7 +871,7 @@ namespace Helyx.Projects
             }
             catch (Exception ex)
             {
-                return [$"[red]{Strings.Git_DiffFailed}[/] {Markup.Escape(ex.Message)}"];
+                return [$"[{Color.Red}]{Strings.Git_DiffFailed}[/] {Markup.Escape(ex.Message)}"];
             }
 
             if (entry == null || string.IsNullOrEmpty(entry.Patch))
@@ -886,10 +886,10 @@ namespace Helyx.Projects
                     return line switch
                     {
                         _ when line.StartsWith("+++") || line.StartsWith("---") => $"[bold]{escaped}[/]",
-                        _ when line.StartsWith("@@") => $"[cyan]{escaped}[/]",
-                        _ when line.StartsWith("+") => $"[green]{escaped}[/]",
-                        _ when line.StartsWith("-") => $"[red]{escaped}[/]",
-                        _ => $"[grey]{escaped}[/]"
+                        _ when line.StartsWith("@@") => $"[{Color.Cyan}]{escaped}[/]",
+                        _ when line.StartsWith("+") => $"[{Color.Green}]{escaped}[/]",
+                        _ when line.StartsWith("-") => $"[{Color.Red}]{escaped}[/]",
+                        _ => $"[{Color.Grey}]{escaped}[/]"
                     };
                 })
                 .ToList();
@@ -905,7 +905,7 @@ namespace Helyx.Projects
             }
             catch (Exception ex)
             {
-                return [$"[red]{Strings.Git_DiffFailed}[/] {Markup.Escape(ex.Message)}"];
+                return [$"[{Color.Red}]{Strings.Git_DiffFailed}[/] {Markup.Escape(ex.Message)}"];
             }
 
             if (entry == null || string.IsNullOrEmpty(entry.Patch))
@@ -924,16 +924,15 @@ namespace Helyx.Projects
                             => $"[bold]{escaped}[/]",
 
                         _ when line.StartsWith("@@")
-                            => $"[cyan]{escaped}[/]",
+                            => $"[{Color.Cyan}]{escaped}[/]",
 
                         _ when line.StartsWith("+")
-                            => $"[green]{escaped}[/]",
+                            => $"[{Color.Green}]{escaped}[/]",
 
                         _ when line.StartsWith("-")
-                            => $"[red]{escaped}[/]",
+                            => $"[{Color.Red}]{escaped}[/]",
 
-                        _
-                            => $"[grey]{escaped}[/]"
+                        _ => $"[{Color.Grey}]{escaped}[/]"
                     };
                 })
                 .ToList();
@@ -968,7 +967,7 @@ namespace Helyx.Projects
                     UndoCommitAction.KeepChangesStaged => Strings.Git_Undo_Soft,
                     UndoCommitAction.KeepChangesUnstaged => Strings.Git_Undo_Mixed,
                     UndoCommitAction.DeleteChangesCompletely => Strings.Git_Undo_Hard,
-                    UndoCommitAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                    UndoCommitAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => x.ToString()
                 })
             );
@@ -1100,7 +1099,7 @@ namespace Helyx.Projects
                 config.Projects[guid] = project;
                 EditConfig(config);
 
-                UI.Success(string.Format(Strings.Git_RedoDone, $"[DarkOrange3]{commit.Sha[..7]}[/]"));
+                UI.Success(string.Format(Strings.Git_RedoDone, $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/]"));
             }
             catch (Exception ex)
             {
@@ -1184,7 +1183,7 @@ namespace Helyx.Projects
                     return;
                 }
 
-                UI.Success(string.Format(Strings.Git_OriginAdded, "[Green3_1]origin[/]"), "Push");
+                UI.Success(string.Format(Strings.Git_OriginAdded, $"[{Color.Green3_1}]origin[/]"), "Push");
                 Console.ReadKey();
             }
 
@@ -1257,7 +1256,7 @@ namespace Helyx.Projects
                     return;
                 }
 
-                UI.Success(string.Format(Strings.Git_NowTracks, $"[Green3_1]{repo.Head.FriendlyName}[/]", $"[Green3_1]{origin.Name}/{repo.Head.FriendlyName}[/]"), "Push");
+                UI.Success(string.Format(Strings.Git_NowTracks, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]", $"[{Color.Green3_1}]{origin.Name}/{repo.Head.FriendlyName}[/]"), "Push");
                 Console.ReadKey();
             }
 
@@ -1350,12 +1349,12 @@ namespace Helyx.Projects
                             .AddColumn()
                             .AddRow($"[bold]{Strings.Git_Row_Step}[/]", steps
                                 ? string.Format(Strings.Git_StepOf, stepIndex + 1, stepCount)
-                                : $"[grey]{Strings.Git_UnknownLower}[/]")
+                                : $"[{Color.Grey}]{Strings.Git_UnknownLower}[/]")
                             .AddRow($"[bold]{Strings.Git_Commit}[/]", stepInfo?.Commit == null
-                                ? $"[grey]{Strings.Git_UnknownLower}[/]"
-                                : $"[DarkOrange3]{stepInfo.Commit.Sha[..7]}[/] - {Markup.Escape(stepInfo.Commit.MessageShort)}")
+                                ? $"[{Color.Grey}]{Strings.Git_UnknownLower}[/]"
+                                : $"[{Color.DarkOrange3}]{stepInfo.Commit.Sha[..7]}[/] - {Markup.Escape(stepInfo.Commit.MessageShort)}")
                             .AddRow($"[bold]{Strings.Git_Row_Conflicts}[/]", conflicts.Count == 0
-                                ? $"[green]{Strings.Git_NoneReadyContinue}[/]"
+                                ? $"[{Color.Green}]{Strings.Git_NoneReadyContinue}[/]"
                                 : conflicted);
 
                         UI.Box(grid, Strings.Git_RebaseInProgress, UIKind.Warning);
@@ -1373,8 +1372,8 @@ namespace Helyx.Projects
                                     RebaseFailedAction.Resolve => Strings.Git_ResolveHere,
                                     RebaseFailedAction.OpenInIDE => Strings.Git_OpenFolder,
                                     RebaseFailedAction.Recheck => Strings.Git_RecheckFiles,
-                                    RebaseFailedAction.Abort => $"[Red3_1]{Strings.Git_AbortRebase}[/]",
-                                    RebaseFailedAction.Leave => $"[Red3_1]{Strings.Git_LeaveInProgress}[/]",
+                                    RebaseFailedAction.Abort => $"[{Color.Red3_1}]{Strings.Git_AbortRebase}[/]",
+                                    RebaseFailedAction.Leave => $"[{Color.Red3_1}]{Strings.Git_LeaveInProgress}[/]",
                                     _ => x.ToString()
                                 }));
 
@@ -1386,9 +1385,9 @@ namespace Helyx.Projects
                                         new SelectionPrompt<StatusEntry?>()
                                             .Title(Strings.Git_SelectFileResolve)
                                             .PageSize(15)
-                                            .AddChoices(conflicts.Cast<StatusEntry?>().Append(null))
+                                            .AddChoices(conflicts.Append(null))
                                             .UseConverter(x => x == null
-                                                ? $"[Red3_1]{Strings.Common_Back}[/]"
+                                                ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                                                 : Markup.Escape(x.FilePath)));
 
                                     if (file != null)
@@ -1404,7 +1403,7 @@ namespace Helyx.Projects
                                     if (stillMarked.Count > 0)
                                     {
                                         UI.Error(Strings.Git_StillMarked + "\n\n" +
-                                            string.Join("\n", stillMarked.Select(x => $"[Red3_1]{Markup.Escape(x)}[/]")) +
+                                            string.Join("\n", stillMarked.Select(x => $"[{Color.Red3_1}]{Markup.Escape(x)}[/]")) +
                                             "\n\n" + Strings.Git_ResolveBeforeRebase,
                                             Strings.Git_ConflictsNotResolved);
                                         Console.ReadKey();
@@ -1462,7 +1461,7 @@ namespace Helyx.Projects
                 return;
             }
 
-            UI.Success(string.Format(Strings.Git_PushedOk, $"[Green3_1]{repo.Head.FriendlyName}[/]"), "Push");
+            UI.Success(string.Format(Strings.Git_PushedOk, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), "Push");
             Console.ReadKey();
         }
 
@@ -1519,9 +1518,9 @@ namespace Helyx.Projects
                 string message = mergeResult.Status switch
                 {
                     MergeStatus.UpToDate => string.Format(Strings.Git_Pull_UpToDate, repo.Head.FriendlyName),
-                    MergeStatus.FastForward => string.Format(Strings.Git_Pull_FastForward, $"[green]'{repo.Head.FriendlyName}'[/]"),
-                    MergeStatus.NonFastForward => string.Format(Strings.Git_Pull_Merged, $"[green]'{repo.Head.FriendlyName}'[/]"),
-                    MergeStatus.Conflicts => string.Format(Strings.Git_Pull_Conflicts, $"[red]'{repo.Head.FriendlyName}'[/]"),
+                    MergeStatus.FastForward => string.Format(Strings.Git_Pull_FastForward, $"[{Color.Green}]'{repo.Head.FriendlyName}'[/]"),
+                    MergeStatus.NonFastForward => string.Format(Strings.Git_Pull_Merged, $"[{Color.Green}]'{repo.Head.FriendlyName}'[/]"),
+                    MergeStatus.Conflicts => string.Format(Strings.Git_Pull_Conflicts, $"[{Color.Red}]'{repo.Head.FriendlyName}'[/]"),
                     _ => string.Format(Strings.Git_Pull_Unexpected, mergeResult.Status)
                 };
 
@@ -1556,7 +1555,7 @@ namespace Helyx.Projects
 
                 var choice = AnsiConsole.Prompt(
                     new SelectionPrompt<Confirm>()
-                    .Title(string.Format(Strings.Git_ForcePullAsk, $"[red]{Strings.Git_DiscardWarn}[/]"))
+                    .Title(string.Format(Strings.Git_ForcePullAsk, $"[{Color.Red}]{Strings.Git_DiscardWarn}[/]"))
                     .AddChoices(Enum.GetValues<Confirm>())
                     .UseConverter(UI.ConfirmName));
 
@@ -1589,7 +1588,7 @@ namespace Helyx.Projects
 
                     if (remoteBranch?.Tip == null)
                     {
-                        UI.Error(string.Format(Strings.Git_NoRemoteToReset, $"[Green3_1]{repo.Head.FriendlyName}[/]"), Strings.Git_PullFailed_Title);
+                        UI.Error(string.Format(Strings.Git_NoRemoteToReset, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_PullFailed_Title);
                         Console.ReadKey();
                         return;
                     }
@@ -1599,7 +1598,7 @@ namespace Helyx.Projects
                         remoteBranch.Tip
                     );
 
-                    UI.Success(string.Format(Strings.Git_ResetTo, $"[Green3_1]{repo.Head.FriendlyName}[/]", $"[Green3_1]{remoteBranch.FriendlyName}[/]"), "Pull");
+                    UI.Success(string.Format(Strings.Git_ResetTo, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]", $"[{Color.Green3_1}]{remoteBranch.FriendlyName}[/]"), "Pull");
                 }
                 catch (Exception forceEx)
                 {
@@ -1654,7 +1653,7 @@ namespace Helyx.Projects
 
                 if (!iAmSure)
                 {
-                    UI.Success(string.Format(Strings.Git_Fetched, $"[Green3_1]{remote.Name}[/]"), "Fetch");
+                    UI.Success(string.Format(Strings.Git_Fetched, $"[{Color.Green3_1}]{remote.Name}[/]"), "Fetch");
                     Console.ReadKey();
                 }
             }
@@ -1684,7 +1683,7 @@ namespace Helyx.Projects
 
             if (repo.RetrieveStatus(GitHelper.FastStatus).IsDirty)
             {
-                UI.Warning(Strings.Git_SyncDirty + $"\n\n[grey]{Strings.Git_PressAnyKey}[/]", Strings.Git_Sync);
+                UI.Warning(Strings.Git_SyncDirty + $"\n\n[{Color.Grey}]{Strings.Git_PressAnyKey}[/]", Strings.Git_Sync);
                 Console.ReadKey();
             }
 
@@ -1713,7 +1712,7 @@ namespace Helyx.Projects
 
                 if (remoteCommit == null)
                 {
-                    UI.Error(string.Format(Strings.Git_NoUpstreamSync, $"[Green3_1]{repo.Head.FriendlyName}[/]"), Strings.Git_Sync);
+                    UI.Error(string.Format(Strings.Git_NoUpstreamSync, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_Sync);
                     Console.ReadKey();
                     return;
                 }
@@ -1732,21 +1731,21 @@ namespace Helyx.Projects
                 switch (divergence)
                 {
                     case { AheadBy: 0, BehindBy: 0 }:
-                        AnsiConsole.MarkupLine($"[green]{Strings.Git_AlreadySynced}[/]\n");
+                        AnsiConsole.MarkupLine($"[{Color.Green}]{Strings.Git_AlreadySynced}[/]\n");
                         break;
 
                     case { AheadBy: > 0, BehindBy: 0 }:
-                        AnsiConsole.MarkupLine($"[blue]{string.Format(Strings.Git_LocalAhead, divergence.AheadBy)}[/]\n");
+                        AnsiConsole.MarkupLine($"[{Color.Blue}]{string.Format(Strings.Git_LocalAhead, divergence.AheadBy)}[/]\n");
                         Push(guid, true);
                         break;
 
                     case { AheadBy: 0, BehindBy: > 0 }:
-                        AnsiConsole.MarkupLine($"[blue]{string.Format(Strings.Git_RemoteAhead, divergence.BehindBy)}[/]\n");
+                        AnsiConsole.MarkupLine($"[{Color.Blue}]{string.Format(Strings.Git_RemoteAhead, divergence.BehindBy)}[/]\n");
                         Pull(guid, true);
                         break;
 
                     case { AheadBy: > 0, BehindBy: > 0 }:
-                        AnsiConsole.MarkupLine($"[yellow]{Strings.Git_Diverged}[/]\n");
+                        AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Git_Diverged}[/]\n");
 
                         var side = Math.Max(Strings.Git_Local.Length, Strings.Git_Remote.Length) + 1;
 
@@ -1756,8 +1755,8 @@ namespace Helyx.Projects
                             .AddChoices(Enum.GetValues<PreferredCommit>())
                             .UseConverter(x => x switch
                             {
-                                PreferredCommit.Local => $"[SeaGreen1]{Strings.Git_Local.PadRight(side)}[/] - [[[CadetBlue]{localCommit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]]]",
-                                PreferredCommit.Remote => $"[Orange3]{Strings.Git_Remote.PadRight(side)}[/] - [[[CadetBlue]{remoteCommit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]]]",
+                                PreferredCommit.Local => $"[{Color.SeaGreen1}]{Strings.Git_Local.PadRight(side)}[/] - [[[{Color.CadetBlue}]{localCommit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]]]",
+                                PreferredCommit.Remote => $"[{Color.Orange3}]{Strings.Git_Remote.PadRight(side)}[/] - [[[{Color.CadetBlue}]{remoteCommit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]]]",
                                 _ => x.ToString()
                             }));
 
@@ -1808,14 +1807,14 @@ namespace Helyx.Projects
 
             if (!Reference.IsValidName("refs/heads/" + branchName))
             {
-                UI.Error(string.Format(Strings.Git_InvalidBranchName, $"[Green3_1]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
+                UI.Error(string.Format(Strings.Git_InvalidBranchName, $"[{Color.Green3_1}]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
                 Console.ReadKey();
                 return;
             }
 
             if (repo.Branches.Any(b => b.FriendlyName == branchName))
             {
-                UI.Error(string.Format(Strings.Git_BranchExists, $"[Green3_1]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
+                UI.Error(string.Format(Strings.Git_BranchExists, $"[{Color.Green3_1}]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
                 Console.ReadKey();
                 return;
             }
@@ -1830,7 +1829,7 @@ namespace Helyx.Projects
             try
             {
                 repo.CreateBranch(branchName);
-                UI.Success(string.Format(Strings.Git_BranchCreated, $"[Green3_1]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
+                UI.Success(string.Format(Strings.Git_BranchCreated, $"[{Color.Green3_1}]{Markup.Escape(branchName)}[/]"), Strings.Git_CreateBranch);
             }
             catch (Exception ex)
             {
@@ -1867,7 +1866,7 @@ namespace Helyx.Projects
                     .AddChoices(branches)
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.FriendlyName
                     }));
 
@@ -1887,7 +1886,7 @@ namespace Helyx.Projects
             try
             {
                 Commands.Checkout(repo, choice);
-                UI.Success(string.Format(Strings.Git_Switched, $"[Green3_1]{choice.FriendlyName}[/]"), Strings.Git_SwitchBranch);
+                UI.Success(string.Format(Strings.Git_Switched, $"[{Color.Green3_1}]{choice.FriendlyName}[/]"), Strings.Git_SwitchBranch);
             }
             catch (Exception ex)
             {
@@ -1928,14 +1927,14 @@ namespace Helyx.Projects
 
             var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<Branch>()
-                    .Title(string.Format(Strings.Git_SelectBranchMerge, $"[Green3_1]{repo.Head.FriendlyName}[/]"))
+                    .Title(string.Format(Strings.Git_SelectBranchMerge, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"))
                     .AddChoices(branches)
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.Tip == null
                             ? x.FriendlyName
-                            : $"{x.FriendlyName} [DarkOrange3]{x.Tip.Sha[..7]}[/] [grey]- {Markup.Escape(x.Tip.MessageShort)}[/]"
+                            : $"{x.FriendlyName} [{Color.DarkOrange3}]{x.Tip.Sha[..7]}[/] [{Color.Grey}]- {Markup.Escape(x.Tip.MessageShort)}[/]"
                     }));
 
             if (choice == null)
@@ -1954,14 +1953,14 @@ namespace Helyx.Projects
 
             if (incoming == 0)
             {
-                UI.Info(string.Format(Strings.Git_AlreadyMerged, $"[Green3_1]{choice.FriendlyName}[/]", $"[Green3_1]{repo.Head.FriendlyName}[/]"), Strings.Git_MergeBranch);
+                UI.Info(string.Format(Strings.Git_AlreadyMerged, $"[{Color.Green3_1}]{choice.FriendlyName}[/]", $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_MergeBranch);
                 Console.ReadKey();
                 return;
             }
 
             var confirm = AnsiConsole.Prompt(
                 new SelectionPrompt<Confirm>()
-                    .Title(string.Format(Strings.Git_MergeConfirm, $"[Green3_1]{choice.FriendlyName}[/]", string.Format(incoming == 1 ? Strings.Git_CommitCountOne : Strings.Git_CommitCountMany, $"[bold]{incoming}[/]"), $"[Green3_1]{repo.Head.FriendlyName}[/]"))
+                    .Title(string.Format(Strings.Git_MergeConfirm, $"[{Color.Green3_1}]{choice.FriendlyName}[/]", string.Format(incoming == 1 ? Strings.Git_CommitCountOne : Strings.Git_CommitCountMany, $"[bold]{incoming}[/]"), $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"))
                     .AddChoices(Enum.GetValues<Confirm>())
                     .UseConverter(UI.ConfirmName));
 
@@ -2023,9 +2022,9 @@ namespace Helyx.Projects
                 var grid = new Grid()
                     .AddColumn()
                     .AddColumn()
-                    .AddRow($"[bold]{Strings.Git_Row_Merging}[/]", $"[Green3_1]{mergedName}[/] → [Green3_1]{repo.Head.FriendlyName}[/]")
+                    .AddRow($"[bold]{Strings.Git_Row_Merging}[/]", $"[{Color.Green3_1}]{mergedName}[/] → [{Color.Green3_1}]{repo.Head.FriendlyName}[/]")
                     .AddRow($"[bold]{Strings.Git_Row_Conflicts}[/]", conflicts.Count == 0
-                        ? $"[green]{Strings.Git_NoneReadyCommit}[/]"
+                        ? $"[{Color.Green}]{Strings.Git_NoneReadyCommit}[/]"
                         : conflicted);
 
                 UI.Box(grid, Strings.Git_MergeInProgress, UIKind.Warning);
@@ -2043,8 +2042,8 @@ namespace Helyx.Projects
                             MergeFailedAction.Resolve => Strings.Git_ResolveHere,
                             MergeFailedAction.OpenInIDE => Strings.Git_OpenFolder,
                             MergeFailedAction.Recheck => Strings.Git_RecheckFiles,
-                            MergeFailedAction.Abort => $"[Red3_1]{Strings.Git_AbortMerge}[/]",
-                            MergeFailedAction.Leave => $"[Red3_1]{Strings.Git_LeaveInProgress}[/]",
+                            MergeFailedAction.Abort => $"[{Color.Red3_1}]{Strings.Git_AbortMerge}[/]",
+                            MergeFailedAction.Leave => $"[{Color.Red3_1}]{Strings.Git_LeaveInProgress}[/]",
                             _ => x.ToString()
                         }));
 
@@ -2056,9 +2055,9 @@ namespace Helyx.Projects
                                 new SelectionPrompt<StatusEntry?>()
                                     .Title(Strings.Git_SelectFileResolve)
                                     .PageSize(15)
-                                    .AddChoices(conflicts.Cast<StatusEntry?>().Append(null))
+                                    .AddChoices(conflicts.Append(null))
                                     .UseConverter(x => x == null
-                                        ? $"[Red3_1]{Strings.Common_Back}[/]"
+                                        ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                                         : Markup.Escape(x.FilePath)));
 
                             if (file != null)
@@ -2073,7 +2072,7 @@ namespace Helyx.Projects
                         if (stillMarked.Count > 0)
                         {
                             UI.Error(Strings.Git_StillMarked + "\n\n" +
-                                string.Join("\n", stillMarked.Select(x => $"[Red3_1]{Markup.Escape(x)}[/]")) +
+                                string.Join("\n", stillMarked.Select(x => $"[{Color.Red3_1}]{Markup.Escape(x)}[/]")) +
                                 "\n\n" + Strings.Git_ResolveBeforeMerge,
                                 Strings.Git_ConflictsNotResolved);
                             Console.ReadKey();
@@ -2085,7 +2084,7 @@ namespace Helyx.Projects
                         try
                         {
                             repo.Commit($"Merge branch '{mergedName}' into {repo.Head.FriendlyName}", signature, signature);
-                            UI.Success(string.Format(Strings.Git_MergedInto, $"[Green3_1]{mergedName}[/]", $"[Green3_1]{repo.Head.FriendlyName}[/]"), Strings.Git_MergeBranch);
+                            UI.Success(string.Format(Strings.Git_MergedInto, $"[{Color.Green3_1}]{mergedName}[/]", $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_MergeBranch);
                         }
                         catch (Exception ex)
                         {
@@ -2155,7 +2154,7 @@ namespace Helyx.Projects
                     .AddChoices(branches)
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.FriendlyName
                     }));
 
@@ -2167,12 +2166,12 @@ namespace Helyx.Projects
                 .Any(b => repo.ObjectDatabase.CalculateHistoryDivergence(choice.Tip, b.Tip).AheadBy == 0);
 
             if (!isMerged)
-                UI.Warning(string.Format(Strings.Git_UnmergedWarn, $"[Green3_1]{choice.FriendlyName}[/]"), Strings.Git_UnmergedWarn_Title);
+                UI.Warning(string.Format(Strings.Git_UnmergedWarn, $"[{Color.Green3_1}]{choice.FriendlyName}[/]"), Strings.Git_UnmergedWarn_Title);
 
             var confirm = AnsiConsole.Prompt(
                 new SelectionPrompt<Confirm>()
                     .Title(isMerged
-                        ? string.Format(Strings.Git_DeleteBranchConfirm, $"[Green3_1]{choice.FriendlyName}[/]")
+                        ? string.Format(Strings.Git_DeleteBranchConfirm, $"[{Color.Green3_1}]{choice.FriendlyName}[/]")
                         : Strings.Git_DeleteBranchStill)
                     .AddChoices(Enum.GetValues<Confirm>())
                     .UseConverter(UI.ConfirmName));
@@ -2191,7 +2190,7 @@ namespace Helyx.Projects
                 return;
             }
 
-            UI.Success(string.Format(Strings.Git_BranchDeleted, $"[Green3_1]{choice.FriendlyName}[/]"), Strings.Git_DeleteBranch);
+            UI.Success(string.Format(Strings.Git_BranchDeleted, $"[{Color.Green3_1}]{choice.FriendlyName}[/]"), Strings.Git_DeleteBranch);
 
             Console.ReadKey();
         }
@@ -2236,7 +2235,7 @@ namespace Helyx.Projects
                 if (stash == null)
                     UI.Info(Strings.Git_StashedNothing, Strings.Git_SaveStash);
                 else
-                    UI.Success(string.Format(Strings.Git_StashSaved, $"[yellow]{Markup.Escape(stash.FriendlyName)}[/]"), Strings.Git_SaveStash);
+                    UI.Success(string.Format(Strings.Git_StashSaved, $"[{Color.Yellow}]{Markup.Escape(stash.FriendlyName)}[/]"), Strings.Git_SaveStash);
             }
             catch (Exception ex)
             {
@@ -2276,7 +2275,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(header);
-            layout["Title"].Update(new Rule($"[blue bold]{Strings.Git_ApplyStash}[/]").LeftJustified());
+            layout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Git_ApplyStash}[/]").LeftJustified());
 
             int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
             int selectedIndex = 0;
@@ -2311,9 +2310,9 @@ namespace Helyx.Projects
                                 message = message[..77] + "...";
 
                             table.AddRow(
-                                i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                $"[yellow]{Markup.Escape(stash.FriendlyName)}[/]",
-                                $"[Khaki1]{Markup.Escape(message)}[/]"
+                                i == selectedIndex ? $"[{Color.SpringGreen2_1}]>[/]" : " ",
+                                $"[{Color.Yellow}]{Markup.Escape(stash.FriendlyName)}[/]",
+                                $"[{Color.Khaki1}]{Markup.Escape(message)}[/]"
                             );
                         }
 
@@ -2325,7 +2324,7 @@ namespace Helyx.Projects
                                 .AddColumn(new GridColumn().RightAligned())
                                 .Expand()
                                 .AddRow(
-                                    $"[grey]{Strings.Git_Nav_Apply}[/]",
+                                    $"[{Color.Grey}]{Strings.Git_Nav_Apply}[/]",
                                     string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, stashes.Count)))
                             .RoundedBorder()
                             .Expand()
@@ -2388,7 +2387,7 @@ namespace Helyx.Projects
                 switch (result)
                 {
                     case StashApplyStatus.Applied:
-                        UI.Success(string.Format(Strings.Git_StashApplied, $"[yellow]{Markup.Escape(stashes[selectedIndex].FriendlyName)}[/]"), Strings.Git_ApplyStash);
+                        UI.Success(string.Format(Strings.Git_StashApplied, $"[{Color.Yellow}]{Markup.Escape(stashes[selectedIndex].FriendlyName)}[/]"), Strings.Git_ApplyStash);
                         break;
                     case StashApplyStatus.Conflicts:
                         UI.Warning(
@@ -2437,7 +2436,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(header);
-            layout["Title"].Update(new Rule($"[blue bold]{Strings.Git_PopStash}[/]").LeftJustified());
+            layout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Git_PopStash}[/]").LeftJustified());
 
             int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
             int selectedIndex = 0;
@@ -2472,9 +2471,9 @@ namespace Helyx.Projects
                                 message = message[..77] + "...";
 
                             table.AddRow(
-                                i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                $"[yellow]{Markup.Escape(stash.FriendlyName)}[/]",
-                                $"[Khaki1]{Markup.Escape(message)}[/]"
+                                i == selectedIndex ? $"[{Color.SpringGreen2_1}]>[/]" : " ",
+                                $"[{Color.Yellow}]{Markup.Escape(stash.FriendlyName)}[/]",
+                                $"[{Color.Khaki1}]{Markup.Escape(message)}[/]"
                             );
                         }
 
@@ -2486,7 +2485,7 @@ namespace Helyx.Projects
                                 .AddColumn(new GridColumn().RightAligned())
                                 .Expand()
                                 .AddRow(
-                                    $"[grey]{Strings.Git_Nav_Pop}[/]",
+                                    $"[{Color.Grey}]{Strings.Git_Nav_Pop}[/]",
                                     string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, stashes.Count)))
                             .RoundedBorder()
                             .Expand()
@@ -2549,7 +2548,7 @@ namespace Helyx.Projects
                 switch (result)
                 {
                     case StashApplyStatus.Applied:
-                        UI.Success(string.Format(Strings.Git_StashPopped, $"[yellow]{Markup.Escape(stashes[selectedIndex].FriendlyName)}[/]"), Strings.Git_PopStash);
+                        UI.Success(string.Format(Strings.Git_StashPopped, $"[{Color.Yellow}]{Markup.Escape(stashes[selectedIndex].FriendlyName)}[/]"), Strings.Git_PopStash);
                         break;
                     case StashApplyStatus.Conflicts:
                         UI.Warning(
@@ -2578,7 +2577,7 @@ namespace Helyx.Projects
 
             if (stashes.Count == 0)
             {
-                AnsiConsole.MarkupLine($"[yellow]{Strings.Git_NoStashesFound}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Git_NoStashesFound}[/]");
                 Console.ReadKey();
                 return;
             }
@@ -2599,7 +2598,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3));
 
                 listLayout["Header"].Update(header);
-                listLayout["Title"].Update(new Rule($"[blue bold]{Strings.Git_Stashes}[/]").LeftJustified());
+                listLayout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Git_Stashes}[/]").LeftJustified());
 
                 int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
 
@@ -2632,9 +2631,9 @@ namespace Helyx.Projects
                                     message = message[..77] + "...";
 
                                 table.AddRow(
-                                    i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                    $"[DarkOrange3]stash@{{{i}}}[/]",
-                                    $"[Khaki1]{Markup.Escape(message)}[/]"
+                                    i == selectedIndex ? $"[{Color.SpringGreen2_1}]>[/]" : " ",
+                                    $"[{Color.DarkOrange3}]stash@{{{i}}}[/]",
+                                    $"[{Color.Khaki1}]{Markup.Escape(message)}[/]"
                                 );
                             }
 
@@ -2646,7 +2645,7 @@ namespace Helyx.Projects
                                     .AddColumn(new GridColumn().RightAligned())
                                     .Expand()
                                     .AddRow(
-                                        $"[grey]{Strings.Git_Nav_View}[/]",
+                                        $"[{Color.Grey}]{Strings.Git_Nav_View}[/]",
                                         string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, stashes.Count)))
                                 .RoundedBorder()
                                 .Expand()
@@ -2703,7 +2702,7 @@ namespace Helyx.Projects
                 var baseCommit = selectedStash.WorkTree.Parents.FirstOrDefault();
                 var patch = repo.Diff.Compare<Patch>(baseCommit?.Tree, selectedStash.WorkTree.Tree);
 
-                var fileEntries = new List<(string Path, string Label, string Color, int Added, int Deleted)>();
+                var fileEntries = new List<(string Path, string Label, Color Color, int Added, int Deleted)>();
 
                 foreach (var entry in patch)
                 {
@@ -2717,13 +2716,13 @@ namespace Helyx.Projects
                         _ => entry.Status.ToString().ToUpperInvariant()
                     };
 
-                    string color = entry.Status switch
+                    Color color = entry.Status switch
                     {
-                        ChangeKind.Added => "green",
-                        ChangeKind.Deleted => "Orange1",
-                        ChangeKind.Modified => "yellow",
-                        ChangeKind.Renamed => "blue",
-                        _ => "grey"
+                        ChangeKind.Added => Color.Green,
+                        ChangeKind.Deleted => Color.Orange1,
+                        ChangeKind.Modified => Color.Yellow,
+                        ChangeKind.Renamed => Color.Blue,
+                        _ => Color.Grey
                     };
 
                     fileEntries.Add((entry.Path, label, color, entry.LinesAdded, entry.LinesDeleted));
@@ -2738,10 +2737,10 @@ namespace Helyx.Projects
                     string colored = line switch
                     {
                         _ when line.StartsWith("+++") || line.StartsWith("---") => $"[bold]{escaped}[/]",
-                        _ when line.StartsWith("@@") => $"[cyan]{escaped}[/]",
-                        _ when line.StartsWith("+") => $"[green]{escaped}[/]",
-                        _ when line.StartsWith("-") => $"[red]{escaped}[/]",
-                        _ => $"[grey]{escaped}[/]"
+                        _ when line.StartsWith("@@") => $"[{Color.Cyan}]{escaped}[/]",
+                        _ when line.StartsWith("+") => $"[{Color.Green}]{escaped}[/]",
+                        _ when line.StartsWith("-") => $"[{Color.Red}]{escaped}[/]",
+                        _ => $"[{Color.Grey}]{escaped}[/]"
                     };
 
                     diffLines.Add(colored);
@@ -2776,14 +2775,14 @@ namespace Helyx.Projects
 
                             if (message.Length > messageWidth)
                                 message = message[..(messageWidth - 3)] + "...";
-
-                            infoGrid.AddRow($"[grey]{Strings.Git_Row_Index}[/]", $"[yellow]stash@{{{selectedIndex}}}[/]");
-                            infoGrid.AddRow($"[grey]{Strings.Git_Col_Message}[/]", $"[Khaki1]{Markup.Escape(message)}[/]");
-                            infoGrid.AddRow($"[grey]{Strings.Git_Row_BasedOn}[/]", baseCommit != null ? $"[DarkOrange3]{baseCommit.Sha[..7]}[/]" : $"[grey]{Strings.Git_UnknownLower}[/]");
+                            /// 
+                            infoGrid.AddRow($"[{Color.Grey}]{Strings.Git_Row_Index}[/]", $"[{Color.Yellow}]stash@{{{selectedIndex}}}[/]");
+                            infoGrid.AddRow($"[{Color.Grey}]{Strings.Git_Col_Message}[/]", $"[{Color.Khaki1}]{Markup.Escape(message)}[/]");
+                            infoGrid.AddRow($"[{Color.Grey}]{Strings.Git_Row_BasedOn}[/]", baseCommit != null ? $"[{Color.DarkOrange3}]{baseCommit.Sha[..7]}[/]" : $"[{Color.Grey}]{Strings.Git_UnknownLower}[/]");
 
                             layout["Info"].Update(
                                 new Panel(infoGrid)
-                                    .Header($"[blue bold] {Strings.Git_StashInfo} [/]")
+                                    .Header($"[bold {Color.Blue}] {Strings.Git_StashInfo} [/]")
                                     .RoundedBorder()
                                     .BorderColor(Color.Grey)
                                     .Padding(1, 1)
@@ -2796,20 +2795,20 @@ namespace Helyx.Projects
 
                             if (fileEntries.Count == 0)
                             {
-                                filesGrid.AddRow($"[grey]{Strings.Git_NoFileChanges}[/]", string.Empty, string.Empty);
+                                filesGrid.AddRow($"[{Color.Grey}]{Strings.Git_NoFileChanges}[/]", string.Empty, string.Empty);
                             }
                             else
                             {
                                 foreach (var (path, label, color, added, deleted) in fileEntries)
                                     filesGrid.AddRow(
                                         $"[{color}]{label}[/]",
-                                        $"[Khaki1]{Markup.Escape(path)}[/]",
-                                        $"[green]+{added}[/] [red]-{deleted}[/]");
+                                        $"[{Color.Khaki1}]{Markup.Escape(path)}[/]",
+                                        $"[{Color.Green}]+{added}[/] [{Color.Grey}]-{deleted}[/]");
                             }
 
                             layout["Files"].Update(
                                 new Panel(filesGrid)
-                                    .Header($"[blue bold] {string.Format(Strings.Git_Files, fileEntries.Count)} [/]")
+                                    .Header($"[bold {Color.Blue}] {string.Format(Strings.Git_Files, fileEntries.Count)} [/]")
                                     .RoundedBorder()
                                     .BorderColor(Color.Grey)
                                     .Padding(1, 1)
@@ -2826,7 +2825,7 @@ namespace Helyx.Projects
 
                             string diffText = visibleLines.Count > 0
                                 ? string.Join("\n", visibleLines)
-                                : $"[grey]{Strings.Git_NoChangesInStash}[/]";
+                                : $"[{Color.Grey}]{Strings.Git_NoChangesInStash}[/]";
 
                             int lastVisibleLine = Math.Min(scrollOffset + paneHeight, diffLines.Count);
                             string scrollInfo = diffLines.Count > paneHeight
@@ -2835,13 +2834,13 @@ namespace Helyx.Projects
 
                             layout["Diff"].Update(
                                 new Panel(diffText)
-                                    .Header($"[blue bold] Diff{scrollInfo} [/]")
+                                    .Header($"[bold {Color.Blue}] Diff{scrollInfo} [/]")
                                     .RoundedBorder()
                                     .BorderColor(Color.Grey)
                                     .Padding(1, 1)
                                     .Expand());
 
-                            layout["Footer"].Update(new Panel($"[grey]{Strings.Git_Stash_Footer}[/]")
+                            layout["Footer"].Update(new Panel($"[{Color.Grey}]{Strings.Git_Stash_Footer}[/]")
                                 .RoundedBorder()
                                 .BorderColor(Color.Grey)
                                 .Expand()
@@ -2898,7 +2897,7 @@ namespace Helyx.Projects
 
             if (commits.Count == 0)
             {
-                AnsiConsole.MarkupLine($"[yellow]{Strings.Git_NoCommitsFound}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Git_NoCommitsFound}[/]");
                 Console.ReadKey();
                 return;
             }
@@ -2919,7 +2918,7 @@ namespace Helyx.Projects
                         new Layout("Footer").Size(3));
 
                 layout["Header"].Update(header);
-                layout["Title"].Update(new Rule($"[blue bold]{Strings.Git_Log}[/]").LeftJustified());
+                layout["Title"].Update(new Rule($"[bold {Color.Blue}]{Strings.Git_Log}[/]").LeftJustified());
 
                 int pageSize = Math.Max(3, Console.WindowHeight - headerHeight - 10);
 
@@ -2952,11 +2951,11 @@ namespace Helyx.Projects
                                     : commit.MessageShort;
 
                                 table.AddRow(
-                                    i == selectedIndex ? "[SpringGreen2_1]>[/]" : " ",
-                                    $"[DarkOrange3]{commit.Sha[..7]}[/]",
-                                    $"[Khaki1]{Markup.Escape(message)}[/]",
-                                    $"[SkyBlue1]{Markup.Escape(commit.Author.Name)}[/]",
-                                    $"[CadetBlue]{commit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]"
+                                    i == selectedIndex ? $"[{Color.SpringGreen2_1}]>[/]" : " ",
+                                    $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/]",
+                                    $"[{Color.Khaki1}]{Markup.Escape(message)}[/]",
+                                    $"[{Color.SkyBlue1}]{Markup.Escape(commit.Author.Name)}[/]",
+                                    $"[{Color.CadetBlue}]{commit.Author.When.ToString("G", CultureInfo.CurrentCulture)}[/]"
                                 );
                             }
 
@@ -2968,7 +2967,7 @@ namespace Helyx.Projects
                                     .AddColumn(new GridColumn().RightAligned())
                                     .Expand()
                                     .AddRow(
-                                        $"[grey]{Strings.Common_NavSelect}[/]",
+                                        $"[{Color.Grey}]{Strings.Common_NavSelect}[/]",
                                         string.Format(Strings.Common_Page, currentPage + 1, totalPages, selectedIndex + 1, commits.Count)))
                                 .RoundedBorder()
                                 .Expand()
@@ -3067,7 +3066,7 @@ namespace Helyx.Projects
                     ? commit.MessageShort[..57] + "..."
                     : commit.MessageShort;
 
-                AnsiConsole.Write(new Rule($"[DarkOrange3]{commit.Sha[..7]}[/] [blue bold]{Markup.Escape(title)}[/]").LeftJustified());
+                AnsiConsole.Write(new Rule($"[{Color.DarkOrange3}]{commit.Sha[..7]}[/] [bold {Color.Blue}]{Markup.Escape(title)}[/]").LeftJustified());
                 AnsiConsole.WriteLine();
 
                 var changed = additions + deletions;
@@ -3078,22 +3077,22 @@ namespace Helyx.Projects
                     .AddColumn(new GridColumn().NoWrap().PadRight(2))
                     .AddColumn();
 
-                info.AddRow("[grey]SHA[/]", $"[DarkOrange3]{commit.Sha[..7]}[/][Grey35]{commit.Sha[7..]}[/]");
-                info.AddRow($"[grey]{Strings.Git_Col_Author}[/]", $"[SkyBlue1]{Markup.Escape(commit.Author.Name)}[/]");
-                info.AddRow($"[grey]{Strings.Git_Col_Date}[/]", $"[CadetBlue]{commit.Author.When.ToLocalTime().ToString("G", CultureInfo.CurrentCulture)}[/]");
+                info.AddRow($"[{Color.Grey}]SHA[/]", $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/][{Color.Grey35}]{commit.Sha[7..]}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Col_Author}[/]", $"[{Color.SkyBlue1}]{Markup.Escape(commit.Author.Name)}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Col_Date}[/]", $"[{Color.CadetBlue}]{commit.Author.When.ToLocalTime().ToString("G", CultureInfo.CurrentCulture)}[/]");
 
-                info.AddRow($"[grey]{Strings.Git_Row_Branches}[/]", branches.Count > 0
-                    ? string.Join(", ", branches.Select(x => $"[Aqua]{x}[/]"))
-                    : $"[grey]{Strings.Common_None}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Row_Branches}[/]", branches.Count > 0
+                    ? string.Join(", ", branches.Select(x => $"[{Color.Aqua}]{x}[/]"))
+                    : $"[{Color.Grey}]{Strings.Common_None}[/]");
 
-                info.AddRow($"[grey]{Strings.Git_Row_Parents}[/]", commit.Parents.Any()
-                    ? string.Join(", ", commit.Parents.Select(x => $"[DarkOrange3]{x.Sha[..7]}[/]"))
-                    : $"[grey]{Strings.Analyze_FirstCommit}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Row_Parents}[/]", commit.Parents.Any()
+                    ? string.Join(", ", commit.Parents.Select(x => $"[{Color.DarkOrange3}]{x.Sha[..7]}[/]"))
+                    : $"[{Color.Grey}]{Strings.Analyze_FirstCommit}[/]");
 
                 var counterWidth = Math.Max($"+{additions}".Length, $"-{deletions}".Length) + 2;
 
-                info.AddRow($"[grey]{Strings.Git_Row_Insertions}[/]", $"[green]{$"+{additions}".PadRight(counterWidth)}{new string('█', addedBar)}[/]");
-                info.AddRow($"[grey]{Strings.Git_Row_Deletions}[/]", $"[red]{$"-{deletions}".PadRight(counterWidth)}{new string('█', deletedBar)}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Row_Insertions}[/]", $"[{Color.Green}]{$"+{additions}".PadRight(counterWidth)}{new string('█', addedBar)}[/]");
+                info.AddRow($"[{Color.Grey}]{Strings.Git_Row_Deletions}[/]", $"[{Color.Red}]{$"-{deletions}".PadRight(counterWidth)}{new string('█', deletedBar)}[/]");
 
                 UI.Box(info, Strings.Git_CommitInformation);
 
@@ -3109,17 +3108,17 @@ namespace Helyx.Projects
                 {
                     var (color, kind, sign) = change.Status switch
                     {
-                        ChangeKind.Added => ("green", Strings.Git_Kind_Added, "+"),
-                        ChangeKind.Deleted => ("red", Strings.Git_Kind_Deleted, "-"),
-                        ChangeKind.Renamed => ("cyan", Strings.Git_Kind_Renamed, "»"),
-                        ChangeKind.Modified => ("yellow", Strings.Git_Kind_Modified, "~"),
-                        _ => ("grey", change.Status.ToString(), "?")
+                        ChangeKind.Added => (Color.Green, Strings.Git_Kind_Added, "+"),
+                        ChangeKind.Deleted => (Color.Red, Strings.Git_Kind_Deleted, "-"),
+                        ChangeKind.Renamed => (Color.Cyan, Strings.Git_Kind_Renamed, "»"),
+                        ChangeKind.Modified => (Color.Yellow, Strings.Git_Kind_Modified, "~"),
+                        _ => (Color.Grey, change.Status.ToString(), "?")
                     };
 
                     files.AddRow(
                         $"[{color}]{sign} {kind}[/]",
-                        $"[Khaki1]{Markup.Escape(change.Path)}[/]",
-                        $"[green]+{change.LinesAdded}[/] [red]-{change.LinesDeleted}[/]");
+                        $"[{Color.Khaki1}]{Markup.Escape(change.Path)}[/]",
+                        $"[{Color.Green}]+{change.LinesAdded}[/] [{Color.Red}]-{change.LinesDeleted}[/]");
                 }
 
                 if (changes.Count > fileLimit)
@@ -3129,14 +3128,14 @@ namespace Helyx.Projects
 
                 var action = AnsiConsole.Prompt(
                     new SelectionPrompt<ShowCommitAction>()
-                        .Title($"[cyan]{Strings.Git_CommitActions}[/]")
+                        .Title($"[{Color.Cyan}]{Strings.Git_CommitActions}[/]")
                         .PageSize(5)
                         .AddChoices(Enum.GetValues<ShowCommitAction>())
                         .UseConverter(x => x switch
                         {
                             ShowCommitAction.ViewDiff => Strings.Git_ViewDiff,
                             ShowCommitAction.ViewFullMessage => Strings.Git_ViewFullMessage,
-                            ShowCommitAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            ShowCommitAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.ToString()
                         })
                 );
@@ -3151,13 +3150,13 @@ namespace Helyx.Projects
 
                         AnsiConsole.Write(
                             new Panel(Markup.Escape(commit.Message.Trim()))
-                                .Header($"[cyan]{Strings.Git_CommitMessageTitle}[/]")
+                                .Header($"[{Color.Cyan}]{Strings.Git_CommitMessageTitle}[/]")
                                 .Expand()
                                 .RoundedBorder()
                         );
 
                         AnsiConsole.MarkupLine(
-                            $"\n[grey]{Strings.Git_PressAnyKeyReturn}[/]"
+                            $"\n[{Color.Grey}]{Strings.Git_PressAnyKeyReturn}[/]"
                         );
 
                         Console.ReadKey();
@@ -3200,14 +3199,14 @@ namespace Helyx.Projects
                 Array.ForEach(gitProcesses, x => x.Dispose());
 
                 if (!File.Exists(lockPath))
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_Index, $"[grey]{Strings.Git_NotLocked}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_Index, $"[{Color.Grey}]{Strings.Git_NotLocked}[/]");
                 else if (gitRunning)
-                    table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Index, Strings.Git_LockedGitRunning);
+                    table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Index, Strings.Git_LockedGitRunning);
                 else if (new FileInfo(lockPath).Length > 0)
-                    table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Index, Strings.Git_LockedNotEmpty);
+                    table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Index, Strings.Git_LockedNotEmpty);
                 else
                 {
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Index, Strings.Git_LockedCrashed);
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Index, Strings.Git_LockedCrashed);
                     problems.Add(Diagnose.RemoveIndexLock);
                 }
 
@@ -3218,19 +3217,19 @@ namespace Helyx.Projects
                     : repo.RetrieveStatus(GitHelper.FastStatus).Count(x => x.State.HasFlag(FileStatus.Conflicted));
 
                 if (repo.Info.CurrentOperation == CurrentOperation.None)
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_Operation, $"[grey]{Strings.Git_NothingInProgress}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_Operation, $"[{Color.Grey}]{Strings.Git_NothingInProgress}[/]");
                 else if (rebasing)
                 {
                     var steps = RebaseSteps(repo, out var stepIndex, out var stepCount);
 
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Operation,
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Operation,
                         (steps
                             ? string.Format(Strings.Git_RebaseUnfinished, stepIndex + 1, stepCount)
                             : Strings.Git_RebaseUnfinishedByGit) +
                         (stuckConflicts > 0
-                            ? string.Format(stuckConflicts == 1 ? Strings.Git_StillConflictedOne : Strings.Git_StillConflictedMany, $"[Red3_1]{stuckConflicts}[/]")
-                            : $"[green]{Strings.Git_NoConflictsLeft}[/]") +
-                        (steps ? string.Empty : $"\n[grey]{Strings.Git_RebaseFinishInTerminal}[/]"));
+                            ? string.Format(stuckConflicts == 1 ? Strings.Git_StillConflictedOne : Strings.Git_StillConflictedMany, $"[{Color.Red3_1}]{stuckConflicts}[/]")
+                            : $"[{Color.Green}]{Strings.Git_NoConflictsLeft}[/]") +
+                        (steps ? string.Empty : $"\n[{Color.Grey}]{Strings.Git_RebaseFinishInTerminal}[/]"));
 
                     if (stuckConflicts > 0)
                         problems.Add(Diagnose.ResolveConflicts);
@@ -3242,9 +3241,9 @@ namespace Helyx.Projects
                 }
                 else
                 {
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Operation,
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Operation,
                         string.Format(Strings.Git_OperationUnfinished, repo.Info.CurrentOperation) +
-                        (stuckConflicts > 0 ? " " + string.Format(stuckConflicts == 1 ? Strings.Git_StillConflictedOne : Strings.Git_StillConflictedMany, $"[Red3_1]{stuckConflicts}[/]") : string.Empty));
+                        (stuckConflicts > 0 ? " " + string.Format(stuckConflicts == 1 ? Strings.Git_StillConflictedOne : Strings.Git_StillConflictedMany, $"[{Color.Red3_1}]{stuckConflicts}[/]") : string.Empty));
 
                     if (stuckConflicts > 0)
                         problems.Add(Diagnose.ResolveConflicts);
@@ -3253,17 +3252,17 @@ namespace Helyx.Projects
                 }
 
                 if (!repo.Info.IsHeadDetached)
-                    table.AddRow("[green]OK[/]", "HEAD", string.Format(Strings.Git_OnBranch, $"[Green3_1]{repo.Head.FriendlyName}[/]"));
+                    table.AddRow($"[{Color.Green}]OK[/]", "HEAD", string.Format(Strings.Git_OnBranch, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"));
                 else
                 {
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", "HEAD", Strings.Git_Detached);
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", "HEAD", Strings.Git_Detached);
                     problems.Add(Diagnose.AttachHead);
                 }
 
                 if (repo.Head.Tip != null)
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_LastCommit, $"[DarkOrange3]{repo.Head.Tip.Sha[..7]}[/] - {Markup.Escape(repo.Head.Tip.MessageShort)}");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_LastCommit, $"[{Color.DarkOrange3}]{repo.Head.Tip.Sha[..7]}[/] - {Markup.Escape(repo.Head.Tip.MessageShort)}");
                 else
-                    table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_LastCommit, $"[grey]{Strings.Git_NoCommitsYet}[/]");
+                    table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_LastCommit, $"[{Color.Grey}]{Strings.Git_NoCommitsYet}[/]");
 
                 var origin = repo.Network.Remotes["origin"];
 
@@ -3278,10 +3277,10 @@ namespace Helyx.Projects
                 var gitHubName = GetProject(guid).GitHubName;
 
                 if (!string.IsNullOrWhiteSpace(gitHubName))
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_GitHubName, $"[grey]{Markup.Escape(gitHubName)}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_GitHubName, $"[{Color.Grey}]{Markup.Escape(gitHubName)}[/]");
                 else
                 {
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_GitHubName,
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_GitHubName,
                         Strings.Git_GitHubNameMissing +
                         (originName != null ? string.Format(Strings.Git_RemoteSuggests, Markup.Escape(originName)) : string.Empty));
 
@@ -3292,40 +3291,40 @@ namespace Helyx.Projects
                 {
                     if (origin == null)
                     {
-                        table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Remote, Strings.Git_NoOriginNothing);
+                        table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Remote, Strings.Git_NoOriginNothing);
                         problems.Add(Diagnose.AddRemote);
                     }
                     else if (!string.IsNullOrWhiteSpace(originName) &&
                              !originName.Equals(gitHubName, StringComparison.OrdinalIgnoreCase))
                     {
-                        table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Remote,
+                        table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_Remote,
                             string.Format(Strings.Git_RemoteMismatch, Markup.Escape(originName), Markup.Escape(gitHubName)) + "\n" +
-                            $"[grey]{Strings.Git_RemoteMismatchHint}[/]");
+                            $"[{Color.Grey}]{Strings.Git_RemoteMismatchHint}[/]");
 
                         problems.Add(Diagnose.SetGitHubName);
                     }
                     else
-                        table.AddRow("[green]OK[/]", Strings.Git_Check_Remote, $"[grey]{Markup.Escape(origin.Url)}[/]");
+                        table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_Remote, $"[{Color.Grey}]{Markup.Escape(origin.Url)}[/]");
                 }
 
                 if (repo.Head.TrackedBranch != null)
                 {
-                    table.AddRow("[green]OK[/]", "Upstream", $"[Green3_1]{repo.Head.TrackedBranch.FriendlyName}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", "Upstream", $"[{Color.Green3_1}]{repo.Head.TrackedBranch.FriendlyName}[/]");
 
                     var ahead = repo.Head.TrackingDetails.AheadBy ?? 0;
                     var behind = repo.Head.TrackingDetails.BehindBy ?? 0;
 
-                    table.AddRow(ahead == 0 && behind == 0 ? "[green]OK[/]" : $"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_SyncState,
+                    table.AddRow(ahead == 0 && behind == 0 ? $"[{Color.Green}]OK[/]" : $"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_SyncState,
                             ahead == 0 && behind == 0
-                                ? $"[grey]{Strings.Git_UpToDateRemote}[/]"
+                                ? $"[{Color.Grey}]{Strings.Git_UpToDateRemote}[/]"
                                 : string.Format(Strings.Git_AheadBehind, ahead, behind)
                         );
                 }
                 else if (origin == null)
-                    table.AddRow($"[grey]{Strings.Git_State_Skip}[/]", "Upstream", $"[grey]{Strings.Git_NoRemoteNoCheck}[/]");
+                    table.AddRow($"[{Color.Grey}]{Strings.Git_State_Skip}[/]", "Upstream", $"[{Color.Grey}]{Strings.Git_NoRemoteNoCheck}[/]");
                 else
                 {
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", "Upstream", string.Format(Strings.Git_TracksNothing, repo.Head.FriendlyName));
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", "Upstream", string.Format(Strings.Git_TracksNothing, repo.Head.FriendlyName));
                     problems.Add(Diagnose.SetUpstream);
 
                     var remoteBranches = repo.Branches
@@ -3334,7 +3333,7 @@ namespace Helyx.Projects
 
                     if (remoteBranches.Count == 1 && remoteBranches[0].FriendlyName != $"{origin.Name}/{repo.Head.FriendlyName}")
                     {
-                        table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_BranchName, string.Format(Strings.Git_LocalRemoteNameDiff, repo.Head.FriendlyName, remoteBranches[0].FriendlyName[(origin.Name.Length + 1)..]));
+                        table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_BranchName, string.Format(Strings.Git_LocalRemoteNameDiff, repo.Head.FriendlyName, remoteBranches[0].FriendlyName[(origin.Name.Length + 1)..]));
 
                         problems.Add(Diagnose.RenameBranch);
                     }
@@ -3348,11 +3347,11 @@ namespace Helyx.Projects
                 );
 
                 table.AddRow(status.IsDirty
-                    ? $"[Orange1]{Strings.Git_State_Warn}[/]"
-                    : "[green]OK[/]", Strings.Git_Check_WorkingTree,
+                    ? $"[{Color.Orange1}]{Strings.Git_State_Warn}[/]"
+                    : $"[{Color.Green}]OK[/]", Strings.Git_Check_WorkingTree,
                             status.IsDirty
                     ? string.Format(Strings.Git_ChangedFileCount, status.Count(x => x.State != FileStatus.Ignored))
-                    : $"[grey]{Strings.Git_Clean}[/]");
+                    : $"[{Color.Grey}]{Strings.Git_Clean}[/]");
 
                 List<IndexEntry> tracked = [];
 
@@ -3371,29 +3370,29 @@ namespace Helyx.Projects
                     .ToList();
 
                 if (oversized.Count == 0)
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_FileSizes, $"[grey]{Strings.Git_NothingOverLimit}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_FileSizes, $"[{Color.Grey}]{Strings.Git_NothingOverLimit}[/]");
                 else
-                    table.AddRow($"[Red3_1]{Strings.Git_State_Problem}[/]", Strings.Git_Check_FileSizes,
+                    table.AddRow($"[{Color.Red3_1}]{Strings.Git_State_Problem}[/]", Strings.Git_Check_FileSizes,
                         string.Format(Strings.Git_OversizedFiles, oversized.Count) + "\n" +
                         string.Join("\n", oversized.Take(3).Select(x =>
-                            $"[grey]{Markup.Escape(x.Path)} — {x.Info.Length / 1048576} MB[/]")) +
-                        (oversized.Count > 3 ? $"\n[grey]{string.Format(Strings.Git_AndMore, oversized.Count - 3)}[/]" : string.Empty) +
-                        $"\n[grey]{Strings.Git_UntrackHint}[/]");
+                            $"[{Color.Grey}]{Markup.Escape(x.Path)} — {x.Info.Length / 1048576} MB[/]")) +
+                        (oversized.Count > 3 ? $"\n[{Color.Grey}]{string.Format(Strings.Git_AndMore, oversized.Count - 3)}[/]" : string.Empty) +
+                        $"\n[{Color.Grey}]{Strings.Git_UntrackHint}[/]");
 
                 var buildOutput = tracked
                     .Where(x => x.Path.Split('/').Any(y => y is "bin" or "obj" or ".vs" or "node_modules" or "target" or "__pycache__"))
                     .ToList();
 
                 if (buildOutput.Count == 0)
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_BuildOutput, $"[grey]{Strings.Git_NotTracked}[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_BuildOutput, $"[{Color.Grey}]{Strings.Git_NotTracked}[/]");
                 else
                 {
                     var paths = buildOutput.Select(x => x.Path).ToHashSet(StringComparer.OrdinalIgnoreCase);
 
                     var bytes = sizes.Where(x => paths.Contains(x.Path)).Sum(x => x.Info.Length);
 
-                    table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_BuildOutput,
-                        string.Format(Strings.Git_BuildOutputTracked, $"[Orange1]{buildOutput.Count}[/]", bytes / 1048576));
+                    table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_BuildOutput,
+                        string.Format(Strings.Git_BuildOutputTracked, $"[{Color.Orange1}]{buildOutput.Count}[/]", bytes / 1048576));
 
                     problems.Add(Diagnose.UntrackBuildOutput);
                 }
@@ -3402,11 +3401,11 @@ namespace Helyx.Projects
                 {
                     var identity = GitHubCalls.MainIdentity(repo.Config);
 
-                    table.AddRow("[green]OK[/]", Strings.Git_Check_Identity, $"[grey]{Markup.Escape(identity.Name)} <{Markup.Escape(identity.Email)}>[/]");
+                    table.AddRow($"[{Color.Green}]OK[/]", Strings.Git_Check_Identity, $"[{Color.Grey}]{Markup.Escape(identity.Name)} <{Markup.Escape(identity.Email)}>[/]");
                 }
                 catch (Exception identityEx)
                 {
-                    table.AddRow($"[Orange1]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Identity, Markup.Escape(identityEx.Message.Replace("\n", " ")));
+                    table.AddRow($"[{Color.Orange1}]{Strings.Git_State_Warn}[/]", Strings.Git_Check_Identity, Markup.Escape(identityEx.Message.Replace("\n", " ")));
                 }
 
                 UI.Box(table, Strings.Git_Diagnostics);
@@ -3430,13 +3429,13 @@ namespace Helyx.Projects
                         Diagnose.ContinueRebase => Strings.Git_Fix_ContinueRebase,
                         Diagnose.ResolveConflicts => Strings.Git_ResolveHere,
                         Diagnose.UntrackBuildOutput => Strings.Git_Fix_UntrackBuild,
-                        Diagnose.AbortOperation => $"[Red3_1]{string.Format(Strings.Git_Fix_AbortOperation, repo.Info.CurrentOperation)}[/]",
+                        Diagnose.AbortOperation => $"[{Color.Red3_1}]{string.Format(Strings.Git_Fix_AbortOperation, repo.Info.CurrentOperation)}[/]",
                         Diagnose.AttachHead => Strings.Git_Fix_AttachHead,
                         Diagnose.AddRemote => Strings.Git_Fix_AddRemote,
                         Diagnose.SetGitHubName => Strings.Git_Fix_SetGitHubName,
                         Diagnose.SetUpstream => Strings.Git_Fix_SetUpstream,
                         Diagnose.RenameBranch => Strings.Git_Fix_RenameBranch,
-                        Diagnose.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Diagnose.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })
                 );
@@ -3456,7 +3455,7 @@ namespace Helyx.Projects
                             {
                                 UI.Warning(
                                     string.Format(Strings.Git_UntrackWarn, $"[bold]{buildOutput.Count}[/]") +
-                                    $"[grey]{Strings.Git_UntrackWarnHistory}[/]",
+                                    $"[{Color.Grey}]{Strings.Git_UntrackWarnHistory}[/]",
                                     Strings.Git_UntrackTitle);
 
                                 var untrack = AnsiConsole.Prompt(
@@ -3488,7 +3487,7 @@ namespace Helyx.Projects
                                         .PageSize(15)
                                         .AddChoices(conflicts.Cast<StatusEntry?>().Append(null))
                                         .UseConverter(x => x == null
-                                            ? $"[Red3_1]{Strings.Common_Back}[/]"
+                                            ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                                             : Markup.Escape(x.FilePath)));
 
                                 if (file == null)
@@ -3499,7 +3498,7 @@ namespace Helyx.Projects
 
                                 Commands.Stage(repo, file.FilePath);
 
-                                UI.Success(string.Format(Strings.Git_MarkedResolved, $"[Green3_1]{Markup.Escape(file.FilePath)}[/]"), Strings.Git_Diagnostics);
+                                UI.Success(string.Format(Strings.Git_MarkedResolved, $"[{Color.Green3_1}]{Markup.Escape(file.FilePath)}[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
                         case Diagnose.ContinueRebase:
@@ -3537,7 +3536,7 @@ namespace Helyx.Projects
                                 }
 
                                 if (result.Status == RebaseStatus.Complete)
-                                    UI.Success(string.Format(Strings.Git_RebaseFinished, $"[Green3_1]{repo.Head.FriendlyName}[/]"), Strings.Git_Diagnostics);
+                                    UI.Success(string.Format(Strings.Git_RebaseFinished, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_Diagnostics);
 
                                 break;
                             }
@@ -3573,7 +3572,7 @@ namespace Helyx.Projects
 
                                 Commands.Checkout(repo, branch);
 
-                                UI.Success(string.Format(Strings.Git_SwitchedTo, $"[Green3_1]{branch.FriendlyName}[/]"));
+                                UI.Success(string.Format(Strings.Git_SwitchedTo, $"[{Color.Green3_1}]{branch.FriendlyName}[/]"));
                                 break;
                             }
                         case Diagnose.SetGitHubName:
@@ -3612,7 +3611,7 @@ namespace Helyx.Projects
                                 nameConfig.Projects[guid] = nameProject;
                                 EditConfig(nameConfig);
 
-                                UI.Success(string.Format(Strings.Git_GitHubNameSet, $"[Green3_1]{Markup.Escape(originName)}[/]"), Strings.Git_Diagnostics);
+                                UI.Success(string.Format(Strings.Git_GitHubNameSet, $"[{Color.Green3_1}]{Markup.Escape(originName)}[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
                         case Diagnose.AddRemote:
@@ -3630,7 +3629,7 @@ namespace Helyx.Projects
 
                                 repo.Network.Remotes.Add("origin", $"https://github.com/{username}/{GetProject(guid).GitHubName}.git");
 
-                                UI.Success(string.Format(Strings.Git_OriginAdded, "[Green3_1]origin[/]"), Strings.Git_Diagnostics);
+                                UI.Success(string.Format(Strings.Git_OriginAdded, $"[{Color.Green3_1}]origin[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
                         case Diagnose.SetUpstream:
@@ -3662,7 +3661,7 @@ namespace Helyx.Projects
                                     x => x.Remote = remote.Name,
                                     x => x.UpstreamBranch = repo.Head.CanonicalName);
 
-                                UI.Success(string.Format(Strings.Git_NowTracks, $"[Green3_1]{repo.Head.FriendlyName}[/]", $"[Green3_1]{remote.Name}/{repo.Head.FriendlyName}[/]"), Strings.Git_Diagnostics);
+                                UI.Success(string.Format(Strings.Git_NowTracks, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]", $"[{Color.Green3_1}]{remote.Name}/{repo.Head.FriendlyName}[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
                         case Diagnose.RenameBranch:
@@ -3681,7 +3680,7 @@ namespace Helyx.Projects
 
                                 repo.Branches.Rename(repo.Head, newName);
 
-                                UI.Success(string.Format(Strings.Git_BranchRenamed, $"[Green3_1]{newName}[/]"), Strings.Git_Diagnostics);
+                                UI.Success(string.Format(Strings.Git_BranchRenamed, $"[{Color.Green3_1}]{newName}[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
                         default:
@@ -3758,7 +3757,7 @@ namespace Helyx.Projects
             if (!TextFile.Decoded(content))
             {
                 UI.Error(Strings.Git_ConflictNotUtf8 + "\n\n" +
-                         $"[grey]{Strings.Git_ResolveInEditor}[/]", Strings.Git_ConflictResolution);
+                         $"[{Color.Grey}]{Strings.Git_ResolveInEditor}[/]", Strings.Git_ConflictResolution);
                 Console.ReadKey();
                 return false;
             }

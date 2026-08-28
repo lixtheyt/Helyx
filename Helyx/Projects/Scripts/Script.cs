@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Text.Json.Serialization;
 using System.Threading.Channels;
+using Color = Spectre.Console.Color;
 
 namespace Helyx.Projects.Scripts
 {
@@ -75,7 +76,7 @@ namespace Helyx.Projects.Scripts
             public sealed class WaitAction : IAction
             {
                 public string Name => Strings.Script_Wait;
-                public string MarkupName => $"[Orange1]{Strings.Script_Wait}[/]";
+                public string MarkupName => $"[{Color.Orange1}]{Strings.Script_Wait}[/]";
 
                 private const double MaxDurationSeconds = 86_400;
 
@@ -87,7 +88,7 @@ namespace Helyx.Projects.Scripts
                         new TextPrompt<double>(Strings.Script_EnterDuration)
                             .Validate(x => x is >= 0 and <= MaxDurationSeconds
                                 ? ValidationResult.Success()
-                                : ValidationResult.Error($"[red]{string.Format(Strings.Script_DurationRange, MaxDurationSeconds)}[/]"))
+                                : ValidationResult.Error($"[{Color.Red}]{string.Format(Strings.Script_DurationRange, MaxDurationSeconds)}[/]"))
                     );
                 }
 
@@ -106,7 +107,7 @@ namespace Helyx.Projects.Scripts
             public sealed class LogAction : IAction
             {
                 public string Name => Strings.Script_Log;
-                public string MarkupName => $"[yellow]{Strings.Script_Log}[/]";
+                public string MarkupName => $"[{Color.Yellow}]{Strings.Script_Log}[/]";
 
                 public string Message { get; set; } = "";
 
@@ -117,7 +118,7 @@ namespace Helyx.Projects.Scripts
 
                 public Task<BlockResult> Execute(Script script)
                 {
-                    script.Logs.Writer.TryWrite($"[grey]<{DateTime.Now.ToString("G", CultureInfo.CurrentCulture)}>:[/] {Markup.Escape(Message)}");
+                    script.Logs.Writer.TryWrite($"[{Color.Grey}]<{DateTime.Now.ToString("G", CultureInfo.CurrentCulture)}>:[/] {Markup.Escape(Message)}");
 
                     return Task.FromResult(
                         new BlockResult()
@@ -128,7 +129,7 @@ namespace Helyx.Projects.Scripts
             public sealed class ExecuteAction : IAction
             {
                 public string Name => Strings.Script_Execute;
-                public string MarkupName => $"[deepskyblue1]{Strings.Script_Execute}[/]";
+                public string MarkupName => $"[{Color.DeepSkyBlue1}]{Strings.Script_Execute}[/]";
 
                 public string Command { get; set; } = "";
 
@@ -145,12 +146,12 @@ namespace Helyx.Projects.Scripts
                     async Task Pump(StreamReader reader, bool error)
                     {
                         while (await reader.ReadLineAsync() is { } line)
-                            script.Logs.Writer.TryWrite($"[deepskyblue1]│[/] " + (error
-                                ? $"[Red3_1]{Markup.Escape(line)}[/]"
-                                : $"[grey]{Markup.Escape(line)}[/]"));
+                            script.Logs.Writer.TryWrite($"[{Color.DeepSkyBlue1}]│[/] " + (error
+                                ? $"[{Color.Red3_1}]{Markup.Escape(line)}[/]"
+                                : $"[{Color.Grey}]{Markup.Escape(line)}[/]"));
                     }
 
-                    script.Logs.Writer.TryWrite($"[deepskyblue1]│ $ {Markup.Escape(Command)}[/]");
+                    script.Logs.Writer.TryWrite($"[{Color.DeepSkyBlue1}]│ $ {Markup.Escape(Command)}[/]");
 
                     try
                     {
@@ -172,8 +173,8 @@ namespace Helyx.Projects.Scripts
                         await draining;
 
                         script.Logs.Writer.TryWrite(process.ExitCode == 0
-                            ? $"[deepskyblue1]╰─[/] [Green3_1]{Strings.Script_CommandDone}[/]"
-                            : $"[deepskyblue1]╰─[/] [Red3_1]{string.Format(Strings.Script_ExitCode, process.ExitCode)}[/]");
+                            ? $"[{Color.DeepSkyBlue1}]╰─[/] [{Color.Green3_1}]{Strings.Script_CommandDone}[/]"
+                            : $"[{Color.DeepSkyBlue1}]╰─[/] [{Color.Red3_1}]{string.Format(Strings.Script_ExitCode, process.ExitCode)}[/]");
                     }
                     catch (Exception ex)
                     {
@@ -187,7 +188,7 @@ namespace Helyx.Projects.Scripts
             public sealed class OpenAction : IAction
             {
                 public string Name => Strings.Script_Open;
-                public string MarkupName => $"[mediumpurple]{Strings.Script_Open}[/]";
+                public string MarkupName => $"[{Color.MediumPurple}]{Strings.Script_Open}[/]";
 
                 public string Path { get; set; } = "";
 
@@ -225,7 +226,7 @@ namespace Helyx.Projects.Scripts
             public sealed class CreateFileAction : IAction
             {
                 public string Name => Strings.Script_CreateFile;
-                public string MarkupName => $"[green]{Strings.Script_CreateFile}[/]";
+                public string MarkupName => $"[{Color.Green}]{Strings.Script_CreateFile}[/]";
 
                 public string Path { get; set; } = "";
 
@@ -261,7 +262,7 @@ namespace Helyx.Projects.Scripts
             public sealed class CreateFolderAction : IAction
             {
                 public string Name => Strings.Script_CreateFolder;
-                public string MarkupName => $"[green]{Strings.Script_CreateFolder}[/]";
+                public string MarkupName => $"[{Color.Green}]{Strings.Script_CreateFolder}[/]";
 
                 public string Path { get; set; } = "";
 
@@ -292,7 +293,7 @@ namespace Helyx.Projects.Scripts
             public sealed class DeleteFileAction : IAction
             {
                 public string Name => Strings.Script_DeleteFile;
-                public string MarkupName => $"[red]{Strings.Script_DeleteFile}[/]";
+                public string MarkupName => $"[{Color.Red}]{Strings.Script_DeleteFile}[/]";
 
                 public string Path { get; set; } = "";
 
@@ -324,7 +325,7 @@ namespace Helyx.Projects.Scripts
             public sealed class DeleteFolderAction : IAction
             {
                 public string Name => Strings.Script_DeleteFolder;
-                public string MarkupName => $"[red]{Strings.Script_DeleteFolder}[/]";
+                public string MarkupName => $"[{Color.Red}]{Strings.Script_DeleteFolder}[/]";
 
                 public string Path { get; set; } = "";
 
@@ -373,10 +374,10 @@ namespace Helyx.Projects.Scripts
                     catch (Exception ex)
                     {
                         Logs.Writer.TryWrite(
-                            $"[red]{string.Format(Strings.Script_BlockFailed, i + 1, Markup.Escape(block.Action?.Name ?? Strings.Common_Unknown))}[/] " +
+                            $"[{Color.Red}]{string.Format(Strings.Script_BlockFailed, i + 1, Markup.Escape(block.Action?.Name ?? Strings.Common_Unknown))}[/] " +
                             Markup.Escape(ex.Message));
 
-                        Logs.Writer.TryWrite($"[bold red]{Strings.Script_Stopped}[/]");
+                        Logs.Writer.TryWrite($"[bold {Color.Red}]{Strings.Script_Stopped}[/]");
                         break;
                     }
 

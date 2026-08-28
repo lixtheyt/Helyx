@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -58,14 +59,14 @@ namespace Helyx
                     {
                         UI.Error(
                             $"{Markup.Escape(ex.Message)}\n\n" +
-                            $"[grey]{string.Format(Strings.Program_Crash_Closing, consecutiveFailures)}[/]",
+                            $"[{Color.Grey}]{string.Format(Strings.Program_Crash_Closing, consecutiveFailures)}[/]",
                             Strings.Program_Crash_Title);
                         Console.ReadKey(true);
                         Environment.Exit(1);
                     }
 
                     UI.Error(
-                        $"{Markup.Escape(ex.ToString())}\n\n[grey]{Strings.Program_Crash_Return}[/]",
+                        $"{Markup.Escape(ex.ToString())}\n\n[{Color.Grey}]{Strings.Program_Crash_Return}[/]",
                         Strings.Program_Crash_Title);
                     Console.ReadKey(true);
                     AnsiConsole.Clear();

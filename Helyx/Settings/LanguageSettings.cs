@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -19,7 +20,7 @@ namespace Helyx.Settings
                 new SelectionPrompt<Language?>()
                     .Title(Strings.Language_Select)
                     .AddChoices(languageChoices)
-                    .UseConverter(choice => choice?.ToString() ?? $"[Red3_1]{Strings.Common_Back}[/]"));
+                    .UseConverter(choice => choice?.ToString() ?? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"));
 
             AnsiConsole.Clear();
 
@@ -31,7 +32,7 @@ namespace Helyx.Settings
 
             Strings.Culture = ((Language)selectedChoice).Culture();
 
-            AnsiConsole.MarkupLine($"[green]{Strings.Language_Saved}[/]" + Environment.NewLine);
+            AnsiConsole.MarkupLine($"[{Color.Green}]{Strings.Language_Saved}[/]" + Environment.NewLine);
             Console.ReadKey();
             AnsiConsole.Clear();
         }

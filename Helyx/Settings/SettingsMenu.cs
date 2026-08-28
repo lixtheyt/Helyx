@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Projects;
 using Helyx.Shared;
@@ -11,7 +12,7 @@ namespace Helyx.Settings
         {
             while (true)
             {
-                AnsiConsole.Write(new Rule($"[blue bold]{Strings.Common_Settings}[/]").LeftJustified());
+                AnsiConsole.Write(new Rule($"[bold {Color.Blue}]{Strings.Common_Settings}[/]").LeftJustified());
                 Console.WriteLine();
 
                 var choice = AnsiConsole.Prompt(
@@ -29,7 +30,7 @@ namespace Helyx.Settings
                             Action.PreferredIdentity => Strings.Settings_PreferredIdentity,
                             Action.NotesSettings => Strings.Settings_Notes,
                             Action.Updates => Strings.Settings_Updates,
-                            Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => action.ToString()
                         })
                 );

@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
+using Color = Spectre.Console.Color;
 
 namespace Helyx.Data
 {
@@ -19,7 +20,7 @@ namespace Helyx.Data
                 Directory.CreateDirectory(Path.GetDirectoryName(configPath)!);
                 File.WriteAllText(configPath, JsonSerializer.Serialize(newConfig, Options));
                 CreateSecrets();
-                AnsiConsole.MarkupLine($"[green]{Strings.Migrator_Created}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Green}]{Strings.Migrator_Created}[/]");
                 return;
             }
 
@@ -31,7 +32,7 @@ namespace Helyx.Data
 
                     File.Move(configPath, kept);
 
-                    AnsiConsole.MarkupLine($"[grey]{string.Format(Strings.Config_KeptAs, Markup.Escape(Path.GetFileName(kept)))}[/]");
+                    AnsiConsole.MarkupLine($"[{Color.Grey}]{string.Format(Strings.Config_KeptAs, Markup.Escape(Path.GetFileName(kept)))}[/]");
                 }
                 catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
                 {
@@ -45,7 +46,7 @@ namespace Helyx.Data
             }
             catch (Exception ex) when (ex is JsonException or IOException or UnauthorizedAccessException)
             {
-                AnsiConsole.MarkupLine($"[red]{Strings.Migrator_Corrupted}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Red}]{Strings.Migrator_Corrupted}[/]");
                 KeepBroken();
                 CreateConfig();
                 return;
@@ -53,7 +54,7 @@ namespace Helyx.Data
 
             if (existingNode is not JsonObject existingObj)
             {
-                AnsiConsole.MarkupLine($"[red]{Strings.Migrator_Invalid}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Red}]{Strings.Migrator_Invalid}[/]");
                 KeepBroken();
                 CreateConfig();
                 return;
@@ -80,7 +81,7 @@ namespace Helyx.Data
                 var actualKey = FindActualKey(existingObj, "projects") ?? "Projects";
                 existingObj[actualKey] = keyed;
                 changed = true;
-                AnsiConsole.MarkupLine($"[yellow]{Strings.Migrator_ProjectsToGuid}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Migrator_ProjectsToGuid}[/]");
             }
 
             string? ReadString(JsonObject parent, string? key) =>
@@ -247,13 +248,13 @@ namespace Helyx.Data
                 if (statusMigrated)
                 {
                     changed = true;
-                    AnsiConsole.MarkupLine($"[yellow]{Strings.Migrator_StatusToString}[/]");
+                    AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Migrator_StatusToString}[/]");
                 }
 
                 if (tagIdsMigrated)
                 {
                     changed = true;
-                    AnsiConsole.MarkupLine($"[yellow]{Strings.Migrator_TagsToIds}[/]");
+                    AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Migrator_TagsToIds}[/]");
                 }
             }
 
@@ -374,7 +375,7 @@ namespace Helyx.Data
                         var defaultValue = CreateDefault(memberType);
                         existing[actualKey] = JsonSerializer.SerializeToNode(defaultValue, memberType, Options);
                         changed = true;
-                        AnsiConsole.MarkupLine($"[yellow]{string.Format(Strings.Migrator_PropertyReset, name)}[/]");
+                        AnsiConsole.MarkupLine($"[{Color.Yellow}]{string.Format(Strings.Migrator_PropertyReset, name)}[/]");
                         continue;
                     }
 
@@ -414,7 +415,7 @@ namespace Helyx.Data
             }
             catch (JsonException)
             {
-                AnsiConsole.MarkupLine($"[red]{Strings.Migrator_UnreadableAfter}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Red}]{Strings.Migrator_UnreadableAfter}[/]");
                 KeepBroken();
                 config = new ConfigurationFile();
                 changed = true;
@@ -464,7 +465,7 @@ namespace Helyx.Data
                 else
                     File.Move(temporary, configPath);
 
-                AnsiConsole.MarkupLine($"[yellow]{Strings.Migrator_Updated}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Yellow}]{Strings.Migrator_Updated}[/]");
             }
             catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
             {
@@ -476,7 +477,7 @@ namespace Helyx.Data
                 {
                 }
 
-                AnsiConsole.MarkupLine($"[red]{string.Format(Strings.Migrator_SaveFailed, Markup.Escape(ex.Message))}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Red}]{string.Format(Strings.Migrator_SaveFailed, Markup.Escape(ex.Message))}[/]");
             }
         }
     }

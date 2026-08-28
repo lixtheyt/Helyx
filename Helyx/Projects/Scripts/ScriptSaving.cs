@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
 using Helyx.Shared;
 using Spectre.Console;
+using Color = Spectre.Console.Color;
 
 namespace Helyx.Projects.Scripts
 {
@@ -164,7 +165,7 @@ namespace Helyx.Projects.Scripts
             {
                 UI.Warning(
                     Strings.Scripts_LoadProblems + "\n\n" +
-                    string.Join("\n", problems.Select(p => $"[grey]{Markup.Escape(p)}[/]")),
+                    string.Join("\n", problems.Select(p => $"[{Color.Gray}]{Markup.Escape(p)}[/]")),
                     Strings.Other_UserScripts);
                 Console.ReadKey();
             }

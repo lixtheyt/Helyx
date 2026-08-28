@@ -9,6 +9,7 @@ using System.Text.Json;
 using Helyx.Projects;
 using TextCopy;
 using Helyx.Shared;
+using Color = Spectre.Console.Color;
 
 namespace Helyx.Data
 {
@@ -143,7 +144,7 @@ namespace Helyx.Data
             }
 
             UI.Info(string.Format(Strings.GitHub_GoToAndEnter, UI.Link(objResponse.VerificationUri, objResponse.VerificationUri)) +
-                    $"\n[italic grey]{Strings.Common_CtrlClick}[/]\n\n[bold yellow]{objResponse.UserCode}[/]\n[italic grey]{Strings.GitHub_CodeCopied}[/]", Strings.Settings_GitHubAuthorization);
+                    $"\n[italic {Color.Grey}]{Strings.Common_CtrlClick}[/]\n\n[bold {Color.Yellow}]{objResponse.UserCode}[/]\n[italic {Color.Grey}]{Strings.GitHub_CodeCopied}[/]", Strings.Settings_GitHubAuthorization);
 
             try
             {
@@ -700,7 +701,7 @@ namespace Helyx.Data
 
                 foreach (var entry in archive.Entries.Where(x => x.Name.EndsWith(".txt", StringComparison.OrdinalIgnoreCase)))
                 {
-                    using var reader = new StreamReader(entry.Open());
+                    using var reader = new StreamReader(await entry.OpenAsync());
                     logs[entry.FullName] = await reader.ReadToEndAsync();
                 }
 
@@ -773,7 +774,7 @@ namespace Helyx.Data
                 .AddChoices(repos)
                 .UseConverter(x => x switch
                 {
-                    null => $"[Red3_1]{Strings.Common_Back}[/]",
+                    null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => x.Name ?? string.Empty
                 }));
 

@@ -28,7 +28,7 @@ namespace Helyx.Projects
                         Action.AnalyzeProject => Strings.Manage_Analyze,
                         Action.ChangeName => Strings.Manage_ChangeName,
                         Action.RemoveProject => Strings.Manage_RemoveProject,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })
                 );
@@ -72,7 +72,7 @@ namespace Helyx.Projects
                     .AddChoices(allStatuses.Keys.Cast<Guid?>().Append(null))
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => Tags.Markup(allStatuses[(Guid)x], Markup.Escape(allStatuses[(Guid)x].Name))
                     })
             );
@@ -111,7 +111,7 @@ namespace Helyx.Projects
                 .AddChoices(allBadges.Keys)
                 .UseConverter(x => Tags.Markup(allBadges[x], $"[[{Markup.Escape(allBadges[x].Name)}]]"))
                 .PageSize(15)
-                .InstructionsText($"[grey]{Strings.Common_MultiSelectHint}[/]")
+                .InstructionsText($"[{Color.Grey}]{Strings.Common_MultiSelectHint}[/]")
                 .NotRequired();
 
             foreach (var badge in project.Badges.Where(allBadges.ContainsKey))
@@ -137,7 +137,7 @@ namespace Helyx.Projects
 
             if (!Directory.Exists(project.Path))
             {
-                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[grey]{Markup.Escape(project.Path)}[/]", Strings.Manage_Analyze);
+                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[{Color.Grey}]{Markup.Escape(project.Path)}[/]", Strings.Manage_Analyze);
                 Console.ReadKey();
                 return;
             }
@@ -266,7 +266,7 @@ namespace Helyx.Projects
 
                     lastCommit = repo.Head.Tip == null
                         ? null
-                        : $"[DarkOrange3]{repo.Head.Tip.Sha[..7]}[/]  [white]{Markup.Escape(repo.Head.Tip.MessageShort)}[/]";
+                        : $"[{Color.DarkOrange3}]{repo.Head.Tip.Sha[..7]}[/]  [{Color.White}]{Markup.Escape(repo.Head.Tip.MessageShort)}[/]";
                 });
 
             var totalLines = perLanguage.Values.Sum(x => x.Lines);
@@ -282,7 +282,7 @@ namespace Helyx.Projects
                     new Layout("Footer").Size(3));
 
             layout["Header"].Update(new Padder(
-                new Rule($"[blue bold]{Strings.Manage_Analyze} · {Markup.Escape(project.HelyxName)}[/]").LeftJustified(),
+                new Rule($"[bold {Color.Blue}]{Strings.Manage_Analyze} · {Markup.Escape(project.HelyxName)}[/]").LeftJustified(),
                 new Spectre.Console.Padding(0, 0, 0, 1)));
 
             AnsiConsole.Clear();
@@ -317,7 +317,7 @@ namespace Helyx.Projects
                         var bar = Math.Clamp(Math.Min(width - label - (detail ? 40 : 12), width - 23), 0, 30);
                         var nameWidth = Math.Max(8, width - bar - 15);
 
-                        List<string> lines = [$"[grey50]{Markup.Escape(Shorten(project.Path, width))}[/]", string.Empty];
+                        List<string> lines = [$"[{Color.Grey50}]{Markup.Escape(Shorten(project.Path, width))}[/]", string.Empty];
 
                         Row(Strings.Analyze_Files, $"{filesCount:N0}", hasRepo ? string.Format(Strings.Analyze_Tracked, $"{trackedCount:N0}") : null);
                         Row(Strings.Analyze_Folders, $"{foldersCount:N0}", null);
@@ -330,19 +330,19 @@ namespace Helyx.Projects
                             Section(Strings.Analyze_Languages);
 
                             foreach (var language in ranked.Take(8))
-                                lines.Add($"[grey]{Markup.Escape(Fit(language.Key, label)).PadRight(label)}[/]" +
+                                lines.Add($"[{Color.Grey}]{Markup.Escape(Fit(language.Key, label)).PadRight(label)}[/]" +
                                           $"{Bar((double)language.Value.Lines / totalLines, bar, UI.GetColor(language.Key).ToMarkup())}  " +
-                                          $"[white]{(double)language.Value.Lines / totalLines * 100,5:0.0}%[/]" +
-                                          (detail ? $"  [grey50]{string.Format(Strings.Analyze_LinesDetail, $"{language.Value.Lines:N0}")}[/]" : string.Empty));
+                                          $"[{Color.White}]{(double)language.Value.Lines / totalLines * 100,5:0.0}%[/]" +
+                                          (detail ? $"  [{Color.Grey50}]{string.Format(Strings.Analyze_LinesDetail, $"{language.Value.Lines:N0}")}[/]" : string.Empty));
 
                             if (ranked.Count > 8)
                             {
                                 var rest = ranked.Skip(8).Sum(x => x.Value.Lines);
 
-                                lines.Add($"[grey]{Strings.Analyze_Other.PadRight(label)}[/]" +
+                                lines.Add($"[{Color.Grey}]{Strings.Analyze_Other.PadRight(label)}[/]" +
                                           $"{Bar((double)rest / totalLines, bar, "grey35")}  " +
-                                          $"[white]{(double)rest / totalLines * 100,5:0.0}%[/]" +
-                                          (detail ? $"  [grey50]{string.Format(Strings.Analyze_LinesDetail, $"{rest:N0}")}[/]" : string.Empty));
+                                          $"[{Color.White}]{(double)rest / totalLines * 100,5:0.0}%[/]" +
+                                          (detail ? $"  [{Color.Grey50}]{string.Format(Strings.Analyze_LinesDetail, $"{rest:N0}")}[/]" : string.Empty));
                             }
                         }
 
@@ -356,14 +356,14 @@ namespace Helyx.Projects
                                     ? UI.GetColor(language).ToMarkup()
                                     : "grey35";
 
-                                lines.Add($"[grey35]{i + 1}.[/] [white]{Markup.Escape(Fit(Path.GetFileName(top[i].Path), nameWidth)).PadRight(nameWidth)}[/]  " +
+                                lines.Add($"[{Color.Grey35}]{i + 1}.[/] [{Color.White}]{Markup.Escape(Fit(Path.GetFileName(top[i].Path), nameWidth)).PadRight(nameWidth)}[/]  " +
                                           $"{Bar((double)top[i].Size / Math.Max(1, top[0].Size), bar, color)}  " +
-                                          $"[grey]{FormatBytes(top[i].Size)}[/]");
+                                          $"[{Color.Grey}]{FormatBytes(top[i].Size)}[/]");
 
                                 var folder = Path.GetDirectoryName(Path.GetRelativePath(project.Path, top[i].Path));
 
                                 if (!string.IsNullOrEmpty(folder))
-                                    lines.Add($"   [grey50]{Markup.Escape(Shorten(folder.Replace('\\', '/'), width - 3))}[/]");
+                                    lines.Add($"   [{Color.Grey50}]{Markup.Escape(Shorten(folder.Replace('\\', '/'), width - 3))}[/]");
                             }
                         }
 
@@ -388,9 +388,9 @@ namespace Helyx.Projects
                             }
 
                             if (lastCommit != null)
-                                lines.Add($"[grey]{Fit(Strings.Analyze_LastCommit, label).PadRight(label)}[/]{lastCommit}");
+                                lines.Add($"[{Color.Grey}]{Fit(Strings.Analyze_LastCommit, label).PadRight(label)}[/]{lastCommit}");
 
-                            Row(Strings.Analyze_WorkingTree, changes == 0 ? $"[Green3_1]{Strings.Analyze_Clean}[/]" : $"[Orange1]{changes:N0}[/] {Strings.Analyze_Changed}", null);
+                            Row(Strings.Analyze_WorkingTree, changes == 0 ? $"[{Color.Green3_1}]{Strings.Analyze_Clean}[/]" : $"[{Color.Orange1}]{changes:N0}[/] {Strings.Analyze_Changed}", null);
                             Row(Strings.Analyze_GitSize, FormatBytes(gitBytes), null);
                         }
 
@@ -408,10 +408,10 @@ namespace Helyx.Projects
                                     .AddColumn(new GridColumn().RightAligned())
                                     .Expand()
                                     .AddRow(
-                                        $"[grey]{Strings.Analyze_Footer}[/]",
+                                        $"[{Color.Grey}]{Strings.Analyze_Footer}[/]",
                                         lines.Count > height
-                                            ? $"[grey]{scroll + 1}-{Math.Min(scroll + height, lines.Count)}/{lines.Count}[/]"
-                                            : $"[grey]{Strings.Analyze_All}[/]"))
+                                            ? $"[{Color.Grey}]{scroll + 1}-{Math.Min(scroll + height, lines.Count)}/{lines.Count}[/]"
+                                            : $"[{Color.Grey}]{Strings.Analyze_All}[/]"))
                             .RoundedBorder()
                             .Expand()
                             .Padding(1, 0));
@@ -458,11 +458,11 @@ namespace Helyx.Projects
                         continue;
 
                         void Row(string name, string value, string? note) =>
-                            lines.Add($"[grey]{Fit(name, label).PadRight(label)}[/][white]{value}[/]" +
-                                      (note == null || !detail ? string.Empty : $"  [grey50]{Markup.Escape(note)}[/]"));
+                            lines.Add($"[{Color.Grey}]{Fit(name, label).PadRight(label)}[/][{Color.White}]{value}[/]" +
+                                      (note == null || !detail ? string.Empty : $"  [{Color.Grey50}]{Markup.Escape(note)}[/]"));
 
                         void Section(string title) =>
-                            lines.AddRange([string.Empty, $"[blue bold]{title}[/] [grey30]{new string('─', Math.Max(1, width - title.Length - 1))}[/]"]);
+                            lines.AddRange([string.Empty, $"[bold {Color.Blue}]{title}[/] [{Color.Grey30}]{new string('─', Math.Max(1, width - title.Length - 1))}[/]"]);
                     }
                 });
 
@@ -477,7 +477,7 @@ namespace Helyx.Projects
             {
                 var filled = Math.Clamp((int)Math.Round(fraction * cells), fraction > 0 ? 1 : 0, cells);
 
-                return $"[{color}]{new string('█', filled)}[/][grey27]{new string('░', cells - filled)}[/]";
+                return $"[{color}]{new string('█', filled)}[/][{Color.Grey27}]{new string('░', cells - filled)}[/]";
             }
 
             static string Fit(string text, int max) =>
@@ -515,7 +515,7 @@ namespace Helyx.Projects
                 {
                     ChangeNameOptions.Helyx => "Helyx",
                     ChangeNameOptions.GitHub => "GitHub",
-                    ChangeNameOptions.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                    ChangeNameOptions.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => x.ToString()
                 })
             );
@@ -588,7 +588,7 @@ namespace Helyx.Projects
                         .AddChoices(repos)
                         .UseConverter(x => x switch
                         {
-                            null => $"[Red3_1]{Strings.Common_Back}[/]",
+                            null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.Name ?? string.Empty
                         }));
 
@@ -611,7 +611,7 @@ namespace Helyx.Projects
                 new SelectionPrompt<Confirm>()
                     .Title(string.Format(Strings.Manage_RemoveConfirm, $"[bold]{Markup.Escape(project.HelyxName)}[/]") + "\n" +
                            $"[bold underline]{Strings.Manage_CannotBeUndone}[/]\n\n" +
-                           $"[Red bold]{Strings.Manage_AlsoDeletes}[/]")
+                           $"[bold {Color.Red}]{Strings.Manage_AlsoDeletes}[/]")
                     .AddChoices(Enum.GetValues<Confirm>())
                     .UseConverter(x => x switch
                     {
@@ -640,7 +640,7 @@ namespace Helyx.Projects
             if (!Update(x => x.Projects.Remove(guid)))
                 return;
 
-            UI.Success(string.Format(Strings.Manage_Removed, $"[SteelBlue1]'{Markup.Escape(project.HelyxName)}'[/]"), Strings.Manage_Removed_Title);
+            UI.Success(string.Format(Strings.Manage_Removed, $"[{Color.SteelBlue1}]'{Markup.Escape(project.HelyxName)}'[/]"), Strings.Manage_Removed_Title);
             Console.ReadKey();
             AnsiConsole.Clear();
         }

@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -30,7 +31,7 @@ namespace Helyx.Settings
 
                 if (authorized)
                 {
-                    UI.Info(GitHubCalls.GetUserGitHubInfo(GitHubCalls.InfoType.Username).GetAwaiter().GetResult() ?? $"[Red3_1]{Strings.Common_Unknown}[/]", Strings.GitHubAuth_Username);
+                    UI.Info(GitHubCalls.GetUserGitHubInfo(GitHubCalls.InfoType.Username).GetAwaiter().GetResult() ?? $"[{Color.Red3_1}]{Strings.Common_Unknown}[/]", Strings.GitHubAuth_Username);
 
                     if (GitHubCalls.HasOutdatedScopes)
                         UI.Warning(
@@ -42,14 +43,14 @@ namespace Helyx.Settings
 
                 var action = AnsiConsole.Prompt(
                     new SelectionPrompt<Action>()
-                    .Title($"[blue]{Strings.Settings_GitHubAuthorization}[/]")
+                    .Title($"[{Color.Blue}]{Strings.Settings_GitHubAuthorization}[/]")
                     .AddChoices(choices)
                     .UseConverter(x => x switch
                     {
                         Action.AuthorizeWithGitHub => Strings.GitHubAuth_Authorize,
-                        Action.ReauthorizeWithGitHub => $"[yellow]{Strings.GitHubAuth_Reauthorize}[/]",
+                        Action.ReauthorizeWithGitHub => $"[{Color.Yellow}]{Strings.GitHubAuth_Reauthorize}[/]",
                         Action.UnauthorizeFromGitHub => Strings.GitHubAuth_Unauthorize,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     }));
 

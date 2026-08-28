@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Shared;
 using Spectre.Console;
 using System.Diagnostics;
@@ -25,7 +26,7 @@ namespace Helyx.Projects
                         Action.OpenIn => Strings.Other_OpenIn,
                         Action.UserScripts => Strings.Other_UserScripts,
                         Action.BackupProject => Strings.Other_BackupProject,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     }));
 
@@ -61,7 +62,7 @@ namespace Helyx.Projects
                 .AddChoices(Enum.GetValues<OpenInAction>())
                 .UseConverter(x => x switch
                 {
-                    OpenInAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                    OpenInAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => x.ToString()
                 })
             );
@@ -128,7 +129,7 @@ namespace Helyx.Projects
             {
                 UI.Error(
                     Strings.Notes_ForeignAccount + "\n\n" +
-                    $"[grey]{Strings.Notes_EditorStaysClosed}[/]",
+                    $"[{Color.Grey}]{Strings.Notes_EditorStaysClosed}[/]",
                     Strings.Other_Notes);
                 Console.ReadKey();
                 return;

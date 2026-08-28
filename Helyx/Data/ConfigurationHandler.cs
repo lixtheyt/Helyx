@@ -3,6 +3,8 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Helyx.Shared;
+using Color = Spectre.Console.Color;
+
 
 namespace Helyx.Data
 {
@@ -68,7 +70,7 @@ namespace Helyx.Data
                 UI.Error(Strings.Config_ReadFailed + $"\n\n{ex.Message}" +
                          (kept == null
                              ? string.Empty
-                             : "\n\n[grey]" + string.Format(Strings.Config_KeptAs, Path.GetFileName(kept)) + "[/]"));
+                             : $"\n\n[{Color.Grey}]" + string.Format(Strings.Config_KeptAs, Path.GetFileName(kept)) + "[/]"));
 
                 config = null;
             }

@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Projects.Scripts;
 using Helyx.Data;
 using static Helyx.Projects.Scripts.Script.Block;
@@ -27,7 +28,7 @@ namespace Helyx.Projects
                         Action.EditScript => Strings.Scripts_EditScript,
                         Action.CreateScript => Strings.Scripts_Create,
                         Action.DeleteScript => Strings.Scripts_DeleteScript,
-                        Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     }));
 
@@ -73,7 +74,7 @@ namespace Helyx.Projects
                 new SelectionPrompt<Script?>()
                     .Title(Strings.Scripts_SelectToRun)
                     .AddChoices(scripts.Cast<Script?>().Append(null))
-                    .UseConverter(x => x == null ? $"[Red3_1]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
+                    .UseConverter(x => x == null ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
 
             if (script == null)
                 return;
@@ -83,7 +84,7 @@ namespace Helyx.Projects
                 .StartAsync(Strings.Scripts_Running, async ctx =>
                 {
                     AnsiConsole.Write(
-                        new Rule($"[bold Green3_1]{Strings.Scripts_Begun}[/]")
+                        new Rule($"[bold {Color.Green3_1}]{Strings.Scripts_Begun}[/]")
                         );
 
                     Task task = script.Run();
@@ -105,7 +106,7 @@ namespace Helyx.Projects
                 });
 
             AnsiConsole.Write(
-                new Rule($"[bold Red3_1]{Strings.Scripts_Ended}[/]")
+                new Rule($"[bold {Color.Red3_1}]{Strings.Scripts_Ended}[/]")
                 );
 
             UI.FlushInput();
@@ -128,7 +129,7 @@ namespace Helyx.Projects
                 new SelectionPrompt<Script?>()
                 .Title(Strings.Scripts_SelectToEdit)
                 .AddChoices(scripts.Cast<Script?>().Append(null))
-                .UseConverter(x => x == null ? $"[Red3_1]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
+                .UseConverter(x => x == null ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
 
             if (script == null)
                 return;
@@ -168,7 +169,7 @@ namespace Helyx.Projects
                 new SelectionPrompt<Script?>()
                 .Title(Strings.Scripts_SelectToDelete)
                 .AddChoices(scripts.Cast<Script?>().Append(null))
-                .UseConverter(x => x == null ? $"[Red3_1]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
+                .UseConverter(x => x == null ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]" : Markup.Escape(x.ScriptName)));
 
             if (script == null)
                 return;
@@ -228,7 +229,7 @@ namespace Helyx.Projects
                             InsideScriptAction.AddBlock => Strings.Scripts_AddBlock,
                             InsideScriptAction.EditBlock => Strings.Scripts_EditBlock,
                             InsideScriptAction.RemoveBlock => Strings.Scripts_RemoveBlock,
-                            InsideScriptAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            InsideScriptAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => x.ToString()
                         }));
 
@@ -274,8 +275,8 @@ namespace Helyx.Projects
                 .AddChoices(script.Blocks.Cast<Script.Block?>().Append(null))
                 .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
-                        _ => $"{x.Action.Name} [DarkSlateGray1][[{script.Blocks.IndexOf(x) + 1}]][/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
+                        _ => $"{x.Action.Name} [{Color.DarkSlateGray1}][[{script.Blocks.IndexOf(x) + 1}]][/]",
                     }
                 ));
 
@@ -290,8 +291,8 @@ namespace Helyx.Projects
                     .AddChoices(script.Blocks.Cast<Script.Block?>().Append(null))
                     .UseConverter(x => x switch
                         {
-                            null => $"[Red3_1]{Strings.Common_Back}[/]",
-                            _ => $"{x.Action.Name} [DarkSlateGray1][[{script.Blocks.IndexOf(x) + 1}]][/]",
+                            null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
+                            _ => $"{x.Action.Name} [{Color.DarkSlateGray1}][[{script.Blocks.IndexOf(x) + 1}]][/]",
                         }
                     ));
 
@@ -316,8 +317,8 @@ namespace Helyx.Projects
                 .AddColumn(new GridColumn().NoWrap().PadRight(2))
                 .AddColumn();
 
-            detailsGrid.AddRow($"[bold]{Strings.Scripts_Guid}[/]", $"[Grey]{script.ScriptGuid}[/]");
-            detailsGrid.AddRow($"[bold]{Strings.Scripts_BlockCount}[/]", $"[yellow]{script.Blocks.Count}[/]");
+            detailsGrid.AddRow($"[bold]{Strings.Scripts_Guid}[/]", $"[{Color.Grey}]{script.ScriptGuid}[/]");
+            detailsGrid.AddRow($"[bold]{Strings.Scripts_BlockCount}[/]", $"[{Color.Yellow}]{script.Blocks.Count}[/]");
 
             UI.Box(detailsGrid, script.ScriptName);
         }
@@ -334,19 +335,19 @@ namespace Helyx.Projects
                 new SelectionPrompt<IAction?>()
                     .Title(Strings.Common_SelectAction)!
                     .AddChoices(actions.Cast<IAction?>().Append(null))
-                    .UseConverter(x => x?.Name ?? $"[Red3_1]{Strings.Common_Back}[/]"));
+                    .UseConverter(x => x?.Name ?? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"));
         }
 
         private static void DrawTree(Script script)
         {
-            var tree = new Tree(new Panel($"[bold Green3_1]{Strings.Scripts_Start}[/]"));
+            var tree = new Tree(new Panel($"[bold {Color.Green3_1}]{Strings.Scripts_Start}[/]"));
             TreeNode node = null!;
 
             for (int i = 0; i < script.Blocks.Count; i++)
             {
                 var action = script.Blocks[i].Action;
 
-                IRenderable renderable = new Markup(TreeRendering.Describe(action) + $" [DarkSlateGray1][[{i + 1}]][/]");
+                IRenderable renderable = new Markup(TreeRendering.Describe(action) + $" [{Color.DarkSlateGray1}][[{i + 1}]][/]");
 
                 node = i == 0
                     ? tree.AddNode(renderable)
@@ -354,7 +355,7 @@ namespace Helyx.Projects
             }
 
             if (tree.Nodes.Count == 0)
-                tree.AddNode(new Panel($"[bold Red3_1]{Strings.Scripts_End}[/]"));
+                tree.AddNode(new Panel($"[bold {Color.Red3_1}]{Strings.Scripts_End}[/]"));
             else
             {
                 node = tree.Nodes.Last();
@@ -362,7 +363,7 @@ namespace Helyx.Projects
                 while (node.Nodes.Count > 0)
                     node = node.Nodes.Last();
 
-                node.AddNode(new Panel($"[bold Red3_1]{Strings.Scripts_End}[/]"));
+                node.AddNode(new Panel($"[bold {Color.Red3_1}]{Strings.Scripts_End}[/]"));
             }
 
             AnsiConsole.Write(tree);

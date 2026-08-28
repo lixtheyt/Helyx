@@ -14,14 +14,14 @@ namespace Helyx.Settings
             {
                 var action = AnsiConsole.Prompt(
                     new SelectionPrompt<Action>()
-                        .Title($"[blue]{Strings.Settings_ManageCustomStatuses}[/]")
+                        .Title($"[{Color.Blue}]{Strings.Settings_ManageCustomStatuses}[/]")
                         .AddChoices(Enum.GetValues<Action>())
                         .UseConverter(a => a switch
                         {
                             Action.AddCustomStatus => Strings.Statuses_Add,
                             Action.EditCustomStatus => Strings.Statuses_Edit,
                             Action.DeleteCustomStatus => Strings.Statuses_Delete,
-                            Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => a.ToString()
                         }));
                 switch (action)
@@ -105,7 +105,7 @@ namespace Helyx.Settings
                 .AddChoices(config.CustomStatuses.Keys.Cast<Guid?>().Append(null))
                 .UseConverter(x => x switch
                 {
-                    null => $"[Red3_1]{Strings.Common_Back}[/]",
+                    null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => Tags.Markup(config.CustomStatuses[(Guid)x], Markup.Escape(config.CustomStatuses[(Guid)x].Name))
                 })
             );
@@ -129,7 +129,7 @@ namespace Helyx.Settings
                     {
                         EditTagAction.EditName => Strings.Common_EditName,
                         EditTagAction.EditColor => Strings.Common_EditColor,
-                        EditTagAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                        EditTagAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     })
                 );
@@ -226,7 +226,7 @@ namespace Helyx.Settings
                 .AddChoices(config.CustomStatuses.Keys.Cast<Guid?>().Append(null))
                 .UseConverter(x => x switch
                 {
-                    null => $"[Red3_1]{Strings.Common_Back}[/]",
+                    null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => Tags.Markup(config.CustomStatuses[(Guid)x], Markup.Escape(config.CustomStatuses[(Guid)x].Name))
                 })
             );
@@ -244,7 +244,7 @@ namespace Helyx.Settings
                 new SelectionPrompt<Confirm>()
                 .Title(string.Format(Strings.Statuses_DeleteConfirm, $"'{label}'") +
                        (usedBy.Count > 0
-                           ? $"\n[grey]{string.Format(Strings.Statuses_UsedBy, usedBy.Count)}[/]"
+                           ? $"\n[{Color.Grey}]{string.Format(Strings.Statuses_UsedBy, usedBy.Count)}[/]"
                            : string.Empty))
                 .AddChoices(Enum.GetValues<Confirm>())
                 .UseConverter(UI.ConfirmName));

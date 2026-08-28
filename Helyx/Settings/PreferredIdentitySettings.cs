@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -26,7 +27,7 @@ namespace Helyx.Settings
                 new SelectionPrompt<PreferredIdentity?>()
                 .Title(Strings.Identity_Select)
                 .AddChoices(choices)
-                .UseConverter(x => x?.ToString() ?? $"[Red3_1]{Strings.Common_Back}[/]"));
+                .UseConverter(x => x?.ToString() ?? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"));
 
             AnsiConsole.Clear();
 

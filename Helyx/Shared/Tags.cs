@@ -118,7 +118,7 @@ namespace Helyx.Shared
                     .AddChoices(allColors.Select(c => (Color?)c.Color).Append(null))
                     .DefaultValue(defaultValue)
                     .UseConverter(x => x == null
-                        ? $"[Red3_1]{Strings.Common_Back}[/]"
+                        ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                         : $"[#{((Color)x).ToHex()}]{(names.TryGetValue((Color)x, out var name) ? name : ((Color)x).ToHex())}[/]"));
         }
     }

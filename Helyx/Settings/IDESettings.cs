@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
@@ -23,16 +24,16 @@ namespace Helyx.Settings
 
                 var ideChoice = AnsiConsole.Prompt(
                     new SelectionPrompt<IDE?>()
-                        .Title($"[blue]{Strings.Settings_IDE}[/]")
+                        .Title($"[{Color.Blue}]{Strings.Settings_IDE}[/]")
                         .AddChoices(ideChoices)
                         .UseConverter(choice => choice == null
-                            ? $"[Red3_1]{Strings.Common_Back}[/]"
+                            ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                             : choice + $" [[{foundCache[choice.Value] switch
                             {
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => "[green]✓[/]",
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => "[red]X[/]",
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => "[cyan]✓[/]",
-                                _ => $"[red]{Strings.Common_Unknown}[/]"
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => "[{Color.Green}]✓[/]",
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => "[{Color.Red}]X[/]",
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => "[{Color.Cyan}]✓[/]",
+                                _ => $"[{Color.Red}]{Strings.Common_Unknown}[/]"
                             }}]]"));
 
                 if (ideChoice == null)
@@ -49,15 +50,15 @@ namespace Helyx.Settings
 
                 statusGrid.AddRow($"[bold]{Strings.Common_Found}[/]", foundCache[selectedIDE] switch
                 {
-                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => $"[green]{Strings.Common_Found}[/]",
-                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => $"[red]{Strings.IDE_State_NotFound}[/]",
-                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => $"[cyan]{Strings.IDE_State_SetByUser}[/]",
-                    _ => $"[red]{Strings.Common_Unknown}[/]"
+                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => $"[{Color.Green}]{Strings.Common_Found}[/]",
+                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => $"[{Color.Red}]{Strings.IDE_State_NotFound}[/]",
+                    ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => $"[{Color.Cyan}]{Strings.IDE_State_SetByUser}[/]",
+                    _ => $"[{Color.Red}]{Strings.Common_Unknown}[/]"
                 });
 
                 if (foundCache[selectedIDE] == ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser
                     && ConfigurationHandler.GetConfig().IDEExecutables.TryGetValue(selectedIDE, out var executable))
-                    statusGrid.AddRow($"[bold]{Strings.Common_Path}[/]", $"[Yellow1]{Markup.Escape(executable.Path)}[/]");
+                    statusGrid.AddRow($"[bold]{Strings.Common_Path}[/]", $"[{Color.Yellow1}]{Markup.Escape(executable.Path)}[/]");
 
                 UI.Box(statusGrid, $"{selectedIDE}");
 
@@ -68,7 +69,7 @@ namespace Helyx.Settings
                         {
                             Action.SetAsDefaultIDE => Strings.IDE_SetDefault,
                             Action.ChangeIDEPath => Strings.IDE_ChangePath,
-                            Action.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                            Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => a.ToString()
                         })
                 );
@@ -80,7 +81,7 @@ namespace Helyx.Settings
                             return;
 
                         AnsiConsole.Clear();
-                        AnsiConsole.MarkupLine($"[green]{string.Format(Strings.IDE_Default_Set, selectedIDE)}[/]\n");
+                        AnsiConsole.MarkupLine($"[{Color.Green}]{string.Format(Strings.IDE_Default_Set, selectedIDE)}[/]\n");
                         break;
                     case Action.ChangeIDEPath:
                         var newExecutable = PickIDEExecutable();
@@ -95,12 +96,12 @@ namespace Helyx.Settings
                                 return;
 
                             AnsiConsole.Clear();
-                            AnsiConsole.MarkupLine($"[green]{string.Format(Strings.IDE_Path_Changed, Markup.Escape(newExecutable))}[/]\n");
+                            AnsiConsole.MarkupLine($"[{Color.Green}]{string.Format(Strings.IDE_Path_Changed, Markup.Escape(newExecutable))}[/]\n");
                         }
                         else
                         {
                             AnsiConsole.Clear();
-                            AnsiConsole.MarkupLine($"[red]{Strings.IDE_Path_Invalid}[/]\n");
+                            AnsiConsole.MarkupLine($"[{Color.Red}]{Strings.IDE_Path_Invalid}[/]\n");
                         }
 
                         break;

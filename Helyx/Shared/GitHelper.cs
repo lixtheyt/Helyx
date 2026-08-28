@@ -1,4 +1,5 @@
 using LibGit2Sharp;
+using Color = Spectre.Console.Color;
 
 namespace Helyx.Shared
 {
@@ -8,7 +9,7 @@ namespace Helyx.Shared
         {
             if (string.IsNullOrWhiteSpace(path) || !Directory.Exists(path))
             {
-                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[grey]{Spectre.Console.Markup.Escape(path ?? string.Empty)}[/]", title);
+                UI.Error(Strings.Common_ProjectFolderMissing + $"\n[{Color.Grey}]{Spectre.Console.Markup.Escape(path ?? string.Empty)}[/]", title);
                 Console.ReadKey();
                 return null;
             }
@@ -32,34 +33,34 @@ namespace Helyx.Shared
             }
         }
 
-        internal static (string color, string label) StatusColorLabel(FileStatus state) => state switch
+        internal static (Color color, string label) StatusColorLabel(FileStatus state) => state switch
         {
-            FileStatus.Unaltered => ("green", Strings.Git_Status_Clean),
+            FileStatus.Unaltered => (Color.Green, Strings.Git_Status_Clean),
 
-            FileStatus.NewInIndex => ("blue", Strings.Git_Status_StagedNew),
-            FileStatus.ModifiedInIndex => ("blue", Strings.Git_Status_StagedModified),
-            FileStatus.RenamedInIndex => ("blue", Strings.Git_Status_StagedRename),
-            FileStatus.TypeChangeInIndex => ("blue", Strings.Git_Status_StagedTypeChange),
-            FileStatus.DeletedFromIndex => ("darkblue", Strings.Git_Status_StagedDelete),
+            FileStatus.NewInIndex => (Color.Blue, Strings.Git_Status_StagedNew),
+            FileStatus.ModifiedInIndex => (Color.Blue, Strings.Git_Status_StagedModified),
+            FileStatus.RenamedInIndex => (Color.Blue, Strings.Git_Status_StagedRename),
+            FileStatus.TypeChangeInIndex => (Color.Blue, Strings.Git_Status_StagedTypeChange),
+            FileStatus.DeletedFromIndex => (Color.DarkBlue, Strings.Git_Status_StagedDelete),
 
-            FileStatus.NewInWorkdir => ("yellow", Strings.Git_Status_New),
-            FileStatus.ModifiedInWorkdir => ("yellow", Strings.Git_Status_Modified),
-            FileStatus.RenamedInWorkdir => ("yellow", Strings.Git_Status_Renamed),
-            FileStatus.TypeChangeInWorkdir => ("yellow", Strings.Git_Status_TypeChanged),
-            FileStatus.DeletedFromWorkdir => ("Orange1", Strings.Git_Status_Deleted),
+            FileStatus.NewInWorkdir => (Color.Yellow, Strings.Git_Status_New),
+            FileStatus.ModifiedInWorkdir => (Color.Yellow, Strings.Git_Status_Modified),
+            FileStatus.RenamedInWorkdir => (Color.Yellow, Strings.Git_Status_Renamed),
+            FileStatus.TypeChangeInWorkdir => (Color.Yellow, Strings.Git_Status_TypeChanged),
+            FileStatus.DeletedFromWorkdir => (Color.Orange1, Strings.Git_Status_Deleted),
 
-            FileStatus.ModifiedInIndex | FileStatus.ModifiedInWorkdir => ("yellow", Strings.Git_Status_StagedAndModified),
-            FileStatus.ModifiedInIndex | FileStatus.RenamedInIndex => ("yellow", Strings.Git_Status_StagedAndRenamed),
+            FileStatus.ModifiedInIndex | FileStatus.ModifiedInWorkdir => (Color.Yellow, Strings.Git_Status_StagedAndModified),
+            FileStatus.ModifiedInIndex | FileStatus.RenamedInIndex => (Color.Yellow, Strings.Git_Status_StagedAndRenamed),
 
-            FileStatus.Ignored => ("grey", Strings.Git_Status_Ignored),
-            FileStatus.Nonexistent => ("Grey19", Strings.Git_Status_Missing),
-            FileStatus.Unreadable => ("red", Strings.Git_Status_Unreadable),
-            FileStatus.Conflicted => ("darkred", Strings.Git_Status_Conflict),
+            FileStatus.Ignored => (Color.Grey, Strings.Git_Status_Ignored),
+            FileStatus.Nonexistent => (Color.Grey19, Strings.Git_Status_Missing),
+            FileStatus.Unreadable => (Color.Red, Strings.Git_Status_Unreadable),
+            FileStatus.Conflicted => (Color.DarkRed, Strings.Git_Status_Conflict),
 
             _ when IsStagedInIndex(state) && PendingLabel(state) is { } pending
-                => ("yellow", string.Format(Strings.Git_Status_StagedPlus, pending)),
+                => (Color.Yellow, string.Format(Strings.Git_Status_StagedPlus, pending)),
 
-            _ => ("Red3", $"{Strings.Git_Status_Unknown} --> {state}")
+            _ => (Color.Red3, $"{Strings.Git_Status_Unknown} --> {state}")
         };
 
         private static string? PendingLabel(FileStatus state) => state switch

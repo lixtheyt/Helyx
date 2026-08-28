@@ -17,10 +17,10 @@ namespace Helyx
 
             if (!ConfigurationHandler.ConfigExists)
             {
-                AnsiConsole.MarkupLine($"[red]{Strings.MainMenu_Config_NotFound}[/]\n[italic bold green]{Strings.MainMenu_Config_Creating}[/]");
+                AnsiConsole.MarkupLine($"[{Color.Red}]{Strings.MainMenu_Config_NotFound}[/]\n[italic bold {Color.Green}]{Strings.MainMenu_Config_Creating}[/]");
                 ConfigurationHandler.CreateConfig();
                 Thread.Sleep(1000);
-                AnsiConsole.MarkupLine($"[lightgreen]{Strings.MainMenu_Config_Created}[/]");
+                AnsiConsole.MarkupLine($"[{Color.LightGreen}]{Strings.MainMenu_Config_Created}[/]");
             }
 
             ConfigurationMigrator.CheckAndMergeConfig();
@@ -115,7 +115,7 @@ namespace Helyx
                 Strings.Common_ScopesMissing + "\n" +
                 $"[bold]{Markup.Escape(string.Join(", ", GitHubCalls.MissingScopes))}[/]\n\n" +
                 string.Format(Strings.MainMenu_Scopes_Hint,
-                    $"[bold]{Strings.Common_Settings}[/] [grey]>[/] [bold]{Strings.Settings_GitHubAuthorization}[/]"),
+                    $"[bold]{Strings.Common_Settings}[/] [{Color.Grey}]>[/] [bold]{Strings.Settings_GitHubAuthorization}[/]"),
                 Strings.Common_ScopesOutdated_Title);
 
             Console.WriteLine();

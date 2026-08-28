@@ -1,3 +1,4 @@
+using Color = Spectre.Console.Color;
 using System.Globalization;
 using Helyx.Data;
 using Helyx.Shared;
@@ -261,19 +262,19 @@ namespace Helyx.Projects
                     $"[bold]{Strings.Projects_Row_Topics}[/]",
                     githubRepo?.Topics is { } topics
                         ? topics.Count > 0
-                            ? string.Join(", ", topics.Select(x => $"[LightSteelBlue]<{Markup.Escape(x)}>[/]"))
-                            : $"[grey]{Strings.Common_None}[/]"
-                        : $"[red3_1]{Strings.Common_Unknown}[/]");
+                            ? string.Join(", ", topics.Select(x => $"[{Color.LightSteelBlue}]<{Markup.Escape(x)}>[/]"))
+                            : $"[{Color.Grey}]{Strings.Common_None}[/]"
+                        : $"[{Color.Red3_1}]{Strings.Common_Unknown}[/]");
 
             Row(
                 $"[bold]{Strings.Projects_Row_Languages}[/]",
                 wantsLanguages
                     ? githubRepo?.Languages is { } languages
                         ? string.Join(", ", languages.Keys)
-                        : $"[Red3_1]{Strings.Common_Unknown}[/]"
+                        : $"[{Color.Red3_1}]{Strings.Common_Unknown}[/]"
                     : project.UsedLanguages.Count > 0
                         ? string.Join(", ", project.UsedLanguages)
-                        : $"[grey]{Strings.Common_None}[/]");
+                        : $"[{Color.Grey}]{Strings.Common_None}[/]");
 
             rows = count;
 
@@ -286,7 +287,7 @@ namespace Helyx.Projects
             {
                 Back:
                 AnsiConsole.Clear();
-                AnsiConsole.Write(new Rule($"[blue bold]{Strings.Projects_Title}[/]").LeftJustified());
+                AnsiConsole.Write(new Rule($"[bold {Color.Blue}]{Strings.Projects_Title}[/]").LeftJustified());
                 AnsiConsole.WriteLine();
 
                 var allStatuses = Tags.AllStatuses();
@@ -306,11 +307,11 @@ namespace Helyx.Projects
                     .SearchPlaceholderText(Strings.Projects_Filter)
                     .UseConverter(x => x switch
                     {
-                        null => $"[Red3_1]{Strings.Common_Back}[/]",
-                        _ when ReferenceEquals(x, addNewProject) => $"[Aqua]{Strings.Projects_AddNew}[/]",
+                        null => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
+                        _ when ReferenceEquals(x, addNewProject) => $"[{Color.Aqua}]{Strings.Projects_AddNew}[/]",
                         _ when headerSentinels.Contains(x) =>
-                            $"{Tags.Markup(allStatuses[x.Status], "●")} [white]{Markup.Escape(allStatuses[x.Status].Name)}[/]",
-                        _ => $"[Gray58]{Markup.Escape(x.HelyxName)}[/]"
+                            $"{Tags.Markup(allStatuses[x.Status], "●")} [{Color.White}]{Markup.Escape(allStatuses[x.Status].Name)}[/]",
+                        _ => $"[{Color.Gray58}]{Markup.Escape(x.HelyxName)}[/]"
                     });
 
                 foreach (var group in projectsByStatus)
@@ -362,7 +363,7 @@ namespace Helyx.Projects
                 {
                     AnsiConsole.Clear();
 
-                    UI.Warning(string.Format(Strings.Projects_FolderNotFound, $"'{Markup.Escape(selected.HelyxName)}'") + $"\n[grey]{Markup.Escape(selected.Path)}[/]", Strings.Projects_Missing_Title);
+                    UI.Warning(string.Format(Strings.Projects_FolderNotFound, $"'{Markup.Escape(selected.HelyxName)}'") + $"\n[{Color.Grey}]{Markup.Escape(selected.Path)}[/]", Strings.Projects_Missing_Title);
 
                     var missing = AnsiConsole.Prompt(
                         new SelectionPrompt<MissingProjectAction>()
@@ -372,7 +373,7 @@ namespace Helyx.Projects
                             {
                                 MissingProjectAction.Search => Strings.Projects_SearchAuto,
                                 MissingProjectAction.Locate => Strings.Projects_LocateManually,
-                                MissingProjectAction.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                                MissingProjectAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                                 _ => x.ToString()
                             }));
 
@@ -492,7 +493,7 @@ namespace Helyx.Projects
                     config.Projects[guid] = project;
                     EditConfig(config);
 
-                    UI.Success(string.Format(Strings.Projects_Linked, $"'{Markup.Escape(selected.HelyxName)}'") + $"\n[grey]{Markup.Escape(newPath)}[/]", Strings.Projects_Found_Title);
+                    UI.Success(string.Format(Strings.Projects_Linked, $"'{Markup.Escape(selected.HelyxName)}'") + $"\n[{Color.Grey}]{Markup.Escape(newPath)}[/]", Strings.Projects_Found_Title);
                     Console.ReadKey();
                 }
 
@@ -513,7 +514,7 @@ namespace Helyx.Projects
                                 ProjectActionMenu.GitHub => Strings.Projects_Menu_GitHub,
                                 ProjectActionMenu.Manage => Strings.Projects_Menu_Manage,
                                 ProjectActionMenu.Other => Strings.Other_Title,
-                                ProjectActionMenu.Back => $"[Red3_1]{Strings.Common_Back}[/]",
+                                ProjectActionMenu.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                                 _ => x.ToString()
                             }));
 
@@ -653,18 +654,18 @@ namespace Helyx.Projects
                 .Spinner(Spinner.Known.Dots)
                 .Start(Strings.Projects_DetectingLanguages, ctx => language = GetLanguagesFromFolder(path));
 
-            AnsiConsole.Write(new Rule($"[cyan bold]{Strings.Projects_ConfirmDetails}[/]").LeftJustified());
+            AnsiConsole.Write(new Rule($"[bold {Color.Cyan}]{Strings.Projects_ConfirmDetails}[/]").LeftJustified());
             AnsiConsole.WriteLine();
 
             var confirmGrid = new Grid()
                 .AddColumn(new GridColumn().NoWrap().PadRight(2))
                 .AddColumn();
 
-            confirmGrid.AddRow($"[bold]{Strings.Projects_Row_ProjectName}[/]", $"[blue]{Markup.Escape(projectName)}[/]");
-            confirmGrid.AddRow($"[bold]{Strings.Common_Path}[/]", $"[green]{Markup.Escape(path)}[/]");
+            confirmGrid.AddRow($"[bold]{Strings.Projects_Row_ProjectName}[/]", $"[{Color.Blue}]{Markup.Escape(projectName)}[/]");
+            confirmGrid.AddRow($"[bold]{Strings.Common_Path}[/]", $"[{Color.Green}]{Markup.Escape(path)}[/]");
             confirmGrid.AddRow($"[bold]{Strings.Projects_Row_Languages}[/]", string.IsNullOrWhiteSpace(language)
-                ? $"[grey]{Strings.Projects_NoneDetected}[/]"
-                : $"[yellow]{language}[/]");
+                ? $"[{Color.Grey}]{Strings.Projects_NoneDetected}[/]"
+                : $"[{Color.Yellow}]{language}[/]");
 
             UI.Box(confirmGrid, "");
 

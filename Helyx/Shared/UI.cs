@@ -288,7 +288,7 @@ namespace Helyx.Shared
         internal static string MarkdownToMarkup(string? markdown, Guid guid)
         {
             if (string.IsNullOrWhiteSpace(markdown))
-                return $"[italic grey]{Strings.GH_NoDescription}[/]";
+                return $"[italic {Color.Grey}]{Strings.GH_NoDescription}[/]";
 
             var username = GitHubCalls.GetCachedUsername().GetAwaiter().GetResult();
             var repoName = ConfigurationHandler.GetProject(guid).GitHubName;
@@ -314,17 +314,17 @@ namespace Helyx.Shared
                     return RenderInline(paragraph.Inline, repoUrl) + "\n\n";
 
                 case QuoteBlock quote:
-                    return Prefix(string.Join("", quote.Select(x => RenderBlock(x, repoUrl))).TrimEnd('\n'), "[grey]│[/] ") + "\n\n";
+                    return Prefix(string.Join("", quote.Select(x => RenderBlock(x, repoUrl))).TrimEnd('\n'), $"[{Color.Grey}]│[/] ") + "\n\n";
 
                 case ListBlock list:
                     return string.Join("", list.Select((x, i) =>
                         Prefix(RenderBlock(x, repoUrl).TrimEnd('\n'), list.IsOrdered ? $"  {i + 1}. " : "  • ", "     ") + "\n")) + "\n";
 
                 case CodeBlock code:
-                    return Prefix(Markup.Escape(code.Lines.ToString()), "[grey50]▏[/] ") + "\n\n";
+                    return Prefix(Markup.Escape(code.Lines.ToString()), $"[{Color.Grey50}]▏[/] ") + "\n\n";
 
                 case ThematicBreakBlock:
-                    return "[grey]────────────[/]\n\n";
+                    return $"[{Color.Grey}]────────────[/]\n\n";
 
                 default:
                     return "";
@@ -361,9 +361,9 @@ namespace Helyx.Shared
                             (_, 2) => "bold",
                             _ => "italic"
                         }),
-                    LinkInline { IsImage: true } image => $"[grey](image: {Markup.Escape(image.Url ?? "")})[/]",
+                    LinkInline { IsImage: true } image => $"[{Color.Grey}](image: {Markup.Escape(image.Url ?? "")})[/]",
                     LinkInline link => Link(link.Url, RenderInline(link, repoUrl)),
-                    TaskList task => task.Checked ? "[green]☑[/]" : "☐",
+                    TaskList task => task.Checked ? $"[{Color.Green}]☑[/]" : "☐",
                     AutolinkInline autolink => Link(autolink.Url, Markup.Escape(autolink.Url ?? "")),
                     LineBreakInline => "\n",
                     _ => ""
@@ -375,12 +375,12 @@ namespace Helyx.Shared
         private static string Linkify(string text, string? repoUrl)
         {
             text = MentionPattern.Replace(text,
-                x => Link($"https://github.com/{x.Groups[1].Value}", $"[SteelBlue1]@{x.Groups[1].Value}[/]"));
+                x => Link($"https://github.com/{x.Groups[1].Value}", $"[{Color.SteelBlue1}]@{x.Groups[1].Value}[/]"));
 
             return repoUrl == null
                 ? text
                 : ReferencePattern.Replace(text,
-                    x => Link($"{repoUrl}/issues/{x.Groups[1].Value}", $"[SteelBlue1]#{x.Groups[1].Value}[/]"));
+                    x => Link($"{repoUrl}/issues/{x.Groups[1].Value}", $"[{Color.SteelBlue1}]#{x.Groups[1].Value}[/]"));
         }
 
         internal static IRenderable SafeMarkup(string message, Style? style = null)
