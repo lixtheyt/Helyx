@@ -8,8 +8,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-10-512BD4.svg)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#run-it-locally)
-[![Languages](https://img.shields.io/badge/languages-8-green.svg)](#helyx-speaks-your-language)<!-- HELYX_STATUS_START -->
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#build-it-yourself)
+[![Languages](https://img.shields.io/badge/languages-8-green.svg)](#languages-support)<!-- HELYX_STATUS_START -->
 ![Status](https://img.shields.io/badge/status-Active-008000)<!-- HELYX_STATUS_END --><!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_START -->
 ![Badge](https://img.shields.io/badge/stardance_project-FFFF00)
 <!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_END -->
@@ -39,7 +39,7 @@
     - [Status in README](#status-in-readme)
 - [Everything else](#everything-else)
 - [Languages support](#languages-support)
-- [Run it locally](#run-it-locally)
+- [Build it yourself](#build-it-yourself)
 - [How it works](#how-it-works)
 - [Credits](#credits)
 - [License](#license)
@@ -266,7 +266,7 @@ This improves the user experience because Helyx is made for everyone.
 
 ![Languages](Helyx/assets/languages.gif)
 
-## Run it locally
+## Build it yourself
 
 You need Windows and [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Nothing
 else.
