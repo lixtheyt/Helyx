@@ -2826,8 +2826,6 @@ namespace Helyx.Projects
                             return;
                         }
 
-                        var newline = content.Contains("\r\n") ? "\r\n" : "\n";
-
                         var shield = $"![Status](https://img.shields.io/badge/status-{ShieldsEscape(Tags.ShieldName(statusGuid, status))}-{Tags.SafeHex(status.Hex)})";
 
                         var newContent = content[..(startIndex + start.Length)] + shield + content[endIndex..];
@@ -3004,8 +3002,6 @@ namespace Helyx.Projects
                         string newContent = content;
 
                         var definitions = Tags.AllBadges();
-
-                        var newline = content.Contains("\r\n") ? "\r\n" : "\n";
 
                         foreach (var badgeGuid in allBadges)
                         {
