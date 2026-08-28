@@ -30,9 +30,9 @@ namespace Helyx.Settings
                             ? $"[{Color.Red3_1}]{Strings.Common_Back}[/]"
                             : choice + $" [[{foundCache[choice.Value] switch
                             {
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => "[{Color.Green}]✓[/]",
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => "[{Color.Red}]X[/]",
-                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => "[{Color.Cyan}]✓[/]",
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => $"[{Color.Green}]✓[/]",
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => $"[{Color.Red}]X[/]",
+                                ConfigurationFile.IDEExecutablesClass.TypesOfFound.SetByUser => $"[{Color.Cyan}]✓[/]",
                                 _ => $"[{Color.Red}]{Strings.Common_Unknown}[/]"
                             }}]]"));
 

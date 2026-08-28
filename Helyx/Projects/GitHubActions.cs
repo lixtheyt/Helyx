@@ -290,7 +290,7 @@ namespace Helyx.Projects
                                             ("closed", "not_planned") => $"[{Color.LightSteelBlue}]● {Strings.GH_State_NotPlanned}[/]",
                                             _ => Strings.Common_Unknown
                                         },
-                                        $"{(issue.Locked ? "[{Color.Green3_1}]✓[/]" : "[{Color.Red3_1}]✗[/]")}",
+                                        $"{(issue.Locked ? $"[{Color.Green3_1}]✓[/]" : $"[{Color.Red3_1}]✗[/]")}",
                                         Markup.Escape(issue.Title ?? ""),
                                         issue.Labels.Count > 0
                                             ? string.Join(", ", issue.Labels.Select(x => $"[#{Tags.SafeHex(x.Color)}]{Markup.Escape(x.Name!)}[/]"))
@@ -539,7 +539,7 @@ namespace Helyx.Projects
                                ("closed", "not_planned") => $"[{Color.LightSteelBlue}]● {Strings.GH_State_NotPlanned}[/]",
                                _ => Strings.Common_Unknown
                            })
-                           .AddRow($"[{Color.Grey}]{Strings.GH_Col_Locked}[/]", $"{(selectedIssue.Locked ? "[{Color.Green3_1}]✓[/]" : "[{Color.Red3_1}]✗[/]")}")
+                           .AddRow($"[{Color.Grey}]{Strings.GH_Col_Locked}[/]", $"{(selectedIssue.Locked ? $"[{Color.Green3_1}]✓[/]" : $"[{Color.Red3_1}]✗[/]")}")
                            .AddRow($"[{Color.Grey}]{Strings.GH_Row_Author}[/]", $"{UI.Link(selectedIssue.User?.HtmlUrl ?? "https://github.com", selectedIssue.User?.Login ?? Strings.GH_UnknownAuthor)}")
                            .AddRow($"[{Color.Grey}]{Strings.GH_Row_Opened}[/]", selectedIssue.CreatedAt.ToString("g", CultureInfo.CurrentCulture))
                            .AddRow($"[{Color.Grey}]{Strings.GH_Col_Labels}[/]", selectedIssue.Labels.Count > 0
@@ -2236,7 +2236,7 @@ namespace Helyx.Projects
                                 rootLayout2["Comments"].Update(new Panel(content.Length == 0
                                          ? $"[italic {Color.Grey}]{Strings.GH_WriteHint}[/]"
                                          : Markup.Escape(content.ToString(0, cursorPos)) +
-                                     "[{Color.SkyBlue1}]|[/]" +
+                                     $"[{Color.SkyBlue1}]|[/]" +
                                      Markup.Escape(content.ToString(cursorPos, content.Length - cursorPos)))
                                 .Header($"⠀[{Color.White}]{Markup.Escape(title)}[/]⠀")
                                 .BorderColor(Color.SkyBlue1)
@@ -3221,7 +3221,7 @@ namespace Helyx.Projects
                         var grid = new Grid().AddColumn();
 
                         for (var i = scroll; i < Math.Min(scroll + height, rows.Count); i++)
-                            grid.AddRow($"{(i == selected ? "[{Color.Aqua}]▸[/]" : " ")} [{Color.Grey}]{(i + 1).ToString().PadLeft(numberWidth)} │[/] {rows[i].Markup}");
+                            grid.AddRow($"{(i == selected ? $"[{Color.Aqua}]▸[/]" : " ")} [{Color.Grey}]{(i + 1).ToString().PadLeft(numberWidth)} │[/] {rows[i].Markup}");
 
                         layout["List"].Update(new Panel(grid)
                             .RoundedBorder()
