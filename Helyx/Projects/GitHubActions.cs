@@ -2828,9 +2828,9 @@ namespace Helyx.Projects
 
                         var newline = content.Contains("\r\n") ? "\r\n" : "\n";
 
-                        var shield = $"{newline}![Status](https://img.shields.io/badge/status-{ShieldsEscape(Tags.ShieldName(statusGuid, status))}-{Tags.SafeHex(status.Hex)})";
+                        var shield = $"![Status](https://img.shields.io/badge/status-{ShieldsEscape(Tags.ShieldName(statusGuid, status))}-{Tags.SafeHex(status.Hex)})";
 
-                        var newContent = content[..(startIndex + start.Length)] + shield + newline + content[endIndex..];
+                        var newContent = content[..(startIndex + start.Length)] + shield + content[endIndex..];
 
                         if (newContent == content)
                             return;
@@ -3026,9 +3026,9 @@ namespace Helyx.Projects
 
                             var shield = badge == null || clear.Contains(badgeGuid)
                                 ? string.Empty
-                                : $"{newline}![Badge](https://img.shields.io/badge/{ShieldsEscape(badge.Name)}-{Tags.SafeHex(badge.Hex)})";
+                                : $"![Badge](https://img.shields.io/badge/{ShieldsEscape(badge.Name)}-{Tags.SafeHex(badge.Hex)})";
 
-                            newContent = newContent[..(startIndex + start.Length)] + shield + newline + newContent[endIndex..];
+                            newContent = newContent[..(startIndex + start.Length)] + shield + newContent[endIndex..];
                         }
 
                         if (newContent == content)
@@ -3146,17 +3146,14 @@ namespace Helyx.Projects
 
             for (var i = 0; i < lines.Count;)
             {
-                var trimmed = lines[i].Trim();
+                var opening = lines[i].IndexOf("<!-- HELYX_", StringComparison.Ordinal);
+                var closing = opening < 0 ? -1 : lines[i].IndexOf("_START -->", opening, StringComparison.Ordinal);
 
-                var name = trimmed.Length > 21 &&
-                           trimmed.StartsWith("<!-- HELYX_", StringComparison.Ordinal) &&
-                           trimmed.EndsWith("_START -->", StringComparison.Ordinal)
-                    ? trimmed[11..^10]
-                    : null;
+                var name = closing > 0 ? lines[i][(opening + 11)..closing] : null;
 
                 var close = name == null
                     ? -1
-                    : lines.FindIndex(i, x => x.Trim() == $"<!-- HELYX_{name}_END -->");
+                    : lines.FindIndex(i, x => x.Contains($"<!-- HELYX_{name}_END -->", StringComparison.Ordinal));
 
                 if (name == null || close < 0)
                 {
@@ -3165,10 +3162,14 @@ namespace Helyx.Projects
                     continue;
                 }
 
-                rows.Add((-1, false, ShieldMarkup(name, definitions, lines
-                        .Skip(i + 1)
-                        .Take(close - i - 1)
-                        .FirstOrDefault(x => x.Contains("img.shields.io/badge/"))) ?? $"[{Color.Grey35}]{Markup.Escape(trimmed)}[/]",
+                var before = lines[i][..opening].TrimEnd();
+
+                var shield = ShieldMarkup(name, definitions, lines
+                    .Skip(i)
+                    .Take(close - i + 1)
+                    .FirstOrDefault(x => x.Contains("img.shields.io/badge/"))) ?? $"[{Color.Grey35}]{Markup.Escape($"<!-- HELYX_{name} -->")}[/]";
+
+                rows.Add((-1, false, before.Length > 0 ? $"{Markup.Escape(before)} {shield}" : shield,
                     lines.Skip(i).Take(close - i + 1).ToArray()));
 
                 i = close + 1;
@@ -3323,8 +3324,12 @@ namespace Helyx.Projects
             foreach (var row in rows)
                 if (row.Tag >= 0)
                 {
-                    rebuilt.Add(missing[row.Tag].Start);
-                    rebuilt.Add(missing[row.Tag].End);
+                    var pair = missing[row.Tag].Start + missing[row.Tag].End;
+
+                    if (rebuilt.Count > 0 && rebuilt[^1].Trim().Length > 0)
+                        rebuilt[^1] += pair;
+                    else
+                        rebuilt.Add(pair);
                 }
                 else
                     rebuilt.AddRange(row.Lines);
