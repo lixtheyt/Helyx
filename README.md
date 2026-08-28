@@ -13,7 +13,6 @@
 ![Status](https://img.shields.io/badge/status-Active-008000)
 <!-- HELYX_STATUS_END -->
 <!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_START -->
-![Badge](https://img.shields.io/badge/stardance-FFFF00)
 <!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_END -->
 
 ![Helyx](Helyx/assets/hero.gif)
