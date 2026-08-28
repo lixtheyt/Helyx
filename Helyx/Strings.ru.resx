@@ -3207,4 +3207,64 @@
   <data name="GH_NoDescription" xml:space="preserve">
     <value>Описание не указано.</value>
   </data>
+  <data name="GH_Event_Labeled" xml:space="preserve">
+    <value>добавил метку {0}</value>
+  </data>
+  <data name="GH_Event_Unlabeled" xml:space="preserve">
+    <value>убрал метку {0}</value>
+  </data>
+  <data name="GH_Event_Closed" xml:space="preserve">
+    <value>закрыл это</value>
+  </data>
+  <data name="GH_Event_Reopened" xml:space="preserve">
+    <value>снова открыл это</value>
+  </data>
+  <data name="GH_Event_Assigned" xml:space="preserve">
+    <value>назначил {0}</value>
+  </data>
+  <data name="GH_Event_Unassigned" xml:space="preserve">
+    <value>снял назначение с {0}</value>
+  </data>
+  <data name="GH_Event_Renamed" xml:space="preserve">
+    <value>изменил заголовок на {0}</value>
+  </data>
+  <data name="GH_Event_Milestoned" xml:space="preserve">
+    <value>добавил это в веху {0}</value>
+  </data>
+  <data name="GH_Event_Demilestoned" xml:space="preserve">
+    <value>убрал это из вехи {0}</value>
+  </data>
+  <data name="GH_Event_Locked" xml:space="preserve">
+    <value>заблокировал это обсуждение</value>
+  </data>
+  <data name="GH_Event_Unlocked" xml:space="preserve">
+    <value>разблокировал это обсуждение</value>
+  </data>
+  <data name="GH_Event_Merged" xml:space="preserve">
+    <value>выполнил слияние</value>
+  </data>
+  <data name="GH_Event_Referenced" xml:space="preserve">
+    <value>сослался на это в коммите</value>
+  </data>
+  <data name="GH_Event_Pinned" xml:space="preserve">
+    <value>закрепил это</value>
+  </data>
+  <data name="GH_Event_Unpinned" xml:space="preserve">
+    <value>открепил это</value>
+  </data>
+  <data name="GH_Event_ReviewRequested" xml:space="preserve">
+    <value>запросил ревью</value>
+  </data>
+  <data name="GH_Event_ReviewRequestRemoved" xml:space="preserve">
+    <value>отозвал запрос на ревью</value>
+  </data>
+  <data name="GH_Event_HeadRefDeleted" xml:space="preserve">
+    <value>удалил ветку</value>
+  </data>
+  <data name="GH_Event_HeadRefForcePushed" xml:space="preserve">
+    <value>принудительно обновил ветку</value>
+  </data>
+  <data name="GH_Event_HeadRefRestored" xml:space="preserve">
+    <value>восстановил ветку</value>
+  </data>
 </root>

@@ -3207,4 +3207,64 @@ etwa ein 'edit' oder 'reword' in einem interaktiven Rebase.</value>
   <data name="GH_NoDescription" xml:space="preserve">
     <value>Keine Beschreibung angegeben.</value>
   </data>
+  <data name="GH_Event_Labeled" xml:space="preserve">
+    <value>hat die Bezeichnung {0} hinzugefügt</value>
+  </data>
+  <data name="GH_Event_Unlabeled" xml:space="preserve">
+    <value>hat die Bezeichnung {0} entfernt</value>
+  </data>
+  <data name="GH_Event_Closed" xml:space="preserve">
+    <value>hat dies geschlossen</value>
+  </data>
+  <data name="GH_Event_Reopened" xml:space="preserve">
+    <value>hat dies wieder geöffnet</value>
+  </data>
+  <data name="GH_Event_Assigned" xml:space="preserve">
+    <value>hat {0} zugewiesen</value>
+  </data>
+  <data name="GH_Event_Unassigned" xml:space="preserve">
+    <value>hat die Zuweisung von {0} entfernt</value>
+  </data>
+  <data name="GH_Event_Renamed" xml:space="preserve">
+    <value>hat den Titel zu {0} geändert</value>
+  </data>
+  <data name="GH_Event_Milestoned" xml:space="preserve">
+    <value>hat dies zum Meilenstein {0} hinzugefügt</value>
+  </data>
+  <data name="GH_Event_Demilestoned" xml:space="preserve">
+    <value>hat dies aus dem Meilenstein {0} entfernt</value>
+  </data>
+  <data name="GH_Event_Locked" xml:space="preserve">
+    <value>hat diese Unterhaltung gesperrt</value>
+  </data>
+  <data name="GH_Event_Unlocked" xml:space="preserve">
+    <value>hat diese Unterhaltung entsperrt</value>
+  </data>
+  <data name="GH_Event_Merged" xml:space="preserve">
+    <value>hat dies zusammengeführt</value>
+  </data>
+  <data name="GH_Event_Referenced" xml:space="preserve">
+    <value>hat dies in einem Commit erwähnt</value>
+  </data>
+  <data name="GH_Event_Pinned" xml:space="preserve">
+    <value>hat dies angeheftet</value>
+  </data>
+  <data name="GH_Event_Unpinned" xml:space="preserve">
+    <value>hat dies losgelöst</value>
+  </data>
+  <data name="GH_Event_ReviewRequested" xml:space="preserve">
+    <value>hat eine Überprüfung angefordert</value>
+  </data>
+  <data name="GH_Event_ReviewRequestRemoved" xml:space="preserve">
+    <value>hat die Überprüfungsanfrage zurückgezogen</value>
+  </data>
+  <data name="GH_Event_HeadRefDeleted" xml:space="preserve">
+    <value>hat den Branch gelöscht</value>
+  </data>
+  <data name="GH_Event_HeadRefForcePushed" xml:space="preserve">
+    <value>hat den Branch force-gepusht</value>
+  </data>
+  <data name="GH_Event_HeadRefRestored" xml:space="preserve">
+    <value>hat den Branch wiederhergestellt</value>
+  </data>
 </root>

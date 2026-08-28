@@ -1,14 +1,12 @@
 using System.IO.Compression;
-using System.IO;
 using System.Text.Json.Serialization;
-using Helyx;
-using Helyx.Data;
 using LibGit2Sharp;
 using Spectre.Console;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
+using Helyx.Projects;
 using TextCopy;
 using Helyx.Shared;
 
@@ -541,6 +539,26 @@ namespace Helyx.Data
             }
         }
 
+        internal static async Task<List<GitHubEvent>?> GetAllEvents(Guid guid, int issueNumber)
+        {
+            var url = $"{await RepoUrl(guid)}/issues/{issueNumber}/events?per_page=100&page=";
+
+            List<GitHubEvent> events = new();
+
+            for (int page = 1; ; page++)
+            {
+                var batch = await GetJsonAsync<GitHubEvent[]>(url + page);
+
+                if (batch == null)
+                    return null;
+
+                events.AddRange(batch);
+
+                if (batch.Length < 100)
+                    return events;
+            }
+        }
+
         internal static async Task<(GitHubComment? Result, string? Error)> CommentOnIssue(Guid guid, int issueNumber, string content) =>
             await SendJsonAsync<GitHubComment>(HttpMethod.Post,
                 $"{await RepoUrl(guid)}/issues/{issueNumber}/comments", new { body = content });
@@ -997,6 +1015,42 @@ namespace Helyx.Data
 
         [JsonPropertyName("assignee")]
         public GitHubUser? Assignee { get; set; }
+    }
+
+    internal class GitHubEvent
+    {
+        [JsonPropertyName("event")]
+        public string? Event { get; set; }
+
+        [JsonPropertyName("actor")]
+        public GitHubUser? Actor { get; set; }
+
+        [JsonPropertyName("created_at")]
+        public DateTimeOffset CreatedAt { get; set; }
+
+        [JsonPropertyName("label")]
+        public GitHubLabel? Label { get; set; }
+
+        [JsonPropertyName("assignee")]
+        public GitHubUser? Assignee { get; set; }
+
+        [JsonPropertyName("milestone")]
+        public GitHubMilestone? Milestone { get; set; }
+
+        [JsonPropertyName("rename")]
+        public GitHubRename? Rename { get; set; }
+
+        [JsonPropertyName("lock_reason")]
+        public string? LockReason { get; set; }
+    }
+
+    internal class GitHubRename
+    {
+        [JsonPropertyName("from")]
+        public string? From { get; set; }
+
+        [JsonPropertyName("to")]
+        public string? To { get; set; }
     }
 
     internal class GitHubUser

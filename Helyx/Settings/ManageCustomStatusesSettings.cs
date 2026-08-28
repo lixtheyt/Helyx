@@ -1,7 +1,6 @@
 using Helyx.Data;
 using Helyx.Projects;
 using Helyx.Shared;
-using LibGit2Sharp;
 using Spectre.Console;
 using Color = Spectre.Console.Color;
 

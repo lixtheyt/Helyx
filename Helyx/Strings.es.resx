@@ -3207,4 +3207,64 @@ como un 'edit' o 'reword' en un rebase interactivo.</value>
   <data name="GH_NoDescription" xml:space="preserve">
     <value>Sin descripción.</value>
   </data>
+  <data name="GH_Event_Labeled" xml:space="preserve">
+    <value>añadió la etiqueta {0}</value>
+  </data>
+  <data name="GH_Event_Unlabeled" xml:space="preserve">
+    <value>quitó la etiqueta {0}</value>
+  </data>
+  <data name="GH_Event_Closed" xml:space="preserve">
+    <value>cerró esto</value>
+  </data>
+  <data name="GH_Event_Reopened" xml:space="preserve">
+    <value>reabrió esto</value>
+  </data>
+  <data name="GH_Event_Assigned" xml:space="preserve">
+    <value>asignó a {0}</value>
+  </data>
+  <data name="GH_Event_Unassigned" xml:space="preserve">
+    <value>desasignó a {0}</value>
+  </data>
+  <data name="GH_Event_Renamed" xml:space="preserve">
+    <value>cambió el título a {0}</value>
+  </data>
+  <data name="GH_Event_Milestoned" xml:space="preserve">
+    <value>añadió esto al hito {0}</value>
+  </data>
+  <data name="GH_Event_Demilestoned" xml:space="preserve">
+    <value>quitó esto del hito {0}</value>
+  </data>
+  <data name="GH_Event_Locked" xml:space="preserve">
+    <value>bloqueó esta conversación</value>
+  </data>
+  <data name="GH_Event_Unlocked" xml:space="preserve">
+    <value>desbloqueó esta conversación</value>
+  </data>
+  <data name="GH_Event_Merged" xml:space="preserve">
+    <value>fusionó esto</value>
+  </data>
+  <data name="GH_Event_Referenced" xml:space="preserve">
+    <value>hizo referencia a esto en un commit</value>
+  </data>
+  <data name="GH_Event_Pinned" xml:space="preserve">
+    <value>fijó esto</value>
+  </data>
+  <data name="GH_Event_Unpinned" xml:space="preserve">
+    <value>dejó de fijar esto</value>
+  </data>
+  <data name="GH_Event_ReviewRequested" xml:space="preserve">
+    <value>solicitó una revisión</value>
+  </data>
+  <data name="GH_Event_ReviewRequestRemoved" xml:space="preserve">
+    <value>retiró la solicitud de revisión</value>
+  </data>
+  <data name="GH_Event_HeadRefDeleted" xml:space="preserve">
+    <value>eliminó la rama</value>
+  </data>
+  <data name="GH_Event_HeadRefForcePushed" xml:space="preserve">
+    <value>forzó el push de la rama</value>
+  </data>
+  <data name="GH_Event_HeadRefRestored" xml:space="preserve">
+    <value>restauró la rama</value>
+  </data>
 </root>

@@ -1,5 +1,4 @@
 using static Helyx.Data.ConfigurationHandler;
-using Helyx.Data;
 using Spectre.Console;
 using System.Reflection;
 using System.Text.Json;

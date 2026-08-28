@@ -3207,4 +3207,64 @@ comme un 'edit' ou un 'reword' dans un rebase interactif.</value>
   <data name="GH_NoDescription" xml:space="preserve">
     <value>Aucune description fournie.</value>
   </data>
+  <data name="GH_Event_Labeled" xml:space="preserve">
+    <value>a ajouté l'étiquette {0}</value>
+  </data>
+  <data name="GH_Event_Unlabeled" xml:space="preserve">
+    <value>a retiré l'étiquette {0}</value>
+  </data>
+  <data name="GH_Event_Closed" xml:space="preserve">
+    <value>a fermé ceci</value>
+  </data>
+  <data name="GH_Event_Reopened" xml:space="preserve">
+    <value>a rouvert ceci</value>
+  </data>
+  <data name="GH_Event_Assigned" xml:space="preserve">
+    <value>a assigné {0}</value>
+  </data>
+  <data name="GH_Event_Unassigned" xml:space="preserve">
+    <value>a retiré l'assignation de {0}</value>
+  </data>
+  <data name="GH_Event_Renamed" xml:space="preserve">
+    <value>a changé le titre en {0}</value>
+  </data>
+  <data name="GH_Event_Milestoned" xml:space="preserve">
+    <value>a ajouté ceci au jalon {0}</value>
+  </data>
+  <data name="GH_Event_Demilestoned" xml:space="preserve">
+    <value>a retiré ceci du jalon {0}</value>
+  </data>
+  <data name="GH_Event_Locked" xml:space="preserve">
+    <value>a verrouillé cette conversation</value>
+  </data>
+  <data name="GH_Event_Unlocked" xml:space="preserve">
+    <value>a déverrouillé cette conversation</value>
+  </data>
+  <data name="GH_Event_Merged" xml:space="preserve">
+    <value>a fusionné ceci</value>
+  </data>
+  <data name="GH_Event_Referenced" xml:space="preserve">
+    <value>a référencé ceci dans un commit</value>
+  </data>
+  <data name="GH_Event_Pinned" xml:space="preserve">
+    <value>a épinglé ceci</value>
+  </data>
+  <data name="GH_Event_Unpinned" xml:space="preserve">
+    <value>a désépinglé ceci</value>
+  </data>
+  <data name="GH_Event_ReviewRequested" xml:space="preserve">
+    <value>a demandé une revue</value>
+  </data>
+  <data name="GH_Event_ReviewRequestRemoved" xml:space="preserve">
+    <value>a retiré la demande de revue</value>
+  </data>
+  <data name="GH_Event_HeadRefDeleted" xml:space="preserve">
+    <value>a supprimé la branche</value>
+  </data>
+  <data name="GH_Event_HeadRefForcePushed" xml:space="preserve">
+    <value>a forcé le push de la branche</value>
+  </data>
+  <data name="GH_Event_HeadRefRestored" xml:space="preserve">
+    <value>a restauré la branche</value>
+  </data>
 </root>

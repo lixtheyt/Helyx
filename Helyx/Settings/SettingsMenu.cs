@@ -1,15 +1,9 @@
-using Helyx.Projects;
-using Helyx.Settings;
-using Color = Spectre.Console.Color;
 using Helyx.Data;
-using Helyx.Projects.Scripts;
-using Spectre.Console;
-using System.Diagnostics;
-using System.Reflection;
-using System.Text.RegularExpressions;
+using Helyx.Projects;
 using Helyx.Shared;
+using Spectre.Console;
 
-namespace Helyx
+namespace Helyx.Settings
 {
     internal static class SettingsMenu
     {

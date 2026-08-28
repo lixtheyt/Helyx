@@ -434,6 +434,7 @@ namespace Helyx.Projects
                 List<string> commentBodies = new();
                 List<int[]> commentLineHeights = new();
                 List<GitHubComment?> commentData = new();
+                List<GitHubEvent?> eventData = new();
 
                 var originalBody = UI.MarkdownToMarkup(selectedIssue.Body, guid);
 
@@ -448,17 +449,42 @@ namespace Helyx.Projects
                 commentBodies.Add(originalBody);
                 commentLineHeights.Add(MeasureLines(originalBody));
                 commentData.Add(null);
+                eventData.Add(null);
 
                 List<GitHubComment>? comments = null;
+                List<GitHubEvent>? events = null;
 
                 await AnsiConsole.Status()
                     .Spinner(Spinner.Known.Dots)
                     .StartAsync(Strings.GH_RetrievingComments, async ctx =>
                     {
                         comments = await GitHubCalls.GetAllComments(guid, selectedIssue.Number);
+                        events = await GitHubCalls.GetAllEvents(guid, selectedIssue.Number);
 
-                        (comments ?? []).ForEach(x =>
+                        (comments ?? [])
+                            .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)x, Happened: (GitHubEvent?)null))
+                            .Concat((events ?? [])
+                                .Where(x => DescribeEvent(x) != null)
+                                .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)null, Happened: (GitHubEvent?)x)))
+                            .OrderBy(x => x.Date)
+                            .ToList()
+                            .ForEach(y =>
                         {
+                            if (y.Happened is { } happened)
+                            {
+                                var described = DescribeEvent(happened)!;
+
+                                issueComments.Add(BuildEventPanel(happened, described, false));
+                                commentBodies.Add(described);
+                                commentLineHeights.Add(MeasureLines(described));
+                                commentData.Add(null);
+                                eventData.Add(happened);
+
+                                return;
+                            }
+
+                            var x = y.Comment!;
+
                             var body = UI.MarkdownToMarkup(x.Body, guid);
 
                             var panel = new Panel(body)
@@ -472,6 +498,7 @@ namespace Helyx.Projects
                             commentBodies.Add(body);
                             commentLineHeights.Add(MeasureLines(body));
                             commentData.Add(x);
+                            eventData.Add(null);
                         });
                     }
                     );
@@ -682,7 +709,7 @@ namespace Helyx.Projects
                                        AppendComment(posted);
                                        break;
                                    }
-                               case ConsoleKey.E:
+                               case ConsoleKey.E when selectedComment == 0 || selectedData != null:
                                    {
                                        var edited = ComposeText(
                                            selectedData == null ? Strings.GH_EditIssue : Strings.GH_EditComment,
@@ -742,6 +769,7 @@ namespace Helyx.Projects
                                        commentBodies.RemoveAt(selectedComment);
                                        commentLineHeights.RemoveAt(selectedComment);
                                        commentData.RemoveAt(selectedComment);
+                                       eventData.RemoveAt(selectedComment);
 
                                        selectedComment = Math.Min(selectedComment, issueComments.Count - 1);
                                        break;
@@ -927,6 +955,7 @@ namespace Helyx.Projects
                            ctx.Refresh();
 
                            var fresh = await GitHubCalls.GetAllComments(guid, selectedIssue.Number);
+                           var freshEvents = await GitHubCalls.GetAllEvents(guid, selectedIssue.Number);
 
                            if (fresh == null)
                                return;
@@ -935,11 +964,36 @@ namespace Helyx.Projects
                            commentBodies.RemoveRange(1, commentBodies.Count - 1);
                            commentLineHeights.RemoveRange(1, commentLineHeights.Count - 1);
                            commentData.RemoveRange(1, commentData.Count - 1);
+                           eventData.RemoveRange(1, eventData.Count - 1);
 
-                           fresh.ForEach(AppendComment);
+                           fresh
+                               .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)x, Happened: (GitHubEvent?)null))
+                               .Concat((freshEvents ?? [])
+                                   .Where(x => DescribeEvent(x) != null)
+                                   .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)null, Happened: (GitHubEvent?)x)))
+                               .OrderBy(x => x.Date)
+                               .ToList()
+                               .ForEach(x =>
+                               {
+                                   if (x.Happened is { } happened)
+                                       AppendEvent(happened);
+                                   else
+                                       AppendComment(x.Comment!);
+                               });
 
                            selectedComment = Math.Clamp(selectedComment, 0, issueComments.Count - 1);
                            currentPage = 0;
+                       }
+
+                       void AppendEvent(GitHubEvent happened)
+                       {
+                           var described = DescribeEvent(happened)!;
+
+                           issueComments.Add(BuildEventPanel(happened, described, false));
+                           commentBodies.Add(described);
+                           commentLineHeights.Add(MeasureLines(described));
+                           commentData.Add(null);
+                           eventData.Add(happened);
                        }
 
                        void AppendComment(GitHubComment posted)
@@ -957,6 +1011,7 @@ namespace Helyx.Projects
                            commentBodies.Add(body);
                            commentLineHeights.Add(MeasureLines(body));
                            commentData.Add(posted);
+                           eventData.Add(null);
 
                            selectedComment = issueComments.Count - 1;
                        }
@@ -1091,6 +1146,9 @@ namespace Helyx.Projects
 
                        Panel BuildPanel(int index, int selected, string[] lines, bool continued, bool continues)
                        {
+                           if (eventData[index] is { } happened)
+                               return BuildEventPanel(happened, commentBodies[index], index == selected);
+
                            var body = string.Join("\n", lines);
 
                            if (continued)
@@ -1424,6 +1482,7 @@ namespace Helyx.Projects
                 List<string> commentBodies = new();
                 List<int[]> commentLineHeights = new();
                 List<GitHubComment?> commentData = new();
+                List<GitHubEvent?> eventData = new();
 
                 var me = await GitHubCalls.GetCachedUsername();
 
@@ -1464,24 +1523,43 @@ namespace Helyx.Projects
                 commentBodies.Add(originalBody);
                 commentLineHeights.Add(MeasureLines(originalBody));
                 commentData.Add(null);
+                eventData.Add(null);
 
                 List<GitHubComment>? comments = null;
+                List<GitHubEvent>? events = null;
 
                 await AnsiConsole.Status()
                     .Spinner(Spinner.Known.Dots)
                     .StartAsync(Strings.GH_RetrievingComments, async ctx =>
                     {
                         comments = await GitHubCalls.GetAllComments(guid, selectedPull.Number);
+                        events = await GitHubCalls.GetAllEvents(guid, selectedPull.Number);
 
                         (comments ?? [])
-                            .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)x, Review: (GitHubPullRequestReview?)null))
+                            .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)x, Review: (GitHubPullRequestReview?)null, Happened: (GitHubEvent?)null))
                             .Concat(reviews
                                 .Where(x => x.State != "PENDING")
-                                .Select(x => (Date: x.SubmittedAt ?? DateTimeOffset.MinValue, Comment: (GitHubComment?)null, Review: (GitHubPullRequestReview?)x)))
+                                .Select(x => (Date: x.SubmittedAt ?? DateTimeOffset.MinValue, Comment: (GitHubComment?)null, Review: (GitHubPullRequestReview?)x, Happened: (GitHubEvent?)null)))
+                            .Concat((events ?? [])
+                                .Where(x => DescribeEvent(x) != null)
+                                .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)null, Review: (GitHubPullRequestReview?)null, Happened: (GitHubEvent?)x)))
                             .OrderBy(x => x.Date)
                             .ToList()
                             .ForEach(x =>
                             {
+                                if (x.Happened is { } happened)
+                                {
+                                    var described = DescribeEvent(happened)!;
+
+                                    pullComments.Add(BuildEventPanel(happened, described, false));
+                                    commentBodies.Add(described);
+                                    commentLineHeights.Add(MeasureLines(described));
+                                    commentData.Add(null);
+                                    eventData.Add(happened);
+
+                                    return;
+                                }
+
                                 var body = x.Review == null
                                     ? UI.MarkdownToMarkup(x.Comment!.Body, guid)
                                     : $"[{x.Review.State switch
@@ -1514,6 +1592,7 @@ namespace Helyx.Projects
                                 commentBodies.Add(body);
                                 commentLineHeights.Add(MeasureLines(body));
                                 commentData.Add(x.Comment);
+                                eventData.Add(null);
                             });
                     }
                 );
@@ -1827,6 +1906,7 @@ namespace Helyx.Projects
 
                                         commentLineHeights.RemoveAt(selectedComment);
                                         commentData.RemoveAt(selectedComment);
+                                        eventData.RemoveAt(selectedComment);
 
                                         selectedComment = Math.Min(selectedComment, pullComments.Count - 1);
                                         break;
@@ -2077,6 +2157,7 @@ namespace Helyx.Projects
                             ctx.Refresh();
 
                             var fresh = await GitHubCalls.GetAllComments(guid, selectedPull.Number);
+                            var freshEvents = await GitHubCalls.GetAllEvents(guid, selectedPull.Number);
 
                             if (fresh == null)
                                 return;
@@ -2085,11 +2166,36 @@ namespace Helyx.Projects
                             commentBodies.RemoveRange(1, commentBodies.Count - 1);
                             commentLineHeights.RemoveRange(1, commentLineHeights.Count - 1);
                             commentData.RemoveRange(1, commentData.Count - 1);
+                            eventData.RemoveRange(1, eventData.Count - 1);
 
-                            fresh.ForEach(AppendComment);
+                            fresh
+                                .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)x, Happened: (GitHubEvent?)null))
+                                .Concat((freshEvents ?? [])
+                                    .Where(x => DescribeEvent(x) != null)
+                                    .Select(x => (Date: x.CreatedAt, Comment: (GitHubComment?)null, Happened: (GitHubEvent?)x)))
+                                .OrderBy(x => x.Date)
+                                .ToList()
+                                .ForEach(x =>
+                                {
+                                    if (x.Happened is { } happened)
+                                        AppendEvent(happened);
+                                    else
+                                        AppendComment(x.Comment!);
+                                });
 
                             selectedComment = Math.Clamp(selectedComment, 0, pullComments.Count - 1);
                             currentPage = 0;
+                        }
+
+                        void AppendEvent(GitHubEvent happened)
+                        {
+                            var described = DescribeEvent(happened)!;
+
+                            pullComments.Add(BuildEventPanel(happened, described, false));
+                            commentBodies.Add(described);
+                            commentLineHeights.Add(MeasureLines(described));
+                            commentData.Add(null);
+                            eventData.Add(happened);
                         }
 
                         void AppendComment(GitHubComment posted)
@@ -2107,6 +2213,7 @@ namespace Helyx.Projects
                             commentBodies.Add(body);
                             commentLineHeights.Add(MeasureLines(body));
                             commentData.Add(posted);
+                            eventData.Add(null);
 
                             selectedComment = pullComments.Count - 1;
                         }
@@ -2241,6 +2348,9 @@ namespace Helyx.Projects
 
                         Panel BuildPanel(int index, int selected, string[] lines, bool continued, bool continues)
                         {
+                            if (eventData[index] is { } happened)
+                                return BuildEventPanel(happened, commentBodies[index], index == selected);
+
                             var body = string.Join("\n", lines);
 
                             if (continued)
@@ -2283,6 +2393,65 @@ namespace Helyx.Projects
                 "mannequin" => Color.Gray50,
                 _ => Color.Grey
             };
+        }
+
+        private static string? DescribeEvent(GitHubEvent happened)
+        {
+            string Tag(string? text, string color) => $"[{color}]{Markup.Escape(text ?? "?")}[/]";
+
+            return happened.Event?.ToLowerInvariant() switch
+            {
+                "labeled" => string.Format(Strings.GH_Event_Labeled, Tag(happened.Label?.Name, LabelColor(happened.Label))),
+                "unlabeled" => string.Format(Strings.GH_Event_Unlabeled, Tag(happened.Label?.Name, LabelColor(happened.Label))),
+                "closed" => Strings.GH_Event_Closed,
+                "reopened" => Strings.GH_Event_Reopened,
+                "assigned" => string.Format(Strings.GH_Event_Assigned, Tag(happened.Assignee?.Login, "SkyBlue1")),
+                "unassigned" => string.Format(Strings.GH_Event_Unassigned, Tag(happened.Assignee?.Login, "SkyBlue1")),
+                "renamed" => string.Format(Strings.GH_Event_Renamed, Tag(happened.Rename?.To, "Khaki1")),
+                "milestoned" => string.Format(Strings.GH_Event_Milestoned, Tag(happened.Milestone?.Title, "Aqua")),
+                "demilestoned" => string.Format(Strings.GH_Event_Demilestoned, Tag(happened.Milestone?.Title, "Aqua")),
+                "locked" => Strings.GH_Event_Locked,
+                "unlocked" => Strings.GH_Event_Unlocked,
+                "merged" => Strings.GH_Event_Merged,
+                "referenced" => Strings.GH_Event_Referenced,
+                "pinned" => Strings.GH_Event_Pinned,
+                "unpinned" => Strings.GH_Event_Unpinned,
+                "review_requested" => Strings.GH_Event_ReviewRequested,
+                "review_request_removed" => Strings.GH_Event_ReviewRequestRemoved,
+                "head_ref_deleted" => Strings.GH_Event_HeadRefDeleted,
+                "head_ref_force_pushed" => Strings.GH_Event_HeadRefForcePushed,
+                "head_ref_restored" => Strings.GH_Event_HeadRefRestored,
+                _ => null
+            };
+        }
+
+        private static string LabelColor(GitHubLabel? label)
+        {
+            if (string.IsNullOrWhiteSpace(label?.Color))
+                return "grey";
+
+            return $"#{label.Color.TrimStart('#')}";
+        }
+
+        private static Panel BuildEventPanel(GitHubEvent happened, string text, bool selected)
+        {
+            var grid = new Grid()
+                .AddColumn()
+                .AddColumn(new GridColumn().RightAligned())
+                .Expand()
+                .AddRow(
+                    $"[{(selected ? "Aqua" : "grey35")}]{(selected ? "▸" : "•")}[/]  " +
+                    $"[white]{UI.Link(happened.Actor?.HtmlUrl ?? "https://github.com/404", happened.Actor?.Login ?? Strings.GH_UnknownAuthor)}[/] " +
+                    $"[grey]{text}[/]",
+                    $"[grey35]{ConvertDateTimeOffsetToText(happened.CreatedAt)}[/]");
+
+            var panel = new Panel(grid)
+            {
+                Width = Console.WindowWidth,
+                Padding = new Spectre.Console.Padding(3, 0, 1, 0)
+            };
+
+            return panel.NoBorder();
         }
 
         private static int[] MeasureLines(string markup)

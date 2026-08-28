@@ -1,5 +1,4 @@
 using Helyx.Shared;
-using Helyx.Projects.Scripts;
 using Spectre.Console;
 using System.Diagnostics;
 using System.Text;

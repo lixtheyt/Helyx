@@ -1,14 +1,12 @@
+using System.Globalization;
 using Helyx.Data;
-using Helyx.Projects;
 using Helyx.Shared;
 using LibGit2Sharp;
 using Spectre.Console;
 using Spectre.Console.Rendering;
-using System.Globalization;
 using static Helyx.Data.ConfigurationHandler;
-using Panel = Spectre.Console.Panel;
 
-namespace Helyx
+namespace Helyx.Projects
 {
     internal static class ProjectsMenu
     {

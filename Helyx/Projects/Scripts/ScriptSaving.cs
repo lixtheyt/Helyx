@@ -2,7 +2,6 @@ using static Helyx.Projects.Scripts.Script.Block;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
 using Helyx.Shared;
-using Helyx.Projects.Scripts;
 using Spectre.Console;
 
 namespace Helyx.Projects.Scripts

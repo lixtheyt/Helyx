@@ -2,7 +2,6 @@ using Helyx.Data;
 using Helyx.Shared;
 using LibGit2Sharp;
 using Spectre.Console;
-using Spectre.Console.Rendering;
 using static Helyx.Data.ConfigurationHandler;
 using Color = Spectre.Console.Color;
 using Panel = Spectre.Console.Panel;

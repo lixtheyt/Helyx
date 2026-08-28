@@ -1,5 +1,4 @@
 using Helyx.Projects.Scripts;
-using Helyx;
 using Helyx.Data;
 using static Helyx.Projects.Scripts.Script.Block;
 using Helyx.Shared;

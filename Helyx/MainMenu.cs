@@ -1,5 +1,7 @@
 using Color = Spectre.Console.Color;
 using Helyx.Data;
+using Helyx.Projects;
+using Helyx.Settings;
 using Helyx.Shared;
 using Spectre.Console;
 

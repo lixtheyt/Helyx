@@ -142,7 +142,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ scroll <pgup/pgdn> page <r> analyze again <esc> back.
+        ///   Looks up a localized string similar to ↑↓ scroll   &lt;pgup/pgdn&gt; page   &lt;r&gt; analyze again   &lt;esc&gt; back.
         /// </summary>
         internal static string Analyze_Footer {
             get {
@@ -214,20 +214,20 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} local branch.
-        /// </summary>
-        internal static string Analyze_LocalBranchOne {
-            get {
-                return ResourceManager.GetString("Analyze_LocalBranchOne", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} local branches.
         /// </summary>
         internal static string Analyze_LocalBranches {
             get {
                 return ResourceManager.GetString("Analyze_LocalBranches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} local branch.
+        /// </summary>
+        internal static string Analyze_LocalBranchOne {
+            get {
+                return ResourceManager.GetString("Analyze_LocalBranchOne", resourceCulture);
             }
         }
         
@@ -403,6 +403,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The backup was deleted successfully..
+        /// </summary>
+        internal static string Backups_Deleted {
+            get {
+                return ResourceManager.GetString("Backups_Deleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Failed.
         /// </summary>
         internal static string Backups_DeleteFailed_Title {
@@ -417,15 +426,6 @@ namespace Helyx {
         internal static string Backups_DeleteYourself {
             get {
                 return ResourceManager.GetString("Backups_DeleteYourself", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The backup was deleted successfully..
-        /// </summary>
-        internal static string Backups_Deleted {
-            get {
-                return ResourceManager.GetString("Backups_Deleted", resourceCulture);
             }
         }
         
@@ -547,15 +547,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restore Failed.
-        /// </summary>
-        internal static string Backups_RestoreFailed_Title {
-            get {
-                return ResourceManager.GetString("Backups_RestoreFailed_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The backup was restored successfully..
         /// </summary>
         internal static string Backups_Restored {
@@ -565,11 +556,20 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The backup was restored successfully, but the copy of the old project could not be removed [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to The backup was restored successfully, but the copy of the old project could not be removed..
         /// </summary>
         internal static string Backups_RestoredLeftover {
             get {
                 return ResourceManager.GetString("Backups_RestoredLeftover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore Failed.
+        /// </summary>
+        internal static string Backups_RestoreFailed_Title {
+            get {
+                return ResourceManager.GetString("Backups_RestoreFailed_Title", resourceCulture);
             }
         }
         
@@ -727,6 +727,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Badges.
+        /// </summary>
+        internal static string Badges_None_Title {
+            get {
+                return ResourceManager.GetString("Badges_None_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are no badges to delete..
         /// </summary>
         internal static string Badges_NoneToDelete {
@@ -741,15 +750,6 @@ namespace Helyx {
         internal static string Badges_NoneToEdit {
             get {
                 return ResourceManager.GetString("Badges_NoneToEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No Badges.
-        /// </summary>
-        internal static string Badges_None_Title {
-            get {
-                return ResourceManager.GetString("Badges_None_Title", resourceCulture);
             }
         }
         
@@ -934,7 +934,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (<space> toggle, <enter> confirm).
+        ///   Looks up a localized string similar to (&lt;space&gt; toggle, &lt;enter&gt; confirm).
         /// </summary>
         internal static string Common_MultiSelectHint {
             get {
@@ -952,7 +952,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <enter> select <esc> back.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page   &lt;enter&gt; select   &lt;esc&gt; back.
         /// </summary>
         internal static string Common_NavSelect {
             get {
@@ -988,7 +988,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to page {0}/{1} · {2}/{3}.
+        ///   Looks up a localized string similar to page {0}/{1}   ·   {2}/{3}.
         /// </summary>
         internal static string Common_Page {
             get {
@@ -1105,61 +1105,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open Configuration File Directory.
-        /// </summary>
-        internal static string ConfigFile_OpenDirectory {
-            get {
-                return ResourceManager.GetString("ConfigFile_OpenDirectory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The configuration folder could not be opened. {0}.
-        /// </summary>
-        internal static string ConfigFile_Open_Failed {
-            get {
-                return ResourceManager.GetString("ConfigFile_Open_Failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reset Configuration File.
-        /// </summary>
-        internal static string ConfigFile_Reset {
-            get {
-                return ResourceManager.GetString("ConfigFile_Reset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to reset the configuration file?.
-        /// </summary>
-        internal static string ConfigFile_Reset_Confirm {
-            get {
-                return ResourceManager.GetString("ConfigFile_Reset_Confirm", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The configuration file could not be reset. {0}.
-        /// </summary>
-        internal static string ConfigFile_Reset_Failed {
-            get {
-                return ResourceManager.GetString("ConfigFile_Reset_Failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Helyx could not restart itself, please start it again manually. {0}.
-        /// </summary>
-        internal static string ConfigFile_Restart_Failed {
-            get {
-                return ResourceManager.GetString("ConfigFile_Restart_Failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The configuration file could not be created in '{0}'..
+        ///   Looks up a localized string similar to The configuration file could not be created in &apos;{0}&apos;..
         /// </summary>
         internal static string Config_CreateFailed {
             get {
@@ -1195,6 +1141,66 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The configuration folder could not be opened.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string ConfigFile_Open_Failed {
+            get {
+                return ResourceManager.GetString("ConfigFile_Open_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Configuration File Directory.
+        /// </summary>
+        internal static string ConfigFile_OpenDirectory {
+            get {
+                return ResourceManager.GetString("ConfigFile_OpenDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Configuration File.
+        /// </summary>
+        internal static string ConfigFile_Reset {
+            get {
+                return ResourceManager.GetString("ConfigFile_Reset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to reset the configuration file?.
+        /// </summary>
+        internal static string ConfigFile_Reset_Confirm {
+            get {
+                return ResourceManager.GetString("ConfigFile_Reset_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The configuration file could not be reset.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string ConfigFile_Reset_Failed {
+            get {
+                return ResourceManager.GetString("ConfigFile_Reset_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helyx could not restart itself, please start it again manually.
+        ///
+        ///{0}.
+        /// </summary>
+        internal static string ConfigFile_Restart_Failed {
+            get {
+                return ResourceManager.GetString("ConfigFile_Restart_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Helyx was created by:.
         /// </summary>
         internal static string Credits_Title {
@@ -1213,7 +1219,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <any key> continue.
+        ///   Looks up a localized string similar to &lt;any key&gt; continue.
         /// </summary>
         internal static string GH_AnyKey {
             get {
@@ -1267,7 +1273,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to in {0} files · {1} commits.
+        ///   Looks up a localized string similar to in {0} files   ·   {1} commits.
         /// </summary>
         internal static string GH_ChangesDetail {
             get {
@@ -1303,7 +1309,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ←→ choose <enter> confirm <esc> cancel.
+        ///   Looks up a localized string similar to ←→ choose   &lt;enter&gt; confirm   &lt;esc&gt; cancel.
         /// </summary>
         internal static string GH_ChooseHint {
             get {
@@ -1537,6 +1543,42 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;ctrl+b&gt; bold.
+        /// </summary>
+        internal static string GH_Editor_Bold {
+            get {
+                return ResourceManager.GetString("GH_Editor_Bold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ctrl+k&gt; code.
+        /// </summary>
+        internal static string GH_Editor_Code {
+            get {
+                return ResourceManager.GetString("GH_Editor_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ctrl+l&gt; list   &lt;ctrl+q&gt; quote   &lt;f2&gt; send   &lt;esc&gt; cancel.
+        /// </summary>
+        internal static string GH_Editor_Footer {
+            get {
+                return ResourceManager.GetString("GH_Editor_Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ctrl+e&gt; italic.
+        /// </summary>
+        internal static string GH_Editor_Italic {
+            get {
+                return ResourceManager.GetString("GH_Editor_Italic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit the pull request.
         /// </summary>
         internal static string GH_EditPull {
@@ -1546,38 +1588,182 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <ctrl+b> bold.
+        ///   Looks up a localized string similar to assigned {0}.
         /// </summary>
-        internal static string GH_Editor_Bold {
+        internal static string GH_Event_Assigned {
             get {
-                return ResourceManager.GetString("GH_Editor_Bold", resourceCulture);
+                return ResourceManager.GetString("GH_Event_Assigned", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <ctrl+k> code.
+        ///   Looks up a localized string similar to closed this.
         /// </summary>
-        internal static string GH_Editor_Code {
+        internal static string GH_Event_Closed {
             get {
-                return ResourceManager.GetString("GH_Editor_Code", resourceCulture);
+                return ResourceManager.GetString("GH_Event_Closed", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <ctrl+l> list <ctrl+q> quote <f2> send <esc> cancel.
+        ///   Looks up a localized string similar to removed this from the {0} milestone.
         /// </summary>
-        internal static string GH_Editor_Footer {
+        internal static string GH_Event_Demilestoned {
             get {
-                return ResourceManager.GetString("GH_Editor_Footer", resourceCulture);
+                return ResourceManager.GetString("GH_Event_Demilestoned", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <ctrl+e> italic.
+        ///   Looks up a localized string similar to deleted the branch.
         /// </summary>
-        internal static string GH_Editor_Italic {
+        internal static string GH_Event_HeadRefDeleted {
             get {
-                return ResourceManager.GetString("GH_Editor_Italic", resourceCulture);
+                return ResourceManager.GetString("GH_Event_HeadRefDeleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to force-pushed the branch.
+        /// </summary>
+        internal static string GH_Event_HeadRefForcePushed {
+            get {
+                return ResourceManager.GetString("GH_Event_HeadRefForcePushed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to restored the branch.
+        /// </summary>
+        internal static string GH_Event_HeadRefRestored {
+            get {
+                return ResourceManager.GetString("GH_Event_HeadRefRestored", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to added the {0} label.
+        /// </summary>
+        internal static string GH_Event_Labeled {
+            get {
+                return ResourceManager.GetString("GH_Event_Labeled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to locked this conversation.
+        /// </summary>
+        internal static string GH_Event_Locked {
+            get {
+                return ResourceManager.GetString("GH_Event_Locked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to merged this.
+        /// </summary>
+        internal static string GH_Event_Merged {
+            get {
+                return ResourceManager.GetString("GH_Event_Merged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to added this to the {0} milestone.
+        /// </summary>
+        internal static string GH_Event_Milestoned {
+            get {
+                return ResourceManager.GetString("GH_Event_Milestoned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pinned this.
+        /// </summary>
+        internal static string GH_Event_Pinned {
+            get {
+                return ResourceManager.GetString("GH_Event_Pinned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to referenced this in a commit.
+        /// </summary>
+        internal static string GH_Event_Referenced {
+            get {
+                return ResourceManager.GetString("GH_Event_Referenced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to changed the title to {0}.
+        /// </summary>
+        internal static string GH_Event_Renamed {
+            get {
+                return ResourceManager.GetString("GH_Event_Renamed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to reopened this.
+        /// </summary>
+        internal static string GH_Event_Reopened {
+            get {
+                return ResourceManager.GetString("GH_Event_Reopened", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to requested a review.
+        /// </summary>
+        internal static string GH_Event_ReviewRequested {
+            get {
+                return ResourceManager.GetString("GH_Event_ReviewRequested", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to removed a review request.
+        /// </summary>
+        internal static string GH_Event_ReviewRequestRemoved {
+            get {
+                return ResourceManager.GetString("GH_Event_ReviewRequestRemoved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unassigned {0}.
+        /// </summary>
+        internal static string GH_Event_Unassigned {
+            get {
+                return ResourceManager.GetString("GH_Event_Unassigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to removed the {0} label.
+        /// </summary>
+        internal static string GH_Event_Unlabeled {
+            get {
+                return ResourceManager.GetString("GH_Event_Unlabeled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unlocked this conversation.
+        /// </summary>
+        internal static string GH_Event_Unlocked {
+            get {
+                return ResourceManager.GetString("GH_Event_Unlocked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to unpinned this.
+        /// </summary>
+        internal static string GH_Event_Unpinned {
+            get {
+                return ResourceManager.GetString("GH_Event_Unpinned", resourceCulture);
             }
         }
         
@@ -1708,7 +1894,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ select ←→ page <c> comment <e> edit.
+        ///   Looks up a localized string similar to ↑↓ select  ←→ page  &lt;c&gt; comment  &lt;e&gt; edit  .
         /// </summary>
         internal static string GH_Footer_Issue {
             get {
@@ -1717,7 +1903,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <tab> change filter <shift+tab> invert filter <n> new <enter> open <es [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page  &lt;tab&gt; change filter   &lt;shift+tab&gt; invert filter  &lt;n&gt; new  &lt;enter&gt; open  &lt;esc&gt; back.
         /// </summary>
         internal static string GH_Footer_Issues {
             get {
@@ -1726,7 +1912,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ select ←→ page <c> comment.
+        ///   Looks up a localized string similar to ↑↓ select  ←→ page  &lt;c&gt; comment  .
         /// </summary>
         internal static string GH_Footer_Pull {
             get {
@@ -1735,7 +1921,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <tab> change filter <shift+tab> invert filter <enter> open <esc> back.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page   &lt;tab&gt; change filter   &lt;shift+tab&gt; invert filter   &lt;enter&gt; open   &lt;esc&gt; back.
         /// </summary>
         internal static string GH_Footer_Pulls {
             get {
@@ -1798,15 +1984,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Issue #{0}.
-        /// </summary>
-        internal static string GH_IssueTitle {
-            get {
-                return ResourceManager.GetString("GH_IssueTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Issues.
         /// </summary>
         internal static string GH_Issues {
@@ -1825,6 +2002,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Issue #{0}.
+        /// </summary>
+        internal static string GH_IssueTitle {
+            get {
+                return ResourceManager.GetString("GH_IssueTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to just now.
         /// </summary>
         internal static string GH_JustNow {
@@ -1834,7 +2020,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <o> browser <esc> back.
+        ///   Looks up a localized string similar to &lt;o&gt; browser  &lt;esc&gt; back.
         /// </summary>
         internal static string GH_Key_Browser {
             get {
@@ -1843,7 +2029,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <x> close.
+        ///   Looks up a localized string similar to &lt;x&gt; close.
         /// </summary>
         internal static string GH_Key_Close {
             get {
@@ -1852,7 +2038,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <d> delete.
+        ///   Looks up a localized string similar to &lt;d&gt; delete.
         /// </summary>
         internal static string GH_Key_Delete {
             get {
@@ -1861,7 +2047,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <e> edit.
+        ///   Looks up a localized string similar to &lt;e&gt; edit.
         /// </summary>
         internal static string GH_Key_Edit {
             get {
@@ -1870,7 +2056,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <k> lock.
+        ///   Looks up a localized string similar to &lt;k&gt; lock.
         /// </summary>
         internal static string GH_Key_Lock {
             get {
@@ -1879,7 +2065,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <m> merge.
+        ///   Looks up a localized string similar to &lt;m&gt; merge.
         /// </summary>
         internal static string GH_Key_Merge {
             get {
@@ -1888,7 +2074,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <f5> refresh.
+        ///   Looks up a localized string similar to &lt;f5&gt; refresh  .
         /// </summary>
         internal static string GH_Key_Refresh {
             get {
@@ -1897,7 +2083,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <x> reopen.
+        ///   Looks up a localized string similar to &lt;x&gt; reopen.
         /// </summary>
         internal static string GH_Key_Reopen {
             get {
@@ -1906,7 +2092,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <r> review.
+        ///   Looks up a localized string similar to &lt;r&gt; review.
         /// </summary>
         internal static string GH_Key_Review {
             get {
@@ -1915,7 +2101,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <k> unlock.
+        ///   Looks up a localized string similar to &lt;k&gt; unlock.
         /// </summary>
         internal static string GH_Key_Unlock {
             get {
@@ -1942,15 +2128,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Helyx markers were not found in README.md, so the status was changed in Helyx only..
-        /// </summary>
-        internal static string GH_MarkersNotFound_Status {
-            get {
-                return ResourceManager.GetString("GH_MarkersNotFound_Status", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Add these to README.md wherever you want them:.
         /// </summary>
         internal static string GH_Markers_AddThese {
@@ -1969,7 +2146,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ move <enter> new line.
+        ///   Looks up a localized string similar to ↑↓ move   &lt;enter&gt; new line   .
         /// </summary>
         internal static string GH_Markers_Footer {
             get {
@@ -1987,7 +2164,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <esc> cancel.
+        ///   Looks up a localized string similar to &lt;esc&gt; cancel.
         /// </summary>
         internal static string GH_Markers_KeyCancel {
             get {
@@ -1996,7 +2173,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <bksp> delete line.
+        ///   Looks up a localized string similar to &lt;bksp&gt; delete line.
         /// </summary>
         internal static string GH_Markers_KeyDeleteLine {
             get {
@@ -2005,7 +2182,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <tab> next tag.
+        ///   Looks up a localized string similar to &lt;tab&gt; next tag   .
         /// </summary>
         internal static string GH_Markers_KeyNextTag {
             get {
@@ -2014,7 +2191,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <space> place.
+        ///   Looks up a localized string similar to &lt;space&gt; place.
         /// </summary>
         internal static string GH_Markers_KeyPlace {
             get {
@@ -2023,7 +2200,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <del> clear tag.
+        ///   Looks up a localized string similar to &lt;del&gt; clear tag.
         /// </summary>
         internal static string GH_Markers_KeyRemove {
             get {
@@ -2032,7 +2209,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <f2> save.
+        ///   Looks up a localized string similar to &lt;f2&gt; save.
         /// </summary>
         internal static string GH_Markers_KeySave {
             get {
@@ -2131,20 +2308,11 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Merge #{0} into {1}.
+        ///   Looks up a localized string similar to The Helyx markers were not found in README.md, so the status was changed in Helyx only..
         /// </summary>
-        internal static string GH_MergeConfirm {
+        internal static string GH_MarkersNotFound_Status {
             get {
-                return ResourceManager.GetString("GH_MergeConfirm", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub has not finished computing the merge. Try again in a moment..
-        /// </summary>
-        internal static string GH_MergeNotReady {
-            get {
-                return ResourceManager.GetString("GH_MergeNotReady", resourceCulture);
+                return ResourceManager.GetString("GH_MarkersNotFound_Status", resourceCulture);
             }
         }
         
@@ -2172,6 +2340,24 @@ namespace Helyx {
         internal static string GH_Merge_Merged {
             get {
                 return ResourceManager.GetString("GH_Merge_Merged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merge #{0} into {1}.
+        /// </summary>
+        internal static string GH_MergeConfirm {
+            get {
+                return ResourceManager.GetString("GH_MergeConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub has not finished computing the merge. Try again in a moment..
+        /// </summary>
+        internal static string GH_MergeNotReady {
+            get {
+                return ResourceManager.GetString("GH_MergeNotReady", resourceCulture);
             }
         }
         
@@ -2293,6 +2479,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nothing matches this filter..
+        /// </summary>
+        internal static string GH_NothingMatches {
+            get {
+                return ResourceManager.GetString("GH_NothingMatches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} does not track a remote branch, so the badges were changed in Helyx only..
         /// </summary>
         internal static string GH_NoUpstream_Badges {
@@ -2311,11 +2506,11 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nothing matches this filter..
+        ///   Looks up a localized string similar to opening post.
         /// </summary>
-        internal static string GH_NothingMatches {
+        internal static string GH_OpeningPost {
             get {
-                return ResourceManager.GetString("GH_NothingMatches", resourceCulture);
+                return ResourceManager.GetString("GH_OpeningPost", resourceCulture);
             }
         }
         
@@ -2325,15 +2520,6 @@ namespace Helyx {
         internal static string GH_OpenWiki {
             get {
                 return ResourceManager.GetString("GH_OpenWiki", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to opening post.
-        /// </summary>
-        internal static string GH_OpeningPost {
-            get {
-                return ResourceManager.GetString("GH_OpeningPost", resourceCulture);
             }
         }
         
@@ -2356,7 +2542,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to page {0}/{1} · issue {2}/{3}.
+        ///   Looks up a localized string similar to page {0}/{1}   ·   issue {2}/{3}.
         /// </summary>
         internal static string GH_Page {
             get {
@@ -2365,7 +2551,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to page {0}/{1} · comment {2}/{3}.
+        ///   Looks up a localized string similar to page {0}/{1}   ·   comment {2}/{3}.
         /// </summary>
         internal static string GH_PageComment {
             get {
@@ -2374,7 +2560,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to page {0}/{1} · pull request {2}/{3}.
+        ///   Looks up a localized string similar to page {0}/{1}   ·   pull request {2}/{3}.
         /// </summary>
         internal static string GH_PagePull {
             get {
@@ -2428,20 +2614,20 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pull request #{0}.
-        /// </summary>
-        internal static string GH_PullTitle {
-            get {
-                return ResourceManager.GetString("GH_PullTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to GitHub could not be reached, so the pull requests could not be loaded..
         /// </summary>
         internal static string GH_PullsLoadFailed {
             get {
                 return ResourceManager.GetString("GH_PullsLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pull request #{0}.
+        /// </summary>
+        internal static string GH_PullTitle {
+            get {
+                return ResourceManager.GetString("GH_PullTitle", resourceCulture);
             }
         }
         
@@ -2698,15 +2884,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save it as UTF-8, then try again..
-        /// </summary>
-        internal static string GH_SaveAsUtf8Retry {
-            get {
-                return ResourceManager.GetString("GH_SaveAsUtf8Retry", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Save it as UTF-8, then assign the badges again..
         /// </summary>
         internal static string GH_SaveAsUtf8_Badges {
@@ -2721,6 +2898,15 @@ namespace Helyx {
         internal static string GH_SaveAsUtf8_Status {
             get {
                 return ResourceManager.GetString("GH_SaveAsUtf8_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save it as UTF-8, then try again..
+        /// </summary>
+        internal static string GH_SaveAsUtf8Retry {
+            get {
+                return ResourceManager.GetString("GH_SaveAsUtf8Retry", resourceCulture);
             }
         }
         
@@ -2950,7 +3136,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use GitHub's language detection instead of Helyx's.
+        ///   Looks up a localized string similar to Use GitHub&apos;s language detection instead of Helyx&apos;s.
         /// </summary>
         internal static string GH_Sync_Languages {
             get {
@@ -3175,7 +3361,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ select ←→ page <tab> workflow.
+        ///   Looks up a localized string similar to ↑↓ select  ←→ page  &lt;tab&gt; workflow  .
         /// </summary>
         internal static string GH_Wf_Footer_List {
             get {
@@ -3184,7 +3370,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ scroll <pgup/pgdn> page <home/end> jump <esc> back.
+        ///   Looks up a localized string similar to ↑↓ scroll  &lt;pgup/pgdn&gt; page  &lt;home/end&gt; jump  &lt;esc&gt; back.
         /// </summary>
         internal static string GH_Wf_Footer_Log {
             get {
@@ -3193,7 +3379,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ scroll.
+        ///   Looks up a localized string similar to ↑↓ scroll  .
         /// </summary>
         internal static string GH_Wf_Footer_Run {
             get {
@@ -3211,15 +3397,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not load the jobs of this run..
-        /// </summary>
-        internal static string GH_Wf_JobsLoadFailed {
-            get {
-                return ResourceManager.GetString("GH_Wf_JobsLoadFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} jobs.
         /// </summary>
         internal static string GH_Wf_Jobs_Count {
@@ -3229,7 +3406,16 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <b> browser.
+        ///   Looks up a localized string similar to Could not load the jobs of this run..
+        /// </summary>
+        internal static string GH_Wf_JobsLoadFailed {
+            get {
+                return ResourceManager.GetString("GH_Wf_JobsLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;b&gt; browser.
         /// </summary>
         internal static string GH_Wf_Key_Browser {
             get {
@@ -3238,7 +3424,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <c> cancel.
+        ///   Looks up a localized string similar to &lt;c&gt; cancel.
         /// </summary>
         internal static string GH_Wf_Key_Cancel {
             get {
@@ -3247,7 +3433,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <d> dispatch.
+        ///   Looks up a localized string similar to &lt;d&gt; dispatch  .
         /// </summary>
         internal static string GH_Wf_Key_Dispatch {
             get {
@@ -3256,7 +3442,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <l> full log.
+        ///   Looks up a localized string similar to &lt;l&gt; full log  .
         /// </summary>
         internal static string GH_Wf_Key_FullLog {
             get {
@@ -3265,7 +3451,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <r> refresh.
+        ///   Looks up a localized string similar to &lt;r&gt; refresh  .
         /// </summary>
         internal static string GH_Wf_Key_Refresh {
             get {
@@ -3274,7 +3460,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <e> re-run.
+        ///   Looks up a localized string similar to &lt;e&gt; re-run.
         /// </summary>
         internal static string GH_Wf_Key_Rerun {
             get {
@@ -3283,7 +3469,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to <f> failed only.
+        ///   Looks up a localized string similar to &lt;f&gt; failed only.
         /// </summary>
         internal static string GH_Wf_Key_RerunFailed {
             get {
@@ -3364,7 +3550,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to page {0}/{1} · run {2}/{3}.
+        ///   Looks up a localized string similar to page {0}/{1}   ·   run {2}/{3}.
         /// </summary>
         internal static string GH_Wf_Page {
             get {
@@ -3661,330 +3847,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authorize with GitHub.
-        /// </summary>
-        internal static string GitHubAuth_Authorize {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Authorize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reauthorizing will replace your token with one that grants them..
-        /// </summary>
-        internal static string GitHubAuth_Outdated_Hint {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Outdated_Hint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reauthorize with GitHub.
-        /// </summary>
-        internal static string GitHubAuth_Reauthorize {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Reauthorize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unauthorize from GitHub.
-        /// </summary>
-        internal static string GitHubAuth_Unauthorize {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Unauthorize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Successfully unauthorized from GitHub!.
-        /// </summary>
-        internal static string GitHubAuth_Unauthorized_Message {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Unauthorized_Message", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unauthorized from GitHub.
-        /// </summary>
-        internal static string GitHubAuth_Unauthorized_Title {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Unauthorized_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub Username.
-        /// </summary>
-        internal static string GitHubAuth_Username {
-            get {
-                return ResourceManager.GetString("GitHubAuth_Username", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Do you want to assign the GitHub repository now?.
-        /// </summary>
-        internal static string GitHub_AssignNow {
-            get {
-                return ResourceManager.GetString("GitHub_AssignNow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Authorization Failed.
-        /// </summary>
-        internal static string GitHub_AuthFailed_Title {
-            get {
-                return ResourceManager.GetString("GitHub_AuthFailed_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub authorization successful!.
-        /// </summary>
-        internal static string GitHub_AuthSuccess {
-            get {
-                return ResourceManager.GetString("GitHub_AuthSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Authorized.
-        /// </summary>
-        internal static string GitHub_Authorized_Title {
-            get {
-                return ResourceManager.GetString("GitHub_Authorized_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The browser could not be opened automatically, please open the link manually:.
-        /// </summary>
-        internal static string GitHub_BrowserFailed {
-            get {
-                return ResourceManager.GetString("GitHub_BrowserFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Check your connection and your authorization in Settings..
-        /// </summary>
-        internal static string GitHub_CheckConnection {
-            get {
-                return ResourceManager.GetString("GitHub_CheckConnection", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The code could not be copied to your clipboard:.
-        /// </summary>
-        internal static string GitHub_ClipboardFailed {
-            get {
-                return ResourceManager.GetString("GitHub_ClipboardFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to (the code has been copied to your clipboard).
-        /// </summary>
-        internal static string GitHub_CodeCopied {
-            get {
-                return ResourceManager.GetString("GitHub_CodeCopied", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The authorization code expired before it was confirmed. Please try again..
-        /// </summary>
-        internal static string GitHub_CodeExpired {
-            get {
-                return ResourceManager.GetString("GitHub_CodeExpired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub could not be reached, so your repositories could not be checked..
-        /// </summary>
-        internal static string GitHub_CouldNotCheck {
-            get {
-                return ResourceManager.GetString("GitHub_CouldNotCheck", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Check your internet connection, then try again..
-        /// </summary>
-        internal static string GitHub_CouldNotCheck_Hint {
-            get {
-                return ResourceManager.GetString("GitHub_CouldNotCheck_Hint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Go to {0} and enter this code:.
-        /// </summary>
-        internal static string GitHub_GoToAndEnter {
-            get {
-                return ResourceManager.GetString("GitHub_GoToAndEnter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub returned an incomplete response. Please try again..
-        /// </summary>
-        internal static string GitHub_IncompleteResponse {
-            get {
-                return ResourceManager.GetString("GitHub_IncompleteResponse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Loading your repositories....
-        /// </summary>
-        internal static string GitHub_LoadingRepos {
-            get {
-                return ResourceManager.GetString("GitHub_LoadingRepos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No Git identity could be determined..
-        /// </summary>
-        internal static string GitHub_NoIdentity {
-            get {
-                return ResourceManager.GetString("GitHub_NoIdentity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Set user.name and user.email in your Git configuration, or authorize with GitHub in Settin [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string GitHub_NoIdentity_Hint {
-            get {
-                return ResourceManager.GetString("GitHub_NoIdentity_Hint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There are no repositories on your GitHub account..
-        /// </summary>
-        internal static string GitHub_NoRepos {
-            get {
-                return ResourceManager.GetString("GitHub_NoRepos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This project is not linked with a GitHub repository..
-        /// </summary>
-        internal static string GitHub_NotLinked {
-            get {
-                return ResourceManager.GetString("GitHub_NotLinked", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to commit activity.
-        /// </summary>
-        internal static string GitHub_Part_CommitActivity {
-            get {
-                return ResourceManager.GetString("GitHub_Part_CommitActivity", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to languages.
-        /// </summary>
-        internal static string GitHub_Part_Languages {
-            get {
-                return ResourceManager.GetString("GitHub_Part_Languages", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to topics.
-        /// </summary>
-        internal static string GitHub_Part_Topics {
-            get {
-                return ResourceManager.GetString("GitHub_Part_Topics", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No matching repository was found on your GitHub profile..
-        /// </summary>
-        internal static string GitHub_RepoNotFound {
-            get {
-                return ResourceManager.GetString("GitHub_RepoNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Make sure the GitHub name matches your GitHub repository name..
-        /// </summary>
-        internal static string GitHub_RepoNotFound_Hint {
-            get {
-                return ResourceManager.GetString("GitHub_RepoNotFound_Hint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub returned an error:.
-        /// </summary>
-        internal static string GitHub_ReturnedError {
-            get {
-                return ResourceManager.GetString("GitHub_ReturnedError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select the GitHub repository:.
-        /// </summary>
-        internal static string GitHub_SelectRepo {
-            get {
-                return ResourceManager.GetString("GitHub_SelectRepo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unknown error.
-        /// </summary>
-        internal static string GitHub_UnknownError {
-            get {
-                return ResourceManager.GetString("GitHub_UnknownError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub could not be reached:.
-        /// </summary>
-        internal static string GitHub_Unreachable {
-            get {
-                return ResourceManager.GetString("GitHub_Unreachable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GitHub could not be reached..
-        /// </summary>
-        internal static string GitHub_UnreachableSettings {
-            get {
-                return ResourceManager.GetString("GitHub_UnreachableSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Waiting for GitHub....
-        /// </summary>
-        internal static string GitHub_Waiting {
-            get {
-                return ResourceManager.GetString("GitHub_Waiting", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Abort the merge.
         /// </summary>
         internal static string Git_AbortMerge {
@@ -4021,7 +3883,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Branch '{0}' is already merged into '{1}'..
+        ///   Looks up a localized string similar to Branch &apos;{0}&apos; is already merged into &apos;{1}&apos;..
         /// </summary>
         internal static string Git_AlreadyMerged {
             get {
@@ -4084,7 +3946,16 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A branch named '{0}' already exists..
+        ///   Looks up a localized string similar to Branches.
+        /// </summary>
+        internal static string Git_Branches {
+            get {
+                return ResourceManager.GetString("Git_Branches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A branch named &apos;{0}&apos; already exists..
         /// </summary>
         internal static string Git_BranchExists {
             get {
@@ -4102,16 +3973,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Branches.
-        /// </summary>
-        internal static string Git_Branches {
-            get {
-                return ResourceManager.GetString("Git_Branches", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} tracked file(s) in bin/obj/.vs and similar, {1} MB. Every build rewrites them, so each [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to {0} tracked file(s) in bin/obj/.vs and similar, {1} MB. Every build rewrites them, so each commit carries them again..
         /// </summary>
         internal static string Git_BuildOutputTracked {
             get {
@@ -4453,20 +4315,20 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Conflicts Not Resolved.
-        /// </summary>
-        internal static string Git_ConflictsNotResolved {
-            get {
-                return ResourceManager.GetString("Git_ConflictsNotResolved", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Conflicts.
         /// </summary>
         internal static string Git_Conflicts_Title {
             get {
                 return ResourceManager.GetString("Git_Conflicts_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conflicts Not Resolved.
+        /// </summary>
+        internal static string Git_ConflictsNotResolved {
+            get {
+                return ResourceManager.GetString("Git_ConflictsNotResolved", resourceCulture);
             }
         }
         
@@ -4579,6 +4441,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ↑↓ navigate   &lt;tab&gt; switch pane   &lt;pgup/pgdn&gt; page   &lt;esc&gt; back.
+        /// </summary>
+        internal static string Git_Diff_Footer {
+            get {
+                return ResourceManager.GetString("Git_Diff_Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The diff could not be produced:.
         /// </summary>
         internal static string Git_DiffFailed {
@@ -4588,16 +4459,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate <tab> switch pane <pgup/pgdn> page <esc> back.
-        /// </summary>
-        internal static string Git_Diff_Footer {
-            get {
-                return ResourceManager.GetString("Git_Diff_Footer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This repository has uncommitted changes. Stage and commit them before merging..
+        ///   Looks up a localized string similar to This repository has uncommitted changes.
+        ///Stage and commit them before merging..
         /// </summary>
         internal static string Git_DirtyMerge {
             get {
@@ -4606,7 +4469,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This repository has uncommitted changes. Stage and commit them before switching branches..
+        ///   Looks up a localized string similar to This repository has uncommitted changes.
+        ///Stage and commit them before switching branches..
         /// </summary>
         internal static string Git_DirtySwitch {
             get {
@@ -4651,20 +4515,20 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fetched latest changes from &apos;{0}&apos;..
+        /// </summary>
+        internal static string Git_Fetched {
+            get {
+                return ResourceManager.GetString("Git_Fetched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fetch Failed.
         /// </summary>
         internal static string Git_FetchFailed_Title {
             get {
                 return ResourceManager.GetString("Git_FetchFailed_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fetched latest changes from '{0}'..
-        /// </summary>
-        internal static string Git_Fetched {
-            get {
-                return ResourceManager.GetString("Git_Fetched", resourceCulture);
             }
         }
         
@@ -4696,7 +4560,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Abort the unfinished '{0}'.
+        ///   Looks up a localized string similar to Abort the unfinished &apos;{0}&apos;.
         /// </summary>
         internal static string Git_Fix_AbortOperation {
             get {
@@ -4705,7 +4569,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the 'origin' remote.
+        ///   Looks up a localized string similar to Add the &apos;origin&apos; remote.
         /// </summary>
         internal static string Git_Fix_AddRemote {
             get {
@@ -4903,7 +4767,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to '{0}' is not a valid branch name..
+        ///   Looks up a localized string similar to &apos;{0}&apos; is not a valid branch name..
         /// </summary>
         internal static string Git_InvalidBranchName {
             get {
@@ -4984,20 +4848,11 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Local is '{0}', but the remote only has '{1}'..
+        ///   Looks up a localized string similar to Local is &apos;{0}&apos;, but the remote only has &apos;{1}&apos;..
         /// </summary>
         internal static string Git_LocalRemoteNameDiff {
             get {
                 return ResourceManager.GetString("Git_LocalRemoteNameDiff", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The index lock was removed..
-        /// </summary>
-        internal static string Git_LockRemoved {
-            get {
-                return ResourceManager.GetString("Git_LockRemoved", resourceCulture);
             }
         }
         
@@ -5029,11 +4884,29 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The index lock was removed..
+        /// </summary>
+        internal static string Git_LockRemoved {
+            get {
+                return ResourceManager.GetString("Git_LockRemoved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log.
         /// </summary>
         internal static string Git_Log {
             get {
                 return ResourceManager.GetString("Git_Log", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} was marked as resolved..
+        /// </summary>
+        internal static string Git_MarkedResolved {
+            get {
+                return ResourceManager.GetString("Git_MarkedResolved", resourceCulture);
             }
         }
         
@@ -5056,20 +4929,38 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} was marked as resolved..
-        /// </summary>
-        internal static string Git_MarkedResolved {
-            get {
-                return ResourceManager.GetString("Git_MarkedResolved", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Measuring tracked files....
         /// </summary>
         internal static string Git_MeasuringFiles {
             get {
                 return ResourceManager.GetString("Git_MeasuringFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branch &apos;{0}&apos; was merged into &apos;{1}&apos;..
+        /// </summary>
+        internal static string Git_Merge_Done {
+            get {
+                return ResourceManager.GetString("Git_Merge_Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Branch &apos;{0}&apos; was merged into &apos;{1}&apos; (fast-forward)..
+        /// </summary>
+        internal static string Git_Merge_FastForward {
+            get {
+                return ResourceManager.GetString("Git_Merge_FastForward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The merge finished with an unexpected status: {0}.
+        /// </summary>
+        internal static string Git_Merge_Unexpected {
+            get {
+                return ResourceManager.GetString("Git_Merge_Unexpected", resourceCulture);
             }
         }
         
@@ -5110,6 +5001,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Branch {0} was merged into {1}..
+        /// </summary>
+        internal static string Git_MergedInto {
+            get {
+                return ResourceManager.GetString("Git_MergedInto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Merge Failed.
         /// </summary>
         internal static string Git_MergeFailed_Title {
@@ -5128,47 +5028,12 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The merge was left in progress. Finish or abort it before you commit again..
+        ///   Looks up a localized string similar to The merge was left in progress.
+        ///Finish or abort it before you commit again..
         /// </summary>
         internal static string Git_MergeLeft {
             get {
                 return ResourceManager.GetString("Git_MergeLeft", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch '{0}' was merged into '{1}'..
-        /// </summary>
-        internal static string Git_Merge_Done {
-            get {
-                return ResourceManager.GetString("Git_Merge_Done", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch '{0}' was merged into '{1}' (fast-forward)..
-        /// </summary>
-        internal static string Git_Merge_FastForward {
-            get {
-                return ResourceManager.GetString("Git_Merge_FastForward", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The merge finished with an unexpected status: {0}.
-        /// </summary>
-        internal static string Git_Merge_Unexpected {
-            get {
-                return ResourceManager.GetString("Git_Merge_Unexpected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Branch {0} was merged into {1}..
-        /// </summary>
-        internal static string Git_MergedInto {
-            get {
-                return ResourceManager.GetString("Git_MergedInto", resourceCulture);
             }
         }
         
@@ -5191,7 +5056,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <enter> apply <esc> back.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page   &lt;enter&gt; apply   &lt;esc&gt; back.
         /// </summary>
         internal static string Git_Nav_Apply {
             get {
@@ -5200,7 +5065,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <enter> pop <esc> back.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page   &lt;enter&gt; pop   &lt;esc&gt; back.
         /// </summary>
         internal static string Git_Nav_Pop {
             get {
@@ -5209,7 +5074,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ navigate ←→ page <enter> view <esc> back.
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ page   &lt;enter&gt; view   &lt;esc&gt; back.
         /// </summary>
         internal static string Git_Nav_View {
             get {
@@ -5371,7 +5236,26 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This repository has no 'origin' remote. Do you want Helyx to add it for you?.
+        ///   Looks up a localized string similar to None - ready to commit.
+        /// </summary>
+        internal static string Git_NoneReadyCommit {
+            get {
+                return ResourceManager.GetString("Git_NoneReadyCommit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None - ready to continue.
+        /// </summary>
+        internal static string Git_NoneReadyContinue {
+            get {
+                return ResourceManager.GetString("Git_NoneReadyContinue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This repository has no &apos;origin&apos; remote.
+        ///Do you want Helyx to add it for you?.
         /// </summary>
         internal static string Git_NoOriginAdd {
             get {
@@ -5380,7 +5264,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This repository has no 'origin' remote configured..
+        ///   Looks up a localized string similar to This repository has no &apos;origin&apos; remote configured..
         /// </summary>
         internal static string Git_NoOriginConfigured {
             get {
@@ -5389,7 +5273,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No 'origin' remote. Nothing can be pushed or pulled..
+        ///   Looks up a localized string similar to No &apos;origin&apos; remote. Nothing can be pushed or pulled..
         /// </summary>
         internal static string Git_NoOriginNothing {
             get {
@@ -5416,7 +5300,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The branch '{0}' has no remote branch to reset to..
+        ///   Looks up a localized string similar to The branch &apos;{0}&apos; has no remote branch to reset to..
         /// </summary>
         internal static string Git_NoRemoteToReset {
             get {
@@ -5443,43 +5327,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This branch does not track a remote branch, so it cannot be rebased..
-        /// </summary>
-        internal static string Git_NoUpstreamRebase {
-            get {
-                return ResourceManager.GetString("Git_NoUpstreamRebase", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The branch '{0}' does not track a remote branch yet. Push it once to create the remote bra [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Git_NoUpstreamSync {
-            get {
-                return ResourceManager.GetString("Git_NoUpstreamSync", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to None - ready to commit.
-        /// </summary>
-        internal static string Git_NoneReadyCommit {
-            get {
-                return ResourceManager.GetString("Git_NoneReadyCommit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to None - ready to continue.
-        /// </summary>
-        internal static string Git_NoneReadyContinue {
-            get {
-                return ResourceManager.GetString("Git_NoneReadyContinue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to '{0}' is not a Git repository..
+        ///   Looks up a localized string similar to &apos;{0}&apos; is not a Git repository..
         /// </summary>
         internal static string Git_NotARepo {
             get {
@@ -5493,24 +5341,6 @@ namespace Helyx {
         internal static string Git_NotARepo_Title {
             get {
                 return ResourceManager.GetString("Git_NotARepo_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Not locked.
-        /// </summary>
-        internal static string Git_NotLocked {
-            get {
-                return ResourceManager.GetString("Git_NotLocked", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Not tracked.
-        /// </summary>
-        internal static string Git_NotTracked {
-            get {
-                return ResourceManager.GetString("Git_NotTracked", resourceCulture);
             }
         }
         
@@ -5533,7 +5363,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nothing over GitHub's 100 MB limit.
+        ///   Looks up a localized string similar to Nothing over GitHub&apos;s 100 MB limit.
         /// </summary>
         internal static string Git_NothingOverLimit {
             get {
@@ -5578,6 +5408,43 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not locked.
+        /// </summary>
+        internal static string Git_NotLocked {
+            get {
+                return ResourceManager.GetString("Git_NotLocked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not tracked.
+        /// </summary>
+        internal static string Git_NotTracked {
+            get {
+                return ResourceManager.GetString("Git_NotTracked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This branch does not track a remote branch, so it cannot be rebased..
+        /// </summary>
+        internal static string Git_NoUpstreamRebase {
+            get {
+                return ResourceManager.GetString("Git_NoUpstreamRebase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The branch &apos;{0}&apos; does not track a remote branch yet.
+        ///Push it once to create the remote branch first..
+        /// </summary>
+        internal static string Git_NoUpstreamSync {
+            get {
+                return ResourceManager.GetString("Git_NoUpstreamSync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Branch {0} now tracks {1}..
         /// </summary>
         internal static string Git_NowTracks {
@@ -5614,7 +5481,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to '{0}' was never finished..
+        ///   Looks up a localized string similar to &apos;{0}&apos; was never finished..
         /// </summary>
         internal static string Git_OperationUnfinished {
             get {
@@ -5632,7 +5499,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The 'origin' remote has to be added first..
+        ///   Looks up a localized string similar to The &apos;origin&apos; remote has to be added first..
         /// </summary>
         internal static string Git_OriginFirst {
             get {
@@ -5641,7 +5508,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} tracked file(s) are over GitHub's 100 MB limit, so every push is rejected:.
+        ///   Looks up a localized string similar to {0} tracked file(s) are over GitHub&apos;s 100 MB limit, so every push is rejected:.
         /// </summary>
         internal static string Git_OversizedFiles {
             get {
@@ -5695,15 +5562,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pull Failed.
-        /// </summary>
-        internal static string Git_PullFailed_Title {
-            get {
-                return ResourceManager.GetString("Git_PullFailed_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Pull completed with conflicts on {0}. Resolve them before continuing..
         /// </summary>
         internal static string Git_Pull_Conflicts {
@@ -5740,7 +5598,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Branch '{0}' is already up to date..
+        ///   Looks up a localized string similar to Branch &apos;{0}&apos; is already up to date..
         /// </summary>
         internal static string Git_Pull_UpToDate {
             get {
@@ -5749,11 +5607,11 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Push Failed.
+        ///   Looks up a localized string similar to Pull Failed.
         /// </summary>
-        internal static string Git_PushFailed_Title {
+        internal static string Git_PullFailed_Title {
             get {
-                return ResourceManager.GetString("Git_PushFailed_Title", resourceCulture);
+                return ResourceManager.GetString("Git_PullFailed_Title", resourceCulture);
             }
         }
         
@@ -5763,6 +5621,15 @@ namespace Helyx {
         internal static string Git_PushedOk {
             get {
                 return ResourceManager.GetString("Git_PushedOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Push Failed.
+        /// </summary>
+        internal static string Git_PushFailed_Title {
+            get {
+                return ResourceManager.GetString("Git_PushFailed_Title", resourceCulture);
             }
         }
         
@@ -5821,20 +5688,20 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Git started this rebase, so Helyx cannot continue or abort it. Finish it in a terminal wit [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Git_RebaseFinishInTerminal {
-            get {
-                return ResourceManager.GetString("Git_RebaseFinishInTerminal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The rebase finished, you are back on {0}..
         /// </summary>
         internal static string Git_RebaseFinished {
             get {
                 return ResourceManager.GetString("Git_RebaseFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Git started this rebase, so Helyx cannot continue or abort it. Finish it in a terminal with git rebase --continue or git rebase --abort..
+        /// </summary>
+        internal static string Git_RebaseFinishInTerminal {
+            get {
+                return ResourceManager.GetString("Git_RebaseFinishInTerminal", resourceCulture);
             }
         }
         
@@ -5848,7 +5715,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The rebase was left in progress. Finish or abort it before you push again..
+        ///   Looks up a localized string similar to The rebase was left in progress.
+        ///Finish or abort it before you push again..
         /// </summary>
         internal static string Git_RebaseLeft {
             get {
@@ -5857,7 +5725,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The rebase stopped on a step that has to be finished by hand, such as an 'edit' or 'reword [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to The rebase stopped on a step that has to be finished by hand,
+        ///such as an &apos;edit&apos; or &apos;reword&apos; in an interactive rebase..
         /// </summary>
         internal static string Git_RebaseNeedsHand {
             get {
@@ -5866,7 +5735,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The rebase stopped again on a later step because of new conflicts. Resolve them, then run  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to The rebase stopped again on a later step because of new conflicts.
+        ///Resolve them, then run Diagnostics again..
         /// </summary>
         internal static string Git_RebaseStoppedAgain {
             get {
@@ -5875,7 +5745,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A rebase was never finished - step {0} of {1}..
+        ///   Looks up a localized string similar to A rebase was never finished - step {0} of {1}. .
         /// </summary>
         internal static string Git_RebaseUnfinished {
             get {
@@ -5884,7 +5754,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A rebase was never finished..
+        ///   Looks up a localized string similar to A rebase was never finished. .
         /// </summary>
         internal static string Git_RebaseUnfinishedByGit {
             get {
@@ -5911,6 +5781,57 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The current branch has changed.
+        ///The undo was performed on &apos;{0}&apos;,
+        ///but you are now on &apos;{1}&apos;..
+        /// </summary>
+        internal static string Git_Redo_BranchChanged {
+            get {
+                return ResourceManager.GetString("Git_Redo_BranchChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The repository has uncommitted changes.
+        ///Commit, stash, or discard them before redoing a commit..
+        /// </summary>
+        internal static string Git_Redo_Dirty {
+            get {
+                return ResourceManager.GetString("Git_Redo_Dirty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The commit that should be restored no longer exists.
+        ///Git garbage collection or other repository changes may have removed it..
+        /// </summary>
+        internal static string Git_Redo_Gone {
+            get {
+                return ResourceManager.GetString("Git_Redo_Gone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is no commit to redo.
+        ///Undo a commit first before trying to redo it..
+        /// </summary>
+        internal static string Git_Redo_NoSha {
+            get {
+                return ResourceManager.GetString("Git_Redo_NoSha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is no undone commit to restore.
+        ///Undo a commit first before trying to redo it..
+        /// </summary>
+        internal static string Git_Redo_NoUndo {
+            get {
+                return ResourceManager.GetString("Git_Redo_NoUndo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do you want to restore the undone commit?.
         /// </summary>
         internal static string Git_RedoAsk {
@@ -5929,7 +5850,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The commit was restored successfully! Restored commit: {0}.
+        ///   Looks up a localized string similar to The commit was restored successfully!
+        ///Restored commit: {0}.
         /// </summary>
         internal static string Git_RedoDone {
             get {
@@ -5938,56 +5860,12 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Redoing a commit rewrites the current state of your repository. Only continue if you are s [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Redoing a commit rewrites the current state of your repository.
+        ///Only continue if you are sure this is the commit you want to restore..
         /// </summary>
         internal static string Git_RedoWarning {
             get {
                 return ResourceManager.GetString("Git_RedoWarning", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The current branch has changed. The undo was performed on '{0}', but you are now on '{1}'..
-        /// </summary>
-        internal static string Git_Redo_BranchChanged {
-            get {
-                return ResourceManager.GetString("Git_Redo_BranchChanged", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The repository has uncommitted changes. Commit, stash, or discard them before redoing a co [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Git_Redo_Dirty {
-            get {
-                return ResourceManager.GetString("Git_Redo_Dirty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The commit that should be restored no longer exists. Git garbage collection or other repos [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Git_Redo_Gone {
-            get {
-                return ResourceManager.GetString("Git_Redo_Gone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There is no commit to redo. Undo a commit first before trying to redo it..
-        /// </summary>
-        internal static string Git_Redo_NoSha {
-            get {
-                return ResourceManager.GetString("Git_Redo_NoSha", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There is no undone commit to restore. Undo a commit first before trying to redo it..
-        /// </summary>
-        internal static string Git_Redo_NoUndo {
-            get {
-                return ResourceManager.GetString("Git_Redo_NoUndo", resourceCulture);
             }
         }
         
@@ -6010,7 +5888,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Points at '{0}' but Helyx has '{1}'..
+        ///   Looks up a localized string similar to Points at &apos;{0}&apos; but Helyx has &apos;{1}&apos;..
         /// </summary>
         internal static string Git_RemoteMismatch {
             get {
@@ -6028,7 +5906,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The remote suggests '{0}'..
+        ///   Looks up a localized string similar to  The remote suggests &apos;{0}&apos;..
         /// </summary>
         internal static string Git_RemoteSuggests {
             get {
@@ -6046,7 +5924,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your branch is '{0}' but the remote only has '{1}'. Do you want to rename your branch to ' [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Your branch is &apos;{0}&apos; but the remote only has &apos;{1}&apos;.
+        ///Do you want to rename your branch to &apos;{1}&apos;?.
         /// </summary>
         internal static string Git_RenameToRemote {
             get {
@@ -6298,7 +6177,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The branch '{0}' does not track a remote branch. Do you want Helyx to set it up?.
+        ///   Looks up a localized string similar to The branch &apos;{0}&apos; does not track a remote branch.
+        ///Do you want Helyx to set it up?.
         /// </summary>
         internal static string Git_SetUpstreamAsk {
             get {
@@ -6334,6 +6214,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ↑↓ scroll   &lt;pgup/pgdn&gt; page   &lt;esc&gt; back.
+        /// </summary>
+        internal static string Git_Stash_Footer {
+            get {
+                return ResourceManager.GetString("Git_Stash_Footer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stash {0} was applied successfully..
         /// </summary>
         internal static string Git_StashApplied {
@@ -6352,11 +6241,31 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The stash was applied, but it caused conflicts. The stash was kept — resolve the conflicts [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to The stash was applied, but it caused conflicts.
+        ///
+        ///The stash was kept — resolve the conflicts manually..
         /// </summary>
         internal static string Git_StashConflicts {
             get {
                 return ResourceManager.GetString("Git_StashConflicts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was nothing to stash..
+        /// </summary>
+        internal static string Git_StashedNothing {
+            get {
+                return ResourceManager.GetString("Git_StashedNothing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stashes.
+        /// </summary>
+        internal static string Git_Stashes {
+            get {
+                return ResourceManager.GetString("Git_Stashes", resourceCulture);
             }
         }
         
@@ -6406,33 +6315,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ↑↓ scroll <pgup/pgdn> page <esc> back.
-        /// </summary>
-        internal static string Git_Stash_Footer {
-            get {
-                return ResourceManager.GetString("Git_Stash_Footer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There was nothing to stash..
-        /// </summary>
-        internal static string Git_StashedNothing {
-            get {
-                return ResourceManager.GetString("Git_StashedNothing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Stashes.
-        /// </summary>
-        internal static string Git_Stashes {
-            get {
-                return ResourceManager.GetString("Git_Stashes", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to PROBLEM.
         /// </summary>
         internal static string Git_State_Problem {
@@ -6465,15 +6347,6 @@ namespace Helyx {
         internal static string Git_Status {
             get {
                 return ResourceManager.GetString("Git_Status", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Git Status — {0}.
-        /// </summary>
-        internal static string Git_StatusTitle {
-            get {
-                return ResourceManager.GetString("Git_StatusTitle", resourceCulture);
             }
         }
         
@@ -6649,6 +6522,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Git Status — {0}.
+        /// </summary>
+        internal static string Git_StatusTitle {
+            get {
+                return ResourceManager.GetString("Git_StatusTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} of {1}.
         /// </summary>
         internal static string Git_StepOf {
@@ -6739,7 +6621,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This repository has uncommitted changes, so the final result may differ from what you expe [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to This repository has uncommitted changes, so the final result may differ from what you expect..
         /// </summary>
         internal static string Git_SyncDirty {
             get {
@@ -6757,7 +6639,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (<space> toggle, <enter> confirm).
+        ///   Looks up a localized string similar to (&lt;space&gt; toggle, &lt;enter&gt; confirm).
         /// </summary>
         internal static string Git_ToggleHint {
             get {
@@ -6766,56 +6648,11 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to '{0}' tracks nothing, so it cannot be pushed..
+        ///   Looks up a localized string similar to &apos;{0}&apos; tracks nothing, so it cannot be pushed..
         /// </summary>
         internal static string Git_TracksNothing {
             get {
                 return ResourceManager.GetString("Git_TracksNothing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Undo Commit.
-        /// </summary>
-        internal static string Git_UndoCommit {
-            get {
-                return ResourceManager.GetString("Git_UndoCommit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to undo the last commit?.
-        /// </summary>
-        internal static string Git_UndoConfirm {
-            get {
-                return ResourceManager.GetString("Git_UndoConfirm", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last commit undone successfully..
-        /// </summary>
-        internal static string Git_UndoDone {
-            get {
-                return ResourceManager.GetString("Git_UndoDone", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to How should the commit be undone?.
-        /// </summary>
-        internal static string Git_UndoHow {
-            get {
-                return ResourceManager.GetString("Git_UndoHow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Undoing a commit rewrites your Git history. Make sure you understand what will happen befo [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Git_UndoWarning {
-            get {
-                return ResourceManager.GetString("Git_UndoWarning", resourceCulture);
             }
         }
         
@@ -6883,6 +6720,52 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Undo Commit.
+        /// </summary>
+        internal static string Git_UndoCommit {
+            get {
+                return ResourceManager.GetString("Git_UndoCommit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to undo the last commit?.
+        /// </summary>
+        internal static string Git_UndoConfirm {
+            get {
+                return ResourceManager.GetString("Git_UndoConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last commit undone successfully..
+        /// </summary>
+        internal static string Git_UndoDone {
+            get {
+                return ResourceManager.GetString("Git_UndoDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How should the commit be undone?.
+        /// </summary>
+        internal static string Git_UndoHow {
+            get {
+                return ResourceManager.GetString("Git_UndoHow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undoing a commit rewrites your Git history.
+        ///Make sure you understand what will happen before you continue..
+        /// </summary>
+        internal static string Git_UndoWarning {
+            get {
+                return ResourceManager.GetString("Git_UndoWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to unknown.
         /// </summary>
         internal static string Git_UnknownLower {
@@ -6892,7 +6775,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Branch {0} contains commits that are not merged into any other branch. Deleting it may mak [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Branch {0} contains commits that are not merged into any other branch.
+        ///Deleting it may make those commits unreachable and eventually lost..
         /// </summary>
         internal static string Git_UnmergedWarn {
             get {
@@ -6919,7 +6803,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} file(s) are no longer tracked and are staged for removal. Commit that, and add a {1} s [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to {0} file(s) are no longer tracked and are staged for removal.
+        ///Commit that, and add a {1} so they do not come back..
         /// </summary>
         internal static string Git_UntrackDone {
             get {
@@ -6928,7 +6813,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Untracking them only helps the next commit - one already committed has to be rewritten by  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Untracking them only helps the next commit - one already committed has to be rewritten by hand..
         /// </summary>
         internal static string Git_UntrackHint {
             get {
@@ -6946,7 +6831,10 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} file(s) will stop being tracked by Git. They stay on your disk untouched - only the ne [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to {0} file(s) will stop being tracked by Git.
+        ///They stay on your disk untouched - only the next commit changes.
+        ///
+        ///.
         /// </summary>
         internal static string Git_UntrackWarn {
             get {
@@ -6955,7 +6843,8 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anything already committed stays in the history and keeps being pushed, so a file over Git [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Anything already committed stays in the history and keeps being pushed,
+        ///so a file over GitHub&apos;s limit still has to be rewritten out by hand..
         /// </summary>
         internal static string Git_UntrackWarnHistory {
             get {
@@ -6973,7 +6862,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use '{0}' from the 'origin' remote as the GitHub name?.
+        ///   Looks up a localized string similar to Use &apos;{0}&apos; from the &apos;origin&apos; remote as the GitHub name?.
         /// </summary>
         internal static string Git_UseOriginName {
             get {
@@ -7023,6 +6912,330 @@ namespace Helyx {
         internal static string Git_WorkingTreeClean {
             get {
                 return ResourceManager.GetString("Git_WorkingTreeClean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want to assign the GitHub repository now?.
+        /// </summary>
+        internal static string GitHub_AssignNow {
+            get {
+                return ResourceManager.GetString("GitHub_AssignNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorization Failed.
+        /// </summary>
+        internal static string GitHub_AuthFailed_Title {
+            get {
+                return ResourceManager.GetString("GitHub_AuthFailed_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorized.
+        /// </summary>
+        internal static string GitHub_Authorized_Title {
+            get {
+                return ResourceManager.GetString("GitHub_Authorized_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub authorization successful!.
+        /// </summary>
+        internal static string GitHub_AuthSuccess {
+            get {
+                return ResourceManager.GetString("GitHub_AuthSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The browser could not be opened automatically, please open the link manually:.
+        /// </summary>
+        internal static string GitHub_BrowserFailed {
+            get {
+                return ResourceManager.GetString("GitHub_BrowserFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check your connection and your authorization in Settings..
+        /// </summary>
+        internal static string GitHub_CheckConnection {
+            get {
+                return ResourceManager.GetString("GitHub_CheckConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The code could not be copied to your clipboard:.
+        /// </summary>
+        internal static string GitHub_ClipboardFailed {
+            get {
+                return ResourceManager.GetString("GitHub_ClipboardFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (the code has been copied to your clipboard).
+        /// </summary>
+        internal static string GitHub_CodeCopied {
+            get {
+                return ResourceManager.GetString("GitHub_CodeCopied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The authorization code expired before it was confirmed. Please try again..
+        /// </summary>
+        internal static string GitHub_CodeExpired {
+            get {
+                return ResourceManager.GetString("GitHub_CodeExpired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub could not be reached, so your repositories could not be checked..
+        /// </summary>
+        internal static string GitHub_CouldNotCheck {
+            get {
+                return ResourceManager.GetString("GitHub_CouldNotCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check your internet connection, then try again..
+        /// </summary>
+        internal static string GitHub_CouldNotCheck_Hint {
+            get {
+                return ResourceManager.GetString("GitHub_CouldNotCheck_Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to {0} and enter this code:.
+        /// </summary>
+        internal static string GitHub_GoToAndEnter {
+            get {
+                return ResourceManager.GetString("GitHub_GoToAndEnter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub returned an incomplete response. Please try again..
+        /// </summary>
+        internal static string GitHub_IncompleteResponse {
+            get {
+                return ResourceManager.GetString("GitHub_IncompleteResponse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading your repositories....
+        /// </summary>
+        internal static string GitHub_LoadingRepos {
+            get {
+                return ResourceManager.GetString("GitHub_LoadingRepos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Git identity could be determined..
+        /// </summary>
+        internal static string GitHub_NoIdentity {
+            get {
+                return ResourceManager.GetString("GitHub_NoIdentity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set user.name and user.email in your Git configuration, or authorize with GitHub in Settings..
+        /// </summary>
+        internal static string GitHub_NoIdentity_Hint {
+            get {
+                return ResourceManager.GetString("GitHub_NoIdentity_Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no repositories on your GitHub account..
+        /// </summary>
+        internal static string GitHub_NoRepos {
+            get {
+                return ResourceManager.GetString("GitHub_NoRepos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This project is not linked with a GitHub repository..
+        /// </summary>
+        internal static string GitHub_NotLinked {
+            get {
+                return ResourceManager.GetString("GitHub_NotLinked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to commit activity.
+        /// </summary>
+        internal static string GitHub_Part_CommitActivity {
+            get {
+                return ResourceManager.GetString("GitHub_Part_CommitActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to languages.
+        /// </summary>
+        internal static string GitHub_Part_Languages {
+            get {
+                return ResourceManager.GetString("GitHub_Part_Languages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to topics.
+        /// </summary>
+        internal static string GitHub_Part_Topics {
+            get {
+                return ResourceManager.GetString("GitHub_Part_Topics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No matching repository was found on your GitHub profile..
+        /// </summary>
+        internal static string GitHub_RepoNotFound {
+            get {
+                return ResourceManager.GetString("GitHub_RepoNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make sure the GitHub name matches your GitHub repository name..
+        /// </summary>
+        internal static string GitHub_RepoNotFound_Hint {
+            get {
+                return ResourceManager.GetString("GitHub_RepoNotFound_Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub returned an error:.
+        /// </summary>
+        internal static string GitHub_ReturnedError {
+            get {
+                return ResourceManager.GetString("GitHub_ReturnedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the GitHub repository:.
+        /// </summary>
+        internal static string GitHub_SelectRepo {
+            get {
+                return ResourceManager.GetString("GitHub_SelectRepo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown error.
+        /// </summary>
+        internal static string GitHub_UnknownError {
+            get {
+                return ResourceManager.GetString("GitHub_UnknownError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub could not be reached:.
+        /// </summary>
+        internal static string GitHub_Unreachable {
+            get {
+                return ResourceManager.GetString("GitHub_Unreachable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub could not be reached..
+        /// </summary>
+        internal static string GitHub_UnreachableSettings {
+            get {
+                return ResourceManager.GetString("GitHub_UnreachableSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Waiting for GitHub....
+        /// </summary>
+        internal static string GitHub_Waiting {
+            get {
+                return ResourceManager.GetString("GitHub_Waiting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authorize with GitHub.
+        /// </summary>
+        internal static string GitHubAuth_Authorize {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Authorize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reauthorizing will replace your token with one that grants them..
+        /// </summary>
+        internal static string GitHubAuth_Outdated_Hint {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Outdated_Hint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reauthorize with GitHub.
+        /// </summary>
+        internal static string GitHubAuth_Reauthorize {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Reauthorize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorize from GitHub.
+        /// </summary>
+        internal static string GitHubAuth_Unauthorize {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Unauthorize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully unauthorized from GitHub!.
+        /// </summary>
+        internal static string GitHubAuth_Unauthorized_Message {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Unauthorized_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unauthorized from GitHub.
+        /// </summary>
+        internal static string GitHubAuth_Unauthorized_Title {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Unauthorized_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub Username.
+        /// </summary>
+        internal static string GitHubAuth_Username {
+            get {
+                return ResourceManager.GetString("GitHubAuth_Username", resourceCulture);
             }
         }
         
@@ -7423,15 +7636,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove Project.
-        /// </summary>
-        internal static string Manage_RemoveProject {
-            get {
-                return ResourceManager.GetString("Manage_RemoveProject", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The project {0} was removed successfully..
         /// </summary>
         internal static string Manage_Removed {
@@ -7446,6 +7650,15 @@ namespace Helyx {
         internal static string Manage_Removed_Title {
             get {
                 return ResourceManager.GetString("Manage_Removed_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Project.
+        /// </summary>
+        internal static string Manage_RemoveProject {
+            get {
+                return ResourceManager.GetString("Manage_RemoveProject", resourceCulture);
             }
         }
         
@@ -7495,7 +7708,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Migrated 'projects' from list to Guid-keyed format..
+        ///   Looks up a localized string similar to Migrated &apos;projects&apos; from list to Guid-keyed format..
         /// </summary>
         internal static string Migrator_ProjectsToGuid {
             get {
@@ -7504,7 +7717,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Property '{0}' had an incompatible shape and was reset..
+        ///   Looks up a localized string similar to Property &apos;{0}&apos; had an incompatible shape and was reset..
         /// </summary>
         internal static string Migrator_PropertyReset {
             get {
@@ -7522,7 +7735,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Migrated project 'Status' from object to string format..
+        ///   Looks up a localized string similar to Migrated project &apos;Status&apos; from object to string format..
         /// </summary>
         internal static string Migrator_StatusToString {
             get {
@@ -7603,7 +7816,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to These notes were encrypted by a different Windows account or on a different machine, so th [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to These notes were encrypted by a different Windows account or on a different machine, so they cannot be read here..
         /// </summary>
         internal static string Notes_ForeignAccount {
             get {
@@ -7657,7 +7870,7 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to These were encrypted by a different Windows account or on a different machine, so they wer [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to These were encrypted by a different Windows account or on a different machine, so they were left untouched:.
         /// </summary>
         internal static string Notes_Unreadable {
             get {
@@ -8548,6 +8761,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The script {0} was deleted successfully..
+        /// </summary>
+        internal static string Scripts_Deleted {
+            get {
+                return ResourceManager.GetString("Scripts_Deleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The script {0} could not be deleted..
         /// </summary>
         internal static string Scripts_DeleteFailed {
@@ -8562,15 +8784,6 @@ namespace Helyx {
         internal static string Scripts_DeleteScript {
             get {
                 return ResourceManager.GetString("Scripts_DeleteScript", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The script {0} was deleted successfully..
-        /// </summary>
-        internal static string Scripts_Deleted {
-            get {
-                return ResourceManager.GetString("Scripts_Deleted", resourceCulture);
             }
         }
         
@@ -8998,6 +9211,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Custom Statuses.
+        /// </summary>
+        internal static string Statuses_None_Title {
+            get {
+                return ResourceManager.GetString("Statuses_None_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are no custom statuses to delete..
         /// </summary>
         internal static string Statuses_NoneToDelete {
@@ -9012,15 +9234,6 @@ namespace Helyx {
         internal static string Statuses_NoneToEdit {
             get {
                 return ResourceManager.GetString("Statuses_NoneToEdit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No Custom Statuses.
-        /// </summary>
-        internal static string Statuses_None_Title {
-            get {
-                return ResourceManager.GetString("Statuses_None_Title", resourceCulture);
             }
         }
         
