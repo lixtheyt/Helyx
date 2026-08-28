@@ -17,6 +17,7 @@ namespace Helyx.Settings
         {
             bool foundUpdate = false;
             string? latestVersion = null;
+            string? currentVersion = null;
 
             try
             {
@@ -38,6 +39,8 @@ namespace Helyx.Settings
                                 string.Format(Strings.Update_Current, Program.Version) + "\n" +
                                 string.Format(Strings.Update_Latest, latestVersion));
                         }
+                        
+                        currentVersion = Program.Version;
 
                         if (latest > current)
                             foundUpdate = true;
@@ -50,6 +53,8 @@ namespace Helyx.Settings
                 Console.ReadKey();
                 return;
             }
+
+            UI.Info($"Current version: {currentVersion}", "Current version");
 
             if (foundUpdate)
             {
