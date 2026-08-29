@@ -299,13 +299,12 @@ couldn't have been done without [Spectre.Console](https://github.com/spectrecons
 their developers who keep [Spectre.Console](https://github.com/spectreconsole/spectre.console) updated.
 
 **One file holds everything, and it is treated as if it will be corrupted.**
-If `%AppData%\Helyx\config.json` becomes unreadable, Helyx will repair it as soon as possible, 
-so you can resume using Helyx.
+If `%AppData%\Helyx\config.json` becomes unreadable, Helyx will repair it as soon as possible.
 Settings are stored by name rather than by index.
 
 **Secrets will always stay secret.** Your GitHub token and your encrypted notes go through Windows
-DPAPI, scoped to your account. A configuration copied
-to another machine cannot be decrypted there, so the notes screen refuses to open rather than
+DPAPI.
+A configuration copied to another machine cannot be decrypted there, so the notes screen refuses to open rather than
 showing you a wall of base64 that you might then save over the note it was hiding.
 
 ## Credits
