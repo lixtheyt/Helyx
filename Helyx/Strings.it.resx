@@ -3267,4 +3267,7 @@ come un 'edit' o un 'reword' in un rebase interattivo.</value>
   <data name="GH_Event_HeadRefRestored" xml:space="preserve">
     <value>ha ripristinato il branch</value>
   </data>
+  <data name="IDE_FoundState" xml:space="preserve">
+    <value>Stato di rilevamento</value>
+  </data>
 </root>

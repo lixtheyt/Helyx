@@ -3267,4 +3267,7 @@ como um 'edit' ou um 'reword' num rebase interativo.</value>
   <data name="GH_Event_HeadRefRestored" xml:space="preserve">
     <value>restaurou o ramo</value>
   </data>
+  <data name="IDE_FoundState" xml:space="preserve">
+    <value>Estado de deteção</value>
+  </data>
 </root>

@@ -7276,6 +7276,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Found state.
+        /// </summary>
+        internal static string IDE_FoundState {
+            get {
+                return ResourceManager.GetString("IDE_FoundState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No executable is configured for {0}..
         /// </summary>
         internal static string IDE_NoExecutable {
