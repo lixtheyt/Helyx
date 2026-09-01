@@ -3267,4 +3267,7 @@ etwa ein 'edit' oder 'reword' in einem interaktiven Rebase.</value>
   <data name="GH_Event_HeadRefRestored" xml:space="preserve">
     <value>hat den Branch wiederhergestellt</value>
   </data>
+  <data name="IDE_FoundState" xml:space="preserve">
+    <value>Erkennungsstatus</value>
+  </data>
 </root>

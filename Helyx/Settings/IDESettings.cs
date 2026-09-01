@@ -48,7 +48,7 @@ namespace Helyx.Settings
                     .AddColumn(new GridColumn().NoWrap().PadRight(2))
                     .AddColumn();
 
-                statusGrid.AddRow($"[bold]{Strings.Common_Found}[/]", foundCache[selectedIDE] switch
+                statusGrid.AddRow($"[bold]{Strings.IDE_FoundState}[/]", foundCache[selectedIDE] switch
                 {
                     ConfigurationFile.IDEExecutablesClass.TypesOfFound.Found => $"[{Color.Green}]{Strings.Common_Found}[/]",
                     ConfigurationFile.IDEExecutablesClass.TypesOfFound.NotFound => $"[{Color.Red}]{Strings.IDE_State_NotFound}[/]",

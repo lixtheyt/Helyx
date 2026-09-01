@@ -3267,4 +3267,7 @@
   <data name="GH_Event_HeadRefRestored" xml:space="preserve">
     <value>восстановил ветку</value>
   </data>
+  <data name="IDE_FoundState" xml:space="preserve">
+    <value>Состояние обнаружения</value>
+  </data>
 </root>
