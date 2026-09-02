@@ -11,8 +11,8 @@
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#build-it-yourself)
 [![Languages](https://img.shields.io/badge/languages-8-green.svg)](#languages-support)<!-- HELYX_STATUS_START -->
 ![Status](https://img.shields.io/badge/status-Active-008000)<!-- HELYX_STATUS_END --><!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_START -->
-![Badge](https://img.shields.io/badge/stardance_project-FFFF00)
-<!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_END -->
+[![Stardance](https://img.shields.io/badge/stardance_project-FFFF00)](https://stardance.hackclub.com/projects/18497)<!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_END -->
+[![SuperStarProject](Helyx/assets/superstarproject.svg)](https://stardance.hackclub.com/projects/18497)
 
 ![Helyx](Helyx/assets/hero.gif)
 
