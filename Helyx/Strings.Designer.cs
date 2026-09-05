@@ -8608,6 +8608,15 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The project folder {0} no longer exists..
+        /// </summary>
+        internal static string Script_ProjectFolderMissing {
+            get {
+                return ResourceManager.GetString("Script_ProjectFolderMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Log.
         /// </summary>
         internal static string Script_Log {

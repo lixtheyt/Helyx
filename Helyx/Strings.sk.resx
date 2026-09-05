@@ -1380,6 +1380,9 @@
   <data name="Script_InvalidPath" xml:space="preserve">
     <value>{0} nie je platná položka {1}.</value>
   </data>
+  <data name="Script_ProjectFolderMissing" xml:space="preserve">
+    <value>Priečinok projektu {0} už neexistuje.</value>
+  </data>
   <data name="Script_FilePath" xml:space="preserve">
     <value>cesta k súboru</value>
   </data>

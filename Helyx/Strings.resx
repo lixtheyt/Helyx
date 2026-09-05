@@ -1596,6 +1596,10 @@
     <value>{0} is not a valid {1}.</value>
     <comment>{0} is a path already quoted by the code, {1} is Script_FilePath, Script_FolderPath or Script_Folder.</comment>
   </data>
+  <data name="Script_ProjectFolderMissing" xml:space="preserve">
+    <value>The project folder {0} no longer exists.</value>
+    <comment>{0} is a path already quoted by the code.</comment>
+  </data>
   <data name="Script_FilePath" xml:space="preserve">
     <value>file path</value>
     <comment>Used inside Script_NothingConfigured and Script_InvalidPath, lowercase on purpose.</comment>

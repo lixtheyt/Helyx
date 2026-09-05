@@ -1,6 +1,7 @@
 using static Helyx.Projects.Scripts.Script.Block;
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
+using Helyx.Data;
 using Helyx.Shared;
 using Spectre.Console;
 using Color = Spectre.Console.Color;
@@ -132,6 +133,10 @@ namespace Helyx.Projects.Scripts
             var scripts = new List<Script>();
             var problems = new List<string>();
 
+            var projectPath = ConfigurationHandler.GetConfig().Projects.TryGetValue(guid, out var project)
+                ? project.Path
+                : "";
+
             foreach (var file in files)
             {
                 Script? script;
@@ -151,6 +156,8 @@ namespace Helyx.Projects.Scripts
                     continue;
                 }
 
+                script.ProjectPath = projectPath;
+                
                 script.Blocks ??= [];
 
                 int dropped = script.Blocks.RemoveAll(b => b?.Action == null);

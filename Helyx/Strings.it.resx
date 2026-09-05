@@ -1380,6 +1380,9 @@
   <data name="Script_InvalidPath" xml:space="preserve">
     <value>{0} non è un {1} valido.</value>
   </data>
+  <data name="Script_ProjectFolderMissing" xml:space="preserve">
+    <value>La cartella del progetto {0} non esiste più.</value>
+  </data>
   <data name="Script_FilePath" xml:space="preserve">
     <value>percorso del file</value>
   </data>

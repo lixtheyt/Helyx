@@ -16,6 +16,9 @@ namespace Helyx.Projects.Scripts
         public List<Block> Blocks { get; set; } = [];
 
         [JsonIgnore]
+        public string ProjectPath { get; set; } = "";
+
+        [JsonIgnore]
         public Channel<string> Logs { get; set; } = Channel.CreateUnbounded<string>();
 
         public sealed class BlockResult
@@ -41,14 +44,17 @@ namespace Helyx.Projects.Scripts
             }
 
             #region Action guards
-            private static string RequirePath(string? path, string what)
+            private static string RequirePath(Script script, string? path, string what)
             {
                 if (string.IsNullOrWhiteSpace(path))
                     throw new InvalidOperationException(string.Format(Strings.Script_NothingConfigured, what));
 
+                if (!Directory.Exists(script.ProjectPath))
+                    throw new InvalidOperationException(string.Format(Strings.Script_ProjectFolderMissing, $"'{script.ProjectPath}'"));
+
                 try
                 {
-                    return System.IO.Path.GetFullPath(path);
+                    return Path.GetFullPath(path, script.ProjectPath);
                 }
                 catch (Exception ex) when (ex is ArgumentException or NotSupportedException or PathTooLongException)
                 {
@@ -56,12 +62,12 @@ namespace Helyx.Projects.Scripts
                 }
             }
 
-            private static string RequireDeletableFolder(string? path)
+            private static string RequireDeletableFolder(Script script, string? path)
             {
-                var full = RequirePath(path, Strings.Script_Folder).TrimEnd(System.IO.Path.DirectorySeparatorChar);
+                var full = RequirePath(script, path, Strings.Script_Folder).TrimEnd(Path.DirectorySeparatorChar);
 
                 var segments = full.Split(
-                    System.IO.Path.DirectorySeparatorChar,
+                    Path.DirectorySeparatorChar,
                     StringSplitOptions.RemoveEmptyEntries);
 
                 if (segments.Length < 3)
@@ -143,6 +149,9 @@ namespace Helyx.Projects.Scripts
                     if (string.IsNullOrWhiteSpace(Command))
                         throw new InvalidOperationException(Strings.Script_NoCommand);
 
+                    if (!Directory.Exists(script.ProjectPath))
+                        throw new InvalidOperationException(string.Format(Strings.Script_ProjectFolderMissing, $"'{script.ProjectPath}'"));
+
                     async Task Pump(StreamReader reader, bool error)
                     {
                         while (await reader.ReadLineAsync() is { } line)
@@ -162,7 +171,8 @@ namespace Helyx.Projects.Scripts
                             UseShellExecute = false,
                             CreateNoWindow = true,
                             RedirectStandardOutput = true,
-                            RedirectStandardError = true
+                            RedirectStandardError = true,
+                            WorkingDirectory = script.ProjectPath
                         }) ?? throw new InvalidOperationException(Strings.Script_NoCommand);
 
                         var draining = Task.WhenAll(
@@ -202,13 +212,17 @@ namespace Helyx.Projects.Scripts
                     if (string.IsNullOrWhiteSpace(Path))
                         throw new InvalidOperationException(Strings.Script_NoPath);
 
+                    if (!Directory.Exists(script.ProjectPath))
+                        throw new InvalidOperationException(string.Format(Strings.Script_ProjectFolderMissing, $"'{script.ProjectPath}'"));
+
                     try
                     {
                         Process.Start(
                             new ProcessStartInfo
                             {
                                 FileName = Path,
-                                UseShellExecute = true
+                                UseShellExecute = true,
+                                WorkingDirectory = script.ProjectPath
                             }
                         );
                     }
@@ -237,7 +251,7 @@ namespace Helyx.Projects.Scripts
 
                 public Task<BlockResult> Execute(Script script)
                 {
-                    var target = RequirePath(Path, Strings.Script_FilePath);
+                    var target = RequirePath(script, Path, Strings.Script_FilePath);
 
                     try
                     {
@@ -273,7 +287,7 @@ namespace Helyx.Projects.Scripts
 
                 public Task<BlockResult> Execute(Script script)
                 {
-                    var target = RequirePath(Path, Strings.Script_FolderPath);
+                    var target = RequirePath(script, Path, Strings.Script_FolderPath);
 
                     try
                     {
@@ -304,7 +318,7 @@ namespace Helyx.Projects.Scripts
 
                 public Task<BlockResult> Execute(Script script)
                 {
-                    var target = RequirePath(Path, Strings.Script_FilePath);
+                    var target = RequirePath(script, Path, Strings.Script_FilePath);
 
                     try
                     {
@@ -336,7 +350,7 @@ namespace Helyx.Projects.Scripts
 
                 public Task<BlockResult> Execute(Script script)
                 {
-                    var target = RequireDeletableFolder(Path);
+                    var target = RequireDeletableFolder(script, Path);
 
                     try
                     {
