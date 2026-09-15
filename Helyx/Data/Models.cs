@@ -22,6 +22,7 @@ namespace Helyx.Data
         public Guid Guid { get; set; } = Guid.Empty;
         public string HelyxName { get; set; }
         public string GitHubName { get; set; } = string.Empty;
+        public string HackatimeName { get; set; } = string.Empty;
         public string Path { get; set; }
         public string RootCommit { get; set; } = string.Empty;
         public Guid Status { get; set; } = BuiltInStatusIds.Active;
@@ -80,6 +81,7 @@ namespace Helyx.Data
     internal class SecretsFile
     {
         public string GitHubAccessToken { get; set; } = string.Empty;
+        public string HackatimeToken { get; set; } = string.Empty;
     }
 
     internal enum Confirm { Yes, No }

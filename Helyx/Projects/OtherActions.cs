@@ -3,6 +3,7 @@ using Helyx.Shared;
 using Spectre.Console;
 using System.Diagnostics;
 using System.Text;
+using Helyx.Data;
 using static Helyx.Data.ConfigurationHandler;
 
 namespace Helyx.Projects
@@ -22,10 +23,11 @@ namespace Helyx.Projects
                     .AddChoices(Enum.GetValues<Action>())
                     .UseConverter(x => x switch
                     {
-                        Action.Notes => Strings.Other_Notes,
                         Action.OpenIn => Strings.Other_OpenIn,
                         Action.UserScripts => Strings.Other_UserScripts,
                         Action.BackupProject => Strings.Other_BackupProject,
+                        Action.HackatimeInfo => "Hackatime Info",
+                        Action.Notes => Strings.Other_Notes,
                         Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                         _ => x.ToString()
                     }));
@@ -40,6 +42,9 @@ namespace Helyx.Projects
                         break;
                     case Action.BackupProject:
                         Backups.Display(guid);
+                        break;
+                    case Action.HackatimeInfo:
+                        HackatimeInfo.Display(guid);
                         break;
                     case Action.Notes:
                         Notes(guid);
@@ -172,6 +177,7 @@ namespace Helyx.Projects
             OpenIn,
             UserScripts,
             BackupProject,
+            HackatimeInfo,
             Notes,
             Back
         }

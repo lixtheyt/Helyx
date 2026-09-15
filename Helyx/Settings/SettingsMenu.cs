@@ -17,7 +17,7 @@ namespace Helyx.Settings
 
                 var choice = AnsiConsole.Prompt(
                     new SelectionPrompt<Action>()
-                        .PageSize(10)
+                        .PageSize(15)
                         .AddChoices(Enum.GetValues<Action>())
                         .UseConverter(action => action switch
                         {
@@ -27,6 +27,7 @@ namespace Helyx.Settings
                             Action.ManageBadges => Strings.Settings_ManageBadges,
                             Action.ManageConfigurationFile => Strings.Settings_ManageConfigurationFile,
                             Action.GitHubAuthorization => Strings.Settings_GitHubAuthorization,
+                            Action.HackatimeAuthorization => "Hackatime Authorization",
                             Action.PreferredIdentity => Strings.Settings_PreferredIdentity,
                             Action.NotesSettings => Strings.Settings_Notes,
                             Action.Updates => Strings.Settings_Updates,
@@ -56,6 +57,9 @@ namespace Helyx.Settings
                         break;
                     case Action.GitHubAuthorization:
                         GitHubAuthorizationSettings.Display();
+                        break;
+                    case Action.HackatimeAuthorization:
+                        HackatimeAuthorizationSettings.Display();
                         break;
                     case Action.PreferredIdentity:
                         PreferredIdentitySettings.Display();
@@ -100,6 +104,7 @@ namespace Helyx.Settings
             ManageBadges,
             ManageConfigurationFile,
             GitHubAuthorization,
+            HackatimeAuthorization,
             PreferredIdentity,
             NotesSettings,
             Updates,

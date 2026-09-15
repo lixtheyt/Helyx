@@ -93,6 +93,7 @@ namespace Helyx.Data
                 project.Badges ??= [];
                 project.UsedLanguages ??= [];
                 project.GitHubName ??= string.Empty;
+                project.HackatimeName ??= string.Empty;
                 project.HelyxName ??= string.Empty;
                 project.Path ??= string.Empty;
                 project.RootCommit ??= string.Empty;
@@ -305,7 +306,7 @@ namespace Helyx.Data
             }
         }
 
-        private static void EditSecrets(SecretsFile secrets)
+        private static bool EditSecrets(SecretsFile secrets)
         {
             var path = GetSecretsPath();
             var temporary = path + ".tmp";
@@ -318,6 +319,8 @@ namespace Helyx.Data
                     File.Replace(temporary, path, null);
                 else
                     File.Move(temporary, path);
+
+                return true;
             }
             catch (Exception ex)
             {
@@ -331,10 +334,12 @@ namespace Helyx.Data
 
                 UI.Error(Strings.Secrets_SaveFailed + $"\n\n{ex.Message}");
                 Console.ReadKey();
+
+                return false;
             }
         }
 
-        public static void SaveGitHubAccessToken(string accessToken)
+        internal static void SaveGitHubAccessToken(string accessToken)
         {
             try
             {
@@ -351,8 +356,7 @@ namespace Helyx.Data
 
                 SecretsFile secrets = GetSecrets();
 
-                secrets.GitHubAccessToken =
-                    Convert.ToBase64String(encrypted);
+                secrets.GitHubAccessToken = Convert.ToBase64String(encrypted);
 
                 EditSecrets(secrets);
             }
@@ -362,7 +366,37 @@ namespace Helyx.Data
             }
         }
 
-        public static string GetGitHubAccessToken()
+        internal static bool SaveHackatimeToken(string token)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(token))
+                    throw new ArgumentException("The Hackatime token is empty.", nameof(token));
+
+                byte[] data = Encoding.UTF8.GetBytes(token);
+
+                byte[] encrypted = ProtectedData.Protect(
+                    data,
+                    null,
+                    DataProtectionScope.CurrentUser
+                );
+
+                SecretsFile secrets = GetSecrets();
+
+                secrets.HackatimeToken = Convert.ToBase64String(encrypted);
+
+                return EditSecrets(secrets);
+            }
+            catch (Exception ex)
+            {
+                UI.Error("Hackatime failed to save!" + $"\n\n{ex.Message}");
+                Console.ReadKey();
+
+                return false;
+            }
+        }
+
+        internal static string GetGitHubAccessToken()
         {
             try
             {
@@ -371,9 +405,7 @@ namespace Helyx.Data
                 if (string.IsNullOrEmpty(secrets.GitHubAccessToken))
                     return string.Empty;
 
-                byte[] data = Convert.FromBase64String(
-                    secrets.GitHubAccessToken
-                );
+                byte[] data = Convert.FromBase64String(secrets.GitHubAccessToken);
 
                 byte[] decrypted = ProtectedData.Unprotect(
                     data,
@@ -389,11 +421,45 @@ namespace Helyx.Data
             }
         }
 
-        public static void ForgetGitHubAccessToken()
+        internal static string GetHackatimeToken()
+        {
+            try
+            {
+                SecretsFile secrets = GetSecrets();
+
+                if (string.IsNullOrEmpty(secrets.HackatimeToken))
+                    return string.Empty;
+
+                byte[] data = Convert.FromBase64String(secrets.HackatimeToken);
+
+                byte[] decrypted = ProtectedData.Unprotect(
+                    data,
+                    null,
+                    DataProtectionScope.CurrentUser
+                );
+
+                return Encoding.UTF8.GetString(decrypted);
+            }
+            catch (Exception ex) when (ex is FormatException or CryptographicException)
+            {
+                return string.Empty;
+            }
+        }
+
+        internal static void ForgetGitHubAccessToken()
         {
             SecretsFile secrets = GetSecrets();
 
             secrets.GitHubAccessToken = string.Empty;
+
+            EditSecrets(secrets);
+        }
+
+        internal static void ForgetHackatimeToken()
+        {
+            SecretsFile secrets = GetSecrets();
+
+            secrets.HackatimeToken = string.Empty;
 
             EditSecrets(secrets);
         }
