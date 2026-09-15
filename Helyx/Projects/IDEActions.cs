@@ -133,6 +133,7 @@ namespace Helyx.Projects
 
             var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<IDE?>()
+                    .PageSize(20)
                     .Title(Strings.IDE_Select)
                     .AddChoices(ranked.Select(x => (IDE?)x.Ide).Append(null))
                     .UseConverter(x => x switch

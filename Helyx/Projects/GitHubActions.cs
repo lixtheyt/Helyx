@@ -160,7 +160,6 @@ namespace Helyx.Projects
                 var filter = IssueFilter.All;
                 var invertedFilters = new HashSet<IssueFilter>();
                 var selectedIndex1 = 0;
-                var pageSize1 = Math.Max(2, (Console.WindowHeight - 10) / 2);
 
                 GitHubIssue? selectedIssue = null;
                 var creating = false;
@@ -186,6 +185,8 @@ namespace Helyx.Projects
                             selectedIndex1 = visible.Count == 0
                                 ? 0
                                 : Math.Clamp(selectedIndex1, 0, visible.Count - 1);
+
+                            var pageSize1 = Math.Max(2, (Console.WindowHeight - 10) / 2);
 
                             var lastPage = Math.Max(1, (int)Math.Ceiling(visible.Count / (double)pageSize1));
 
@@ -1257,8 +1258,6 @@ namespace Helyx.Projects
 
                 var selectedIndex1 = 0;
 
-                var pageSize1 = Math.Max(2, (Console.WindowHeight - 10) / 2);
-
                 GitHubPullRequest? selectedPull = null;
 
                 AnsiConsole.Live(rootLayout1)
@@ -1283,6 +1282,8 @@ namespace Helyx.Projects
                             selectedIndex1 = visible.Count == 0
                                 ? 0
                                 : Math.Clamp(selectedIndex1, 0, visible.Count - 1);
+
+                            var pageSize1 = Math.Max(2, (Console.WindowHeight - 10) / 2);
 
                             var lastPage = Math.Max(1, (int)Math.Ceiling(visible.Count / (double)pageSize1));
 

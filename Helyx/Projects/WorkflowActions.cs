@@ -79,7 +79,6 @@ namespace Helyx.Projects
                         .LeftJustified());
 
                 var selectedIndex = 0;
-                var pageSize = Math.Max(2, Console.WindowHeight - 12);
 
                 GitHubWorkflowRun? opened = null;
 
@@ -100,6 +99,8 @@ namespace Helyx.Projects
                             selectedIndex = visible.Count == 0
                                 ? 0
                                 : Math.Clamp(selectedIndex, 0, visible.Count - 1);
+
+                            var pageSize = Math.Max(2, Console.WindowHeight - 12);
 
                             var lastPage = Math.Max(1, (int)Math.Ceiling(visible.Count / (double)pageSize));
 
@@ -362,7 +363,6 @@ namespace Helyx.Projects
                     .Padding(1, 0));
 
                 var scroll = 0;
-                var height = Math.Max(3, Console.WindowHeight - 12);
 
                 var action = ConsoleKey.Escape;
 
@@ -373,6 +373,8 @@ namespace Helyx.Projects
 
                         while (running)
                         {
+                            var height = Math.Max(3, Console.WindowHeight - 12);
+
                             scroll = Math.Clamp(scroll, 0, Math.Max(0, lines.Count - height));
 
                             layout["Jobs"].Update(new Markup(string.Join("\n", lines.Skip(scroll).Take(height))));
@@ -540,7 +542,6 @@ namespace Helyx.Projects
                 new Rule($"[bold {Color.Blue}]{string.Format(Strings.GH_Wf_LogTitle, run.RunNumber)}[/]").LeftJustified());
 
             var scroll = 0;
-            var height = Math.Max(3, Console.WindowHeight - 8);
 
             AnsiConsole.Live(layout)
                 .Start(ctx =>
@@ -549,6 +550,8 @@ namespace Helyx.Projects
 
                     while (running)
                     {
+                        var height = Math.Max(3, Console.WindowHeight - 8);
+
                         scroll = Math.Clamp(scroll, 0, Math.Max(0, lines.Count - height));
 
                         layout["Log"].Update(new Markup(string.Join("\n", lines.Skip(scroll).Take(height))));
