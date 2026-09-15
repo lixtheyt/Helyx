@@ -3440,9 +3440,6 @@ namespace Helyx.Projects
                     })
                 );
 
-                if (choice == Diagnose.Back)
-                    return;
-
                 try
                 {
                     switch (choice)
@@ -3683,6 +3680,8 @@ namespace Helyx.Projects
                                 UI.Success(string.Format(Strings.Git_BranchRenamed, $"[{Color.Green3_1}]{newName}[/]"), Strings.Git_Diagnostics);
                                 break;
                             }
+                        case Diagnose.Back:
+                            return;
                         default:
                             throw new ArgumentOutOfRangeException();
                     }

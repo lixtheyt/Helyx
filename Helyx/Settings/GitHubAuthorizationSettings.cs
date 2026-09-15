@@ -13,7 +13,7 @@ namespace Helyx.Settings
             {
                 var authorized = GitHubCalls.IsAuthorizedWithGitHub();
 
-                List<Action> choices = [];
+                List<Action> choices = new();
 
                 if (authorized)
                 {
@@ -55,9 +55,6 @@ namespace Helyx.Settings
                     }));
 
                 AnsiConsole.Clear();
-
-                if (action is Action.Back)
-                    return;
 
                 switch (action)
                 {
