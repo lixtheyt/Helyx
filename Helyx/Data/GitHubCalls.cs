@@ -800,8 +800,12 @@ namespace Helyx.Data
             {
                 using var request = new HttpRequestMessage(method, url);
 
+                var token = ConfigurationHandler.GetGitHubAccessToken();
+
                 request.Headers.UserAgent.ParseAdd("Helyx");
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", ConfigurationHandler.GetGitHubAccessToken());
+
+                if (!string.IsNullOrEmpty(token))
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                 if (body != null)
                     request.Content = JsonContent.Create(body);
@@ -843,8 +847,12 @@ namespace Helyx.Data
             {
                 using var request = new HttpRequestMessage(HttpMethod.Get, url);
 
+                var token = ConfigurationHandler.GetGitHubAccessToken();
+
                 request.Headers.UserAgent.ParseAdd("Helyx");
-                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", ConfigurationHandler.GetGitHubAccessToken());
+
+                if (!string.IsNullOrEmpty(token))
+                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                 using var response = await Client.SendAsync(request);
 
