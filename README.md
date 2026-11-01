@@ -316,8 +316,8 @@ And [LibGit2Sharp](https://github.com/libgit2/libgit2sharp), Helyx's brain, whic
 talk to Git properly, instead of running the git command and trying to parse whatever it prints.
 
 [Markdig](https://github.com/xoofx/markdig) parses the
-Markdown that GitHub hands back before Helyx turns it into something a console can draw, and
-[TextCopy](https://github.com/CopyText/TextCopy) puts the device code into your clipboard.
+Markdown that GitHub hands back before Helyx turns it into something a console can draw,
+and [TextCopy](https://github.com/CopyText/TextCopy) puts the device code into your clipboard.
 
 The credits window is drawn with a figlet font created by [xero](https://github.com/xero/figlet-fonts).
 
