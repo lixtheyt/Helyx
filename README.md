@@ -312,15 +312,14 @@ That gives you one file, `publish/Helyx.exe`, which needs nothing else installed
 </details>
 
 <details>
-<summary><b>Linux and macOS</b></summary>
+<summary><b>Linux</b></summary>
 <br>
 
-Install the .NET 10 SDK first. On macOS with Homebrew that is `brew install dotnet`. On Linux use
-your package manager, for example `sudo apt install dotnet-sdk-10.0` or `sudo dnf install dotnet-sdk-10.0`.
-If your distribution does not have it yet, Microsoft's
+Install the .NET 10 SDK with your package manager, for example `sudo apt install dotnet-sdk-10.0`
+or `sudo dnf install dotnet-sdk-10.0`. If your distribution does not have it yet, Microsoft's
 [install script](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script) works everywhere.
 
-Then clone the repository and publish a single file for the system you are on:
+Then clone the repository and publish a single file:
 
 ```sh
 git clone https://github.com/lixtheyt/Helyx.git
@@ -342,25 +341,75 @@ cp publish/Helyx ~/.local/bin/helyx
 ```
 
 If `helyx` is still not found after that, add `export PATH="$HOME/.local/bin:$PATH"` to your
-`~/.zshrc` or `~/.bashrc` and open a new terminal.
+`~/.bashrc` and open a new terminal.
 
-To build for a different system than the one you are on, replace `--use-current-runtime` with
-`-r` and one of `linux-x64`, `linux-arm64`, `osx-arm64` or `osx-x64`. A macOS build made on another
-system is not signed, so on the Mac it has to be signed once before it will start:
+On a very minimal Linux, Helyx can stop on a missing ICU library. Installing `libicu` fixes it.
+
+When Helyx needs a folder, it opens your desktop's own dialog, whichever of `kdialog`, `qarma`,
+`zenity` or `yad` fits it. When there is no display or none of them is installed, Helyx opens a
+file browser of its own inside the terminal.
+
+The Linux build is new. It compiles and publishes, but it has not been tested the way the Windows
+build has.
+
+</details>
+
+<details>
+<summary><b>macOS</b></summary>
+<br>
+
+Install the .NET 10 SDK. Download the installer from the
+[.NET website](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) and run it, or if you have
+Homebrew, use `brew install dotnet`.
+
+Then clone the repository and publish a single file:
+
+```sh
+git clone https://github.com/lixtheyt/Helyx.git
+cd Helyx
+dotnet publish Helyx/Helyx.csproj -c Release -f net10.0 --use-current-runtime --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=none -o publish
+```
+
+That gives you one file, `publish/Helyx`, which needs nothing else installed. Run it right away:
+
+```sh
+./publish/Helyx
+```
+
+To be able to type `helyx` from anywhere, copy it to a folder that is on your `PATH`:
+
+```sh
+mkdir -p ~/.local/bin
+cp publish/Helyx ~/.local/bin/helyx
+```
+
+If `helyx` is still not found after that, add `export PATH="$HOME/.local/bin:$PATH"` to your
+`~/.zshrc` and open a new terminal.
+
+When Helyx needs a folder, it opens the Finder panel.
+
+The macOS build is new. It compiles and publishes, but it has not been tested the way the Windows
+build has.
+
+</details>
+
+<details>
+<summary><b>Building for another system</b></summary>
+<br>
+
+You can build for a system other than the one you are on. Replace `--use-current-runtime` in the
+publish command with `-r` and one of `linux-x64`, `linux-arm64`, `osx-arm64` or `osx-x64`:
+
+```sh
+dotnet publish Helyx/Helyx.csproj -c Release -f net10.0 -r linux-x64 --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=none -o publish
+```
+
+A macOS build made on another system is not signed, so on the Mac it has to be signed once before
+it will start:
 
 ```sh
 codesign --force --sign - Helyx
 ```
-
-On a very minimal Linux, Helyx can stop on a missing ICU library. Installing `libicu` fixes it.
-
-When Helyx needs a folder, it opens the dialog your system already has. On macOS that is the
-Finder panel. On Linux it is your desktop's own dialog, whichever of `kdialog`, `qarma`, `zenity`
-or `yad` fits it. When there is no display or none of them is installed, Helyx opens a file
-browser of its own inside the terminal.
-
-The Linux and macOS builds are new. They compile and publish, but they have not been tested the
-way the Windows build has.
 
 </details>
 
@@ -378,7 +427,7 @@ couldn't have been done without [Spectre.Console](https://github.com/spectrecons
 their developers who keep [Spectre.Console](https://github.com/spectreconsole/spectre.console) updated.
 
 **One file holds everything, and it is treated as if it will be corrupted.**
-If `%AppData%\Helyx\config.json` (`~/.config/Helyx/config.json` on Linux) becomes unreadable, Helyx will repair it as soon as possible.
+If `%AppData%\Helyx\config.json` (`~/.config/Helyx/config.json` on Linux, `~/Library/Application Support/Helyx/config.json` on macOS) becomes unreadable, Helyx will repair it as soon as possible.
 Settings are stored by name rather than by index.
 
 **Secrets will always stay secret.** Your GitHub token, your signing key and your encrypted notes go through Windows
