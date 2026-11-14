@@ -116,6 +116,9 @@ namespace Helyx.Settings
 
         private static string? PickIDEExecutable()
         {
+            if (!OperatingSystem.IsWindows())
+                return PathPicker.Pick(Strings.IDE_Picker_Title, true);
+
             using var dialog = new OpenFileDialog
             {
                 Title = Strings.IDE_Picker_Title,

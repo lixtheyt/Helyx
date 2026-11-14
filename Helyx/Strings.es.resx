@@ -3273,4 +3273,127 @@ como un 'edit' o 'reword' en un rebase interactivo.</value>
   <data name="IDE_FoundState" xml:space="preserve">
     <value>Estado de detección</value>
   </data>
+  <data name="Picker_Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Picker_Desktop" xml:space="preserve">
+    <value>Escritorio</value>
+  </data>
+  <data name="Picker_Documents" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="Picker_Downloads" xml:space="preserve">
+    <value>Descargas</value>
+  </data>
+  <data name="Picker_Places" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="Picker_Drives" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="Picker_Col_Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Picker_Col_Modified" xml:space="preserve">
+    <value>Modificado</value>
+  </data>
+  <data name="Picker_Col_Size" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="Picker_Unreadable" xml:space="preserve">
+    <value>No se puede leer esta carpeta.</value>
+  </data>
+  <data name="Picker_NoMatch" xml:space="preserve">
+    <value>Nada coincide con el filtro.</value>
+  </data>
+  <data name="Picker_Empty" xml:space="preserve">
+    <value>Esta carpeta está vacía.</value>
+  </data>
+  <data name="Picker_Type_Repo" xml:space="preserve">
+    <value>Repositorio Git</value>
+  </data>
+  <data name="Picker_Type_Folder" xml:space="preserve">
+    <value>Carpeta</value>
+  </data>
+  <data name="Picker_Type_File" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="Picker_Ask_Filter" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="Picker_Ask_NewFolder" xml:space="preserve">
+    <value>Nueva carpeta</value>
+  </data>
+  <data name="Picker_Sort" xml:space="preserve">
+    <value>orden: {0}</value>
+  </data>
+  <data name="Picker_HiddenShown" xml:space="preserve">
+    <value>elementos ocultos visibles</value>
+  </data>
+  <data name="Picker_Help_Title" xml:space="preserve">
+    <value>Teclas</value>
+  </data>
+  <data name="Picker_Help_Move" xml:space="preserve">
+    <value>moverse por la lista</value>
+  </data>
+  <data name="Picker_Help_Page" xml:space="preserve">
+    <value>saltar una página</value>
+  </data>
+  <data name="Picker_Help_History" xml:space="preserve">
+    <value>ir atrás y adelante</value>
+  </data>
+  <data name="Picker_Help_Pane" xml:space="preserve">
+    <value>cambiar entre los lugares y la lista</value>
+  </data>
+  <data name="Picker_Help_Open" xml:space="preserve">
+    <value>abrir la carpeta</value>
+  </data>
+  <data name="Picker_Help_Parent" xml:space="preserve">
+    <value>ir a la carpeta superior</value>
+  </data>
+  <data name="Picker_Help_Filter" xml:space="preserve">
+    <value>filtrar esta carpeta</value>
+  </data>
+  <data name="Picker_Help_Path" xml:space="preserve">
+    <value>escribir una ruta</value>
+  </data>
+  <data name="Picker_Help_NewFolder" xml:space="preserve">
+    <value>crear una carpeta</value>
+  </data>
+  <data name="Picker_Help_Sort" xml:space="preserve">
+    <value>cambiar el orden</value>
+  </data>
+  <data name="Picker_Help_Hidden" xml:space="preserve">
+    <value>mostrar u ocultar los elementos ocultos</value>
+  </data>
+  <data name="Picker_Help_Select" xml:space="preserve">
+    <value>seleccionar</value>
+  </data>
+  <data name="Picker_Help_Back" xml:space="preserve">
+    <value>atrás</value>
+  </data>
+  <data name="Picker_Footer_Help" xml:space="preserve">
+    <value>&lt;?&gt; cerrar</value>
+  </data>
+  <data name="Picker_Footer_Input" xml:space="preserve">
+    <value>&lt;enter&gt; confirmar   &lt;esc&gt; cancelar</value>
+  </data>
+  <data name="Picker_NameInvalid" xml:space="preserve">
+    <value>Ese nombre no se puede usar aquí.</value>
+  </data>
+  <data name="Picker_FolderCreated" xml:space="preserve">
+    <value>Carpeta creada.</value>
+  </data>
+  <data name="Picker_PathMissing" xml:space="preserve">
+    <value>Esa ruta no existe.</value>
+  </data>
+  <data name="Picker_OnlyFolders" xml:space="preserve">
+    <value>Aquí solo se pueden seleccionar carpetas.</value>
+  </data>
+  <data name="Picker_Footer_List" xml:space="preserve">
+    <value>↑↓ navegar   ←→ historial   &lt;tab&gt; panel   &lt;enter&gt; abrir   &lt;backspace&gt; subir</value>
+  </data>
+  <data name="Picker_Footer_Actions" xml:space="preserve">
+    <value>&lt;/&gt; filtrar   &lt;p&gt; ruta   &lt;n&gt; nueva carpeta   &lt;s&gt; ordenar   &lt;.&gt; ocultos   &lt;f2&gt; seleccionar   &lt;?&gt; teclas   &lt;esc&gt; atrás</value>
+  </data>
 </root>

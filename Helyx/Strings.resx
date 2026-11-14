@@ -3690,4 +3690,127 @@ such as an 'edit' or 'reword' in an interactive rebase.</value>
   <data name="IDE_FoundState" xml:space="preserve">
     <value>Found state</value>
   </data>
+  <data name="Picker_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Picker_Desktop" xml:space="preserve">
+    <value>Desktop</value>
+  </data>
+  <data name="Picker_Documents" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="Picker_Downloads" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="Picker_Places" xml:space="preserve">
+    <value>Places</value>
+  </data>
+  <data name="Picker_Drives" xml:space="preserve">
+    <value>Drives</value>
+  </data>
+  <data name="Picker_Col_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Picker_Col_Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="Picker_Col_Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Picker_Unreadable" xml:space="preserve">
+    <value>This folder cannot be read.</value>
+  </data>
+  <data name="Picker_NoMatch" xml:space="preserve">
+    <value>Nothing matches the filter.</value>
+  </data>
+  <data name="Picker_Empty" xml:space="preserve">
+    <value>This folder is empty.</value>
+  </data>
+  <data name="Picker_Type_Repo" xml:space="preserve">
+    <value>Git repository</value>
+  </data>
+  <data name="Picker_Type_Folder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="Picker_Type_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Picker_Ask_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Picker_Ask_NewFolder" xml:space="preserve">
+    <value>New folder</value>
+  </data>
+  <data name="Picker_Sort" xml:space="preserve">
+    <value>sort: {0}</value>
+  </data>
+  <data name="Picker_HiddenShown" xml:space="preserve">
+    <value>hidden items shown</value>
+  </data>
+  <data name="Picker_Help_Title" xml:space="preserve">
+    <value>Keys</value>
+  </data>
+  <data name="Picker_Help_Move" xml:space="preserve">
+    <value>move through the list</value>
+  </data>
+  <data name="Picker_Help_Page" xml:space="preserve">
+    <value>jump one page</value>
+  </data>
+  <data name="Picker_Help_History" xml:space="preserve">
+    <value>go back and forward</value>
+  </data>
+  <data name="Picker_Help_Pane" xml:space="preserve">
+    <value>switch between the places and the list</value>
+  </data>
+  <data name="Picker_Help_Open" xml:space="preserve">
+    <value>open the folder</value>
+  </data>
+  <data name="Picker_Help_Parent" xml:space="preserve">
+    <value>go to the parent folder</value>
+  </data>
+  <data name="Picker_Help_Filter" xml:space="preserve">
+    <value>filter this folder</value>
+  </data>
+  <data name="Picker_Help_Path" xml:space="preserve">
+    <value>type a path</value>
+  </data>
+  <data name="Picker_Help_NewFolder" xml:space="preserve">
+    <value>create a folder</value>
+  </data>
+  <data name="Picker_Help_Sort" xml:space="preserve">
+    <value>change the sorting</value>
+  </data>
+  <data name="Picker_Help_Hidden" xml:space="preserve">
+    <value>show or hide hidden items</value>
+  </data>
+  <data name="Picker_Help_Select" xml:space="preserve">
+    <value>select</value>
+  </data>
+  <data name="Picker_Help_Back" xml:space="preserve">
+    <value>back</value>
+  </data>
+  <data name="Picker_Footer_Help" xml:space="preserve">
+    <value>&lt;?&gt; close</value>
+  </data>
+  <data name="Picker_Footer_Input" xml:space="preserve">
+    <value>&lt;enter&gt; confirm   &lt;esc&gt; cancel</value>
+  </data>
+  <data name="Picker_NameInvalid" xml:space="preserve">
+    <value>That name cannot be used here.</value>
+  </data>
+  <data name="Picker_FolderCreated" xml:space="preserve">
+    <value>Folder created.</value>
+  </data>
+  <data name="Picker_PathMissing" xml:space="preserve">
+    <value>That path does not exist.</value>
+  </data>
+  <data name="Picker_OnlyFolders" xml:space="preserve">
+    <value>Only folders can be selected here.</value>
+  </data>
+  <data name="Picker_Footer_List" xml:space="preserve">
+    <value>↑↓ navigate   ←→ history   &lt;tab&gt; pane   &lt;enter&gt; open   &lt;backspace&gt; up</value>
+  </data>
+  <data name="Picker_Footer_Actions" xml:space="preserve">
+    <value>&lt;/&gt; filter   &lt;p&gt; path   &lt;n&gt; new folder   &lt;s&gt; sort   &lt;.&gt; hidden   &lt;f2&gt; select   &lt;?&gt; keys   &lt;esc&gt; back</value>
+  </data>
 </root>

@@ -3273,4 +3273,127 @@ napríklad 'edit' alebo 'reword' v interaktívnom rebase.</value>
   <data name="IDE_FoundState" xml:space="preserve">
     <value>Stav detekcie</value>
   </data>
+  <data name="Picker_Home" xml:space="preserve">
+    <value>Domov</value>
+  </data>
+  <data name="Picker_Desktop" xml:space="preserve">
+    <value>Plocha</value>
+  </data>
+  <data name="Picker_Documents" xml:space="preserve">
+    <value>Dokumenty</value>
+  </data>
+  <data name="Picker_Downloads" xml:space="preserve">
+    <value>Stiahnuté</value>
+  </data>
+  <data name="Picker_Places" xml:space="preserve">
+    <value>Miesta</value>
+  </data>
+  <data name="Picker_Drives" xml:space="preserve">
+    <value>Disky</value>
+  </data>
+  <data name="Picker_Col_Name" xml:space="preserve">
+    <value>Názov</value>
+  </data>
+  <data name="Picker_Col_Modified" xml:space="preserve">
+    <value>Zmenené</value>
+  </data>
+  <data name="Picker_Col_Size" xml:space="preserve">
+    <value>Veľkosť</value>
+  </data>
+  <data name="Picker_Unreadable" xml:space="preserve">
+    <value>Tento priečinok sa nedá prečítať.</value>
+  </data>
+  <data name="Picker_NoMatch" xml:space="preserve">
+    <value>Filtru nič nezodpovedá.</value>
+  </data>
+  <data name="Picker_Empty" xml:space="preserve">
+    <value>Tento priečinok je prázdny.</value>
+  </data>
+  <data name="Picker_Type_Repo" xml:space="preserve">
+    <value>Git repozitár</value>
+  </data>
+  <data name="Picker_Type_Folder" xml:space="preserve">
+    <value>Priečinok</value>
+  </data>
+  <data name="Picker_Type_File" xml:space="preserve">
+    <value>Súbor</value>
+  </data>
+  <data name="Picker_Ask_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Picker_Ask_NewFolder" xml:space="preserve">
+    <value>Nový priečinok</value>
+  </data>
+  <data name="Picker_Sort" xml:space="preserve">
+    <value>zoradenie: {0}</value>
+  </data>
+  <data name="Picker_HiddenShown" xml:space="preserve">
+    <value>skryté položky zobrazené</value>
+  </data>
+  <data name="Picker_Help_Title" xml:space="preserve">
+    <value>Klávesy</value>
+  </data>
+  <data name="Picker_Help_Move" xml:space="preserve">
+    <value>pohyb v zozname</value>
+  </data>
+  <data name="Picker_Help_Page" xml:space="preserve">
+    <value>skok o stranu</value>
+  </data>
+  <data name="Picker_Help_History" xml:space="preserve">
+    <value>späť a dopredu</value>
+  </data>
+  <data name="Picker_Help_Pane" xml:space="preserve">
+    <value>prepnúť medzi miestami a zoznamom</value>
+  </data>
+  <data name="Picker_Help_Open" xml:space="preserve">
+    <value>otvoriť priečinok</value>
+  </data>
+  <data name="Picker_Help_Parent" xml:space="preserve">
+    <value>prejsť do nadradeného priečinka</value>
+  </data>
+  <data name="Picker_Help_Filter" xml:space="preserve">
+    <value>filtrovať tento priečinok</value>
+  </data>
+  <data name="Picker_Help_Path" xml:space="preserve">
+    <value>zadať cestu</value>
+  </data>
+  <data name="Picker_Help_NewFolder" xml:space="preserve">
+    <value>vytvoriť priečinok</value>
+  </data>
+  <data name="Picker_Help_Sort" xml:space="preserve">
+    <value>zmeniť zoradenie</value>
+  </data>
+  <data name="Picker_Help_Hidden" xml:space="preserve">
+    <value>zobraziť alebo skryť skryté položky</value>
+  </data>
+  <data name="Picker_Help_Select" xml:space="preserve">
+    <value>vybrať</value>
+  </data>
+  <data name="Picker_Help_Back" xml:space="preserve">
+    <value>späť</value>
+  </data>
+  <data name="Picker_Footer_Help" xml:space="preserve">
+    <value>&lt;?&gt; zavrieť</value>
+  </data>
+  <data name="Picker_Footer_Input" xml:space="preserve">
+    <value>&lt;enter&gt; potvrdiť   &lt;esc&gt; zrušiť</value>
+  </data>
+  <data name="Picker_NameInvalid" xml:space="preserve">
+    <value>Tento názov sa tu nedá použiť.</value>
+  </data>
+  <data name="Picker_FolderCreated" xml:space="preserve">
+    <value>Priečinok bol vytvorený.</value>
+  </data>
+  <data name="Picker_PathMissing" xml:space="preserve">
+    <value>Táto cesta neexistuje.</value>
+  </data>
+  <data name="Picker_OnlyFolders" xml:space="preserve">
+    <value>Tu sa dajú vybrať iba priečinky.</value>
+  </data>
+  <data name="Picker_Footer_List" xml:space="preserve">
+    <value>↑↓ pohyb   ←→ história   &lt;tab&gt; panel   &lt;enter&gt; otvoriť   &lt;backspace&gt; vyššie</value>
+  </data>
+  <data name="Picker_Footer_Actions" xml:space="preserve">
+    <value>&lt;/&gt; filter   &lt;p&gt; cesta   &lt;n&gt; nový priečinok   &lt;s&gt; zoradiť   &lt;.&gt; skryté   &lt;f2&gt; vybrať   &lt;?&gt; klávesy   &lt;esc&gt; späť</value>
+  </data>
 </root>

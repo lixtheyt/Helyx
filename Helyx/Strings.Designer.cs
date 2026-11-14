@@ -7933,6 +7933,375 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filter.
+        /// </summary>
+        internal static string Picker_Ask_Filter {
+            get {
+                return ResourceManager.GetString("Picker_Ask_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New folder.
+        /// </summary>
+        internal static string Picker_Ask_NewFolder {
+            get {
+                return ResourceManager.GetString("Picker_Ask_NewFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modified.
+        /// </summary>
+        internal static string Picker_Col_Modified {
+            get {
+                return ResourceManager.GetString("Picker_Col_Modified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Picker_Col_Name {
+            get {
+                return ResourceManager.GetString("Picker_Col_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        internal static string Picker_Col_Size {
+            get {
+                return ResourceManager.GetString("Picker_Col_Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desktop.
+        /// </summary>
+        internal static string Picker_Desktop {
+            get {
+                return ResourceManager.GetString("Picker_Desktop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Documents.
+        /// </summary>
+        internal static string Picker_Documents {
+            get {
+                return ResourceManager.GetString("Picker_Documents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloads.
+        /// </summary>
+        internal static string Picker_Downloads {
+            get {
+                return ResourceManager.GetString("Picker_Downloads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drives.
+        /// </summary>
+        internal static string Picker_Drives {
+            get {
+                return ResourceManager.GetString("Picker_Drives", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This folder is empty..
+        /// </summary>
+        internal static string Picker_Empty {
+            get {
+                return ResourceManager.GetString("Picker_Empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folder created..
+        /// </summary>
+        internal static string Picker_FolderCreated {
+            get {
+                return ResourceManager.GetString("Picker_FolderCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;/&gt; filter   &lt;p&gt; path   &lt;n&gt; new folder   &lt;s&gt; sort   &lt;.&gt; hidden   &lt;f2&gt; select   &lt;?&gt; keys   &lt;esc&gt; back.
+        /// </summary>
+        internal static string Picker_Footer_Actions {
+            get {
+                return ResourceManager.GetString("Picker_Footer_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?&gt; close.
+        /// </summary>
+        internal static string Picker_Footer_Help {
+            get {
+                return ResourceManager.GetString("Picker_Footer_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;enter&gt; confirm   &lt;esc&gt; cancel.
+        /// </summary>
+        internal static string Picker_Footer_Input {
+            get {
+                return ResourceManager.GetString("Picker_Footer_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ↑↓ navigate   ←→ history   &lt;tab&gt; pane   &lt;enter&gt; open   &lt;backspace&gt; up.
+        /// </summary>
+        internal static string Picker_Footer_List {
+            get {
+                return ResourceManager.GetString("Picker_Footer_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to back.
+        /// </summary>
+        internal static string Picker_Help_Back {
+            get {
+                return ResourceManager.GetString("Picker_Help_Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to filter this folder.
+        /// </summary>
+        internal static string Picker_Help_Filter {
+            get {
+                return ResourceManager.GetString("Picker_Help_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to show or hide hidden items.
+        /// </summary>
+        internal static string Picker_Help_Hidden {
+            get {
+                return ResourceManager.GetString("Picker_Help_Hidden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to go back and forward.
+        /// </summary>
+        internal static string Picker_Help_History {
+            get {
+                return ResourceManager.GetString("Picker_Help_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to move through the list.
+        /// </summary>
+        internal static string Picker_Help_Move {
+            get {
+                return ResourceManager.GetString("Picker_Help_Move", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to create a folder.
+        /// </summary>
+        internal static string Picker_Help_NewFolder {
+            get {
+                return ResourceManager.GetString("Picker_Help_NewFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to open the folder.
+        /// </summary>
+        internal static string Picker_Help_Open {
+            get {
+                return ResourceManager.GetString("Picker_Help_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to jump one page.
+        /// </summary>
+        internal static string Picker_Help_Page {
+            get {
+                return ResourceManager.GetString("Picker_Help_Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to switch between the places and the list.
+        /// </summary>
+        internal static string Picker_Help_Pane {
+            get {
+                return ResourceManager.GetString("Picker_Help_Pane", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to go to the parent folder.
+        /// </summary>
+        internal static string Picker_Help_Parent {
+            get {
+                return ResourceManager.GetString("Picker_Help_Parent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to type a path.
+        /// </summary>
+        internal static string Picker_Help_Path {
+            get {
+                return ResourceManager.GetString("Picker_Help_Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to select.
+        /// </summary>
+        internal static string Picker_Help_Select {
+            get {
+                return ResourceManager.GetString("Picker_Help_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to change the sorting.
+        /// </summary>
+        internal static string Picker_Help_Sort {
+            get {
+                return ResourceManager.GetString("Picker_Help_Sort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keys.
+        /// </summary>
+        internal static string Picker_Help_Title {
+            get {
+                return ResourceManager.GetString("Picker_Help_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to hidden items shown.
+        /// </summary>
+        internal static string Picker_HiddenShown {
+            get {
+                return ResourceManager.GetString("Picker_HiddenShown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string Picker_Home {
+            get {
+                return ResourceManager.GetString("Picker_Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to That name cannot be used here..
+        /// </summary>
+        internal static string Picker_NameInvalid {
+            get {
+                return ResourceManager.GetString("Picker_NameInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nothing matches the filter..
+        /// </summary>
+        internal static string Picker_NoMatch {
+            get {
+                return ResourceManager.GetString("Picker_NoMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Only folders can be selected here..
+        /// </summary>
+        internal static string Picker_OnlyFolders {
+            get {
+                return ResourceManager.GetString("Picker_OnlyFolders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to That path does not exist..
+        /// </summary>
+        internal static string Picker_PathMissing {
+            get {
+                return ResourceManager.GetString("Picker_PathMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Places.
+        /// </summary>
+        internal static string Picker_Places {
+            get {
+                return ResourceManager.GetString("Picker_Places", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sort: {0}.
+        /// </summary>
+        internal static string Picker_Sort {
+            get {
+                return ResourceManager.GetString("Picker_Sort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        internal static string Picker_Type_File {
+            get {
+                return ResourceManager.GetString("Picker_Type_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folder.
+        /// </summary>
+        internal static string Picker_Type_Folder {
+            get {
+                return ResourceManager.GetString("Picker_Type_Folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Git repository.
+        /// </summary>
+        internal static string Picker_Type_Repo {
+            get {
+                return ResourceManager.GetString("Picker_Type_Repo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This folder cannot be read..
+        /// </summary>
+        internal static string Picker_Unreadable {
+            get {
+                return ResourceManager.GetString("Picker_Unreadable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Helyx is already running in another window..
         /// </summary>
         internal static string Program_AlreadyRunning {

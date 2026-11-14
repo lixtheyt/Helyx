@@ -3273,4 +3273,127 @@
   <data name="IDE_FoundState" xml:space="preserve">
     <value>Состояние обнаружения</value>
   </data>
+  <data name="Picker_Home" xml:space="preserve">
+    <value>Домашняя папка</value>
+  </data>
+  <data name="Picker_Desktop" xml:space="preserve">
+    <value>Рабочий стол</value>
+  </data>
+  <data name="Picker_Documents" xml:space="preserve">
+    <value>Документы</value>
+  </data>
+  <data name="Picker_Downloads" xml:space="preserve">
+    <value>Загрузки</value>
+  </data>
+  <data name="Picker_Places" xml:space="preserve">
+    <value>Места</value>
+  </data>
+  <data name="Picker_Drives" xml:space="preserve">
+    <value>Диски</value>
+  </data>
+  <data name="Picker_Col_Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="Picker_Col_Modified" xml:space="preserve">
+    <value>Изменено</value>
+  </data>
+  <data name="Picker_Col_Size" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="Picker_Unreadable" xml:space="preserve">
+    <value>Эту папку не удаётся прочитать.</value>
+  </data>
+  <data name="Picker_NoMatch" xml:space="preserve">
+    <value>Ничего не соответствует фильтру.</value>
+  </data>
+  <data name="Picker_Empty" xml:space="preserve">
+    <value>Эта папка пуста.</value>
+  </data>
+  <data name="Picker_Type_Repo" xml:space="preserve">
+    <value>Репозиторий Git</value>
+  </data>
+  <data name="Picker_Type_Folder" xml:space="preserve">
+    <value>Папка</value>
+  </data>
+  <data name="Picker_Type_File" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="Picker_Ask_Filter" xml:space="preserve">
+    <value>Фильтр</value>
+  </data>
+  <data name="Picker_Ask_NewFolder" xml:space="preserve">
+    <value>Новая папка</value>
+  </data>
+  <data name="Picker_Sort" xml:space="preserve">
+    <value>сортировка: {0}</value>
+  </data>
+  <data name="Picker_HiddenShown" xml:space="preserve">
+    <value>скрытые элементы показаны</value>
+  </data>
+  <data name="Picker_Help_Title" xml:space="preserve">
+    <value>Клавиши</value>
+  </data>
+  <data name="Picker_Help_Move" xml:space="preserve">
+    <value>перемещение по списку</value>
+  </data>
+  <data name="Picker_Help_Page" xml:space="preserve">
+    <value>переход на страницу</value>
+  </data>
+  <data name="Picker_Help_History" xml:space="preserve">
+    <value>назад и вперёд</value>
+  </data>
+  <data name="Picker_Help_Pane" xml:space="preserve">
+    <value>переключение между местами и списком</value>
+  </data>
+  <data name="Picker_Help_Open" xml:space="preserve">
+    <value>открыть папку</value>
+  </data>
+  <data name="Picker_Help_Parent" xml:space="preserve">
+    <value>перейти в родительскую папку</value>
+  </data>
+  <data name="Picker_Help_Filter" xml:space="preserve">
+    <value>фильтровать эту папку</value>
+  </data>
+  <data name="Picker_Help_Path" xml:space="preserve">
+    <value>ввести путь</value>
+  </data>
+  <data name="Picker_Help_NewFolder" xml:space="preserve">
+    <value>создать папку</value>
+  </data>
+  <data name="Picker_Help_Sort" xml:space="preserve">
+    <value>изменить сортировку</value>
+  </data>
+  <data name="Picker_Help_Hidden" xml:space="preserve">
+    <value>показать или скрыть скрытые элементы</value>
+  </data>
+  <data name="Picker_Help_Select" xml:space="preserve">
+    <value>выбрать</value>
+  </data>
+  <data name="Picker_Help_Back" xml:space="preserve">
+    <value>назад</value>
+  </data>
+  <data name="Picker_Footer_Help" xml:space="preserve">
+    <value>&lt;?&gt; закрыть</value>
+  </data>
+  <data name="Picker_Footer_Input" xml:space="preserve">
+    <value>&lt;enter&gt; подтвердить   &lt;esc&gt; отмена</value>
+  </data>
+  <data name="Picker_NameInvalid" xml:space="preserve">
+    <value>Это имя нельзя использовать здесь.</value>
+  </data>
+  <data name="Picker_FolderCreated" xml:space="preserve">
+    <value>Папка создана.</value>
+  </data>
+  <data name="Picker_PathMissing" xml:space="preserve">
+    <value>Этот путь не существует.</value>
+  </data>
+  <data name="Picker_OnlyFolders" xml:space="preserve">
+    <value>Здесь можно выбрать только папки.</value>
+  </data>
+  <data name="Picker_Footer_List" xml:space="preserve">
+    <value>↑↓ навигация   ←→ история   &lt;tab&gt; панель   &lt;enter&gt; открыть   &lt;backspace&gt; вверх</value>
+  </data>
+  <data name="Picker_Footer_Actions" xml:space="preserve">
+    <value>&lt;/&gt; фильтр   &lt;p&gt; путь   &lt;n&gt; новая папка   &lt;s&gt; сортировка   &lt;.&gt; скрытые   &lt;f2&gt; выбрать   &lt;?&gt; клавиши   &lt;esc&gt; назад</value>
+  </data>
 </root>

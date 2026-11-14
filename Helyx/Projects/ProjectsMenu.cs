@@ -121,6 +121,9 @@ namespace Helyx.Projects
 
         private static string? PickFolder()
         {
+            if (!OperatingSystem.IsWindows())
+                return PathPicker.Pick(Strings.Projects_SelectFolder, false);
+
             using var dialog = new FolderBrowserDialog
             {
                 Description = Strings.Projects_SelectFolder,

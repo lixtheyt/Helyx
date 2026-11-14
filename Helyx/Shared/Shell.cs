@@ -11,7 +11,7 @@ namespace Helyx.Shared
             {
                 using var process = Process.Start(new ProcessStartInfo
                 {
-                    FileName = "where",
+                    FileName = OperatingSystem.IsWindows() ? "where" : "which",
                     Arguments = command,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
