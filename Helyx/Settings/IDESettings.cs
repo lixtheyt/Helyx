@@ -116,9 +116,7 @@ namespace Helyx.Settings
 
         private static string? PickIDEExecutable()
         {
-            if (!OperatingSystem.IsWindows())
-                return PathPicker.Pick(Strings.IDE_Picker_Title, true);
-
+#if WINDOWS
             using var dialog = new OpenFileDialog
             {
                 Title = Strings.IDE_Picker_Title,
@@ -130,6 +128,9 @@ namespace Helyx.Settings
             return dialog.ShowDialog() == DialogResult.OK
                 ? dialog.FileName
                 : null;
+#else
+            return PathPicker.Pick(Strings.IDE_Picker_Title, true);
+#endif
         }
 
         private enum Action

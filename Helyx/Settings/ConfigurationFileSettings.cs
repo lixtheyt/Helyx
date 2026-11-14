@@ -70,6 +70,9 @@ namespace Helyx.Settings
                 return;
             }
 
+            if (!OperatingSystem.IsWindows())
+                Environment.Exit(0);
+
             try
             {
                 Process.Start(new ProcessStartInfo

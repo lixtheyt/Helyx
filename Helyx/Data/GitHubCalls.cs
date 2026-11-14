@@ -50,7 +50,8 @@ namespace Helyx.Data
             "repo",
             "workflow",
             "read:user",
-            "user:email"
+            "user:email",
+            "write:ssh_signing_key"
         ];
 
         private static readonly Dictionary<string, string[]> ScopeImplications =
@@ -59,6 +60,7 @@ namespace Helyx.Data
                 ["repo"] = ["public_repo", "repo:status", "repo_deployment", "repo:invite", "security_events"],
                 ["user"] = ["read:user", "user:email", "user:follow"],
                 ["admin:org"] = ["write:org", "read:org"],
+                ["admin:ssh_signing_key"] = ["write:ssh_signing_key", "read:ssh_signing_key"],
                 ["write:org"] = ["read:org"]
             };
 
@@ -679,6 +681,18 @@ namespace Helyx.Data
         internal static async Task<(bool Result, string? Error)> DispatchWorkflow(Guid guid, long workflowId, string reference) =>
             await SendJsonAsync<bool>(HttpMethod.Post,
                 $"{await RepoUrl(guid)}/actions/workflows/{workflowId}/dispatches", new { @ref = reference });
+
+        internal static async Task<(bool Result, string? Error)> AddSigningKey(string key)
+        {
+            using var keys = await GetJsonAsync<JsonDocument>("https://api.github.com/user/ssh_signing_keys?per_page=100");
+
+            if (keys is { RootElement.ValueKind: JsonValueKind.Array } &&
+                keys.RootElement.EnumerateArray().Any(x => x.TryGetProperty("key", out var value) && value.GetString() == key))
+                return (true, null);
+
+            return await SendJsonAsync<bool>(HttpMethod.Post, "https://api.github.com/user/ssh_signing_keys",
+                new { title = $"Helyx ({Environment.MachineName})", key });
+        }
 
         internal static async Task<Dictionary<string, string>?> GetRunLogs(Guid guid, long runId)
         {

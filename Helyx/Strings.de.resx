@@ -3396,4 +3396,43 @@ etwa ein 'edit' oder 'reword' in einem interaktiven Rebase.</value>
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; filtern   &lt;p&gt; Pfad   &lt;n&gt; neuer Ordner   &lt;s&gt; sortieren   &lt;.&gt; versteckte   &lt;f2&gt; auswählen   &lt;?&gt; Tasten   &lt;esc&gt; zurück</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Dateimanager</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>Es wurde kein Terminalemulator gefunden.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Commit-Signierung</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Commit-Signierung einschalten</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Commit-Signierung ausschalten</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>Signaturschlüssel wird bei GitHub registriert...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>GitHub hat den Signaturschlüssel nicht angenommen.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>Die Commit-Signierung benötigt eine Berechtigung, die Ihre aktuelle Autorisierung nicht hat. Autorisieren Sie sich zuerst erneut mit GitHub.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>Helyx signiert ab jetzt jeden Commit, den es erstellt, und GitHub zeigt sie als Verified an.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>Die E-Mail-Adresse im Commit muss in Ihrem GitHub-Konto verifiziert sein. Die Bevorzugte Identität auf GitHub zu stellen, erledigt das.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>Helyx signiert keine Commits mehr. Der Schlüssel bleibt in Ihrem GitHub-Konto, bereits signierte Commits behalten also ihre Verified-Kennzeichnung.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>Der Commit konnte nicht signiert werden und blieb unsigniert.</value>
+  </data>
 </root>

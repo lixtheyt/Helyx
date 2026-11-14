@@ -27,7 +27,8 @@ namespace Helyx
 
             }
 
-            NativeMethods.UseOwnConsoleIcon();
+            if (OperatingSystem.IsWindows())
+                NativeMethods.UseOwnConsoleIcon();
 
             Strings.Culture = ConfigurationHandler.GetConfig().ProgramLanguage.Culture();
 

@@ -121,9 +121,7 @@ namespace Helyx.Projects
 
         private static string? PickFolder()
         {
-            if (!OperatingSystem.IsWindows())
-                return PathPicker.Pick(Strings.Projects_SelectFolder, false);
-
+#if WINDOWS
             using var dialog = new FolderBrowserDialog
             {
                 Description = Strings.Projects_SelectFolder,
@@ -137,6 +135,9 @@ namespace Helyx.Projects
             return dialog.ShowDialog(owner) == DialogResult.OK
                 ? dialog.SelectedPath
                 : null;
+#else
+            return PathPicker.Pick(Strings.Projects_SelectFolder, false);
+#endif
         }
 
         private static string RootCommitSha(string path)

@@ -8,7 +8,27 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            rid: win-x64
+            file: Helyx.exe
+          - os: ubuntu-latest
+            rid: linux-x64
+            file: Helyx
+          - os: ubuntu-latest
+            rid: linux-arm64
+            file: Helyx
+          - os: macos-latest
+            rid: osx-arm64
+            file: Helyx
+          - os: macos-latest
+            rid: osx-x64
+            file: Helyx
+
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v7
@@ -20,11 +40,19 @@ jobs:
       - name: Build
         run: dotnet build Helyx/Helyx.csproj -c Release
 
-      - name: Publish single file
+      - name: Publish single file (Windows)
+        if: runner.os == 'Windows'
         run: dotnet publish Helyx/Helyx.csproj -p:PublishProfile=SingleFile
+
+      - name: Publish single file (Linux and macOS)
+        if: runner.os != 'Windows'
+        run: >
+          dotnet publish Helyx/Helyx.csproj -c Release -f net10.0 -r ${{ matrix.rid }}
+          --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:DebugType=none -o publish
 
       - name: Upload
         uses: actions/upload-artifact@v7
         with:
-          name: Helyx-win-x64
-          path: publish/Helyx.exe
+          name: Helyx-${{ matrix.rid }}
+          path: publish/${{ matrix.file }}

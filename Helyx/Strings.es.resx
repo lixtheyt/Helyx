@@ -3396,4 +3396,43 @@ como un 'edit' o 'reword' en un rebase interactivo.</value>
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; filtrar   &lt;p&gt; ruta   &lt;n&gt; nueva carpeta   &lt;s&gt; ordenar   &lt;.&gt; ocultos   &lt;f2&gt; seleccionar   &lt;?&gt; teclas   &lt;esc&gt; atrás</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Gestor de archivos</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>No se encontró ningún emulador de terminal.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Firma de commits</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Activar la firma de commits</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Desactivar la firma de commits</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>Registrando la clave de firma en GitHub...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>GitHub no aceptó la clave de firma.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>La firma de commits necesita un permiso que su autorización actual no tiene. Vuelva a autorizar con GitHub primero.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>Helyx firma ahora cada commit que crea y GitHub los muestra como Verified.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>El correo del commit debe estar verificado en su cuenta de GitHub. Establecer la Identidad preferida en GitHub se encarga de ello.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>Helyx ya no firma los commits. La clave permanece en su cuenta de GitHub, por lo que los commits ya firmados conservan la marca Verified.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>No se pudo firmar el commit y quedó sin firmar.</value>
+  </data>
 </root>

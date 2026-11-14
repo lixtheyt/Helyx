@@ -442,12 +442,16 @@ namespace Helyx.Projects
             AnsiConsole.WriteLine();
 
             Commit commit;
+            bool signed;
 
             try
             {
                 var signature = new Signature(GitHubCalls.MainIdentity(repo.Config), DateTimeOffset.Now);
 
-                commit = repo.Commit(message, signature, signature);
+                repo.Commit(message, signature, signature);
+
+                signed = Signing.Sign(repo);
+                commit = repo.Head.Tip;
 
                 UpdateProject(guid, x => x.UndoState = null);
             }
@@ -458,7 +462,8 @@ namespace Helyx.Projects
                 return;
             }
 
-            UI.Success(string.Format(Strings.Git_CommittedAs, $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/]", Markup.Escape(message)), Strings.Git_Commit);
+            UI.Success(string.Format(Strings.Git_CommittedAs, $"[{Color.DarkOrange3}]{commit.Sha[..7]}[/]", Markup.Escape(message)) +
+                       (signed ? string.Empty : $"\n\n[{Color.Grey}]{Strings.Signing_NotSigned}[/]"), Strings.Git_Commit);
             Console.ReadKey();
         }
         private static void Diff(Guid guid)
@@ -1314,6 +1319,7 @@ namespace Helyx.Projects
                     var committer = GitHubCalls.MainIdentity(repo.Config);
 
                     var options = new RebaseOptions();
+                    var onto = repo.Head.TrackedBranch.Tip;
 
                     RebaseResult result = null;
 
@@ -1327,6 +1333,7 @@ namespace Helyx.Projects
                     {
                         if (result.Status == RebaseStatus.Complete)
                         {
+                            Signing.Sign(repo, onto);
                             Push(guid, true);
                             return;
                         }
@@ -1514,6 +1521,9 @@ namespace Helyx.Projects
                     },
                     MergeOptions = new MergeOptions()
                 });
+
+                if (mergeResult.Status == MergeStatus.NonFastForward)
+                    Signing.Sign(repo);
 
                 string message = mergeResult.Status switch
                 {
@@ -1986,6 +1996,9 @@ namespace Helyx.Projects
                 return;
             }
 
+            if (result.Status == MergeStatus.NonFastForward)
+                Signing.Sign(repo);
+
             if (result.Status != MergeStatus.Conflicts)
             {
                 var message = result.Status switch
@@ -2084,6 +2097,7 @@ namespace Helyx.Projects
                         try
                         {
                             repo.Commit($"Merge branch '{mergedName}' into {repo.Head.FriendlyName}", signature, signature);
+                            Signing.Sign(repo);
                             UI.Success(string.Format(Strings.Git_MergedInto, $"[{Color.Green3_1}]{mergedName}[/]", $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_MergeBranch);
                         }
                         catch (Exception ex)
@@ -3502,6 +3516,11 @@ namespace Helyx.Projects
                             {
                                 var committer = GitHubCalls.MainIdentity(repo.Config);
                                 var options = new RebaseOptions();
+                                var ontoPath = Path.Combine(repo.Info.Path, "rebase-merge", "onto");
+
+                                var onto = File.Exists(ontoPath)
+                                    ? repo.Lookup<Commit>(File.ReadAllText(ontoPath).Trim())
+                                    : null;
 
                                 RebaseResult result = null;
 
@@ -3531,6 +3550,9 @@ namespace Helyx.Projects
                                             result = repo.Rebase.Continue(committer, options)
                                         );
                                 }
+
+                                if (result.Status == RebaseStatus.Complete && onto != null)
+                                    Signing.Sign(repo, onto);
 
                                 if (result.Status == RebaseStatus.Complete)
                                     UI.Success(string.Format(Strings.Git_RebaseFinished, $"[{Color.Green3_1}]{repo.Head.FriendlyName}[/]"), Strings.Git_Diagnostics);

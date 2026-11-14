@@ -4,11 +4,11 @@
 
 ---
 
-**A terminal app for Windows that keeps every project you have in one list, and lets you commit, branch, resolve conflicts, repair broken repositories and answer GitHub issues and pull requests without opening anything else.**
+**A terminal app for Windows, Linux and macOS that keeps every project you have in one list, and lets you commit, branch, resolve conflicts, repair broken repositories and answer GitHub issues and pull requests without opening anything else.**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-10-512BD4.svg)](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6.svg)](#build-it-yourself)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-0078D6.svg)](#build-it-yourself)
 [![Languages](https://img.shields.io/badge/languages-8-green.svg)](#languages-support)<!-- HELYX_STATUS_START -->
 ![Status](https://img.shields.io/badge/status-Active-008000)<!-- HELYX_STATUS_END --><!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_START -->
 [![Stardance](https://img.shields.io/badge/stardance_project-FFFF00)](https://stardance.hackclub.com/projects/18497)<!-- HELYX_BADGE_6873ca5b-f1d6-494c-998e-0a233646d5f8_END -->
@@ -17,10 +17,10 @@
 ![Helyx](Helyx/assets/hero.gif)
 
 <a href="https://github.com/lixtheyt/Helyx/releases/latest">
-  <img src="https://img.shields.io/badge/DOWNLOAD%20FOR%20WINDOWS-0078D6?style=for-the-badge&logo=windows&logoColor=white" width="440" alt="Download for Windows">
+  <img src="https://img.shields.io/badge/DOWNLOAD-0078D6?style=for-the-badge" width="440" alt="Download">
 </a>
 
-***For the best experience, please use Windows Terminal. (not cmd.exe or powershell.exe)***
+***For the best experience on Windows, please use Windows Terminal. (not cmd.exe or powershell.exe)***
 
 </div>
 
@@ -46,11 +46,11 @@
 
 ## Quick start
 
-Download the installer from the [latest release](https://github.com/lixtheyt/Helyx/releases/latest)
+On Windows, download the installer from the [latest release](https://github.com/lixtheyt/Helyx/releases/latest)
 and run it:
 
 ```
-Helyx-1.2.1-setup.exe
+Helyx-1.3.0-setup.exe
 ```
 
 It installs into your user folder and adds Helyx to `PATH`, so you can start it from Windows Terminal:
@@ -60,6 +60,16 @@ helyx
 ```
 
 No administrator rights are needed.
+
+On Linux and macOS, run this in a terminal instead:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/lixtheyt/Helyx/main/install.sh | sh
+```
+
+It shows you the license, installs Helyx into `~/.local` and adds it to `PATH`. It does not need
+`sudo`, and it works without a desktop too. To remove Helyx later, run the same line with
+`| sh -s -- --uninstall` at the end.
 
 Then pick **Add project** and choose any folder on your machine
 Helyx finds the Git repository inside the folder by itself, if there is one.
@@ -74,6 +84,7 @@ Helyx finds the Git repository inside the folder by itself, if there is one.
 - **A built-in conflict resolver**, that opens the conflicted part of a file in its own editor instead of making you use Windows notepad.
 - **GitHub issues and pull requests** can be read, filtered, commented on and reviewed directly from the terminal.
 - **Status and badge shields in your README**, automatically updated, committed and pushed when the project status changes.
+- **Signed commits**, with one switch. Helyx creates a signing key, registers it with your GitHub account and every commit it makes shows up as Verified.
 - **Encrypted notes, project backups and scripts**, all stored together with the project they belong to.
 
 ## Projects list
@@ -210,7 +221,7 @@ Analyze Project reads the whole tree and shows the language breakdown and the bi
 ![Analyze project](Helyx/assets/analyze-project.gif)
 
 Every project gets a notes file with an editor. Turn encryption on in Settings and Helyx encrypts
-them with Windows DPAPI, so they can only be read by you.
+them, so they can only be read by you.
 
 ![Notes](Helyx/assets/notes.gif)
 
@@ -244,7 +255,11 @@ Helyx allows you to create your own statuses and badges, with your own names and
 
 Settings also
 hold your editor paths, which identity Helyx commits under, whether
-notes are encrypted, and a check for new versions of Helyx itself.
+commits are signed, whether notes are encrypted, and a check for new versions of Helyx itself.
+
+Commit signing is turned on in GitHub Authorization. Helyx needs one more permission for it, so if you
+authorized before this existed, it asks you to reauthorize first. The e-mail on your commits has to be
+one verified on your GitHub account, which Preferred Identity set to GitHub takes care of.
 
 ![Manage badges](Helyx/assets/manage-badges.png)
 
@@ -268,8 +283,15 @@ This improves the user experience because Helyx is made for everyone.
 
 ## Build it yourself
 
-You need Windows and [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Nothing
-else.
+You need [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0). Nothing else.
+Click your system to see how.
+
+<details>
+<summary><b>Windows</b></summary>
+<br>
+
+Install the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0), then clone the
+repository and build it:
 
 ```sh
 git clone https://github.com/lixtheyt/Helyx.git
@@ -279,11 +301,68 @@ dotnet build Helyx.slnx -c Release
 
 The executable is exported to `Helyx/bin/Release/net10.0-windows`.
 
-If you want the same single file the download button above gives you, publish it instead:
+If you want the same single file the installer gives you, publish it instead:
 
 ```sh
 dotnet publish Helyx/Helyx.csproj -p:PublishProfile=SingleFile
 ```
+
+That gives you one file, `publish/Helyx.exe`, which needs nothing else installed.
+
+</details>
+
+<details>
+<summary><b>Linux and macOS</b></summary>
+<br>
+
+Install the .NET 10 SDK first. On macOS with Homebrew that is `brew install dotnet`. On Linux use
+your package manager, for example `sudo apt install dotnet-sdk-10.0` or `sudo dnf install dotnet-sdk-10.0`.
+If your distribution does not have it yet, Microsoft's
+[install script](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script) works everywhere.
+
+Then clone the repository and publish a single file for the system you are on:
+
+```sh
+git clone https://github.com/lixtheyt/Helyx.git
+cd Helyx
+dotnet publish Helyx/Helyx.csproj -c Release -f net10.0 --use-current-runtime --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:DebugType=none -o publish
+```
+
+That gives you one file, `publish/Helyx`, which needs nothing else installed. Run it right away:
+
+```sh
+./publish/Helyx
+```
+
+To be able to type `helyx` from anywhere, copy it to a folder that is on your `PATH`:
+
+```sh
+mkdir -p ~/.local/bin
+cp publish/Helyx ~/.local/bin/helyx
+```
+
+If `helyx` is still not found after that, add `export PATH="$HOME/.local/bin:$PATH"` to your
+`~/.zshrc` or `~/.bashrc` and open a new terminal.
+
+To build for a different system than the one you are on, replace `--use-current-runtime` with
+`-r` and one of `linux-x64`, `linux-arm64`, `osx-arm64` or `osx-x64`. A macOS build made on another
+system is not signed, so on the Mac it has to be signed once before it will start:
+
+```sh
+codesign --force --sign - Helyx
+```
+
+On a very minimal Linux, Helyx can stop on a missing ICU library. Installing `libicu` fixes it.
+
+When Helyx needs a folder, it opens the dialog your system already has. On macOS that is the
+Finder panel. On Linux it is your desktop's own dialog, whichever of `kdialog`, `qarma`, `zenity`
+or `yad` fits it. When there is no display or none of them is installed, Helyx opens a file
+browser of its own inside the terminal.
+
+The Linux and macOS builds are new. They compile and publish, but they have not been tested the
+way the Windows build has.
+
+</details>
 
 ## How it works
 
@@ -299,11 +378,11 @@ couldn't have been done without [Spectre.Console](https://github.com/spectrecons
 their developers who keep [Spectre.Console](https://github.com/spectreconsole/spectre.console) updated.
 
 **One file holds everything, and it is treated as if it will be corrupted.**
-If `%AppData%\Helyx\config.json` becomes unreadable, Helyx will repair it as soon as possible.
+If `%AppData%\Helyx\config.json` (`~/.config/Helyx/config.json` on Linux) becomes unreadable, Helyx will repair it as soon as possible.
 Settings are stored by name rather than by index.
 
-**Secrets will always stay secret.** Your GitHub token and your encrypted notes go through Windows
-DPAPI.
+**Secrets will always stay secret.** Your GitHub token, your signing key and your encrypted notes go through Windows
+DPAPI. On Linux and macOS they are encrypted with AES and a key file that only your user can read.
 A configuration copied to another machine cannot be decrypted there, so the notes screen refuses to open rather than
 showing you a wall of base64 that you might then save over the note it was hiding.
 

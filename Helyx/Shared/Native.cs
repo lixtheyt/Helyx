@@ -3,11 +3,13 @@ using System.Text;
 
 namespace Helyx.Shared
 {
+#if WINDOWS
     internal sealed class Win32Window : IWin32Window
     {
         public IntPtr Handle { get; }
         public Win32Window(IntPtr handle) => Handle = handle;
     }
+#endif
 
     internal static class NativeMethods
     {

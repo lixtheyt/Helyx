@@ -3396,4 +3396,43 @@ napríklad 'edit' alebo 'reword' v interaktívnom rebase.</value>
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; filter   &lt;p&gt; cesta   &lt;n&gt; nový priečinok   &lt;s&gt; zoradiť   &lt;.&gt; skryté   &lt;f2&gt; vybrať   &lt;?&gt; klávesy   &lt;esc&gt; späť</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Správca súborov</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Terminál</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>Nenašiel sa žiadny emulátor terminálu.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Podpisovanie commitov</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Zapnúť podpisovanie commitov</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Vypnúť podpisovanie commitov</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>Registrujem podpisový kľúč na GitHube...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>GitHub podpisový kľúč neprijal.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>Podpisovanie commitov potrebuje oprávnenie, ktoré vaša súčasná autorizácia nemá. Najprv sa znova autorizujte s GitHubom.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>Helyx odteraz podpisuje každý commit, ktorý vytvorí, a GitHub ich zobrazuje ako Verified.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>E-mail v commite musí byť overený vo vašom účte GitHub. Postará sa o to nastavenie Preferovanej identity na GitHub.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>Helyx už commity nepodpisuje. Kľúč zostáva vo vašom účte GitHub, takže už podpísané commity si označenie Verified ponechajú.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>Commit sa nepodarilo podpísať a zostal nepodpísaný.</value>
+  </data>
 </root>

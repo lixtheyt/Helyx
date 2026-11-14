@@ -3396,4 +3396,43 @@ como um 'edit' ou um 'reword' num rebase interativo.</value>
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; filtrar   &lt;p&gt; caminho   &lt;n&gt; nova pasta   &lt;s&gt; ordenar   &lt;.&gt; ocultos   &lt;f2&gt; selecionar   &lt;?&gt; teclas   &lt;esc&gt; voltar</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Gestor de ficheiros</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>Não foi encontrado nenhum emulador de terminal.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Assinatura de commits</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Ativar a assinatura de commits</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Desativar a assinatura de commits</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>A registar a chave de assinatura no GitHub...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>O GitHub não aceitou a chave de assinatura.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>A assinatura de commits precisa de uma permissão que a sua autorização atual não tem. Volte primeiro a autorizar com o GitHub.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>O Helyx assina agora cada commit que cria e o GitHub mostra-os como Verified.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>O e-mail do commit tem de estar verificado na sua conta do GitHub. Definir a Identidade preferida como GitHub trata disso.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>O Helyx já não assina commits. A chave permanece na sua conta do GitHub, pelo que os commits já assinados mantêm a marca Verified.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>Não foi possível assinar o commit, que ficou sem assinatura.</value>
+  </data>
 </root>

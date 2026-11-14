@@ -51,6 +51,7 @@ namespace Helyx.Data
     {
         public Dictionary<Guid, ProjectClass> Projects { get; set; } = new();
         public bool NotesEncryption { get; set; }
+        public bool SignCommits { get; set; }
 
         public Language ProgramLanguage { get; set; }
 
@@ -82,6 +83,7 @@ namespace Helyx.Data
     {
         public string GitHubAccessToken { get; set; } = string.Empty;
         public string HackatimeToken { get; set; } = string.Empty;
+        public string SigningKey { get; set; } = string.Empty;
     }
 
     internal enum Confirm { Yes, No }

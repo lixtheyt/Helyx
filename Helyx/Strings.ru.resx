@@ -3396,4 +3396,43 @@
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; фильтр   &lt;p&gt; путь   &lt;n&gt; новая папка   &lt;s&gt; сортировка   &lt;.&gt; скрытые   &lt;f2&gt; выбрать   &lt;?&gt; клавиши   &lt;esc&gt; назад</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Файловый менеджер</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Терминал</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>Эмулятор терминала не найден.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Подпись коммитов</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Включить подпись коммитов</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Отключить подпись коммитов</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>Регистрация ключа подписи в GitHub...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>GitHub не принял ключ подписи.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>Для подписи коммитов требуется разрешение, которого нет у вашей текущей авторизации. Сначала повторно авторизуйтесь в GitHub.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>Теперь Helyx подписывает каждый созданный им коммит, и GitHub показывает их как Verified.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>Адрес почты в коммите должен быть подтверждён в вашей учётной записи GitHub. Об этом позаботится Предпочитаемая учётная запись, установленная на GitHub.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>Helyx больше не подписывает коммиты. Ключ остаётся в вашей учётной записи GitHub, поэтому уже подписанные коммиты сохраняют отметку Verified.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>Коммит не удалось подписать, он остался без подписи.</value>
+  </data>
 </root>

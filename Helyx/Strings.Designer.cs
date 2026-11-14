@@ -7897,6 +7897,24 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File manager.
+        /// </summary>
+        internal static string Other_FileManager {
+            get {
+                return ResourceManager.GetString("Other_FileManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No terminal emulator was found..
+        /// </summary>
+        internal static string Other_NoTerminal {
+            get {
+                return ResourceManager.GetString("Other_NoTerminal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notes.
         /// </summary>
         internal static string Other_Notes {
@@ -7911,6 +7929,15 @@ namespace Helyx {
         internal static string Other_OpenIn {
             get {
                 return ResourceManager.GetString("Other_OpenIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terminal.
+        /// </summary>
+        internal static string Other_Terminal {
+            get {
+                return ResourceManager.GetString("Other_Terminal", resourceCulture);
             }
         }
         
@@ -8977,15 +9004,6 @@ namespace Helyx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The project folder {0} no longer exists..
-        /// </summary>
-        internal static string Script_ProjectFolderMissing {
-            get {
-                return ResourceManager.GetString("Script_ProjectFolderMissing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Log.
         /// </summary>
         internal static string Script_Log {
@@ -9036,6 +9054,15 @@ namespace Helyx {
         internal static string Script_OpenFailed {
             get {
                 return ResourceManager.GetString("Script_OpenFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project folder {0} no longer exists..
+        /// </summary>
+        internal static string Script_ProjectFolderMissing {
+            get {
+                return ResourceManager.GetString("Script_ProjectFolderMissing", resourceCulture);
             }
         }
         
@@ -9477,6 +9504,96 @@ namespace Helyx {
         internal static string Settings_Updates {
             get {
                 return ResourceManager.GetString("Settings_Updates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn off commit signing.
+        /// </summary>
+        internal static string Signing_Disable {
+            get {
+                return ResourceManager.GetString("Signing_Disable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helyx no longer signs commits. The key stays on your GitHub account, so commits already signed keep their Verified mark..
+        /// </summary>
+        internal static string Signing_Disabled_Message {
+            get {
+                return ResourceManager.GetString("Signing_Disabled_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The e-mail on the commit has to be one verified on your GitHub account. Setting Preferred Identity to GitHub takes care of that..
+        /// </summary>
+        internal static string Signing_EmailHint {
+            get {
+                return ResourceManager.GetString("Signing_EmailHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn on commit signing.
+        /// </summary>
+        internal static string Signing_Enable {
+            get {
+                return ResourceManager.GetString("Signing_Enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helyx now signs every commit it creates, and GitHub shows them as Verified..
+        /// </summary>
+        internal static string Signing_Enabled_Message {
+            get {
+                return ResourceManager.GetString("Signing_Enabled_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit signing needs a permission your current authorization does not have. Reauthorize with GitHub first..
+        /// </summary>
+        internal static string Signing_NeedsScope {
+            get {
+                return ResourceManager.GetString("Signing_NeedsScope", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The commit could not be signed and was left unsigned..
+        /// </summary>
+        internal static string Signing_NotSigned {
+            get {
+                return ResourceManager.GetString("Signing_NotSigned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GitHub did not accept the signing key..
+        /// </summary>
+        internal static string Signing_RegisterFailed {
+            get {
+                return ResourceManager.GetString("Signing_RegisterFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registering the signing key with GitHub....
+        /// </summary>
+        internal static string Signing_Registering {
+            get {
+                return ResourceManager.GetString("Signing_Registering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commit Signing.
+        /// </summary>
+        internal static string Signing_Title {
+            get {
+                return ResourceManager.GetString("Signing_Title", resourceCulture);
             }
         }
         

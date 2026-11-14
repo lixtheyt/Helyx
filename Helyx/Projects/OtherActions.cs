@@ -64,9 +64,14 @@ namespace Helyx.Projects
             var choice = AnsiConsole.Prompt(
                 new SelectionPrompt<OpenInAction>()
                 .Title(Strings.Other_OpenIn)
-                .AddChoices(Enum.GetValues<OpenInAction>())
+                .AddChoices(Enum.GetValues<OpenInAction>()
+                    .Where(x => x is OpenInAction.Explorer or OpenInAction.Back ||
+                                (x == OpenInAction.Terminal) != OperatingSystem.IsWindows()))
                 .UseConverter(x => x switch
                 {
+                    OpenInAction.Explorer when OperatingSystem.IsMacOS() => "Finder",
+                    OpenInAction.Explorer when !OperatingSystem.IsWindows() => Strings.Other_FileManager,
+                    OpenInAction.Terminal => Strings.Other_Terminal,
                     OpenInAction.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                     _ => x.ToString()
                 })
@@ -88,6 +93,52 @@ namespace Helyx.Projects
                     fileName = "powershell";
                     workingDir = project.Path;
                     break;
+                case OpenInAction.Terminal:
+                    var terminals = OperatingSystem.IsMacOS()
+                        ? ["open"]
+                        : new[]
+                        {
+                            Environment.GetEnvironmentVariable("TERMINAL") ?? string.Empty,
+                            "x-terminal-emulator", "gnome-terminal", "kgx", "ptyxis", "konsole", "xfce4-terminal",
+                            "mate-terminal", "lxterminal", "qterminal", "tilix", "terminator", "kitty", "alacritty",
+                            "wezterm", "foot", "ghostty", "xterm"
+                        }.Where(x => x.Length > 0);
+
+                    foreach (var terminal in terminals)
+                    {
+                        try
+                        {
+                            var info = new ProcessStartInfo
+                            {
+                                FileName = terminal,
+                                WorkingDirectory = project.Path,
+                                RedirectStandardOutput = true,
+                                RedirectStandardError = true,
+                                UseShellExecute = false
+                            };
+
+                            if (OperatingSystem.IsMacOS())
+                            {
+                                info.ArgumentList.Add("-a");
+                                info.ArgumentList.Add("Terminal");
+                                info.ArgumentList.Add(project.Path);
+                            }
+
+                            var process = Process.Start(info);
+
+                            process?.BeginOutputReadLine();
+                            process?.BeginErrorReadLine();
+
+                            return;
+                        }
+                        catch (Exception ex) when (ex is System.ComponentModel.Win32Exception or InvalidOperationException)
+                        {
+                        }
+                    }
+
+                    UI.Error(Strings.Other_NoTerminal);
+                    Console.ReadKey();
+                    return;
                 case OpenInAction.Back:
                     return;
                 default:
@@ -169,6 +220,7 @@ namespace Helyx.Projects
             Explorer,
             Cmd,
             PowerShell,
+            Terminal,
             Back
         }
 

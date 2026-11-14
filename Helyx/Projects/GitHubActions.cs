@@ -2848,6 +2848,7 @@ namespace Helyx.Projects
                         Commands.Stage(repo, readmePath);
 
                         repo.Commit("Updated status in README.md", signature, signature);
+                        Signing.Sign(repo);
 
                         repo.Network.Push(repo.Head, new PushOptions
                         {
@@ -3045,6 +3046,7 @@ namespace Helyx.Projects
                         Commands.Stage(repo, readmePath);
 
                         repo.Commit("Updated badges in README.md", signature, signature);
+                        Signing.Sign(repo);
 
                         repo.Network.Push(repo.Head, new PushOptions
                         {

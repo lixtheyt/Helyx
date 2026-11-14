@@ -11,7 +11,7 @@ namespace Helyx.Projects
     {
         internal static readonly Dictionary<IDE, string> ExecutableCommands = new()
         {
-            [IDE.VSCode] = "code.cmd",
+            [IDE.VSCode] = OperatingSystem.IsWindows() ? "code.cmd" : "code",
             [IDE.VS] = "devenv",
             [IDE.Eclipse] = "eclipse",
             [IDE.Vim] = "vim",
@@ -95,12 +95,32 @@ namespace Helyx.Projects
 
             try
             {
-                Process.Start(new ProcessStartInfo
+                var inTerminal = !OperatingSystem.IsWindows() && ide is IDE.Vim or IDE.Neovim;
+
+                var info = new ProcessStartInfo
                 {
                     FileName = fileName,
                     Arguments = $"\"{project.Path}\"",
-                    UseShellExecute = true
-                });
+                    RedirectStandardOutput = !OperatingSystem.IsWindows() && !inTerminal,
+                    RedirectStandardError = !OperatingSystem.IsWindows() && !inTerminal,
+                    UseShellExecute = OperatingSystem.IsWindows()
+                };
+
+                if (OperatingSystem.IsMacOS() && fileName.EndsWith(".app"))
+                {
+                    info.FileName = "open";
+                    info.Arguments = $"-a \"{fileName}\" \"{project.Path}\"";
+                }
+
+                var process = Process.Start(info);
+
+                if (inTerminal)
+                    process?.WaitForExit();
+                else if (!OperatingSystem.IsWindows())
+                {
+                    process?.BeginOutputReadLine();
+                    process?.BeginErrorReadLine();
+                }
             }
             catch (Exception ex)
             {

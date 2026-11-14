@@ -272,3 +272,7 @@ Helyx.iss
 installer-assets/
 Helyx Content/
 Helyx Bannery/
+
+release/
+release.cs
+RELEASING.md

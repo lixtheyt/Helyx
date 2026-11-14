@@ -3396,4 +3396,43 @@ comme un 'edit' ou un 'reword' dans un rebase interactif.</value>
   <data name="Picker_Footer_Actions" xml:space="preserve">
     <value>&lt;/&gt; filtrer   &lt;p&gt; chemin   &lt;n&gt; nouveau dossier   &lt;s&gt; trier   &lt;.&gt; masqués   &lt;f2&gt; sélectionner   &lt;?&gt; touches   &lt;esc&gt; retour</value>
   </data>
+  <data name="Other_FileManager" xml:space="preserve">
+    <value>Gestionnaire de fichiers</value>
+  </data>
+  <data name="Other_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Other_NoTerminal" xml:space="preserve">
+    <value>Aucun émulateur de terminal n'a été trouvé.</value>
+  </data>
+  <data name="Signing_Title" xml:space="preserve">
+    <value>Signature des commits</value>
+  </data>
+  <data name="Signing_Enable" xml:space="preserve">
+    <value>Activer la signature des commits</value>
+  </data>
+  <data name="Signing_Disable" xml:space="preserve">
+    <value>Désactiver la signature des commits</value>
+  </data>
+  <data name="Signing_Registering" xml:space="preserve">
+    <value>Enregistrement de la clé de signature sur GitHub...</value>
+  </data>
+  <data name="Signing_RegisterFailed" xml:space="preserve">
+    <value>GitHub n'a pas accepté la clé de signature.</value>
+  </data>
+  <data name="Signing_NeedsScope" xml:space="preserve">
+    <value>La signature des commits nécessite une permission que votre autorisation actuelle ne possède pas. Réautorisez-vous d'abord avec GitHub.</value>
+  </data>
+  <data name="Signing_Enabled_Message" xml:space="preserve">
+    <value>Helyx signe désormais chaque commit qu'il crée et GitHub les affiche comme Verified.</value>
+  </data>
+  <data name="Signing_EmailHint" xml:space="preserve">
+    <value>L'e-mail du commit doit être vérifié sur votre compte GitHub. Régler l'Identité préférée sur GitHub s'en charge.</value>
+  </data>
+  <data name="Signing_Disabled_Message" xml:space="preserve">
+    <value>Helyx ne signe plus les commits. La clé reste sur votre compte GitHub, les commits déjà signés conservent donc leur mention Verified.</value>
+  </data>
+  <data name="Signing_NotSigned" xml:space="preserve">
+    <value>Le commit n'a pas pu être signé et est resté non signé.</value>
+  </data>
 </root>

@@ -272,13 +272,13 @@ namespace Helyx.Data
                 return true;
             }
 
-            if (data is not [1, 0, 0, 0, ..])
+            if (data is not ([1, 0, 0, 0, ..] or [72, 76, 88, 1, ..]))
                 return true;
 
             try
             {
                 plain = Encoding.UTF8.GetString(
-                    ProtectedData.Unprotect(data, null, DataProtectionScope.CurrentUser));
+                    Unprotect(data));
 
                 return true;
             }
@@ -293,17 +293,82 @@ namespace Helyx.Data
             try
             {
                 return Convert.ToBase64String(
-                    ProtectedData.Protect(
-                        Encoding.UTF8.GetBytes(plain),
-                        null,
-                        DataProtectionScope.CurrentUser
-                    )
+                    Protect(Encoding.UTF8.GetBytes(plain))
                 );
             }
             catch (CryptographicException)
             {
                 return null;
             }
+        }
+
+        private static byte[] Protect(byte[] data)
+        {
+#if WINDOWS
+            return ProtectedData.Protect(data, null, DataProtectionScope.CurrentUser);
+#else
+            try
+            {
+                var path = Path.Combine(Path.GetDirectoryName(GetSecretsPath())!, "secrets.key");
+
+                if (!File.Exists(path))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+
+                    var options = new FileStreamOptions
+                    {
+                        Mode = FileMode.CreateNew,
+                        Access = FileAccess.Write
+                    };
+
+                    if (!OperatingSystem.IsWindows())
+                        options.UnixCreateMode = UnixFileMode.UserRead | UnixFileMode.UserWrite;
+
+                    using var stream = new FileStream(path, options);
+
+                    stream.Write(RandomNumberGenerator.GetBytes(32));
+                }
+
+                var nonce = RandomNumberGenerator.GetBytes(12);
+                var cipher = new byte[data.Length];
+                var tag = new byte[16];
+
+                using var aes = new AesGcm(File.ReadAllBytes(path), tag.Length);
+
+                aes.Encrypt(nonce, data, cipher, tag);
+
+                return [72, 76, 88, 1, .. nonce, .. tag, .. cipher];
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                throw new CryptographicException(ex.Message, ex);
+            }
+#endif
+        }
+
+        private static byte[] Unprotect(byte[] data)
+        {
+#if WINDOWS
+            return ProtectedData.Unprotect(data, null, DataProtectionScope.CurrentUser);
+#else
+            if (data is not [72, 76, 88, 1, ..] || data.Length < 32)
+                throw new CryptographicException();
+
+            try
+            {
+                var plain = new byte[data.Length - 32];
+
+                using var aes = new AesGcm(File.ReadAllBytes(Path.Combine(Path.GetDirectoryName(GetSecretsPath())!, "secrets.key")), 16);
+
+                aes.Decrypt(data.AsSpan(4, 12), data.AsSpan(32), data.AsSpan(16, 16), plain);
+
+                return plain;
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                throw new CryptographicException(ex.Message, ex);
+            }
+#endif
         }
 
         private static bool EditSecrets(SecretsFile secrets)
@@ -348,11 +413,7 @@ namespace Helyx.Data
 
                 byte[] data = Encoding.UTF8.GetBytes(accessToken);
 
-                byte[] encrypted = ProtectedData.Protect(
-                    data,
-                    null,
-                    DataProtectionScope.CurrentUser
-                );
+                byte[] encrypted = Protect(data);
 
                 SecretsFile secrets = GetSecrets();
 
@@ -375,11 +436,7 @@ namespace Helyx.Data
 
                 byte[] data = Encoding.UTF8.GetBytes(token);
 
-                byte[] encrypted = ProtectedData.Protect(
-                    data,
-                    null,
-                    DataProtectionScope.CurrentUser
-                );
+                byte[] encrypted = Protect(data);
 
                 SecretsFile secrets = GetSecrets();
 
@@ -407,11 +464,7 @@ namespace Helyx.Data
 
                 byte[] data = Convert.FromBase64String(secrets.GitHubAccessToken);
 
-                byte[] decrypted = ProtectedData.Unprotect(
-                    data,
-                    null,
-                    DataProtectionScope.CurrentUser
-                );
+                byte[] decrypted = Unprotect(data);
 
                 return Encoding.UTF8.GetString(decrypted);
             }
@@ -432,11 +485,7 @@ namespace Helyx.Data
 
                 byte[] data = Convert.FromBase64String(secrets.HackatimeToken);
 
-                byte[] decrypted = ProtectedData.Unprotect(
-                    data,
-                    null,
-                    DataProtectionScope.CurrentUser
-                );
+                byte[] decrypted = Unprotect(data);
 
                 return Encoding.UTF8.GetString(decrypted);
             }
@@ -460,6 +509,50 @@ namespace Helyx.Data
             SecretsFile secrets = GetSecrets();
 
             secrets.HackatimeToken = string.Empty;
+
+            EditSecrets(secrets);
+        }
+
+        internal static bool SaveSigningKey(byte[] key)
+        {
+            try
+            {
+                SecretsFile secrets = GetSecrets();
+
+                secrets.SigningKey = Convert.ToBase64String(Protect(key));
+
+                return EditSecrets(secrets);
+            }
+            catch (CryptographicException ex)
+            {
+                UI.Error(Strings.Secrets_SaveFailed + $"\n\n{ex.Message}");
+                Console.ReadKey();
+
+                return false;
+            }
+        }
+
+        internal static byte[]? GetSigningKey()
+        {
+            try
+            {
+                SecretsFile secrets = GetSecrets();
+
+                return string.IsNullOrEmpty(secrets.SigningKey)
+                    ? null
+                    : Unprotect(Convert.FromBase64String(secrets.SigningKey));
+            }
+            catch (Exception ex) when (ex is FormatException or CryptographicException)
+            {
+                return null;
+            }
+        }
+
+        internal static void ForgetSigningKey()
+        {
+            SecretsFile secrets = GetSecrets();
+
+            secrets.SigningKey = string.Empty;
 
             EditSecrets(secrets);
         }

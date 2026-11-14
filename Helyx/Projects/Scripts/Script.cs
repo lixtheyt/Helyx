@@ -164,16 +164,30 @@ namespace Helyx.Projects.Scripts
 
                     try
                     {
-                        using var process = Process.Start(new ProcessStartInfo
+                        var info = new ProcessStartInfo
                         {
                             FileName = "powershell.exe",
                             Arguments = $"-NoProfile -NonInteractive -Command {Command}",
                             UseShellExecute = false,
                             CreateNoWindow = true,
+                            RedirectStandardInput = !OperatingSystem.IsWindows(),
                             RedirectStandardOutput = true,
                             RedirectStandardError = true,
                             WorkingDirectory = script.ProjectPath
-                        }) ?? throw new InvalidOperationException(Strings.Script_NoCommand);
+                        };
+
+                        if (!OperatingSystem.IsWindows())
+                        {
+                            info.FileName = "/bin/sh";
+                            info.Arguments = string.Empty;
+                            info.ArgumentList.Add("-c");
+                            info.ArgumentList.Add(Command);
+                        }
+
+                        using var process = Process.Start(info) ?? throw new InvalidOperationException(Strings.Script_NoCommand);
+
+                        if (!OperatingSystem.IsWindows())
+                            process.StandardInput.Close();
 
                         var draining = Task.WhenAll(
                             Pump(process.StandardOutput, false),
