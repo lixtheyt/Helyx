@@ -17,10 +17,14 @@
 ![Helyx](Helyx/assets/hero.gif)
 
 <a href="https://github.com/lixtheyt/Helyx/releases/latest">
-  <img src="https://img.shields.io/badge/DOWNLOAD-0078D6?style=for-the-badge" width="440" alt="Download">
+  <img src="https://img.shields.io/badge/DOWNLOAD-0078D6?style=for-the-badge" width="220" alt="Download">
 </a>
 
 ***For the best experience on Windows, please use Windows Terminal. (not cmd.exe or powershell.exe)***
+
+***For the best experience on Linux, use a terminal with true color, such as GNOME Terminal, Konsole, kitty or Alacritty.***
+
+***For the best experience on macOS, use iTerm2, Ghostty or kitty.***
 
 </div>
 
