@@ -17,7 +17,7 @@
 ![Helyx](Helyx/assets/hero.gif)
 
 <a href="https://github.com/lixtheyt/Helyx/releases/latest">
-  <img src="https://img.shields.io/badge/DOWNLOAD-0078D6?style=for-the-badge" width="220" alt="Download">
+  <img src="https://img.shields.io/badge/DOWNLOAD_HELYX-0078D6?style=for-the-badge" width="420" alt="Download">
 </a>
 
 ***For the best experience on Windows, please use Windows Terminal. (not cmd.exe or powershell.exe)***
