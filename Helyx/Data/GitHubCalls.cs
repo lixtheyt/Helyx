@@ -246,41 +246,21 @@ namespace Helyx.Data
 
         internal static async Task<string?> GetUserGitHubInfo(InfoType infoType)
         {
-            var url = infoType == InfoType.Username
-                ? "https://api.github.com/user"
-                : "https://api.github.com/user/emails";
+            using var document = await GetJsonAsync<JsonDocument>("https://api.github.com/user");
 
-            using var document = await GetJsonAsync<JsonDocument>(url);
-
-            if (document == null)
+            if (document == null ||
+                !document.RootElement.TryGetProperty("login", out var login) ||
+                login.GetString() is not { Length: > 0 } username)
                 return null;
 
-            switch (infoType)
+            return infoType switch
             {
-                case InfoType.Username:
-                    return document.RootElement.TryGetProperty("login", out var login)
-                        ? login.GetString()
-                        : null;
-                case InfoType.Email:
-                    {
-                        if (document.RootElement.ValueKind != JsonValueKind.Array)
-                            return null;
-
-                        foreach (var entry in document.RootElement.EnumerateArray())
-                        {
-                            if (entry.TryGetProperty("primary", out var primary) &&
-                                primary.GetBoolean() &&
-                                entry.TryGetProperty("email", out var email))
-                            {
-                                return email.GetString();
-                            }
-                        }
-
-                        return null;
-                    }
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(infoType), infoType, null);
-            }
+                InfoType.Username => username,
+                InfoType.Email => document.RootElement.TryGetProperty("id", out var id) && id.TryGetInt64(out var number)
+                    ? $"{number}+{username}@users.noreply.github.com"
+                    : null,
+                _ => throw new ArgumentOutOfRangeException(nameof(infoType), infoType, null)
+            };
         }
 
         internal static async Task CheckGitHubTokenAndResolve()
