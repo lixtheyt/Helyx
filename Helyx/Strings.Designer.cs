@@ -7429,6 +7429,42 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The primary e-mail of your GitHub account.
+        /// </summary>
+        internal static string Identity_Email_Primary {
+            get {
+                return ResourceManager.GetString("Identity_Email_Primary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your primary e-mail will be written into every commit, and anyone who can read the repository can read it. If your GitHub account blocks pushes that expose your e-mail, GitHub will refuse them..
+        /// </summary>
+        internal static string Identity_Email_PrimaryWarning {
+            get {
+                return ResourceManager.GetString("Identity_Email_PrimaryWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The private address GitHub gives your account (noreply).
+        /// </summary>
+        internal static string Identity_Email_Private {
+            get {
+                return ResourceManager.GetString("Identity_Email_Private", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Which e-mail should your commits carry?.
+        /// </summary>
+        internal static string Identity_Email_Select {
+            get {
+                return ResourceManager.GetString("Identity_Email_Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You need to authorize with GitHub before you can change this setting..
         /// </summary>
         internal static string Identity_NeedsAuth {

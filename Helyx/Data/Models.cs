@@ -59,6 +59,8 @@ namespace Helyx.Data
 
         public PreferredIdentity PreferredIdentity { get; set; } = PreferredIdentity.Git;
 
+        public CommitEmail CommitEmail { get; set; } = CommitEmail.Private;
+
         public Dictionary<IDE, IDEExecutablesClass> IDEExecutables { get; set; } = new();
 
         public Dictionary<Guid, TagDefinition> CustomStatuses { get; set; } = new();
@@ -119,6 +121,12 @@ namespace Helyx.Data
     {
         Git,
         GitHub
+    }
+
+    internal enum CommitEmail
+    {
+        Private,
+        Primary
     }
 
     public enum Language

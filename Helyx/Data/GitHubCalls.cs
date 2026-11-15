@@ -246,6 +246,18 @@ namespace Helyx.Data
 
         internal static async Task<string?> GetUserGitHubInfo(InfoType infoType)
         {
+            if (infoType == InfoType.Email && ConfigurationHandler.GetConfig().CommitEmail == CommitEmail.Primary)
+            {
+                using var emails = await GetJsonAsync<JsonDocument>("https://api.github.com/user/emails");
+
+                return emails is { RootElement.ValueKind: JsonValueKind.Array }
+                    ? emails.RootElement.EnumerateArray()
+                        .Where(x => x.TryGetProperty("primary", out var primary) && primary.ValueKind == JsonValueKind.True && x.TryGetProperty("email", out _))
+                        .Select(x => x.GetProperty("email").GetString())
+                        .FirstOrDefault()
+                    : null;
+            }
+
             using var document = await GetJsonAsync<JsonDocument>("https://api.github.com/user");
 
             if (document == null ||

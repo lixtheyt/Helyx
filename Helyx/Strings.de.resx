@@ -3435,4 +3435,16 @@ etwa ein 'edit' oder 'reword' in einem interaktiven Rebase.</value>
   <data name="Signing_NotSigned" xml:space="preserve">
     <value>Der Commit konnte nicht signiert werden und blieb unsigniert.</value>
   </data>
+  <data name="Identity_Email_Select" xml:space="preserve">
+    <value>Welche E-Mail-Adresse sollen Ihre Commits tragen?</value>
+  </data>
+  <data name="Identity_Email_Private" xml:space="preserve">
+    <value>Die private Adresse, die GitHub Ihrem Konto zuweist (noreply)</value>
+  </data>
+  <data name="Identity_Email_Primary" xml:space="preserve">
+    <value>Die primäre E-Mail-Adresse Ihres GitHub-Kontos</value>
+  </data>
+  <data name="Identity_Email_PrimaryWarning" xml:space="preserve">
+    <value>Ihre primäre E-Mail-Adresse wird in jeden Commit geschrieben und ist für jeden lesbar, der das Repository lesen kann. Wenn Ihr GitHub-Konto Pushes blockiert, die Ihre Adresse offenlegen, wird GitHub sie ablehnen.</value>
+  </data>
 </root>

@@ -265,6 +265,10 @@ Commit signing is turned on in GitHub Authorization. Helyx needs one more permis
 authorized before this existed, it asks you to reauthorize first. The e-mail on your commits has to be
 one verified on your GitHub account, which Preferred Identity set to GitHub takes care of.
 
+With Preferred Identity set to GitHub, Helyx commits under the private `noreply` address GitHub gives
+your account, so your real e-mail never ends up in a repository. You can pick your primary e-mail
+instead, in the same setting.
+
 ![Manage badges](Helyx/assets/manage-badges.png)
 
 ![Settings](Helyx/assets/settings.png)

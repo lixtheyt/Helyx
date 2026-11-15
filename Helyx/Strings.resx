@@ -3852,4 +3852,16 @@ such as an 'edit' or 'reword' in an interactive rebase.</value>
   <data name="Signing_NotSigned" xml:space="preserve">
     <value>The commit could not be signed and was left unsigned.</value>
   </data>
+  <data name="Identity_Email_Select" xml:space="preserve">
+    <value>Which e-mail should your commits carry?</value>
+  </data>
+  <data name="Identity_Email_Private" xml:space="preserve">
+    <value>The private address GitHub gives your account (noreply)</value>
+  </data>
+  <data name="Identity_Email_Primary" xml:space="preserve">
+    <value>The primary e-mail of your GitHub account</value>
+  </data>
+  <data name="Identity_Email_PrimaryWarning" xml:space="preserve">
+    <value>Your primary e-mail will be written into every commit, and anyone who can read the repository can read it. If your GitHub account blocks pushes that expose your e-mail, GitHub will refuse them.</value>
+  </data>
 </root>
