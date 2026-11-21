@@ -737,7 +737,7 @@ namespace Helyx.Data
             try
             {
                 using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
-                using var request = new HttpRequestMessage(HttpMethod.Get, "https://gist.githubusercontent.com/LixTheYT/199e72996e90e626b0d9b876ada10988/raw/broadcast.json");
+                using var request = new HttpRequestMessage(HttpMethod.Get, $"https://gist.githubusercontent.com/LixTheYT/199e72996e90e626b0d9b876ada10988/raw/broadcast.json?t={DateTime.UtcNow.Ticks}");
 
                 request.Headers.UserAgent.ParseAdd("Helyx");
 
