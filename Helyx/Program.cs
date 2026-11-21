@@ -13,7 +13,7 @@ namespace Helyx
                 : "0.0.0";
 
         private const int MaxConsecutiveFailures = 3;
-
+        
         [STAThread]
         private static void Main(string[] args)
         {
