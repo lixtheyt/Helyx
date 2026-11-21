@@ -18,7 +18,6 @@ namespace Helyx.Settings
         {
             bool foundUpdate = false;
             string? latestVersion = null;
-            string? currentVersion = null;
 
             try
             {
@@ -40,8 +39,6 @@ namespace Helyx.Settings
                                 string.Format(Strings.Update_Current, Program.Version) + "\n" +
                                 string.Format(Strings.Update_Latest, latestVersion));
                         }
-                        
-                        currentVersion = Program.Version;
 
                         if (latest > current)
                             foundUpdate = true;
@@ -55,19 +52,17 @@ namespace Helyx.Settings
                 return;
             }
 
-            UI.Info($"Current version: {currentVersion}", "Current version");
-
             if (foundUpdate)
             {
                 UI.Success(Strings.Update_Available + "\n\n" +
-                           $"[link={UpdatesLink}]{Strings.Update_ClickHere}[/]\n" +
+                           UI.Link(UpdatesLink, Strings.Update_ClickHere) + "\n" +
                            $"[italic {Color.Grey}]{Strings.Common_CtrlClick}[/]\n\n" +
                            string.Format(Strings.Update_Current, Program.Version) + "\n" +
                            string.Format(Strings.Update_Latest, latestVersion), Strings.Update_Available_Title);
             }
             else
             {
-                UI.Info(Strings.Update_None, Strings.Update_None_Title);
+                UI.Info(Strings.Update_None + "\n\n" + string.Format(Strings.Update_Current, Program.Version), Strings.Update_None_Title);
             }
             Console.ReadKey();
 
