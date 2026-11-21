@@ -450,6 +450,9 @@
   <data name="Secrets_SaveFailed" xml:space="preserve">
     <value>Súbor s tajomstvami sa nepodarilo uložiť.</value>
   </data>
+  <data name="Settings_Broadcasts" xml:space="preserve">
+    <value>Oznámenia</value>
+  </data>
   <data name="Settings_GitHubAuthorization" xml:space="preserve">
     <value>Autorizácia GitHub</value>
   </data>
@@ -3446,5 +3449,11 @@ napríklad 'edit' alebo 'reword' v interaktívnom rebase.</value>
   </data>
   <data name="Identity_Email_PrimaryWarning" xml:space="preserve">
     <value>Váš primárny e-mail sa zapíše do každého commitu a prečíta si ho každý, kto môže čítať repozitár. Ak váš účet GitHub blokuje pushe, ktoré e-mail odhaľujú, GitHub ich odmietne.</value>
+  </data>
+  <data name="Broadcast_Explain" xml:space="preserve">
+    <value>Pri spustení Helyx stiahne z GitHubu krátky súbor, do ktorého jeho autor píše oznámenia, napríklad o novej verzii alebo o známom probléme. O vás ani o vašich projektoch sa nič neodosiela.</value>
+  </data>
+  <data name="Broadcast_Title" xml:space="preserve">
+    <value>Oznámenie</value>
   </data>
 </root>

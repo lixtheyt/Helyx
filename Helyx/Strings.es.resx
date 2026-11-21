@@ -450,6 +450,9 @@
   <data name="Secrets_SaveFailed" xml:space="preserve">
     <value>No se pudo guardar el archivo de secretos.</value>
   </data>
+  <data name="Settings_Broadcasts" xml:space="preserve">
+    <value>Anuncios</value>
+  </data>
   <data name="Settings_GitHubAuthorization" xml:space="preserve">
     <value>Autorización de GitHub</value>
   </data>
@@ -3446,5 +3449,11 @@ como un 'edit' o 'reword' en un rebase interactivo.</value>
   </data>
   <data name="Identity_Email_PrimaryWarning" xml:space="preserve">
     <value>Su correo principal se escribirá en cada commit y podrá leerlo cualquiera que pueda leer el repositorio. Si su cuenta de GitHub bloquea los push que exponen su correo, GitHub los rechazará.</value>
+  </data>
+  <data name="Broadcast_Explain" xml:space="preserve">
+    <value>Al iniciarse, Helyx descarga de GitHub un breve archivo en el que el autor de Helyx publica anuncios, por ejemplo sobre una nueva versión o un problema conocido. No se envía nada sobre usted ni sobre sus proyectos.</value>
+  </data>
+  <data name="Broadcast_Title" xml:space="preserve">
+    <value>Anuncio</value>
   </data>
 </root>

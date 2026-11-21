@@ -4,6 +4,7 @@ using Helyx.Projects;
 using Helyx.Settings;
 using Helyx.Shared;
 using Spectre.Console;
+using Spectre.Console.Rendering;
 
 namespace Helyx
 {
@@ -11,6 +12,7 @@ namespace Helyx
     {
         internal static void Display()
         {
+            AnsiConsole.Clear();
             AnsiConsole.Write(new FigletText("Helyx")
                 .Color(Color.FromHex("#26ABDF")));
             Console.WriteLine();
@@ -35,47 +37,152 @@ namespace Helyx
 
             _tokenCheck ??= Task.Run(GitHubCalls.CheckGitHubTokenAndResolve);
 
-            if (_tokenCheck.IsCompleted)
-                _scopeChecked = true;
+            if (_broadcasts == null && !ConfigurationHandler.GetConfig().HideBroadcasts)
+                _broadcasts = Task.Run(GitHubCalls.GetBroadcasts);
 
-            WarnAboutOutdatedScopes();
+            var choices = Enum.GetValues<Action>();
+            var top = Console.CursorTop - Console.WindowTop;
+            var language = Strings.Culture?.TwoLetterISOLanguageName ?? "en";
+            var selected = 0;
+            var warned = false;
+            var announced = false;
+            Action? choice = null;
 
-            using var cts = new CancellationTokenSource();
+            string? Localized(Dictionary<string, string?>? values) =>
+                values?
+                    .OrderBy(x => x.Key.Equals(language, StringComparison.OrdinalIgnoreCase) ? 0 : x.Key.Equals("en", StringComparison.OrdinalIgnoreCase) ? 1 : 2)
+                    .Select(x => x.Value)
+                    .FirstOrDefault(x => !string.IsNullOrWhiteSpace(x));
 
-            if (!_scopeChecked)
-                _ = _tokenCheck.ContinueWith(_ =>
-                {
-                    try
-                    {
-                        cts.Cancel();
-                    }
-                    catch (ObjectDisposedException)
-                    {
-                    }
-                }, TaskScheduler.Default);
-
-            Action choice;
-
-            try
+            IRenderable Build()
             {
-                choice = new SelectionPrompt<Action>()
-                    .AddChoices(Enum.GetValues<Action>())
-                    .UseConverter(x => x switch
+                var options = RenderOptions.Create(AnsiConsole.Console, AnsiConsole.Console.Profile.Capabilities);
+                var room = Console.WindowHeight - top - choices.Length - 1;
+                List<(IRenderable Panel, bool Below, bool Broadcast)> notices = [];
+                List<IRenderable> above = [];
+                List<IRenderable> below = [];
+
+                if (GitHubCalls.HasOutdatedScopes && !_scopeWarningShown)
+                    notices.Add((UI.StyledPanel(UI.SafeMarkup(
+                        Strings.Common_ScopesMissing + "\n" +
+                        $"[bold]{Markup.Escape(string.Join(", ", GitHubCalls.MissingScopes))}[/]\n\n" +
+                        string.Format(Strings.MainMenu_Scopes_Hint,
+                            $"[bold]{Strings.Common_Settings}[/] [{Color.Grey}]>[/] [bold]{Strings.Settings_GitHubAuthorization}[/]"),
+                        new Style(Color.White)), Strings.Common_ScopesOutdated_Title, UIKind.Warning), false, false));
+
+                if (_broadcasts is { IsCompletedSuccessfully: true } && !_broadcastsShown)
+                    foreach (var broadcast in _broadcasts.Result)
+                        notices.Add((UI.StyledPanel(UI.SafeMarkup(
+                            UI.MarkdownToMarkup(Localized(broadcast.Text)!, "https://github.com/LixTheYT/Helyx") +
+                            (string.IsNullOrWhiteSpace(broadcast.Link)
+                                ? string.Empty
+                                : $"\n\n{UI.Link(broadcast.Link, $"[{Color.Grey}]{Markup.Escape(broadcast.Link)}[/]")}\n[italic {Color.Grey}]{Strings.Common_CtrlClick}[/]"),
+                            new Style(Color.White)),
+                            Localized(broadcast.Title) ?? Strings.Broadcast_Title,
+                            Enum.TryParse<UIKind>(broadcast.Kind, true, out var kind) ? kind : UIKind.Info),
+                            string.Equals(broadcast.Position, "below", StringComparison.OrdinalIgnoreCase), true));
+
+                foreach (var (panel, isBelow, broadcast) in notices)
+                {
+                    var cost = Segment.SplitLines(panel.Render(options, AnsiConsole.Console.Profile.Width)).Count +
+                               (isBelow || above.Count > 0 ? 1 : 2);
+
+                    if (cost > room)
+                        continue;
+
+                    room -= cost;
+                    (isBelow ? below : above).Add(panel);
+
+                    if (broadcast)
+                        announced = true;
+                    else
+                        warned = true;
+                }
+
+                List<IRenderable> rows = [];
+
+                foreach (var panel in above)
+                    rows.AddRange([panel, new Text(string.Empty)]);
+
+                if (above.Count > 0)
+                    rows.Add(new Text(string.Empty));
+
+                rows.AddRange(choices.Select((x, i) =>
+                {
+                    var label = x switch
                     {
                         Action.Projects => Strings.MainMenu_Projects,
                         Action.Settings => Strings.Common_Settings,
                         Action.Credits => Strings.MainMenu_Credits,
                         Action.Exit => Strings.MainMenu_Exit,
                         _ => x.ToString()
-                    })
-                    .ShowAsync(AnsiConsole.Console, cts.Token)
-                    .GetAwaiter().GetResult();
+                    };
+
+                    return new Markup(i == selected ? $"[{Color.Blue}]> {label}[/]" : $"  {label}");
+                }));
+
+                foreach (var panel in below)
+                    rows.AddRange([new Text(string.Empty), panel]);
+
+                return new Rows(rows);
             }
-            catch (OperationCanceledException)
+
+            AnsiConsole.Live(Build())
+                .Start(ctx =>
+                {
+                    var drawn = (GitHubCalls.HasOutdatedScopes, _broadcasts?.IsCompleted, Console.WindowWidth, Console.WindowHeight);
+
+                    ctx.Refresh();
+
+                    while (choice == null && !GitHubCalls.TokenRejected)
+                    {
+                        var state = (GitHubCalls.HasOutdatedScopes, _broadcasts?.IsCompleted, Console.WindowWidth, Console.WindowHeight);
+
+                        if (Console.KeyAvailable)
+                        {
+                            switch (Console.ReadKey(true).Key)
+                            {
+                                case ConsoleKey.UpArrow:
+                                    selected = Math.Max(0, selected - 1);
+                                    break;
+                                case ConsoleKey.DownArrow:
+                                    selected = Math.Min(choices.Length - 1, selected + 1);
+                                    break;
+                                case ConsoleKey.Home or ConsoleKey.PageUp:
+                                    selected = 0;
+                                    break;
+                                case ConsoleKey.End or ConsoleKey.PageDown:
+                                    selected = choices.Length - 1;
+                                    break;
+                                case ConsoleKey.Enter or ConsoleKey.Spacebar:
+                                    choice = choices[selected];
+                                    break;
+                                default:
+                                    continue;
+                            }
+                        }
+                        else if (state == drawn)
+                        {
+                            Thread.Sleep(25);
+                            continue;
+                        }
+
+                        drawn = state;
+                        ctx.UpdateTarget(Build());
+                    }
+                });
+
+            if (choice == null)
             {
                 AnsiConsole.Clear();
                 return;
             }
+
+            if (warned)
+                _scopeWarningShown = true;
+
+            if (announced)
+                _broadcastsShown = true;
 
             AnsiConsole.Clear();
 
@@ -100,26 +207,11 @@ namespace Helyx
 
         private static bool _scopeWarningShown;
 
+        private static bool _broadcastsShown;
+
         private static Task? _tokenCheck;
 
-        private static bool _scopeChecked;
-
-        private static void WarnAboutOutdatedScopes()
-        {
-            if (_scopeWarningShown || !GitHubCalls.HasOutdatedScopes)
-                return;
-
-            _scopeWarningShown = true;
-
-            UI.Warning(
-                Strings.Common_ScopesMissing + "\n" +
-                $"[bold]{Markup.Escape(string.Join(", ", GitHubCalls.MissingScopes))}[/]\n\n" +
-                string.Format(Strings.MainMenu_Scopes_Hint,
-                    $"[bold]{Strings.Common_Settings}[/] [{Color.Grey}]>[/] [bold]{Strings.Settings_GitHubAuthorization}[/]"),
-                Strings.Common_ScopesOutdated_Title);
-
-            Console.WriteLine();
-        }
+        private static Task<List<Broadcast>>? _broadcasts;
 
         private enum Action
         {

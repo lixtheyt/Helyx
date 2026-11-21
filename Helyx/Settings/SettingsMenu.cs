@@ -31,6 +31,7 @@ namespace Helyx.Settings
                             Action.PreferredIdentity => Strings.Settings_PreferredIdentity,
                             Action.NotesSettings => Strings.Settings_Notes,
                             Action.Updates => Strings.Settings_Updates,
+                            Action.Broadcasts => Strings.Settings_Broadcasts,
                             Action.Back => $"[{Color.Red3_1}]{Strings.Common_Back}[/]",
                             _ => action.ToString()
                         })
@@ -70,6 +71,9 @@ namespace Helyx.Settings
                     case Action.Updates:
                         UpdateHandler.Display();
                         break;
+                    case Action.Broadcasts:
+                        BroadcastSettings.Display();
+                        break;
                     case Action.Back:
                         AnsiConsole.Clear();
                         return;
@@ -108,6 +112,7 @@ namespace Helyx.Settings
             PreferredIdentity,
             NotesSettings,
             Updates,
+            Broadcasts,
             Back
         }
     }

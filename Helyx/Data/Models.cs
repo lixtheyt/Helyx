@@ -52,6 +52,7 @@ namespace Helyx.Data
         public Dictionary<Guid, ProjectClass> Projects { get; set; } = new();
         public bool NotesEncryption { get; set; }
         public bool SignCommits { get; set; }
+        public bool HideBroadcasts { get; set; }
 
         public Language ProgramLanguage { get; set; }
 
@@ -86,6 +87,23 @@ namespace Helyx.Data
         public string GitHubAccessToken { get; set; } = string.Empty;
         public string HackatimeToken { get; set; } = string.Empty;
         public string SigningKey { get; set; } = string.Empty;
+    }
+
+    internal class BroadcastFile
+    {
+        public List<Broadcast?>? Messages { get; set; }
+    }
+
+    internal class Broadcast
+    {
+        public string? Kind { get; set; }
+        public string? From { get; set; }
+        public string? Until { get; set; }
+        public string? Below { get; set; }
+        public string? Position { get; set; }
+        public Dictionary<string, string?>? Title { get; set; }
+        public Dictionary<string, string?>? Text { get; set; }
+        public string? Link { get; set; }
     }
 
     internal enum Confirm { Yes, No }

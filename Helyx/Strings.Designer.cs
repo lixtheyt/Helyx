@@ -781,6 +781,24 @@ namespace Helyx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to At startup, Helyx downloads a short file from GitHub where its author posts announcements, such as a new version or a known problem. Nothing about you or your projects is sent..
+        /// </summary>
+        internal static string Broadcast_Explain {
+            get {
+                return ResourceManager.GetString("Broadcast_Explain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Announcement.
+        /// </summary>
+        internal static string Broadcast_Title {
+            get {
+                return ResourceManager.GetString("Broadcast_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
         internal static string Common_Back {
@@ -9459,6 +9477,15 @@ namespace Helyx {
         internal static string Secrets_SaveFailed {
             get {
                 return ResourceManager.GetString("Secrets_SaveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Announcements.
+        /// </summary>
+        internal static string Settings_Broadcasts {
+            get {
+                return ResourceManager.GetString("Settings_Broadcasts", resourceCulture);
             }
         }
         

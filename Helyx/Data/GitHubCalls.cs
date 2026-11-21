@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using LibGit2Sharp;
 using Spectre.Console;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -729,6 +730,39 @@ namespace Helyx.Data
             return json.RootElement.TryGetProperty("tag_name", out var tagName)
                 ? tagName.GetString()
                 : null;
+        }
+
+        internal static async Task<List<Broadcast>> GetBroadcasts()
+        {
+            try
+            {
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+                using var request = new HttpRequestMessage(HttpMethod.Get, "https://gist.githubusercontent.com/LixTheYT/199e72996e90e626b0d9b876ada10988/raw/broadcast.json");
+
+                request.Headers.UserAgent.ParseAdd("Helyx");
+
+                using var response = await Client.SendAsync(request, cts.Token);
+
+                if (!response.IsSuccessStatusCode)
+                    return [];
+
+                var file = await response.Content.ReadFromJsonAsync<BroadcastFile>(cts.Token);
+
+                var today = DateOnly.FromDateTime(DateTime.Now);
+                var current = System.Version.Parse(Program.Version);
+
+                return file?.Messages?
+                    .OfType<Broadcast>()
+                    .Where(x => x.Text?.Values.Any(y => !string.IsNullOrWhiteSpace(y)) == true &&
+                                DateOnly.TryParseExact(x.Until, "yyyy-M-d", CultureInfo.InvariantCulture, DateTimeStyles.None, out var until) && today <= until &&
+                                (x.From == null || DateOnly.TryParseExact(x.From, "yyyy-M-d", CultureInfo.InvariantCulture, DateTimeStyles.None, out var from) && from <= today) &&
+                                (x.Below == null || System.Version.TryParse(x.Below, out var below) && current < below))
+                    .ToList() ?? [];
+            }
+            catch (Exception)
+            {
+                return [];
+            }
         }
 
         internal static bool HasGitHubName(Guid guid)

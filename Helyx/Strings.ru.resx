@@ -450,6 +450,9 @@
   <data name="Secrets_SaveFailed" xml:space="preserve">
     <value>Не удалось сохранить файл с секретами.</value>
   </data>
+  <data name="Settings_Broadcasts" xml:space="preserve">
+    <value>Объявления</value>
+  </data>
   <data name="Settings_GitHubAuthorization" xml:space="preserve">
     <value>Авторизация GitHub</value>
   </data>
@@ -3446,5 +3449,11 @@
   </data>
   <data name="Identity_Email_PrimaryWarning" xml:space="preserve">
     <value>Ваш основной адрес почты будет записан в каждый коммит, и его сможет прочитать любой, кто может читать репозиторий. Если ваша учётная запись GitHub блокирует отправки, раскрывающие адрес, GitHub их отклонит.</value>
+  </data>
+  <data name="Broadcast_Explain" xml:space="preserve">
+    <value>При запуске Helyx загружает с GitHub небольшой файл, в котором его автор публикует объявления, например о новой версии или известной проблеме. Никакие сведения о вас или ваших проектах не отправляются.</value>
+  </data>
+  <data name="Broadcast_Title" xml:space="preserve">
+    <value>Объявление</value>
   </data>
 </root>

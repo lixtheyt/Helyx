@@ -5,7 +5,9 @@ using Spectre.Console.Rendering;
 using System.Text;
 using System.Text.RegularExpressions;
 using Markdig;
+using Markdig.Extensions.CustomContainers;
 using Markdig.Extensions.TaskLists;
+using Markdig.Renderers.Html;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Color = Spectre.Console.Color;
@@ -285,6 +287,11 @@ namespace Helyx.Shared
         private static readonly Regex ReferencePattern =
             new(@"(?<![\w#])#(\d+)\b", RegexOptions.Compiled);
 
+        private static readonly Regex ColorPattern =
+            new(@"^(#[0-9A-Fa-f]{6}|[A-Za-z][A-Za-z0-9_]*)$", RegexOptions.Compiled);
+
+        private static readonly string[] Decorations = ["bold", "italic", "underline", "strikethrough", "dim"];
+
         internal static string MarkdownToMarkup(string? markdown, Guid guid)
         {
             if (string.IsNullOrWhiteSpace(markdown))
@@ -293,12 +300,13 @@ namespace Helyx.Shared
             var username = GitHubCalls.GetCachedUsername().GetAwaiter().GetResult();
             var repoName = ConfigurationHandler.GetProject(guid).GitHubName;
 
-            var repoUrl = string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(repoName)
+            return MarkdownToMarkup(markdown, string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(repoName)
                 ? null
-                : $"https://github.com/{username}/{repoName}";
-
-            return RenderBlock(Markdown.Parse(markdown.Replace("\r\n", "\n"), MarkdownPipeline), repoUrl).Trim('\n');
+                : $"https://github.com/{username}/{repoName}");
         }
+
+        internal static string MarkdownToMarkup(string markdown, string? repoUrl) =>
+            RenderBlock(Markdown.Parse(markdown.Replace("\r\n", "\n"), MarkdownPipeline), repoUrl).Trim('\n');
 
         private static string RenderBlock(Block block, string? repoUrl)
         {
@@ -354,6 +362,9 @@ namespace Helyx.Shared
                 {
                     LiteralInline literal => Linkify(Markup.Escape(literal.Content.ToString()), repoUrl),
                     CodeInline code => Wrap(Markup.Escape(code.Content ?? ""), "grey93 on grey19"),
+                    CustomContainerInline custom => InlineStyle(custom.TryGetAttributes()) is { } style
+                        ? Wrap(RenderInline(custom, repoUrl), style)
+                        : RenderInline(custom, repoUrl),
                     EmphasisInline emphasis =>
                         Wrap(RenderInline(emphasis, repoUrl), (emphasis.DelimiterChar, emphasis.DelimiterCount) switch
                         {
@@ -381,6 +392,30 @@ namespace Helyx.Shared
                 ? text
                 : ReferencePattern.Replace(text,
                     x => Link($"{repoUrl}/issues/{x.Groups[1].Value}", $"[{Color.SteelBlue1}]#{x.Groups[1].Value}[/]"));
+        }
+
+        private static string? InlineStyle(HtmlAttributes? attributes)
+        {
+            bool IsColor(string? value) =>
+                value != null && ColorPattern.IsMatch(value) &&
+                Style.TryParse(value, out var parsed) && parsed is { Decoration: Decoration.None } && parsed.Foreground != Color.Default;
+
+            var classes = attributes?.Classes ?? [];
+            var properties = attributes?.Properties ?? [];
+            var color = properties.FirstOrDefault(x => x.Key.Equals("color", StringComparison.OrdinalIgnoreCase)).Value;
+            var background = properties.FirstOrDefault(x => x.Key.Equals("bg", StringComparison.OrdinalIgnoreCase)).Value;
+
+            List<string> style = [.. classes.Where(x => Decorations.Contains(x, StringComparer.OrdinalIgnoreCase)).Select(x => x.ToLowerInvariant())];
+
+            if (IsColor(color))
+                style.Add(color!);
+            else if (classes.FirstOrDefault(IsColor) is { } named)
+                style.Add(named);
+
+            if (IsColor(background))
+                style.AddRange(["on", background!]);
+
+            return style.Count > 0 ? string.Join(' ', style) : null;
         }
 
         internal static IRenderable SafeMarkup(string message, Style? style = null)
