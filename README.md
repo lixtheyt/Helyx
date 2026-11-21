@@ -54,7 +54,7 @@ On Windows, download the installer from the [latest release](https://github.com/
 and run it:
 
 ```
-Helyx-1.4.0-setup.exe
+Helyx-1.5.1-setup.exe
 ```
 
 It installs into your user folder and adds Helyx to `PATH`, so you can start it from Windows Terminal:
