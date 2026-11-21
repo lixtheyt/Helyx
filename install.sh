@@ -194,7 +194,8 @@ esac
 
 if [ -z "$SOURCE" ]; then
     BASE="https://github.com/$REPO/releases/latest/download"
-    ARCHIVE="Helyx-$RID.tar.gz"
+    SUMS=""
+    ARCHIVE=""
 
     if command -v curl >/dev/null 2>&1; then
         fetch() { curl -fsSL "$1" -o "$2"; }
@@ -206,11 +207,18 @@ if [ -z "$SOURCE" ]; then
 
     step "Downloading Helyx for $RID..."
 
+    if fetch "$BASE/SHA256SUMS" "$WORK/SHA256SUMS" 2>/dev/null; then
+        SUMS="$WORK/SHA256SUMS"
+        ARCHIVE=$(awk -v tail="-$RID.tar.gz" 'substr($2, length($2) - length(tail) + 1) == tail { print $2; exit }' "$SUMS")
+    fi
+
+    [ -n "$ARCHIVE" ] || ARCHIVE="Helyx-$RID.tar.gz"
+
     fetch "$BASE/$ARCHIVE" "$WORK/$ARCHIVE" ||
         fail "Could not download $BASE/$ARCHIVE"
 
-    if fetch "$BASE/SHA256SUMS" "$WORK/SHA256SUMS" 2>/dev/null; then
-        expected=$(grep " $ARCHIVE\$" "$WORK/SHA256SUMS" | awk '{print $1}')
+    if [ -n "$SUMS" ]; then
+        expected=$(grep " $ARCHIVE\$" "$SUMS" | awk '{print $1}')
 
         if command -v sha256sum >/dev/null 2>&1; then
             actual=$(sha256sum "$WORK/$ARCHIVE" | awk '{print $1}')
